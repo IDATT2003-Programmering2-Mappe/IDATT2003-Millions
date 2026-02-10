@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.edu.ntnu.idatt2003.group49</groupId>
+    <groupId>org.edu.ntnu.idatt2003.group49.millions</groupId>
     <artifactId>IDATT2003-Millions</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -39,6 +39,21 @@
     <build>
         <plugins>
 
+            <!-- Package jar file with a main class -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.5.0</version> <!-- Use the latest version -->
+                <configuration>
+                    <!-- Custom configuration goes here -->
+                    <archive>
+                        <manifest>
+                            <mainClass>org.edu.ntnu.idatt2003.group49.millions.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
             <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,7 +75,7 @@
                 <version>0.0.8</version>
                 <configuration>
                     <!-- Specify the fully qualified name of your main application class -->
-                    <mainClass>org.edu.ntnu.idatt2003.group49.Main</mainClass>
+                    <mainClass>org.edu.ntnu.idatt2003.group49.millions.Main</mainClass>
                 </configuration>
             </plugin>
 
