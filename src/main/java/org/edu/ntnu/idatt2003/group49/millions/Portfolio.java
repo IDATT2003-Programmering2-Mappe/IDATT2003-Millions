@@ -1,20 +1,24 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Portfolio {
-  private List<Share> shares;
+  private final List<Share> shares;
 
   public Portfolio() {
     shares = new ArrayList<>();
   }
 
   public boolean addShare(Share share) {
-    shares.add(share);
+    Objects.requireNonNull(share, "share cannot be null");
+    return shares.add(share);
   }
 
   public boolean removeShare(Share share) {
-    shares.remove(share);
+    Objects.requireNonNull(share, "share cannot be null");
+    return shares.remove(share);
   }
 
   public List<Share> getShares() {
@@ -22,10 +26,14 @@ public class Portfolio {
   }
 
   public List<Share> getShares(String symbol) {
-
+    Objects.requireNonNull(symbol, "symbol cannot be null");
+    return shares.stream()
+        .filter(s -> s.getStock().getSymbol() == symbol)
+        .toList();
   }
 
   public boolean contains(Share share) {
-    return
+    Objects.requireNonNull(share, "share cannot be null");
+    return shares.contains(share);
   }
 }
