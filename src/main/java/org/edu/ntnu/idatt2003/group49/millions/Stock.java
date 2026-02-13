@@ -15,7 +15,7 @@ public class Stock {
     this.company = Objects.requireNonNull(company, "company cannot be null");
 
     this.prices = new ArrayList<>();
-    this.prices.add(salesPrice);
+    this.prices.add(Objects.requireNonNull(salesPrice, "salesPrice cannot be null"));
   }
 
   public String getSymbol() {
@@ -32,9 +32,7 @@ public class Stock {
 
   public void addNewSalesPrice (BigDecimal price) {
     if (price == null || price.compareTo(BigDecimal.ZERO) < 0) {
-      throw new IllegalArgumentException("price must be positive");
+      prices.add(price);
     }
-    prices.add(price);
-
   }
 }

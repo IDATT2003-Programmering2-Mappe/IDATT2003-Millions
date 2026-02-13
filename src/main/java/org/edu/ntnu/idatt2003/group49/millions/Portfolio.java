@@ -12,13 +12,15 @@ public class Portfolio {
   }
 
   public boolean addShare(Share share) {
-    Objects.requireNonNull(share, "share cannot be null");
-    return shares.add(share);
+    return shares.add(
+        Objects.requireNonNull(share, "'share' cannot be null")
+    );
   }
 
   public boolean removeShare(Share share) {
-    Objects.requireNonNull(share, "share cannot be null");
-    return shares.remove(share);
+    return shares.remove(
+        Objects.requireNonNull(share, "'share' cannot be null")
+    );
   }
 
   public List<Share> getShares() {
@@ -26,14 +28,15 @@ public class Portfolio {
   }
 
   public List<Share> getShares(String symbol) {
-    Objects.requireNonNull(symbol, "symbol cannot be null");
+    Objects.requireNonNull(symbol, "'symbol' cannot be null");
     return shares.stream()
-        .filter(s -> s.getStock().getSymbol() == symbol)
+        .filter(s -> Objects.equals(s.getStock().getSymbol(), symbol))
         .toList();
   }
 
   public boolean contains(Share share) {
-    Objects.requireNonNull(share, "share cannot be null");
-    return shares.contains(share);
+    return shares.contains(
+      Objects.requireNonNull(share, "'share' cannot be null")
+    );
   }
 }

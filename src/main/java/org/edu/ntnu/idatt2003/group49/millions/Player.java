@@ -1,0 +1,60 @@
+package org.edu.ntnu.idatt2003.group49.millions;
+
+import java.math.BigDecimal;
+import java.util.Objects;
+
+public class Player {
+  private final String name;
+  private final BigDecimal startingMoney;
+  private BigDecimal money;
+  private final Portfolio portfolio;
+  private final TransactionArchive transactionArchive;
+
+  public Player(String name, BigDecimal startingMoney) {
+    Objects.requireNonNull(name, "name cannot be null");
+    if (name.isBlank()) {
+      throw new IllegalArgumentException("name must have at least one character");
+    }
+    Objects.requireNonNull(startingMoney, "startingMoney cannot be null");
+    if (startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException("startingMoney must be greater than zero");
+    }
+    this.name               = name;
+    this.startingMoney      = startingMoney;
+    this.money              = startingMoney;
+    this.portfolio          = new Portfolio();
+    this.transactionArchive = new TransactionArchive();
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getMoney() {
+    return money.toString();
+  }
+
+  public void addMoney(BigDecimal amount) {
+    Objects.requireNonNull(amount, "amount cannot be null");
+    if (amount.compareTo(BigDecimal.ZERO) < 0) {
+      throw new IllegalArgumentException("amount cannot be negative");
+    }
+    money = money.add(amount);
+  }
+
+  public void withdrawMoney(BigDecimal amount) {
+    Objects.requireNonNull(amount, "amount cannot be null");
+    if (amount.compareTo(BigDecimal.ZERO) < 0) {
+      throw new IllegalArgumentException("amount cannot be negative");
+    }
+    money = money.subtract(amount);
+  }
+
+  public Portfolio getPortfolio() {
+    return portfolio;
+  }
+
+  public TransactionArchive getTransactionArchive() {
+    return transactionArchive;
+  }
+}
