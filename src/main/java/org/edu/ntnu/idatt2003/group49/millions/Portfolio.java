@@ -28,7 +28,7 @@ public class Portfolio {
   public List<Share> getShares(String symbol) {
     Objects.requireNonNull(symbol, "symbol cannot be null");
     return shares.stream()
-        .filter(s -> s.getStock().getSymbol() == symbol)
+        .filter(s -> Objects.equals(s.getStock().getSymbol(), symbol))
         .toList();
   }
 
