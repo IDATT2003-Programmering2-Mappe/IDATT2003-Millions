@@ -8,6 +8,7 @@ public class Sale extends Transaction {
     super(share, week, calculator);
   }
 
+  // TODO:
   @Override
   public void commit(Player player) {
 
