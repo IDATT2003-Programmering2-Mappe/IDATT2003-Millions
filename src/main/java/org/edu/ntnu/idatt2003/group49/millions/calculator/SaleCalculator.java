@@ -1,14 +1,18 @@
-package org.edu.ntnu.idatt2003.group49.millions;
+package org.edu.ntnu.idatt2003.group49.millions.calculator;
+
+import org.edu.ntnu.idatt2003.group49.millions.Share;
 
 import java.math.BigDecimal;
 
-public class PurchaseCalculator implements TransactionCalculator {
+public class SaleCalculator implements TransactionCalculator {
   private BigDecimal purchasePrice;
+  private BigDecimal salesPrice;
   private BigDecimal quantity;
 
-  public PurchaseCalculator(Share share) {
+  public SaleCalculator(Share share) {
     this.purchasePrice = share.getPurchasePrice();
-    this.quantity       = share.getQuantity();
+    this.salesPrice    = share.getStock().getSalesPrice();
+    this.quantity      = share.getQuantity();
   }
 
   @Override

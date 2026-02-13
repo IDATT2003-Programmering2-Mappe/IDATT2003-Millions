@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions;
+package org.edu.ntnu.idatt2003.group49.millions.calculator;
 
 import java.math.BigDecimal;
 
