@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class TransactionArchive {
-  private List<Transaction> transactions;
+  private final List<Transaction> transactions;
 
   public TransactionArchive() {
-    transactions = new ArrayList<Transaction>();
+    transactions = new ArrayList<>();
   }
 
   public boolean add(Transaction transaction) {
