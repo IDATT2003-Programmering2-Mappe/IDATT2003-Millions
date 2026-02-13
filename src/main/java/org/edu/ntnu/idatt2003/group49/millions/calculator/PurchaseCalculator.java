@@ -3,6 +3,7 @@ package org.edu.ntnu.idatt2003.group49.millions.calculator;
 import org.edu.ntnu.idatt2003.group49.millions.Share;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PurchaseCalculator implements TransactionCalculator {
   private BigDecimal purchasePrice;
@@ -11,25 +12,32 @@ public class PurchaseCalculator implements TransactionCalculator {
   public PurchaseCalculator(Share share) {
     this.purchasePrice = share.getPurchasePrice();
     this.quantity       = share.getQuantity();
+
   }
 
   @Override
   public BigDecimal calculateGross() {
-    return null;
+    return purchasePrice.multiply(quantity);
   }
 
   @Override
   public BigDecimal calculateCommission() {
-    return null;
+    BigDecimal commissionRate = new BigDecimal("0.005");
+
+    return calculateGross().multiply(commissionRate)
+            .setScale(2, RoundingMode.HALF_UP);
   }
 
   @Override
   public BigDecimal calculateTax() {
-    return null;
+    return BigDecimal.ZERO;
   }
 
   @Override
   public BigDecimal calculateTotal() {
-    return null;
+
+    return calculateGross()
+            .add(calculateCommission())
+                    .add(calculateTax());
   }
 }

@@ -32,8 +32,9 @@ public class Stock {
 
   public void addNewSalesPrice (BigDecimal price) {
     if (price == null || price.compareTo(BigDecimal.ZERO) < 0) {
-      prices.add(price);
+      throw new IllegalArgumentException("price must be positive");
     }
+    prices.add(price);
 
   }
 }
