@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,16 +53,21 @@ class PortfolioTest {
 
   @Test
   void getShares_ReturnsOnlySharesWithGivenSymbol() {
+
     Share newShare = new Share(
         new Stock("NVDA", "Nvidia", new BigDecimal("180")),
         new BigDecimal("20"),
         new BigDecimal("180")
     );
+
     portfolio.addShare(newShare);
+
+    List<Share> result = portfolio.getShares("APPL");
+
+    assertFalse(result.isEmpty());
     assertTrue(
-        !portfolio.getShares("APPL").isEmpty() && // This is to prevent false positives, since .allMatch() always returns true if the stream is empty
-        portfolio.getShares("APPL")
-            .stream().allMatch(s -> s.getStock().getSymbol().equals("APPL")));
+        result.stream()
+            .allMatch(s -> s.getStock().getSymbol().equals("APPL")));
   }
 
   @Test
