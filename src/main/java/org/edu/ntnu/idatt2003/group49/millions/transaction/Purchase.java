@@ -12,13 +12,12 @@ public class Purchase extends Transaction {
     super(share, week, calculator);
   }
 
-  // TODO:
   @Override
   public void commit(Player player) {
     Objects.requireNonNull(player, "player cannot be null");
 
     if (isCommited()) {
-      throw new IllegalArgumentException("Transaction already commited");
+      throw new IllegalStateException("Transaction already commited");
     }
 
     BigDecimal totalCost = getCalculator().calculateTotal();
@@ -26,7 +25,6 @@ public class Purchase extends Transaction {
     player.withdrawMoney(totalCost);
     player.getPortfolio().addShare(getShare());
     player.getTransactionArchive().add(this);
-
     markCommited();
       }
   }

@@ -8,11 +8,10 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Sale extends Transaction {
-  protected Sale(Share share, int week, TransactionCalculator calculator) {
+  public Sale(Share share, int week, TransactionCalculator calculator) {
     super(share, week, calculator);
   }
 
-  // TODO:
   @Override
   public void commit(Player player) {
     Objects.requireNonNull(player, "player cannot be null");
@@ -23,5 +22,9 @@ public class Sale extends Transaction {
 
     BigDecimal totalCost = getCalculator().calculateTotal();
 
+    player.addMoney(totalCost);
+    player.getPortfolio().removeShare(getShare());
+    player.getTransactionArchive().add(this);
+    markCommited();
   }
 }

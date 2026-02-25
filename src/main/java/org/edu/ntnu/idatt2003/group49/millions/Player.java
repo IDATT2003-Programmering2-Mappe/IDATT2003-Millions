@@ -48,7 +48,7 @@ public class Player {
     }
 
     if (money.compareTo(amount) < 0) {
-      throw new IllegalStateException("amount cannot be negative");
+      throw new IllegalStateException("Not enough money");
     }
     money = money.subtract(amount);
   }
