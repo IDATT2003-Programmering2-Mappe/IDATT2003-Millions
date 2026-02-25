@@ -38,7 +38,7 @@ public class Share {
   }
 
   /**
-   * Retrieves the stock associated with this share.
+   * Returns the stock associated with this share.
    *
    * @return the stock associated with this share
    */
@@ -47,7 +47,7 @@ public class Share {
   }
 
   /**
-   * Retrieves the quantity of shares owned.
+   * Return the quantity of shares owned.
    *
    * @return the quantity of shares
    */
@@ -56,7 +56,7 @@ public class Share {
   }
 
   /**
-   * Retrieves the purchase price per share
+   * returns the price per share
    *
    * @return the purchase price per share
    */
