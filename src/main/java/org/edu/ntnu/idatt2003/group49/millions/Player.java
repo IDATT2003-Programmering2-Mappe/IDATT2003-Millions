@@ -11,16 +11,15 @@ public class Player {
   private final TransactionArchive transactionArchive;
 
   public Player(String name, BigDecimal startingMoney) {
-    Objects.requireNonNull(name, "name cannot be null");
-    if (name.isBlank()) {
+    this.name = Objects.requireNonNull(name, "name cannot be null");
+    if (this.name.isBlank()) {
       throw new IllegalArgumentException("name must have at least one character");
     }
-    Objects.requireNonNull(startingMoney, "startingMoney cannot be null");
-    if (startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
+    this.startingMoney = Objects.requireNonNull(startingMoney, "startingMoney cannot be null");
+    if (this.startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("startingMoney must be greater than zero");
     }
-    this.name               = name;
-    this.startingMoney      = startingMoney;
+
     this.money              = startingMoney;
     this.portfolio          = new Portfolio();
     this.transactionArchive = new TransactionArchive();
@@ -30,8 +29,8 @@ public class Player {
     return name;
   }
 
-  public String getMoney() {
-    return money.toString();
+  public BigDecimal getMoney() {
+    return money;
   }
 
   public void addMoney(BigDecimal amount) {
@@ -46,6 +45,10 @@ public class Player {
     Objects.requireNonNull(amount, "amount cannot be null");
     if (amount.compareTo(BigDecimal.ZERO) < 0) {
       throw new IllegalArgumentException("amount cannot be negative");
+    }
+
+    if (money.compareTo(amount) < 0) {
+      throw new IllegalStateException("amount cannot be negative");
     }
     money = money.subtract(amount);
   }
