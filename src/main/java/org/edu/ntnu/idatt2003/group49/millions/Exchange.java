@@ -37,15 +37,18 @@ public class Exchange {
   public List<Stock> findStocks(String searchTerm) {
     List<Stock> stocks = new ArrayList<>();
 
-
+    return null;
   }
 
   public Transaction buy(String symbol, BigDecimal quantity, Player player) {
-
+    return null;
   }
 
   public Transaction sell(Share share, Player player) {
-
+      if (!player.getPortfolio().contains(share)) {
+        throw new IllegalArgumentException("player cannot sell a share they do not own.");
+      }
+      return null;
   }
 
   public void advance() {
