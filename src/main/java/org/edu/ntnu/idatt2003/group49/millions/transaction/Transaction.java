@@ -13,6 +13,9 @@ public abstract class Transaction {
   private boolean commited;
 
   protected Transaction(Share share, int week, TransactionCalculator calculator) {
+    if (week < 0) {
+      throw new IllegalArgumentException("Week cannot be negative");
+    }
     this.share      = Objects.requireNonNull(share, "share cannot be null");
     this.week       = week;
     this.calculator = Objects.requireNonNull(calculator,"calculator cannot be null");
@@ -39,6 +42,5 @@ public abstract class Transaction {
     this.commited = true;
   }
 
-  public void commit(Player player) {
-  }
+  public void commit(Player player) { }
 }
