@@ -19,7 +19,6 @@ public class Player {
     if (this.startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("startingMoney must be greater than zero");
     }
-
     this.money              = startingMoney;
     this.portfolio          = new Portfolio();
     this.transactionArchive = new TransactionArchive();
