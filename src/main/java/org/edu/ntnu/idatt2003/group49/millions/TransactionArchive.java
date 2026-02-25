@@ -28,34 +28,41 @@ public class TransactionArchive {
     if (week < 0) {
       throw new IllegalArgumentException("week number cannot be negative");
     }
-    if (week > transactions.size()) {
-      throw new IllegalArgumentException("week number is greater than size of the transaction array");
+    if (transactions.stream().noneMatch(t -> t.getWeek() == week)) {
+      throw new IllegalArgumentException("no transactions in the given week present in the archive");
     }
+
     return transactions.stream()
         .filter(t -> t.getWeek() == week)
         .toList();
   }
 
-  // TODO:
   public List<Purchase> getPurchases(int week) {
     if (week < 0) {
       throw new IllegalArgumentException("week number cannot be negative");
     }
-    if (week > transactions.size()) {
-      throw new IllegalArgumentException("week number is greater than size of the transaction array");
+    if (transactions.stream().noneMatch(t -> t.getWeek() == week)) {
+      throw new IllegalArgumentException("no transactions in the given week present in the archive");
     }
-    return null;
+
+    return transactions.stream()
+        .filter(t -> t instanceof Purchase && t.getWeek() == week)
+        .map(t -> (Purchase) t)
+        .toList();
   }
 
-  // TODO:
   public List<Sale> getSales(int week) {
     if (week < 0) {
       throw new IllegalArgumentException("week number cannot be negative");
     }
-    if (week > transactions.size()) {
-      throw new IllegalArgumentException("week number is greater than size of the transaction array");
+    if (transactions.stream().noneMatch(t -> t.getWeek() == week)) {
+      throw new IllegalArgumentException("no transactions in the given week present in the archive");
     }
-    return null;
+
+    return transactions.stream()
+        .filter(t -> t instanceof Sale && t.getWeek() == week)
+        .map(t -> (Sale) t)
+        .toList();
   }
 
   public int countDistinctWeeks() {
