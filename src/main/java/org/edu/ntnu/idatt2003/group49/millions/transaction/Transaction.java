@@ -40,6 +40,5 @@ public abstract class Transaction {
   }
 
   public void commit(Player player) {
-
   }
 }
