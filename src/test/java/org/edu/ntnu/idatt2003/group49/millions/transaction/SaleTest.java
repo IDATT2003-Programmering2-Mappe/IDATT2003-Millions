@@ -22,6 +22,7 @@ class SaleTest {
   Stock stock;
   Share share;
   Player player;
+  Sale sale;
 
   @BeforeEach
   void setUp() {
@@ -32,6 +33,7 @@ class SaleTest {
     share = new Share(stock, quantity, purchasePrice);
     saleCalculator = new SaleCalculator(share);
     player = new Player("Steve", new BigDecimal("100"));
+    sale = new Sale(share, 1, saleCalculator);
   }
 
   @Test
@@ -51,15 +53,12 @@ class SaleTest {
 
   @Test
   void commit_ThrowsWhenPlayerIsNull() {
-    Sale sale = new Sale(share, 1, saleCalculator);
 
     assertThrows(NullPointerException.class, () -> sale.commit(null));
   }
 
   @Test
   void commit_ThrowsWhenTransactionIsAlreadyCommited() {
-    Sale sale = new Sale(share, 1, saleCalculator);
-
     sale.commit(player);
 
     assertThrows(IllegalArgumentException.class, () -> sale.commit(player));
@@ -67,8 +66,6 @@ class SaleTest {
 
   @Test
   void commit_ThrowsWhenPlayerDoesNotOwnShare() {
-    Sale sale = new Sale(share, 1, saleCalculator);
-
     sale.commit(player);
 
     assertThrows(IllegalArgumentException.class, () -> sale.commit(player));
@@ -77,7 +74,6 @@ class SaleTest {
   @Test
   void commit_AddsSalesRevenueToPlayersMoney() {
     BigDecimal prevPlayerMoney = player.getMoney();
-    Sale sale = new Sale(share, 1, saleCalculator);
     sale.commit(player);
 
     BigDecimal salesRevenue = sale.getCalculator().calculateTotal();
@@ -87,7 +83,6 @@ class SaleTest {
 
   @Test
   void commit_RemovesShareFromPlayerPortfolio() {
-    Sale sale = new Sale(share, 1, saleCalculator);
     sale.commit(player);
 
     assertFalse(player.getPortfolio().contains(share));
