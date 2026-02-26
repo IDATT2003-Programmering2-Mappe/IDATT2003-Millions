@@ -35,9 +35,11 @@ public class Exchange {
   }
 
   public List<Stock> findStocks(String searchTerm) {
-    List<Stock> stocks = new ArrayList<>();
+    String lowerCaseSearch = searchTerm.toLowerCase();
 
-    return null;
+    return stockMap.values().stream().filter(stock ->
+            stock.getSymbol().contains(lowerCaseSearch)
+                    || stock.getCompany().contains(lowerCaseSearch)).toList();
   }
 
   public Transaction buy(String symbol, BigDecimal quantity, Player player) {
