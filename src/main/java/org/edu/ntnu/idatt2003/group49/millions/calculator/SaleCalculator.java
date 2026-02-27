@@ -1,6 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.calculator;
 
-import org.edu.ntnu.idatt2003.group49.millions.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

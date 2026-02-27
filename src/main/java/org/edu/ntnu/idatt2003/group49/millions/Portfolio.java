@@ -1,5 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.Share;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

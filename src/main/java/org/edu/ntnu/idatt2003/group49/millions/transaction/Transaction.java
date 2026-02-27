@@ -1,8 +1,8 @@
 package org.edu.ntnu.idatt2003.group49.millions.transaction;
 
-import org.edu.ntnu.idatt2003.group49.millions.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.calculator.TransactionCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.Player;
 
 import java.util.Objects;
 
