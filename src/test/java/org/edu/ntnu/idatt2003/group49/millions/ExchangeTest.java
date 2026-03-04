@@ -13,6 +13,7 @@ import org.junit.jupiter.api.TestTemplate;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -176,6 +177,24 @@ class ExchangeTest {
   }
 
   @Test
-  void advance() {
+  void advance_IncrementsWeekByOne() {
+    int weekBefore = exchange.getWeek();
+
+    exchange.advance();
+
+    int weekAfter = exchange.getWeek();
+    assertEquals(weekBefore + 1, weekAfter);
+  }
+
+  @Test
+  void advance_UpdatesPricesOfEachStock() {
+    Map<String, Stock> beforeStockMap = exchange.getStockMap();
+
+    exchange.advance();
+
+    Map<String, Stock> afterStockMap = exchange.getStockMap();
+
+    assertFalse(afterStockMap.keySet().stream()
+        .allMatch(key -> beforeStockMap.get(key).getSalesPrice().compareTo(afterStockMap.get(key).getSalesPrice()) == 0));
   }
 }

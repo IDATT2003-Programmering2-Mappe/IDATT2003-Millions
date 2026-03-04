@@ -17,7 +17,7 @@ public class Exchange {
   private final String name;
   private int week = 1;
   private final Map<String, Stock> stockMap;
-  private Random random;
+  private final Random random;
 
   public Exchange(String name, List<Stock> stocks) {
     Objects.requireNonNull(stocks, "name must not be null");
@@ -27,6 +27,7 @@ public class Exchange {
     this.name = Objects.requireNonNull(name, "name cannot be null");
     this.stockMap = new HashMap<>();
     stocks.forEach(stock -> stockMap.put(stock.getSymbol(), stock));
+    random = new Random();
   }
 
   public String getName() {
@@ -35,6 +36,10 @@ public class Exchange {
 
   public int getWeek() {
     return week;
+  }
+
+  public Map<String, Stock> getStockMap() {
+    return stockMap;
   }
 
   public boolean hasStock(String symbol) {
@@ -91,7 +96,19 @@ public class Exchange {
   }
 
   public void advance() {
+    double maxPercentage = 0.11;
+
+    stockMap.forEach((symbol, stock) -> {
+      int change = random.nextInt(2); // Returns 0 or 1; 0 being negative change and 1 being positive change
+      if (change == 0) {
+        stock.addNewSalesPrice(stock.getSalesPrice()
+            .subtract(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage)))));
+      }
+      else {
+        stock.addNewSalesPrice(stock.getSalesPrice()
+            .add(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage)))));
+      }
+    });
     week++;
-    stockMap.forEach((symbol, stock) -> {stock.addNewSalesPrice(stock.getSalesPrice());});
   }
 }
