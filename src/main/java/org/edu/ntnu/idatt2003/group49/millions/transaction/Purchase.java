@@ -19,6 +19,9 @@ public class Purchase extends Transaction {
     if (isCommited()) {
       throw new IllegalStateException("Transaction already commited");
     }
+    if (player.getMoney().compareTo(getCalculator().calculateTotal()) < 0) {
+      throw new IllegalStateException("player '" + player.getName() + "' has insufficient funds to make this purchase");
+    }
 
     BigDecimal totalCost = getCalculator().calculateTotal();
 
