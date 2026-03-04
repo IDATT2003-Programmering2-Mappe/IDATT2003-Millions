@@ -1,6 +1,10 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.transaction.Purchase;
+import org.edu.ntnu.idatt2003.group49.millions.transaction.Transaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
@@ -37,6 +41,16 @@ class ExchangeTest {
   @Test
   void constructor_ThrowsWhenNameIsNull() {
     assertThrows(NullPointerException.class, () -> new Exchange(null, stocks));
+  }
+
+  @Test
+  void constructor_ThrowsWhenStocksIsNull() {
+    assertThrows(NullPointerException.class, () -> new Exchange("Nasdaq", null));
+  }
+
+  @Test
+  void constructor_ThrowsWhenStocksIsEmpty() {
+    assertThrows(IllegalArgumentException.class, () -> new Exchange("Nasdaq", new ArrayList<>()));
   }
 
   @Test
@@ -87,7 +101,40 @@ class ExchangeTest {
   }
 
   @Test
-  void buy() {
+  void buy_ThrowsWhenSymbolIsNull() {
+    assertThrows(NullPointerException.class, () -> exchange.buy(null, new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void buy_ThrowsWhenQuantityIsNull() {
+    assertThrows(NullPointerException.class, () -> exchange.buy("NVDA", null, new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void buy_ThrowsWhenPlayerIsNull() {
+    assertThrows(NullPointerException.class, () -> exchange.buy("NVDA", new BigDecimal("100"), null));
+  }
+
+  @Test
+  void buy_ThrowsWhenQuantityIsNegative() {
+    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NVDA", new BigDecimal("-100"), new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void buy_ThrowsWhenQuantityIsZero() {
+    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NVDA", new BigDecimal("0"), new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void buy_ThrowsWhenStockDoesNotExistWithinExchange() {
+    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NTNU", new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void buy_CommitsPurchaseToPlayer() {
+    Transaction purchase = exchange.buy("NVDA", new BigDecimal("1"), new Player("Steve", new BigDecimal("1000")));
+
+    assertTrue(purchase.isCommited());
   }
 
   @Test
