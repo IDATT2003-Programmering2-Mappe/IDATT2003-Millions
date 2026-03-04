@@ -4,6 +4,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.transaction.Purchase;
+import org.edu.ntnu.idatt2003.group49.millions.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.transaction.Transaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -102,12 +103,14 @@ class ExchangeTest {
 
   @Test
   void buy_ThrowsWhenSymbolIsNull() {
-    assertThrows(NullPointerException.class, () -> exchange.buy(null, new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
+    assertThrows(NullPointerException.class,
+        () -> exchange.buy(null, new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void buy_ThrowsWhenQuantityIsNull() {
-    assertThrows(NullPointerException.class, () -> exchange.buy("NVDA", null, new Player("Steve", new BigDecimal("1000"))));
+    assertThrows(NullPointerException.class,
+        () -> exchange.buy("NVDA", null, new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
@@ -117,28 +120,59 @@ class ExchangeTest {
 
   @Test
   void buy_ThrowsWhenQuantityIsNegative() {
-    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NVDA", new BigDecimal("-100"), new Player("Steve", new BigDecimal("1000"))));
+    assertThrows(IllegalArgumentException.class,
+        () -> exchange.buy("NVDA", new BigDecimal("-100"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void buy_ThrowsWhenQuantityIsZero() {
-    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NVDA", new BigDecimal("0"), new Player("Steve", new BigDecimal("1000"))));
+    assertThrows(IllegalArgumentException.class,
+        () -> exchange.buy("NVDA", new BigDecimal("0"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void buy_ThrowsWhenStockDoesNotExistWithinExchange() {
-    assertThrows(IllegalArgumentException.class, () -> exchange.buy("NTNU", new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
+    assertThrows(IllegalArgumentException.class,
+        () -> exchange.buy("NTNU", new BigDecimal("100"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void buy_CommitsPurchaseToPlayer() {
-    Transaction purchase = exchange.buy("NVDA", new BigDecimal("1"), new Player("Steve", new BigDecimal("1000")));
+    Transaction purchase = exchange
+        .buy("NVDA", new BigDecimal("1"), new Player("Steve", new BigDecimal("1000")));
 
     assertTrue(purchase.isCommited());
   }
 
   @Test
-  void sell() {
+  void sell_ThrowsWhenShareIsNull() {
+    assertThrows(NullPointerException.class,
+        () -> exchange.sell(null, new Player("Steve", new BigDecimal("1000"))));
+  }
+
+  @Test
+  void sell_ThrowsWhenPlayerIsNull() {
+    assertThrows(NullPointerException.class,
+        () -> exchange.sell(new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice()), null));
+  }
+
+  @Test
+  void sell_ThrowsWhenPlayerDoesNotOwnShare() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+
+    assertThrows(IllegalStateException.class, () -> exchange.sell(share, player));
+  }
+
+  @Test
+  void sell_CommitsSaleToPlayer() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+
+    player.getPortfolio().addShare(share);
+
+    Transaction sale = exchange.sell(share, player);
+    assertTrue(sale.isCommited());
   }
 
   @Test

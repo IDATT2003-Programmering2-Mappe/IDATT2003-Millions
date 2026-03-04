@@ -1,10 +1,13 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
 import org.edu.ntnu.idatt2003.group49.millions.calculator.PurchaseCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.calculator.SaleCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.calculator.TransactionCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.transaction.Purchase;
+import org.edu.ntnu.idatt2003.group49.millions.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.transaction.Transaction;
 
 import java.math.BigDecimal;
@@ -66,9 +69,9 @@ public class Exchange {
 
     Stock stock = getStock(symbol);
     Share share = new Share(stock, quantity, stock.getSalesPrice());
-    PurchaseCalculator calculator = new PurchaseCalculator(share);
+    TransactionCalculator purchaseCalculator = new PurchaseCalculator(share);
 
-    Purchase purchase = new Purchase(share, getWeek(), calculator);
+    Purchase purchase = new Purchase(share, getWeek(), purchaseCalculator);
     purchase.commit(player);
     return purchase;
   }
@@ -77,9 +80,14 @@ public class Exchange {
     Objects.requireNonNull(share, "share cannot be null");
     Objects.requireNonNull(player, "player cannot be null");
     if (!player.getPortfolio().contains(share)) {
-      throw new IllegalArgumentException("player cannot sell a share they do not own.");
+      throw new IllegalStateException("player cannot sell a share they do not own.");
     }
-    return null;
+
+    TransactionCalculator saleCalculator = new SaleCalculator(share);
+
+    Transaction sale = new Sale(share, getWeek(), saleCalculator);
+    sale.commit(player);
+    return sale;
   }
 
   public void advance() {
