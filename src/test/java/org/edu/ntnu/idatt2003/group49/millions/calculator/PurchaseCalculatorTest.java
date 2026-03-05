@@ -2,6 +2,8 @@ package org.edu.ntnu.idatt2003.group49.millions.calculator;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

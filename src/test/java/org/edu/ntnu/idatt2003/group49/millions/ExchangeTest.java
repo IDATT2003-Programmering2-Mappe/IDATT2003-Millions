@@ -1,14 +1,12 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Purchase;
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Sale;
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Transaction;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

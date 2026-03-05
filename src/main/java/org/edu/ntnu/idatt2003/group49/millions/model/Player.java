@@ -1,8 +1,5 @@
 package org.edu.ntnu.idatt2003.group49.millions.model;
 
-import org.edu.ntnu.idatt2003.group49.millions.Portfolio;
-import org.edu.ntnu.idatt2003.group49.millions.TransactionArchive;
-
 import java.math.BigDecimal;
 import java.util.Objects;
 
