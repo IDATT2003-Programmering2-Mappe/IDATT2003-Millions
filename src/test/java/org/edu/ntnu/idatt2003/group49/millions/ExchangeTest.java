@@ -187,12 +187,18 @@ class ExchangeTest {
   @Test
   void advance_UpdatesPricesOfEachStock() {
     Map<String, Stock> beforeStockMap = exchange.getStockMap();
+    BigDecimal nvidiaBefore = beforeStockMap.get("NVDA").getSalesPrice();
+    BigDecimal appleBefore = beforeStockMap.get("AAPL").getSalesPrice();
 
     exchange.advance();
 
     Map<String, Stock> afterStockMap = exchange.getStockMap();
+    BigDecimal nvidiaAfter = afterStockMap.get("NVDA").getSalesPrice();
+    BigDecimal appleAfter = afterStockMap.get("AAPL").getSalesPrice();
 
-    assertFalse(afterStockMap.keySet().stream()
-        .allMatch(key -> beforeStockMap.get(key).getSalesPrice().compareTo(afterStockMap.get(key).getSalesPrice()) == 0));
+    assertAll(
+        () -> assertNotEquals(nvidiaBefore, nvidiaAfter),
+        () -> assertNotEquals(appleBefore, appleAfter)
+    );
   }
 }

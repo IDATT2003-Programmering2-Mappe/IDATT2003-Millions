@@ -6,6 +6,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Main {
@@ -29,13 +30,14 @@ public class Main {
     Random rand = new Random();
 
     Exchange nasdaq = new Exchange("Nasdaq", stocks);
-    for(Stock stock : stocks) {
-      System.out.println(stock.getSalesPrice());
+    Map<String, Stock> stockMap = nasdaq.getStockMap();
+    for(Map.Entry<String, Stock> entry : stockMap.entrySet()) {
+      System.out.println(entry.getValue().getSalesPrice());
     }
     nasdaq.advance();
-    for(Stock stock : stocks) {
-      System.out.println(stock.getSalesPrice());
+    Map<String, Stock> afstockMap = nasdaq.getStockMap();
+    for(Map.Entry<String, Stock> entry : afstockMap.entrySet()) {
+      System.out.println(entry.getValue().getSalesPrice());
     }
-    System.out.println(rand.nextInt(2));
   }
 }
