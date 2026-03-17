@@ -60,4 +60,30 @@ public class Exchange {
     week++;
     stockMap.forEach((symbol, stock) -> {stock.addNewSalesPrice(stock.getSalesPrice());});
   }
+
+  public List<Stock> getGainers(int limit) {
+    if (limit < 0) {
+      throw new IllegalArgumentException();
+    }
+
+    return stockMap.values().stream()
+            .filter(stock -> stock.getLatestPriceChange().compareTo(BigDecimal.ZERO) > 0)
+            .sorted(Comparator.comparing(Stock::getLatestPriceChange).reversed())
+            .limit(limit)
+            .toList();
+  }
+
+  public List<Stock> getLosers(int limit) {
+    if (limit < 0) {
+      throw new IllegalArgumentException();
+    }
+
+    return stockMap.values().stream()
+            .filter(stock -> stock.getLatestPriceChange().compareTo(BigDecimal.ZERO) > 0)
+            .sorted(Comparator.comparing(Stock::getLatestPriceChange))
+            .limit(limit)
+            .toList();
+  }
+
+
 }

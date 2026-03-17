@@ -123,6 +123,10 @@ public class Stock {
 
   public BigDecimal getLatestPriceChange() {
 
+    if (prices.size() < 2) {
+      return BigDecimal.ZERO;
+    }
+
     BigDecimal latestPrice = getSalesPrice();
     BigDecimal previousPrice = prices.get(prices.size() - 2);
 
