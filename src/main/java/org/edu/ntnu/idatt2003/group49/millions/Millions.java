@@ -66,14 +66,14 @@ public class Millions extends Application {
       System.out.println(entry.getValue().getSalesPrice());
     }
 
-    List<Stock> sp500stocks = new ArrayList<>();
-    try {
-      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
-    } catch(IOException e) {
-      logger.severe(e.getMessage());
-      sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
-    }
-    sp500stocks.forEach(System.out::println);
+//    List<Stock> sp500stocks = new ArrayList<>();
+//    try {
+//      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
+//    } catch(IOException e) {
+//      logger.severe(e.getMessage());
+//      sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
+//    }
+//    sp500stocks.forEach(System.out::println);
 
     try {
       MillionsFileWriter.writeToFileTryWithResource(Path.of("src/main/resources/test.csv"), "Test");
