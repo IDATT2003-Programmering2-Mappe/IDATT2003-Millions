@@ -3,8 +3,9 @@ package org.edu.ntnu.idatt2003.group49.millions.transaction;
 import org.edu.ntnu.idatt2003.group49.millions.model.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.calculator.PurchaseCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.calculator.TransactionCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -50,6 +51,23 @@ class PurchaseTest {
   }
 
   @Test
+  void commit_ThrowsWhenPlayerIsNull() {
+    assertThrows(NullPointerException.class, () -> purchase.commit(null));
+  }
+
+  @Test
+  void commit_ThrowsWhenTransactionIsAlreadyCommitted() {
+    purchase.commit(player);
+    assertThrows(IllegalStateException.class, () -> purchase.commit(player));
+  }
+
+  @Test
+  void commit_ThrowsWhenPlayerHasInsufficientFunds() {
+    Player poorPlayer = new Player("Poor", new BigDecimal("1"));
+    assertThrows(IllegalStateException.class, () -> purchase.commit(poorPlayer));
+  }
+
+  @Test
   void commit_WithdrawsMoneyFromPlayer() {
     BigDecimal moneyBefore = player.getMoney();
     BigDecimal totalCost = purchaseCalculator.calculateTotal();
@@ -62,28 +80,14 @@ class PurchaseTest {
   @Test
   void commit_AddsShareToPlayersPortfolio() {
     purchase.commit(player);
+
     assertTrue(player.getPortfolio().contains(share));
   }
+
   @Test
   void commit_StoresTransactionInArchive() {
     purchase.commit(player);
 
     assertEquals(1, player.getTransactionArchive().getTransactions(1).size());
-  }
-//negative tester
-  @Test
-  void commit_ThrowsWhenPlayerIsNull() {
-    assertThrows(NullPointerException.class, () -> purchase.commit(null));
-  }
-
-  @Test
-  void commit_ThrowsWhenTransactionIsAlreadyCommitted() {
-    purchase.commit(player);
-    assertThrows(IllegalStateException.class, () -> purchase.commit(player));
-  }
-  @Test
-  void commit_ThrowsWhenNotEnoughMoney() {
-    Player poorPlayer = new Player("Poor", new BigDecimal("1"));
-    assertThrows(IllegalStateException.class, () -> purchase.commit(poorPlayer));
   }
 }

@@ -1,8 +1,8 @@
-package org.edu.ntnu.idatt2003.group49.millions;
+package org.edu.ntnu.idatt2003.group49.millions.model;
 
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Purchase;
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Sale;
-import org.edu.ntnu.idatt2003.group49.millions.transaction.Transaction;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
