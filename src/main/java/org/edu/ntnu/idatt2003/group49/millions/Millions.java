@@ -5,12 +5,14 @@ import org.edu.ntnu.idatt2003.group49.millions.model.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.MillionsService;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -18,6 +20,8 @@ import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
 public class Millions extends Application {
+  Logger logger = Logger.getLogger(Millions.class.getName());
+
   @Override
   public void start(Stage stage) {
     MillionsService millionsService = new MillionsService();
@@ -61,8 +65,14 @@ public class Millions extends Application {
       System.out.println(entry.getValue().getSalesPrice());
     }
 
-    List<Stock> sp500 = MillionsFileReader.readStocksFromCSVFile(Path.of("src/main/resources/sp500.csv"));
-    sp500.forEach(System.out::println);
+    List<Stock> sp500stocks = new ArrayList<>();
+    try {
+      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
+    } catch(IOException e) {
+      logger.severe(e.getMessage());
+      sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
+    }
+    sp500stocks.forEach(System.out::println);
   }
 
   static void main(String[] args) {
