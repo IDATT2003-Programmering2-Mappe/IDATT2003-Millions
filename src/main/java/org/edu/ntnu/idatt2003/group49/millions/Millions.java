@@ -1,6 +1,9 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
+import javafx.scene.control.Label;
+import org.edu.ntnu.idatt2003.group49.millions.controller.MainController;
 import org.edu.ntnu.idatt2003.group49.millions.model.Exchange;
+import org.edu.ntnu.idatt2003.group49.millions.model.MillionsService;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 
 import java.math.BigDecimal;
@@ -9,8 +12,28 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class Main {
-  static void main(String[] args) {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import org.edu.ntnu.idatt2003.group49.millions.view.HomeView;
+import org.edu.ntnu.idatt2003.group49.millions.view.MainView;
+
+public class Millions extends Application {
+  @Override
+  public void start(Stage stage) {
+    MillionsService millionsService = new MillionsService();
+    MainController controller = new MainController(millionsService);
+
+    Scene root = new Scene(controller.getMainView(), 1024, 768);
+
+    stage.setTitle("Millions");
+    stage.setScene(root);
+    stage.show();
+  }
+
+  @Override
+  public void init() {
     List<Stock> stocks;
     final Stock nvidiaStock = new Stock("NVDA", "Nvidia", new BigDecimal("191.27"));
     final Stock appleStock = new Stock("AAPL", "Apple", new BigDecimal("276.43"));
@@ -39,5 +62,9 @@ public class Main {
     for(Map.Entry<String, Stock> entry : afstockMap.entrySet()) {
       System.out.println(entry.getValue().getSalesPrice());
     }
+  }
+
+  static void main(String[] args) {
+    launch(args);
   }
 }

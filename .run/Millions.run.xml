@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Millions" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.edu.ntnu.idatt2003.group49.millions.Millions" />
+    <module name="IDATT2003-Millions" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;C:\KodeProsjekter\javafx-sdk-25.0.2\lib&quot; --add-modules javafx.controls" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
