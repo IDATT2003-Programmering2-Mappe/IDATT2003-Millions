@@ -18,6 +18,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileWriter;
 
 public class Millions extends Application {
   Logger logger = Logger.getLogger(Millions.class.getName());
@@ -73,6 +74,12 @@ public class Millions extends Application {
       sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
     }
     sp500stocks.forEach(System.out::println);
+
+    try {
+      MillionsFileWriter.writeToFileTryWithResource(Path.of("src/main/resources/test.csv"), "Test");
+    } catch (IOException e) {
+      logger.severe(e.getMessage());
+    }
   }
 
   static void main(String[] args) {
