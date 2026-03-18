@@ -8,6 +8,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 public class Exchange {
@@ -99,11 +100,11 @@ public class Exchange {
       int change = random.nextInt(2); // Returns 0 or 1; 0 being negative change and 1 being positive change
       if (change == 0) {
         stock.addNewSalesPrice(stock.getSalesPrice()
-            .subtract(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage)))));
+            .subtract(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage))).setScale(2, RoundingMode.HALF_UP)));
       }
       else {
         stock.addNewSalesPrice(stock.getSalesPrice()
-            .add(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage)))));
+            .add(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage))).setScale(2, RoundingMode.HALF_UP)));
       }
     });
     week++;

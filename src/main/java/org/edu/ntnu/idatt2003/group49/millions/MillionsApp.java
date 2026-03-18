@@ -8,10 +8,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.logging.Logger;
 
 import javafx.application.Application;
@@ -20,8 +17,8 @@ import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileWriter;
 
-public class Millions extends Application {
-  Logger logger = Logger.getLogger(Millions.class.getName());
+public class MillionsApp extends Application {
+  Logger logger = Logger.getLogger(MillionsApp.class.getName());
 
   @Override
   public void start(Stage stage) {
@@ -32,7 +29,7 @@ public class Millions extends Application {
 
     stage.setTitle("Millions");
     stage.setScene(root);
-    stage.show();
+    // stage.show();
   }
 
   @Override
@@ -66,17 +63,17 @@ public class Millions extends Application {
       System.out.println(entry.getValue().getSalesPrice());
     }
 
-//    List<Stock> sp500stocks = new ArrayList<>();
-//    try {
-//      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
-//    } catch(IOException e) {
-//      logger.severe(e.getMessage());
-//      sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
-//    }
-//    sp500stocks.forEach(System.out::println);
+    List<Stock> sp500stocks = new ArrayList<>();
+    try {
+      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
+    } catch(IOException e) {
+      logger.severe(e.getMessage());
+      sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
+    }
+    sp500stocks.forEach(System.out::println);
 
     try {
-      MillionsFileWriter.writeToFileTryWithResource(Path.of("src/main/resources/test.csv"), "Test");
+      MillionsFileWriter.writeStockDataToFile(Path.of("src/main/resources/test.csv"), stockMap);
     } catch (IOException e) {
       logger.severe(e.getMessage());
     }
