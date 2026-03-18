@@ -31,6 +31,7 @@ public class Stock {
     this.symbol = Objects.requireNonNull(symbol, "symbol cannot be null");
     this.company = Objects.requireNonNull(company, "company cannot be null");
     this.prices = new ArrayList<>();
+
     this.prices.add(Objects.requireNonNull(salesPrice, "salesPrice cannot be null"));
     if (symbol.isBlank()) {
       throw new IllegalArgumentException("Symbol cannot be blank");

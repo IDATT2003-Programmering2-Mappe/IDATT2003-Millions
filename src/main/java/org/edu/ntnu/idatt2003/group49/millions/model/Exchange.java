@@ -108,4 +108,41 @@ public class Exchange {
     });
     week++;
   }
+
+  public List<Stock> getGainers(int limit) {
+    if (limit < 0) {
+      throw new IllegalArgumentException("limit cannot be negative");
+    }
+
+    List<Stock> gainerList = stockMap.values().stream()
+            .filter(stock -> stock.getLatestPriceChange().compareTo(BigDecimal.ZERO) > 0)
+            .sorted(Comparator.comparing(Stock::getLatestPriceChange).reversed())
+            .limit(limit)
+            .toList();
+
+    if (limit > gainerList.size()) {
+      throw new IllegalArgumentException("limit cannot be greater than gainerList size");
+    }
+
+    return gainerList;
+  }
+
+  public List<Stock> getLosers(int limit) {
+    if (limit < 0) {
+      throw new IllegalArgumentException("limit cannot be negative");
+    }
+
+    List<Stock> loserList = stockMap.values().stream()
+            .filter(stock -> stock.getLatestPriceChange().compareTo(BigDecimal.ZERO) < 0)
+            .sorted(Comparator.comparing(Stock::getLatestPriceChange))
+            .limit(limit)
+            .toList();
+
+    if (limit > loserList.size()) {
+      throw new IllegalArgumentException("limit cannot be greater than gainerList size");
+    }
+
+    return loserList;
+  }
+
 }
