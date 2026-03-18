@@ -79,8 +79,8 @@ class StockTest {
   @Test
   void getHighestPrice_returnsHighestPrice() {
 
-    stock.addNewSalesPrice(new BigDecimal("280.54"));
-    stock.addNewSalesPrice(new BigDecimal("270.67"));
+    stock.addNewSalesPrice(new BigDecimal("280.67"));
+    stock.addNewSalesPrice(new BigDecimal("270.54"));
 
     BigDecimal highestPrice = stock.getHighestPrice();
 
