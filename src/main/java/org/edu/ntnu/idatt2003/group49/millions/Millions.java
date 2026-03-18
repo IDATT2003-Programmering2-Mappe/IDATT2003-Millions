@@ -1,12 +1,12 @@
 package org.edu.ntnu.idatt2003.group49.millions;
 
-import javafx.scene.control.Label;
 import org.edu.ntnu.idatt2003.group49.millions.controller.MainController;
 import org.edu.ntnu.idatt2003.group49.millions.model.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.MillionsService;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 
 import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +14,8 @@ import java.util.Random;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.edu.ntnu.idatt2003.group49.millions.view.HomeView;
-import org.edu.ntnu.idatt2003.group49.millions.view.MainView;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
 public class Millions extends Application {
   @Override
@@ -62,6 +60,9 @@ public class Millions extends Application {
     for(Map.Entry<String, Stock> entry : afstockMap.entrySet()) {
       System.out.println(entry.getValue().getSalesPrice());
     }
+
+    List<Stock> sp500 = MillionsFileReader.readStocksFromCSVFile(Path.of("src/main/resources/sp500.csv"));
+    sp500.forEach(System.out::println);
   }
 
   static void main(String[] args) {
