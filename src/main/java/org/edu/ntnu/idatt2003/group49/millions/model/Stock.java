@@ -121,6 +121,12 @@ public class Stock {
             .orElse(BigDecimal.ZERO);
   }
 
+
+  /**
+   * returns the price change since last price update
+   *
+   * @return pricechange
+   */
   public BigDecimal getLatestPriceChange() {
 
     if (prices.size() < 2) {
