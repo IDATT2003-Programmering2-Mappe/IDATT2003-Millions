@@ -83,3 +83,4 @@ class PortfolioTest {
     assertThrows(NullPointerException.class, () -> {portfolio.contains(null);});
   }
 }
+
