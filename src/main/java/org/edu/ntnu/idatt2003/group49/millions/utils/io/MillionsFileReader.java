@@ -17,7 +17,14 @@ public class MillionsFileReader {
   /*
    * Read lines from a file with a BufferedReader.
    */
-  public static List<String[]> readFromCSVFile(Path path) throws IOException {
+
+  /**
+   * Reads data from a CSV file and converts it into a List of String[]
+   *
+   * @param path filepath
+   * @return a list of String[]
+   */
+  public static List<String[]> readCSVFile(Path path) {
     List<String[]> data = new ArrayList<>();
     try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
       String line;
@@ -38,15 +45,20 @@ public class MillionsFileReader {
         data.add(stocksArray);
       }
     } catch (IOException e) {
-      // handle exception
-      throw new IOException("Could not read from CSV file: " + path);
+      logger.log(Level.SEVERE, "Could not read from CSV file: ", e);
     }
 
     return data;
   }
 
-  public static List<Stock> convertCSVFileToStocks(Path path) throws IOException {
-    List<String[]> data = readFromCSVFile(path);
+  /**
+   * Converts data from a CSV file to a list of Stocks.
+   *
+   * @param path filepath
+   * @return a list of Stocks.
+   */
+  public static List<Stock> convertCSVFileToStocksList(Path path) {
+    List<String[]> data = readCSVFile(path);
     List<Stock> stocks = new ArrayList<>();
     for (String[] stocksArray : data) {
       String symbol = stocksArray[0];

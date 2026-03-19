@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javafx.application.Application;
@@ -65,9 +66,9 @@ public class MillionsApp extends Application {
 
     List<Stock> sp500stocks = new ArrayList<>();
     try {
-      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocks(Path.of("src/main/resources/sp500.csv")));
-    } catch(IOException e) {
-      logger.severe(e.getMessage());
+      sp500stocks.addAll(MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
+    } catch(NullPointerException e) {
+      logger.log(Level.SEVERE, "List of Stocks is null");
       sp500stocks.add(new Stock("ERR", "Error", new BigDecimal("0.0")));
     }
     sp500stocks.forEach(System.out::println);
