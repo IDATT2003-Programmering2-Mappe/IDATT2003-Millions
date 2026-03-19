@@ -1,5 +1,8 @@
 package org.edu.ntnu.idatt2003.group49.millions.model;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -38,5 +41,11 @@ public class Portfolio {
     return shares.contains(
       Objects.requireNonNull(share, "'share' cannot be null")
     );
+  }
+
+  public BigDecimal getNetWorth() {
+    return shares.stream()
+            .map(share -> new SaleCalculator(share).calculateGross())
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 }
