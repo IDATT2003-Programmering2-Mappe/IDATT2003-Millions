@@ -201,4 +201,61 @@ class ExchangeTest {
         () -> assertNotEquals(appleBefore, appleAfter)
     );
   }
+
+  @Test
+  void getGainers_ThrowsWhenLimitIsNegative() {
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.getGainers(-1));
+  }
+
+  @Test
+  void getGainers_ThrowsWhenLimitIsGreaterThanLoserListSize() {
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.getGainers(7));
+  }
+
+  @Test
+  void getGainers_ReturnsCorrectListWithCorrectLimit() {
+    nvidiaStock.addNewSalesPrice(new BigDecimal("200.13"));
+    appleStock.addNewSalesPrice(new BigDecimal("283.79"));
+    microsoftStock.addNewSalesPrice(new BigDecimal("415.13"));
+
+    List<Stock> gainers = exchange.getGainers(2);
+
+    assertAll(
+            () -> assertEquals(2, gainers.size()),
+            () -> assertEquals(microsoftStock, gainers.getFirst())
+    );
+  }
+
+  @Test
+  void getLosers_ThrowsWhenLimitIsNegative() {
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.getLosers(-1));
+  }
+
+  @Test
+  void getLosers_ThrowsWhenLimitIsGreaterThanLoserListSize() {
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.getLosers(7));
+  }
+
+  @Test
+  void getLosers_ReturnsCorrectListWithCorrectLimit() {
+    nvidiaStock.addNewSalesPrice(new BigDecimal("185.13"));
+    appleStock.addNewSalesPrice(new BigDecimal("272.79"));
+    microsoftStock.addNewSalesPrice(new BigDecimal("360.18"));
+
+    List<Stock> losers = exchange.getLosers(2);
+
+    assertAll(
+
+            () -> assertEquals(2, losers.size()),
+            () -> assertEquals(microsoftStock, losers.getFirst())
+    );
+  }
 }
