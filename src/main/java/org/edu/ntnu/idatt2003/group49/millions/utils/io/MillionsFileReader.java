@@ -25,6 +25,7 @@ public class MillionsFileReader {
    * @return a list of String[]
    */
   public static List<String[]> readCSVFile(Path path) {
+    Objects.requireNonNull(path, "path is null");
     List<String[]> data = new ArrayList<>();
     try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
       String line;
@@ -58,6 +59,7 @@ public class MillionsFileReader {
    * @return a list of Stocks.
    */
   public static List<Stock> convertCSVFileToStocksList(Path path) {
+    Objects.requireNonNull(path, "path is null");
     List<String[]> data = readCSVFile(path);
     List<Stock> stocks = new ArrayList<>();
     for (String[] stocksArray : data) {

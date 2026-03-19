@@ -7,8 +7,12 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
+import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MillionsFileWriter {
+  private final static Logger logger = Logger.getLogger(MillionsFileWriter.class.getName());
 
   /**
    * Writes Stock Data to a file with the format: [symbol, company, price].
@@ -18,6 +22,9 @@ public class MillionsFileWriter {
    * @throws IOException if writer is unable to write to file.
    */
   public static void writeStockDataToFile(Path path, Map<String, Stock> stockData) throws IOException {
+    Objects.requireNonNull(path, "path is null");
+    Objects.requireNonNull(stockData, "stockData is null");
+
     try (Writer writer = Files.newBufferedWriter(path)) {
       writer.write("# Stock Data" + System.lineSeparator());
       writer.write(System.lineSeparator());
@@ -33,7 +40,7 @@ public class MillionsFileWriter {
           }
       });
     } catch (IOException e) {
-      throw new IOException("Could not write to file: " + path);
+      logger.log(Level.SEVERE, "Could not write to file: ", e);
     }
   }
 }
