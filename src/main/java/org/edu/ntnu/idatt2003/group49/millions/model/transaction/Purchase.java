@@ -16,7 +16,7 @@ public class Purchase extends Transaction {
   public void commit(Player player) {
     Objects.requireNonNull(player, "player cannot be null");
 
-    if (isCommited()) {
+    if (commited) {
       throw new IllegalStateException("Transaction already commited");
     }
     if (player.getMoney().compareTo(getCalculator().calculateTotal()) < 0) {
@@ -28,6 +28,6 @@ public class Purchase extends Transaction {
     player.withdrawMoney(totalCost);
     player.getPortfolio().addShare(getShare());
     player.getTransactionArchive().add(this);
-    markCommited();
-    }
+    commited = true;
+  }
 }
