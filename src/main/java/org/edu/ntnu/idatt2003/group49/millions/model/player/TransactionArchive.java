@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;

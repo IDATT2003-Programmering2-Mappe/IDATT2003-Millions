@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -9,6 +9,7 @@ public class Player {
   private BigDecimal money;
   private final Portfolio portfolio;
   private final TransactionArchive transactionArchive;
+  private Status status;
 
   public Player(String name, BigDecimal startingMoney) {
     this.name = Objects.requireNonNull(name, "name cannot be null");
@@ -22,6 +23,7 @@ public class Player {
     this.money              = startingMoney;
     this.portfolio          = new Portfolio();
     this.transactionArchive = new TransactionArchive();
+    this.status             = Status.NOVICE;
   }
 
   public String getName() {
@@ -30,6 +32,14 @@ public class Player {
 
   public BigDecimal getMoney() {
     return money;
+  }
+
+  public Status getStatus() {
+    return this.status;
+  }
+
+  public void setStatus(Status status) {
+    this.status = status;
   }
 
   public void addMoney(BigDecimal amount) {
