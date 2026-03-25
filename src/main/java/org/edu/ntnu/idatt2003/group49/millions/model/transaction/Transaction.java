@@ -10,7 +10,7 @@ public abstract class Transaction {
   private final Share share;
   private final int week;
   private final TransactionCalculator calculator;
-  private boolean commited;
+  protected boolean commited;
 
   protected Transaction(Share share, int week, TransactionCalculator calculator) {
     if (week < 0) {
@@ -38,9 +38,5 @@ public abstract class Transaction {
     return commited;
   }
 
-  public void markCommited() {
-    this.commited = true;
-  }
-
-  public void commit(Player player) { }
+  public abstract void commit(Player player);
 }
