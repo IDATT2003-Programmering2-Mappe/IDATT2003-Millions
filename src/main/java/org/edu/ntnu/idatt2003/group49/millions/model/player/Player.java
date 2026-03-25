@@ -9,7 +9,6 @@ public class Player {
   private BigDecimal money;
   private final Portfolio portfolio;
   private final TransactionArchive transactionArchive;
-  private Status status;
 
   public Player(String name, BigDecimal startingMoney) {
     this.name = Objects.requireNonNull(name, "name cannot be null");
@@ -20,10 +19,9 @@ public class Player {
     if (this.startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("startingMoney must be greater than zero");
     }
-    this.money              = startingMoney;
-    this.portfolio          = new Portfolio();
+    this.money = startingMoney;
+    this.portfolio = new Portfolio();
     this.transactionArchive = new TransactionArchive();
-    this.status             = Status.NOVICE;
   }
 
   public String getName() {
@@ -35,12 +33,20 @@ public class Player {
   }
 
   public Status getStatus() {
-    return this.status;
+    BigDecimal netWorth = getNetWorth();
+    int weeksTraded = transactionArchive.countDistinctWeeks();
+
+    BigDecimal investorThreshold = startingMoney.multiply(new BigDecimal("1.20"));
+    BigDecimal speculatorThreshold = startingMoney.multiply(new BigDecimal("2.00"));
+
+    if (weeksTraded >= 20 && netWorth.compareTo(speculatorThreshold) >= 0) {
+      return Status.SPECULATOR;
+    } else if (weeksTraded >= 10 && netWorth.compareTo(investorThreshold) >= 0) {
+      return Status.INVESTOR;
+    }
+    return Status.NOVICE;
   }
 
-  public void setStatus(Status status) {
-    this.status = status;
-  }
 
   public void addMoney(BigDecimal amount) {
     Objects.requireNonNull(amount, "amount cannot be null");
@@ -73,4 +79,5 @@ public class Player {
   public BigDecimal getNetWorth() {
     return money.add(portfolio.getNetWorth());
   }
-}
+  }
+
