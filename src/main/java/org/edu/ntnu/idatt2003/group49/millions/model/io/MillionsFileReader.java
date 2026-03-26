@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.utils.io;
+package org.edu.ntnu.idatt2003.group49.millions.model.io;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 
@@ -12,11 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MillionsFileReader {
-  static Logger logger = Logger.getLogger(MillionsFileReader.class.getName());
-
-  /*
-   * Read lines from a file with a BufferedReader.
-   */
+  private static final Logger logger = Logger.getLogger(MillionsFileReader.class.getName());
 
   /**
    * Reads data from a CSV file and converts it into a List of String[]
@@ -27,23 +23,21 @@ public class MillionsFileReader {
   public static List<String[]> readCSVFile(Path path) {
     Objects.requireNonNull(path, "path is null");
     List<String[]> data = new ArrayList<>();
+
     try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
       String line;
       int lineNumber = 0;
 
       while ((line = bufferedReader.readLine()) != null) {
         lineNumber++;
-
         line = line.trim();
 
-        // do stuff, e.g. print to System.out
+        // Skip over comments or empty lines.
         if (line.startsWith("#") || line.isEmpty()) {
           continue;
         }
 
-        String[] stocksArray = line.split(",");
-
-        data.add(stocksArray);
+        data.add(line.split(","));
       }
     } catch (IOException e) {
       logger.log(Level.SEVERE, "Could not read from CSV file: ", e);
@@ -58,17 +52,23 @@ public class MillionsFileReader {
    * @param path filepath
    * @return a list of Stocks.
    */
-  public static List<Stock> convertCSVFileToStocksList(Path path) {
+  public static List<Stock> convertCSVFileToStocks(Path path) {
     Objects.requireNonNull(path, "path is null");
+
     List<String[]> data = readCSVFile(path);
     List<Stock> stocks = new ArrayList<>();
+
     for (String[] stocksArray : data) {
+      if (stocksArray.length > 3) {
+        throw new IllegalStateException("Current line has too many fields to create a Stock");
+      }
       String symbol = stocksArray[0];
       String company = stocksArray[1];
       String price = stocksArray[2];
 
       stocks.add(new Stock(symbol, company, new BigDecimal(price)));
     }
+
     return stocks;
   }
 }

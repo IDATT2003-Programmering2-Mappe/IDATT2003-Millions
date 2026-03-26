@@ -40,6 +40,7 @@ public class Stock {
       throw new IllegalArgumentException("Company cannot be blank");
     }
   }
+
   /**
    * Returns a string representation of the stock.
    *
@@ -73,7 +74,6 @@ public class Stock {
    *
    * @return the current sales price of the stock
    */
-
   public BigDecimal getSalesPrice() {
     return prices.getLast();
   }

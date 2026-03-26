@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.utils.io;
+package org.edu.ntnu.idatt2003.group49.millions.model.io;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
 
@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Level;
@@ -19,25 +20,29 @@ public class MillionsFileWriter {
    *
    * @param path filePath.
    * @param stockData stockData to be written to file.
-   * @throws IOException if writer is unable to write to file.
    */
-  public static void writeStockDataToFile(Path path, Map<String, Stock> stockData) throws IOException {
+  public static void writeStockDataToFile(Path path, Map<String, Stock> stockData) {
     Objects.requireNonNull(path, "path is null");
     Objects.requireNonNull(stockData, "stockData is null");
 
-    try (Writer writer = Files.newBufferedWriter(path)) {
-      writer.write("# Stock Data" + System.lineSeparator());
-      writer.write(System.lineSeparator());
+    try (Writer writer = Files.newBufferedWriter(
+        path,
+        StandardOpenOption.CREATE
+    )) {
+      writer.write("# Stock Data"
+        + System.lineSeparator()
+        + System.lineSeparator());
 
       writer.write("symbol, company, price" + System.lineSeparator());
       stockData.forEach((symbol, stock) ->
       {
-          try {
-              writer.append("%s, %s, %s".formatted(stock.getSymbol(), stock.getCompany(), stock.getSalesPrice()));
-              writer.append(System.lineSeparator());
-          } catch (IOException e) {
-              throw new RuntimeException(e);
-          }
+        try {
+          writer
+              .append("%s, %s, %s".formatted(stock.getSymbol(), stock.getCompany(), stock.getSalesPrice()))
+              .append(System.lineSeparator());
+        } catch (IOException e) {
+          logger.log(Level.SEVERE, "Could not append to file", e);
+        }
       });
     } catch (IOException e) {
       logger.log(Level.SEVERE, "Could not write to file: ", e);

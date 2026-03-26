@@ -1,9 +1,4 @@
 # Stock Data
 
 symbol, company, price
-MSFT, Microsoft, 378.56
-NVDA, Nvidia, 188.65
-GOOGL, Alphabet Inc. (Class A), 316.46
-GOOG, Alphabet Inc. (Class C), 325.13
-AAPL, Apple, 272.49
-AMZN, Amazon, 212.69
+APPL, Apple, 2000
