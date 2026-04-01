@@ -24,7 +24,7 @@ public class Header extends MillionsView {
 
     body.getChildren().addAll(
       title(),
-      navBar(new String[]{"Stocks", "Profile"})
+      navBar()
     );
     return body;
   }
@@ -35,15 +35,17 @@ public class Header extends MillionsView {
     return title;
   }
 
-  private HBox navBar(String[] btnNames) {
+  private HBox navBar() {
     HBox nav = new HBox();
     nav.getStyleClass().add("navbar");
 
-    for(String name : btnNames) {
-      nav.getChildren().add(
-          new Button(name)
-      );
-    }
+    // Buttons
+    Button btnStocks = new Button("Stocks");
+    btnStocks.setOnAction(e -> this.nav.showHomeView());
+
+    nav.getChildren().addAll(
+        btnStocks
+    );
     return nav;
   }
 }
