@@ -39,14 +39,18 @@ public class Player {
     BigDecimal investorThreshold = startingMoney.multiply(new BigDecimal("1.20"));
     BigDecimal speculatorThreshold = startingMoney.multiply(new BigDecimal("2.00"));
 
-    if (weeksTraded >= 20 && netWorth.compareTo(speculatorThreshold) >= 0) {
+    if (weeksTraded >= 20 &&
+        netWorth.compareTo(speculatorThreshold) >= 0) {
       return Status.SPECULATOR;
-    } else if (weeksTraded >= 10 && netWorth.compareTo(investorThreshold) >= 0) {
+    }
+
+    if (weeksTraded >= 10 &&
+        netWorth.compareTo(investorThreshold) >= 0) {
       return Status.INVESTOR;
     }
+
     return Status.NOVICE;
   }
-
 
   public void addMoney(BigDecimal amount) {
     Objects.requireNonNull(amount, "amount cannot be null");

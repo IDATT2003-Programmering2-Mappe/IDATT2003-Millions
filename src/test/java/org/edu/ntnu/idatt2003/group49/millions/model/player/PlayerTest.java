@@ -1,6 +1,9 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -86,5 +89,43 @@ class PlayerTest {
     assertEquals(curMoney.subtract(amount), player.getMoney());
   }
 
+  @Test
+  void getStatus_returnsInvestorIfWeeksTraded10OrHigherAndNetWorthIsGreaterThanThreshold() {
+    Stock stock = new Stock("APPL", "Apple", new BigDecimal("10"));
+    Share share = new Share(stock, new BigDecimal("10"), new BigDecimal("10"));
 
+    for(int i = 0; i < 11; i++) {
+      stock.addNewSalesPrice(new BigDecimal("100"));
+
+      new Purchase(share, i, new PurchaseCalculator(share)).commit(player);
+    }
+
+    assertEquals(Status.INVESTOR, player.getStatus());
+  }
+
+  @Test
+  void getStatus_returnsSpeculatorIfWeeksTraded20OrHigherAndNetWorthIsGreaterThanThreshold() {
+    Stock stock = new Stock("APPL", "Apple", new BigDecimal("10"));
+    Share share = new Share(stock, new BigDecimal("10"), new BigDecimal("10"));
+
+    for(int i = 0; i < 21; i++) {
+      stock.addNewSalesPrice(new BigDecimal("200"));
+
+      new Purchase(share, i, new PurchaseCalculator(share)).commit(player);
+    }
+
+    assertEquals(Status.SPECULATOR, player.getStatus());
+  }
+
+  @Test
+  void getStatus_returnsNoviceIfWeeksTraded10OrHigherAndNetWorthIsLessThanThreshold() {
+    Stock stock = new Stock("APPL", "Apple", new BigDecimal("10"));
+    Share share = new Share(stock, new BigDecimal("10"), new BigDecimal("10"));
+    for(int i = 0; i < 11; i++) {
+      stock.addNewSalesPrice(new BigDecimal("12"));
+      new Purchase(share, i, new PurchaseCalculator(share)).commit(player);
+    }
+
+    assertEquals(Status.NOVICE, player.getStatus());
+  }
 }
