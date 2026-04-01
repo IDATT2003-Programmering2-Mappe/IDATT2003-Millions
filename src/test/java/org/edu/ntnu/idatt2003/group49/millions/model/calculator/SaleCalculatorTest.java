@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.calculator;
+package org.edu.ntnu.idatt2003.group49.millions.model.calculator;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
