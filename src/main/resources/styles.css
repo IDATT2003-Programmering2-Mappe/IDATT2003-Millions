@@ -1,0 +1,15 @@
+.header {
+    -fx-background-color: cornflowerblue;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: center_left;
+}
+
+.title {
+    -fx-font-size: 3em;
+    -fx-font-weight: bold;
+}
+
+.navbar {
+    -fx-alignment: center;
+}
