@@ -1,22 +1,22 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import javafx.scene.layout.BorderPane;
-import org.edu.ntnu.idatt2003.group49.millions.view.HomeView;
+import org.edu.ntnu.idatt2003.group49.millions.view.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.Header;
 
 import java.util.logging.Logger;
 
-public class NavigationController {
+public class NavController {
   private final Logger logger = Logger.getLogger(getClass().getName());
   private final BorderPane root;
 
-  public NavigationController(BorderPane root) {
+  public NavController(BorderPane root) {
     this.root = root;
   }
 
-  public void showHomeView() {
+  public void showDashboardView() {
     root.setTop(new Header(this));
-    root.setCenter(new HomeView(this));
-    logger.info("Switched to HomeView");
+    root.setCenter(new DashboardView(this));
+    logger.info("Switched to DashboardView");
   }
 }
