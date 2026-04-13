@@ -1,15 +1,69 @@
 .header {
-    -fx-background-color: cornflowerblue;
-    -fx-padding: 10px;
+    -fx-background-color: #34384C;
+    -fx-padding: 10px 20px;
     -fx-spacing: 10px;
-    -fx-alignment: center_left;
+    -fx-alignment: center;
+}
+
+.header-label {
+    -fx-text-fill: white;
+}
+
+.title-container {
+    -fx-alignment: center;
 }
 
 .title {
     -fx-font-size: 3em;
     -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-fill: #BFDDFF;
+}
+
+.title-rect {
+    -fx-fill: #859BB4;
+}
+
+.searchbar-container {
+    -fx-alignment: center;
+}
+
+.searchbar {
+    -fx-alignment: center;
+}
+
+.search-field {
+    -fx-padding: 5px;
+}
+
+.user-section {
+    -fx-spacing: 10px;
+}
+
+.header-stats {
+    -fx-alignment: top_center;
+}
+
+.header-info {
+    -fx-alignment: center;
+    -fx-spacing: 5px;
+}
+
+.header-avatar {
+    -fx-border-radius: 50%;
 }
 
 .navbar {
-    -fx-alignment: center;
+    -fx-background-color: #7D7F8C;
+    -fx-padding: 5px;
+    -fx-alignment: center_left;
+    -fx-spacing: 10px;
+}
+
+.navbar-btn {
+    -fx-background-color: #A2A5B3;
+}
+
+.navbar-btn:hover {
+    -fx-cursor: hand;
 }

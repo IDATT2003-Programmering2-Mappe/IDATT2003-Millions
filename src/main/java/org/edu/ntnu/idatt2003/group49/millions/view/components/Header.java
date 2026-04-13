@@ -2,12 +2,14 @@ package org.edu.ntnu.idatt2003.group49.millions.view.components;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
@@ -22,21 +24,56 @@ public class Header extends MillionsView {
 
   @Override
   protected Pane build() {
-    HBox body = new HBox();
-    body.getStyleClass().add("header");
+    VBox body = new VBox();
+    BorderPane topSection = new BorderPane();
+    topSection.getStyleClass().add("header");
+
+    topSection.setLeft(title());
+    topSection.setCenter(searchBar());
+    topSection.setRight(userSection());
 
     body.getChildren().addAll(
-      title(),
-      navBar(),
-      userAvatar()
+      topSection,
+      navBar()
     );
     return body;
   }
 
-  private Label title() {
+  private VBox title() {
+    VBox titleContainer = new VBox();
+    titleContainer.getStyleClass().add("title-container");
+
     Label title = new Label("Millions");
     title.getStyleClass().add("title");
-    return title;
+
+    Rectangle rect = new Rectangle();
+    rect.getStyleClass().add("title-rect");
+    rect.widthProperty().bind(title.widthProperty());
+    rect.setHeight(5);
+
+    titleContainer.getChildren().addAll(
+      title,
+      rect
+    );
+    return titleContainer;
+  }
+
+  private HBox searchBar() {
+    HBox searchBarContainer = new HBox();
+    searchBarContainer.getStyleClass().add("searchbar-container");
+
+    HBox searchBar = new HBox();
+    searchBar.getStyleClass().add("searchbar");
+
+    TextField searchField = new TextField();
+    searchField.getStyleClass().add("search-field");
+    searchField.setPromptText("Search");
+
+    searchBar.getChildren().addAll(
+      searchField
+    );
+    searchBarContainer.getChildren().add(searchBar);
+    return searchBarContainer;
   }
 
   private HBox navBar() {
@@ -44,24 +81,58 @@ public class Header extends MillionsView {
     nav.getStyleClass().add("navbar");
 
     // Buttons
+    Button btnDashboard = new Button("Dashboard");
+    btnDashboard.getStyleClass().add("navbar-btn");
+
     Button btnStocks = new Button("Stocks");
+    btnStocks.getStyleClass().add("navbar-btn");
     btnStocks.setOnAction(e -> this.navController.showDashboardView());
 
     nav.getChildren().addAll(
-        btnStocks
+      btnDashboard,
+      btnStocks
     );
     return nav;
   }
 
-  private StackPane userAvatar() {
-    StackPane userAvatar = new StackPane();
-    userAvatar.getStyleClass().add("userAvatar");
-    ImageView avatar = new ImageView(
-      new Image(Objects.requireNonNull(getClass().getResource("/images/shrek.png")).toExternalForm())
+  private HBox userSection() {
+    HBox userSection = new HBox();
+    userSection.getStyleClass().add("user-section");
+
+    VBox stats = new VBox();
+    stats.getStyleClass().add("header-stats");
+
+    VBox info = new VBox();
+    info.getStyleClass().add("header-info");
+
+    Label netWorth = new Label("Net Worth:");
+    netWorth.getStyleClass().add("header-label");
+
+    Label money = new Label("100 000 000$");
+    money.getStyleClass().add("header-label");
+
+    Label name = new Label("Shrek");
+    name.getStyleClass().add("header-label");
+
+    Circle avatar = new Circle(32);
+    avatar.getStyleClass().add("header-avatar");
+    Image img = new Image(Objects.requireNonNull(getClass().getResource("/images/shrek.png")).toExternalForm());
+    avatar.setFill(new ImagePattern(img));
+
+    stats.getChildren().addAll(
+      netWorth,
+      money
     );
-    avatar.setFitHeight(64);
-    avatar.setFitWidth(64);
-    userAvatar.getChildren().addAll(avatar);
-    return userAvatar;
+
+    info.getChildren().addAll(
+      avatar,
+      name
+    );
+
+    userSection.getChildren().addAll(
+      stats,
+      info
+    );
+    return userSection;
   }
 }
