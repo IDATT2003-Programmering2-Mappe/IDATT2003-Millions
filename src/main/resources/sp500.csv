@@ -1,5 +1,5 @@
 # S&P 500 Companies by Market Cap
-# Ticker,Name,Price
+# Symbol,Name,Price
 
 NVDA,Nvidia,191.27
 AAPL,Apple Inc.,276.43

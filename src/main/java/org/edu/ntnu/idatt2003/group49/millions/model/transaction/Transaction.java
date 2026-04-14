@@ -2,7 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model.transaction;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.model.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 
 import java.util.Objects;
 
@@ -10,7 +10,7 @@ public abstract class Transaction {
   private final Share share;
   private final int week;
   private final TransactionCalculator calculator;
-  private boolean commited;
+  protected boolean commited;
 
   protected Transaction(Share share, int week, TransactionCalculator calculator) {
     if (week < 0) {
@@ -38,9 +38,5 @@ public abstract class Transaction {
     return commited;
   }
 
-  public void markCommited() {
-    this.commited = true;
-  }
-
-  public void commit(Player player) { }
+  public abstract void commit(Player player);
 }

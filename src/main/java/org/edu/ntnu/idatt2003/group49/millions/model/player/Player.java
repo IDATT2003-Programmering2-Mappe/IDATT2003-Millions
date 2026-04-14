@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -19,8 +19,8 @@ public class Player {
     if (this.startingMoney.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("startingMoney must be greater than zero");
     }
-    this.money              = startingMoney;
-    this.portfolio          = new Portfolio();
+    this.money = startingMoney;
+    this.portfolio = new Portfolio();
     this.transactionArchive = new TransactionArchive();
   }
 
@@ -30,6 +30,26 @@ public class Player {
 
   public BigDecimal getMoney() {
     return money;
+  }
+
+  public Status getStatus() {
+    BigDecimal netWorth = getNetWorth();
+    int weeksTraded = transactionArchive.countDistinctWeeks();
+
+    BigDecimal investorThreshold = startingMoney.multiply(new BigDecimal("1.20"));
+    BigDecimal speculatorThreshold = startingMoney.multiply(new BigDecimal("2.00"));
+
+    if (weeksTraded >= 20 &&
+        netWorth.compareTo(speculatorThreshold) >= 0) {
+      return Status.SPECULATOR;
+    }
+
+    if (weeksTraded >= 10 &&
+        netWorth.compareTo(investorThreshold) >= 0) {
+      return Status.INVESTOR;
+    }
+
+    return Status.NOVICE;
   }
 
   public void addMoney(BigDecimal amount) {
@@ -59,4 +79,9 @@ public class Player {
   public TransactionArchive getTransactionArchive() {
     return transactionArchive;
   }
-}
+
+  public BigDecimal getNetWorth() {
+    return money.add(portfolio.getNetWorth());
+  }
+  }
+
