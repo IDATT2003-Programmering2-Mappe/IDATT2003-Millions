@@ -1,7 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import javafx.scene.layout.BorderPane;
-import org.edu.ntnu.idatt2003.group49.millions.view.DashboardView;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.Header;
 
 import java.util.logging.Logger;

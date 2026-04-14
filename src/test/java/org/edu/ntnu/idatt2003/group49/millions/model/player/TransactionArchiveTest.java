@@ -2,8 +2,8 @@ package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;

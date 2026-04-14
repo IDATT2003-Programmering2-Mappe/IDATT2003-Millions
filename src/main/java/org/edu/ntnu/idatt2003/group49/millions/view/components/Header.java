@@ -4,7 +4,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 import javafx.scene.paint.ImagePattern;
@@ -16,9 +15,13 @@ import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import java.util.Objects;
 
 public class Header extends MillionsView {
+  private final NavController navController;
+
   public Header(NavController navController) {
-    super(navController);
-    getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles.css")).toExternalForm());
+    this.navController = navController;
+    getStylesheets().add(Objects.requireNonNull(
+      getClass().getResource("/styles/header.css")
+    ).toExternalForm());
     getChildren().add(build());
   }
 
@@ -105,14 +108,11 @@ public class Header extends MillionsView {
     VBox info = new VBox();
     info.getStyleClass().add("header-info");
 
-    Label netWorth = new Label("Net Worth:");
+    Label netWorth = new Label("Cash:");
     netWorth.getStyleClass().add("header-label");
 
     Label money = new Label("100 000 000$");
     money.getStyleClass().add("header-label");
-
-    Label name = new Label("Shrek");
-    name.getStyleClass().add("header-label");
 
     Circle avatar = new Circle(32);
     avatar.getStyleClass().add("header-avatar");
@@ -125,8 +125,7 @@ public class Header extends MillionsView {
     );
 
     info.getChildren().addAll(
-      avatar,
-      name
+      avatar
     );
 
     userSection.getChildren().addAll(

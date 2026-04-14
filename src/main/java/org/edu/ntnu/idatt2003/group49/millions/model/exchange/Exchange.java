@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
