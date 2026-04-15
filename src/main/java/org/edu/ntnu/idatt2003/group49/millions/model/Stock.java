@@ -2,6 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,6 +31,7 @@ public class Stock {
     this.symbol = Objects.requireNonNull(symbol, "symbol cannot be null");
     this.company = Objects.requireNonNull(company, "company cannot be null");
     this.prices = new ArrayList<>();
+
     this.prices.add(Objects.requireNonNull(salesPrice, "salesPrice cannot be null"));
     if (symbol.isBlank()) {
       throw new IllegalArgumentException("Symbol cannot be blank");
@@ -89,5 +91,52 @@ public class Stock {
       throw new IllegalArgumentException("Price cannot be negative");
     }
     prices.add(price);
+  }
+
+  /**
+   * Returns all earlier prices for the stock
+   *
+   * @return an immutable list of historical prices
+   */
+  public List<BigDecimal> getHistoricalPrices() {
+    return List.copyOf(prices);
+  }
+
+  /**
+   * returns the highest price for this stock
+   *
+   * @return the highest price
+   */
+  public BigDecimal getHighestPrice() {
+    return prices.stream().max(BigDecimal::compareTo)
+            .orElse(BigDecimal.ZERO);
+  }
+
+  /**
+   * returns the lowest price for this stock
+   *
+   * @return the lowest price
+   */
+  public BigDecimal getLowestPrice() {
+    return prices.stream().min(BigDecimal::compareTo)
+            .orElse(BigDecimal.ZERO);
+  }
+
+
+  /**
+   * returns the price change since last price update
+   *
+   * @return pricechange
+   */
+  public BigDecimal getLatestPriceChange() {
+
+    if (prices.size() < 2) {
+      return BigDecimal.ZERO;
+    }
+
+    BigDecimal latestPrice = getSalesPrice();
+    BigDecimal previousPrice = prices.get(prices.size() - 2);
+
+    return latestPrice.subtract(previousPrice);
   }
 }
