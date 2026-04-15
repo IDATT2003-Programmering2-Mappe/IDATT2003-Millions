@@ -69,9 +69,9 @@ public class MillionsGraph extends MillionsView {
   private void changeLowerBoundBasedOnMode() {
     switch (mode) {
       case ONE_MONTH -> xAxis.setLowerBound(xAxis.getUpperBound() - 4);
-      case THREE_MONTHS -> xAxis.setLowerBound(xAxis.getUpperBound() - 12);
-      case SIX_MONTHS -> xAxis.setLowerBound(xAxis.getUpperBound() - 24);
-      case ONE_YEAR -> xAxis.setLowerBound(xAxis.getUpperBound() - 48);
+      case THREE_MONTHS -> xAxis.setLowerBound(xAxis.getUpperBound() - 13);
+      case SIX_MONTHS -> xAxis.setLowerBound(xAxis.getUpperBound() - 26);
+      case ONE_YEAR -> xAxis.setLowerBound(xAxis.getUpperBound() - 52);
       case MAX -> xAxis.setLowerBound(1);
     }
   }
