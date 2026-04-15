@@ -95,7 +95,7 @@ public class MillionsGraph extends MillionsView {
 
     Button threeMonthsBtn = new Button("3M");
     threeMonthsBtn.setOnAction(e -> {
-      if (this.xAxis.getUpperBound() > 12) {
+      if (this.xAxis.getUpperBound() > 13) {
         this.mode = GraphMode.THREE_MONTHS;
         changeLowerBoundBasedOnMode();
       }
@@ -103,7 +103,7 @@ public class MillionsGraph extends MillionsView {
 
     Button sixMonthsBtn = new Button("6M");
     sixMonthsBtn.setOnAction(e -> {
-      if (this.xAxis.getUpperBound() > 24) {
+      if (this.xAxis.getUpperBound() > 26) {
         this.mode = GraphMode.SIX_MONTHS;
         changeLowerBoundBasedOnMode();
       }
@@ -111,7 +111,7 @@ public class MillionsGraph extends MillionsView {
 
     Button oneYearBtn = new Button("1Y");
     oneYearBtn.setOnAction(e -> {
-      if (this.xAxis.getUpperBound() > 48) {
+      if (this.xAxis.getUpperBound() > 52) {
         this.mode = GraphMode.ONE_YEAR;
         changeLowerBoundBasedOnMode();
       }
