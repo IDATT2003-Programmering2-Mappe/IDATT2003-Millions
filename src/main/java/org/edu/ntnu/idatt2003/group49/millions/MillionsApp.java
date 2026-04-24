@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileWriter;
 
@@ -53,7 +54,8 @@ public class MillionsApp extends Application {
 
     Random rand = new Random();
 
-    Exchange nasdaq = new Exchange("Nasdaq", stocks);
+    TransactionFactory transactionFactory = new TransactionFactory();
+    Exchange nasdaq = new Exchange("Nasdaq", stocks, transactionFactory);
     Map<String, Stock> stockMap = nasdaq.getStockMap();
     for(Map.Entry<String, Stock> entry : stockMap.entrySet()) {
       System.out.println(entry.getValue().getSalesPrice());

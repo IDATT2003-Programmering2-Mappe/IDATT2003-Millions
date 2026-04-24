@@ -7,6 +7,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -17,13 +18,16 @@ public class Exchange {
   private int week = 1;
   private final Map<String, Stock> stockMap;
   private final Random random;
+  private final TransactionFactory transactionFactory;
 
-  public Exchange(String name, List<Stock> stocks) {
+
+  public Exchange(String name, List<Stock> stocks, TransactionFactory transactionFactory) {
     Objects.requireNonNull(stocks, "name must not be null");
     if (stocks.isEmpty()) {
       throw new IllegalArgumentException("stocks cannot be empty");
     }
     this.name = Objects.requireNonNull(name, "name cannot be null");
+    this.transactionFactory = Objects.requireNonNull(transactionFactory, "transactionFactory cannot be null");
     this.stockMap = new HashMap<>();
     stocks.forEach(stock -> stockMap.put(stock.getSymbol(), stock));
     random = new Random();
@@ -72,24 +76,26 @@ public class Exchange {
     }
 
     Stock stock = getStock(symbol);
-    Share share = new Share(stock, quantity, stock.getSalesPrice());
-    TransactionCalculator purchaseCalculator = new PurchaseCalculator(share);
-
-    Purchase purchase = new Purchase(share, getWeek(), purchaseCalculator);
+    Transaction purchase  = transactionFactory.createPurchase(stock, quantity, getWeek());
     purchase.commit(player);
     return purchase;
   }
 
-  public Transaction sell(Share share, Player player) {
-    Objects.requireNonNull(share, "share cannot be null");
+  public Transaction sell(Share ownedShare, BigDecimal quantityToSell, Player player) {
+    Objects.requireNonNull(ownedShare, "ownedShare cannot be null");
+    Objects.requireNonNull(quantityToSell, "quantityToSell cannot be null");
     Objects.requireNonNull(player, "player cannot be null");
-    if (!player.getPortfolio().contains(share)) {
+    if (!player.getPortfolio().contains(ownedShare)) {
       throw new IllegalStateException("player cannot sell a share they do not own.");
     }
+    if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException("quantityToSell must be greater than zero");
+    }
+    if (quantityToSell.compareTo(ownedShare.getQuantity()) > 0) {
+      throw new IllegalArgumentException("Cannot sell more shares than are owned");
+    }
 
-    TransactionCalculator saleCalculator = new SaleCalculator(share);
-
-    Transaction sale = new Sale(share, getWeek(), saleCalculator);
+    Transaction sale = transactionFactory.createSale(ownedShare, quantityToSell, getWeek());
     sale.commit(player);
     return sale;
   }
