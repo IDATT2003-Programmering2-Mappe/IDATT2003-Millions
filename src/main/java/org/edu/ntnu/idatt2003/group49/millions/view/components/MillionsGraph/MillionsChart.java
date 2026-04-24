@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph;
 
+import javafx.geometry.Side;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -34,6 +35,7 @@ public class MillionsChart extends MillionsView {
   protected Pane build() {
     this.xAxis = new NumberAxis(1, 2, 1);
     this.yAxis = new NumberAxis();
+    yAxis.setSide(Side.RIGHT);
 
     yAxis.setTickLabelFormatter(new StringConverter<Number>() {
       @Override
@@ -117,7 +119,7 @@ public class MillionsChart extends MillionsView {
     this.chartMode = mode;
     updateChartBasedOnMode();
     resetFilterButtonsStyles();
-    logger.info("Changed chart mode to: " + this.chartMode);
+    logger.info("Switched chart mode to: " + this.chartMode);
   }
 
   private void resetFilterButtonsStyles() {
