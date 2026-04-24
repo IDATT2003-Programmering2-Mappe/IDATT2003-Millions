@@ -8,7 +8,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsGraph;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
 import java.util.Objects;
@@ -28,20 +28,10 @@ public class DashboardView extends MillionsView {
 
   @Override
   protected Pane build() {
-    HBox body = new HBox();
-    VBox bodyLeft = new VBox();
-    bodyLeft.getStyleClass().add("body-left");
-    bodyLeft.setFillWidth(true);
-    VBox bodyRight = new VBox();
-    bodyRight.getStyleClass().add("body-right");
-    bodyRight.setFillWidth(true);
-    HBox.setHgrow(bodyLeft, Priority.ALWAYS);
-    HBox.setHgrow(bodyRight, Priority.ALWAYS);
-
     Random rand = new Random();
     AtomicInteger week = new AtomicInteger(2);
 
-    MillionsGraph chart = new MillionsGraph();
+    MillionsChart chart = new MillionsChart();
     chart.addData(new XYChart.Data<>(1, 50));
 
     Button advanceBtn = new Button("Advance");
@@ -51,14 +41,27 @@ public class DashboardView extends MillionsView {
       week.getAndIncrement();
     });
 
+    VBox bodyLeft = new VBox();
+    bodyLeft.getStyleClass().add("body-left");
+    bodyLeft.setFillWidth(true);
+    HBox.setHgrow(bodyLeft, Priority.ALWAYS);
+
     bodyLeft.getChildren().addAll(
       chart,
       advanceBtn
     );
 
+    VBox bodyRight = new VBox();
+    bodyRight.getStyleClass().add("body-right");
+    bodyRight.setFillWidth(true);
+    HBox.setHgrow(bodyRight, Priority.ALWAYS);
+
     bodyRight.getChildren().add(
       new OwnedStocks(this.navController)
     );
+
+    HBox body = new HBox();
+    body.getStyleClass().add("dashboard");
 
     body.getChildren().addAll(
       bodyLeft,
