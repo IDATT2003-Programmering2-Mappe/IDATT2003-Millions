@@ -2,6 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +17,7 @@ class ExchangeTest {
 
   private Exchange exchange;
   private List<Stock> stocks;
+  private TransactionFactory transactionFactory;
   private final Stock nvidiaStock = new Stock("NVDA", "Nvidia", new BigDecimal("191.27"));
   private final Stock appleStock = new Stock("AAPL", "Apple", new BigDecimal("276.43"));
   private final Stock microsoftStock = new Stock("MSFT", "Microsoft", new BigDecimal("404.68"));
@@ -32,7 +34,9 @@ class ExchangeTest {
     stocks.add(amazonStock);
     stocks.add(googleStockA);
     stocks.add(googleStockB);
-    exchange = new Exchange("Nasdaq", stocks);
+
+    transactionFactory = new TransactionFactory();
+    exchange = new Exchange("Nasdaq", stocks, transactionFactory);
   }
 
   @Test
