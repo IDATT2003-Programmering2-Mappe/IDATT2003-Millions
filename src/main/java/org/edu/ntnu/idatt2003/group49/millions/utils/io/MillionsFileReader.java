@@ -1,6 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.utils.io;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 
 import java.io.BufferedReader;
 import java.io.IOException;
