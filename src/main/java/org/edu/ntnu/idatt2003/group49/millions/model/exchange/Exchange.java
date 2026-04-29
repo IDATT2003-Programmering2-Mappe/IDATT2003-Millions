@@ -3,6 +3,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.Subject;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
-public class Exchange {
+public class Exchange extends Subject {
   private final String name;
   private int week = 1;
   private final Map<String, Stock> stockMap;
@@ -147,4 +148,8 @@ public class Exchange {
     return loserList;
   }
 
+  @Override
+  public void notifyObservers() {
+
+  }
 }
