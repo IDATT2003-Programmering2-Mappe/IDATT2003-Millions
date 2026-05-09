@@ -1,8 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import javafx.scene.layout.BorderPane;
-import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
+import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 
 import java.util.logging.Logger;
 
@@ -23,6 +22,6 @@ public class NavController implements Navigator {
   public void goToDashboard() {
     root.setTop(viewFactory.createHeaderView());
     root.setCenter(viewFactory.createDashboardView());
-    logger.info("Switched to DashboardView");
+    logger.info("Switched to Dashboard");
   }
 }

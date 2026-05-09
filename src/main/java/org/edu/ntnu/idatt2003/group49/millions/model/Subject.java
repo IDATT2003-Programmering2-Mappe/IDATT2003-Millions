@@ -1,24 +1,27 @@
 package org.edu.ntnu.idatt2003.group49.millions.model;
 
-import org.edu.ntnu.idatt2003.group49.millions.view.Observer;
+import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Subject {
-  List<Observer> observers;
+  List<StockObserver> stockObservers;
 
   public Subject() {
-    observers = new ArrayList<>();
+    stockObservers = new ArrayList<>();
   }
 
-  public void addObserver(Observer observer) {
-    observers.add(observer);
+  public void addObserver(StockObserver stockObserver) {
+    stockObservers.add(stockObserver);
   };
 
-  public void removeObserver(Observer observer) {
-    observers.remove(observer);
+  public void removeObserver(StockObserver stockObserver) {
+    stockObservers.remove(stockObserver);
   };
 
-  public abstract void notifyObservers();
+  public void notifyObservers(List<BigDecimal> stockData, int week) {
+    stockObservers.forEach(observer -> observer.update(stockData, week));
+  };
 }

@@ -8,11 +8,10 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
-import org.edu.ntnu.idatt2003.group49.millions.controller.ViewFactory;
+import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
+import org.edu.ntnu.idatt2003.group49.millions.model.Test;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
-import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileWriter;
 
 import java.nio.file.Path;
 import java.util.Objects;
@@ -22,6 +21,8 @@ public class MillionsApp extends Application {
   private NavController nav;
   private Exchange exchange;
   private ViewFactory viewFactory;
+
+  private Test test;
 
   @Override
   public void start(Stage stage) {
@@ -40,9 +41,10 @@ public class MillionsApp extends Application {
     this.exchange = new Exchange("Nasdaq", MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
     this.root = new BorderPane();
     this.nav = new NavController(root);
-    this.viewFactory = new ViewFactory(nav, new ExchangeController(exchange));
-    this.nav.setViewFactory(viewFactory);
 
+    this.test = new Test();
+    this.viewFactory = new ViewFactory(nav, test);
+    this.nav.setViewFactory(viewFactory);
   }
 
   static void main(String[] args) {

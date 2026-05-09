@@ -1,0 +1,28 @@
+package org.edu.ntnu.idatt2003.group49.millions.helper;
+
+import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.model.Test;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
+
+public class ViewFactory {
+  private final Navigator navigator;
+  private final Test exchange;
+
+  public ViewFactory(Navigator navigator, Test exchange) {
+    this.navigator = navigator;
+    this.exchange = exchange;
+  }
+
+  public HeaderView createHeaderView() {
+    return new HeaderView(navigator);
+  }
+
+  public DashboardView createDashboardView() {
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange));
+    this.exchange.addObserver(dashboard);
+    return dashboard;
+  }
+}
