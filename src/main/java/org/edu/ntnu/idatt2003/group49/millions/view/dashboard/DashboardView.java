@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.Table.MillionsTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
 import java.util.Objects;
@@ -57,7 +58,7 @@ public class DashboardView extends MillionsView {
     HBox.setHgrow(bodyRight, Priority.ALWAYS);
 
     bodyRight.getChildren().add(
-      new OwnedStocks(this.navController)
+      new MillionsTable(this.navController)
     );
 
     HBox body = new HBox();
