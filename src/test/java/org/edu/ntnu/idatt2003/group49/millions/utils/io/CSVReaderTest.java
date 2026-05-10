@@ -12,7 +12,7 @@ class CSVReaderTest {
 
   @Test
   void readCSVFile_throwsWhenPathIsNull() {
-    assertThrows(NullPointerException.class, () -> CSVReader.readCSVFile(null));
+    assertThrows(NullPointerException.class, () -> CSVReader.readCSV(null));
   }
 
   @Test

@@ -20,9 +20,8 @@ public class CSVWriter {
    *
    * @param path filePath.
    * @param stockMap data to be written to file.
-   * @throws IOException if writer is unable to write to file.
    */
-  public static void writeStockDataToFile(Path path, Map<String, Stock> stockMap) throws IOException {
+  public static void writeStockDataToFile(Path path, Map<String, Stock> stockMap) {
     Objects.requireNonNull(path, "path is null");
     Objects.requireNonNull(stockMap, "stockMap is null");
 

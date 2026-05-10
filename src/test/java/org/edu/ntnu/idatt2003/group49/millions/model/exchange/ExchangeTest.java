@@ -5,6 +5,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -172,7 +173,7 @@ class ExchangeTest {
   }
 
   @Test
-  void advance_IncrementsWeekByOne() {
+  void advance_IncrementsWeekByOne() throws IOException {
     int weekBefore = exchange.getWeek();
 
     exchange.advance();

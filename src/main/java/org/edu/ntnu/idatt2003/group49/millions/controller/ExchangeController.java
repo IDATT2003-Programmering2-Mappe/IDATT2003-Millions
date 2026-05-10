@@ -2,9 +2,11 @@ package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +20,8 @@ public class ExchangeController {
   public void advance() throws IOException {
     System.out.println("Advance clicked");
     exchange.advance();
+
+    CSVWriter.appendStockPricesToFile(Path.of("data/stock_data.csv"), getStockMap());
   }
 
   public Map<String, Stock> getStockMap() {

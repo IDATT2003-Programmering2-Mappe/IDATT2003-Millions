@@ -8,12 +8,9 @@ import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Purchase;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
-import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.nio.file.Path;
 import java.util.*;
 
 public class Exchange extends StockSubject {
@@ -98,7 +95,7 @@ public class Exchange extends StockSubject {
     return sale;
   }
 
-  public void advance() throws IOException {
+  public void advance() {
     double maxPercentage = 0.11;
 
     stockMap.forEach((symbol, stock) -> {
@@ -113,7 +110,6 @@ public class Exchange extends StockSubject {
       }
     });
     notifyObservers(stockMap, week);
-    CSVWriter.appendStockPricesToFile(Path.of("src/main/resources/stock_data.csv"), stockMap);
     week++;
   }
 
