@@ -113,7 +113,7 @@ public class Exchange extends StockSubject {
       }
     });
     notifyObservers(stockMap, week);
-    CSVWriter.appendCurrentStockPrices(Path.of("src/main/resources/test.csv"), stockMap);
+    CSVWriter.appendStockPricesToFile(Path.of("src/main/resources/stock_data.csv"), stockMap);
     week++;
   }
 

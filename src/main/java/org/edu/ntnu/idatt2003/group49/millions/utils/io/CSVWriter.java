@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -21,37 +19,34 @@ public class CSVWriter {
    * Writes Stock Data to a file with the format: [symbol, company, price].
    *
    * @param path filePath.
-   * @param stockData stockData to be written to file.
+   * @param stockMap data to be written to file.
    * @throws IOException if writer is unable to write to file.
    */
-  public static void writeStockDataToFile(Path path, Map<String, Stock> stockData) throws IOException {
+  public static void writeStockDataToFile(Path path, Map<String, Stock> stockMap) throws IOException {
     Objects.requireNonNull(path, "path is null");
-    Objects.requireNonNull(stockData, "stockData is null");
+    Objects.requireNonNull(stockMap, "stockMap is null");
 
     try (Writer writer = Files.newBufferedWriter(path)) {
       writer.write("# Stock Data" + System.lineSeparator());
       writer.write("# Symbol,Company,Price" + System.lineSeparator());
       writer.write(System.lineSeparator());
 
-      stockData.forEach((symbol, stock) ->
-      {
-        System.out.println(symbol);
-          try {
-              writer.append("%s, %s, %s".formatted(stock.getSymbol(), stock.getCompany(), stock.getSalesPrice()));
-              writer.append(System.lineSeparator());
-          } catch (IOException e) {
-              throw new RuntimeException(e);
-          }
+      stockMap.forEach((symbol, stock) -> {
+        try {
+            writer.append("%s, %s, %s".formatted(stock.getSymbol(), stock.getCompany(), stock.getSalesPrice()));
+            writer.append(System.lineSeparator());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
       });
     } catch (IOException e) {
       logger.log(Level.SEVERE, "Could not write to file: ", e);
     }
   }
 
-  public static void appendCurrentStockPrices(Path path, Map<String, Stock> stockMap) {
+  public static void appendStockPricesToFile(Path path, Map<String, Stock> stockMap) {
     Objects.requireNonNull(path, "path is null");
     Objects.requireNonNull(stockMap, "stockData is null");
-    List<Stock> stocks = new ArrayList<>(stockMap.values());
 
     try {
       List<String> lines = Files.readAllLines(path);
@@ -60,14 +55,9 @@ public class CSVWriter {
         if (lines.get(i).startsWith("#") || lines.get(i).isBlank()) {
           continue;
         }
-        if (i >= stockMap.size()) {
-          break;
-        }
 
-        if (lines.get(i - 3).startsWith(stocks.get(i).getSymbol())) {
-          System.out.println("Hellodsianbdisjahb");
-          lines.set(i, lines.get(i) + ", " + stocks.get(i).getSalesPrice());
-        }
+        String[] columns = lines.get(i).split(",");
+        lines.set(i, lines.get(i) + ", " + stockMap.get(columns[0]).getSalesPrice());
       }
 
       Files.write(path, lines);

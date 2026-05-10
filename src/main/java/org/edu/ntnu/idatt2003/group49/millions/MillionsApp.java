@@ -35,7 +35,7 @@ public class MillionsApp extends Application {
   @Override
   public void init() throws IOException {
     Exchange exchange = new Exchange("NASDAQ", CSVReader.convertCSVToStocksList(Path.of("src/main/resources/sp500.csv")));
-    CSVWriter.writeStockDataToFile(Path.of("src/main/resources/test.csv"), exchange.getStockMap());
+    CSVWriter.writeStockDataToFile(Path.of("src/main/resources/stock_data.csv"), exchange.getStockMap());
     this.root = new BorderPane();
     this.nav = new NavController(root);
 

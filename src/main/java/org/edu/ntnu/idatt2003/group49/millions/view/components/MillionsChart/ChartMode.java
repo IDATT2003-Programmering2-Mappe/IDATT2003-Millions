@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph;
+package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart;
 
 public enum ChartMode {
   ONE_MONTH,

@@ -1,14 +1,17 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph;
+package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart;
 
 import javafx.geometry.Side;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.util.StringConverter;
+import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +19,7 @@ import java.util.logging.Logger;
 
 public class MillionsChart extends MillionsView {
   private Logger logger = Logger.getLogger(MillionsChart.class.getName());
-  private final XYChart.Series<Number, Number> series;
+  private XYChart.Series<Number, Number> series;
   private NumberAxis xAxis;
   private NumberAxis yAxis;
   private ChartMode chartMode = ChartMode.MAX;
@@ -33,7 +36,7 @@ public class MillionsChart extends MillionsView {
 
   @Override
   protected Pane build() {
-    this.xAxis = new NumberAxis(1, 2, 1);
+    this.xAxis = new NumberAxis(0, 1, 1);
     this.yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
 
@@ -60,13 +63,16 @@ public class MillionsChart extends MillionsView {
     chartContainer.getStyleClass().add("chart-container");
     chartContainer.getChildren().addAll(
       filters(),
+      new Label("Nvidia"),
       chart
     );
     return chartContainer;
   }
 
   public void addData(XYChart.Data<Number, Number> data) {
-    xAxis.setUpperBound(data.getXValue().doubleValue());
+    if (!(data.getXValue().doubleValue() < 1)) {
+     xAxis.setUpperBound(data.getXValue().doubleValue());
+    }
     updateChartBasedOnMode();
     this.series.getData().add(data);
   }
@@ -107,7 +113,7 @@ public class MillionsChart extends MillionsView {
         xAxis.setTickUnit(Math.round((double) oneYearInWeeks / 10));
       }
       case MAX -> {
-        xAxis.setLowerBound(1);
+        xAxis.setLowerBound(0);
         if (xAxis.getUpperBound() >= threeMonthsInWeeks) {
           xAxis.setTickUnit(Math.round(xAxis.getUpperBound() / 10));
         }
@@ -123,40 +129,40 @@ public class MillionsChart extends MillionsView {
   }
 
   private void resetFilterButtonsStyles() {
-    this.filterButtons.forEach(b -> b.setId("filters-btn"));
+    this.filterButtons.forEach(b -> b.setId("filter-btn"));
   }
 
   private HBox filters() {
     Button oneMonthBtn = new Button("1M");
-    oneMonthBtn.setId("filters-btn");
+    oneMonthBtn.setId("filter-btn");
     oneMonthBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.ONE_MONTH);
       oneMonthBtn.setId("filter-btn-clicked");
     });
 
     Button threeMonthsBtn = new Button("3M");
-    threeMonthsBtn.setId("filters-btn");
+    threeMonthsBtn.setId("filter-btn");
     threeMonthsBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.THREE_MONTHS);
       threeMonthsBtn.setId("filter-btn-clicked");
     });
 
     Button sixMonthsBtn = new Button("6M");
-    sixMonthsBtn.setId("filters-btn");
+    sixMonthsBtn.setId("filter-btn");
     sixMonthsBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.SIX_MONTHS);
       sixMonthsBtn.setId("filter-btn-clicked");
     });
 
     Button oneYearBtn = new Button("1Y");
-    oneYearBtn.setId("filters-btn");
+    oneYearBtn.setId("filter-btn");
     oneYearBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.ONE_YEAR);
       oneYearBtn.setId("filter-btn-clicked");
     });
 
     Button maxBtn = new Button("MAX");
-    maxBtn.setId("filters-btn");
+    maxBtn.setId("filter-btn-clicked");
     maxBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.MAX);
       maxBtn.setId("filter-btn-clicked");
@@ -168,7 +174,7 @@ public class MillionsChart extends MillionsView {
 
     HBox filters = new HBox();
     filters.setSpacing(4);
-    filters.getStyleClass().add("filters");
+    filters.getStyleClass().add("filter");
     filters.getChildren().addAll(filterButtons);
     return filters;
   }
