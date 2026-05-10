@@ -13,11 +13,12 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -79,13 +80,19 @@ public class DashboardView extends MillionsView implements StockObserver {
       bodyRight
     );
 
+    List<BigDecimal> nvidiaPrices = exchangeController.getStockPrices("NVDA");
+    for (int i = 0; i < nvidiaPrices.size(); i++) {
+      XYChart.Data<Number, Number> data = new XYChart.Data<>(i, nvidiaPrices.get(i));
+      chart.addData(data);
+    }
+
     return body;
   }
 
   @Override
   public void update(Map<String, Stock> stockMap, int week) {
     System.out.println(stockMap.get("NVDA").getSalesPrice());
-    XYChart.Data<Number, Number> data = new XYChart.Data<>(week, stockMap.get("NVDA").getSalesPrice());
-    chart.addData(data);
+    System.out.println("Monk");
+    chart.addData(new XYChart.Data<>(week, stockMap.get("NVDA").getSalesPrice()));
   }
 }

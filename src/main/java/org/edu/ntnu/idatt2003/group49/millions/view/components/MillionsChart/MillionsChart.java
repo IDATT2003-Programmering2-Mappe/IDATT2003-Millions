@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph;
+package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart;
 
 import javafx.geometry.Side;
 import javafx.scene.chart.*;
@@ -33,7 +33,7 @@ public class MillionsChart extends MillionsView {
 
   @Override
   protected Pane build() {
-    this.xAxis = new NumberAxis(1, 2, 1);
+    this.xAxis = new NumberAxis(0, 1, 1);
     NumberAxis yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
 
@@ -60,13 +60,16 @@ public class MillionsChart extends MillionsView {
     chartContainer.getStyleClass().add("chart-container");
     chartContainer.getChildren().addAll(
       filters(),
+      new Label("Nvidia"),
       chart
     );
     return chartContainer;
   }
 
   public void addData(XYChart.Data<Number, Number> data) {
-    xAxis.setUpperBound(data.getXValue().doubleValue());
+    if (!(data.getXValue().doubleValue() < 1)) {
+     xAxis.setUpperBound(data.getXValue().doubleValue());
+    }
     updateChartBasedOnMode();
     this.series.getData().add(data);
   }
@@ -102,7 +105,7 @@ public class MillionsChart extends MillionsView {
         xAxis.setTickUnit(Math.round((double) TimeConstants.ONE_YEAR_IN_WEEKS / 10));
       }
       case MAX -> {
-        xAxis.setLowerBound(1);
+        xAxis.setLowerBound(0);
         if (xAxis.getUpperBound() >= TimeConstants.THREE_MONTHS_IN_WEEKS) {
           xAxis.setTickUnit(Math.round(xAxis.getUpperBound() / 10));
         }
@@ -151,7 +154,7 @@ public class MillionsChart extends MillionsView {
     });
 
     Button maxBtn = new Button("MAX");
-    maxBtn.setId("filter-btn");
+    maxBtn.setId("filter-btn-clicked");
     maxBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.MAX);
       maxBtn.setId("filter-btn-clicked");

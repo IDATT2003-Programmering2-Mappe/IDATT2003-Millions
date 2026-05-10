@@ -18,7 +18,7 @@
     -fx-text-fill: white;
 }
 
-#filters-btn:hover {
+#filter-btn:hover {
     -fx-text-fill: #bfdcff;
 }
 

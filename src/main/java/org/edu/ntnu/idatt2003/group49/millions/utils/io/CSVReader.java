@@ -67,4 +67,24 @@ public class CSVReader {
     }
     return stocks;
   }
+
+  public static List<BigDecimal> findStockPricesInFile(Path path, String symbol) {
+    List<BigDecimal> data = new ArrayList<>();
+    try {
+      List<String> lines = Files.readAllLines(path);
+
+      for (String line : lines) {
+        if (line.startsWith(symbol)) {
+          String[] col = line.split(",");
+
+          for(int i = 2; i < col.length; i++) {
+            data.add(new BigDecimal(col[i].trim()));
+          }
+        }
+      }
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    return data;
+  }
 }
