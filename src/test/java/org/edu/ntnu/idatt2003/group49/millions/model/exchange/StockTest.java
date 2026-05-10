@@ -1,6 +1,5 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

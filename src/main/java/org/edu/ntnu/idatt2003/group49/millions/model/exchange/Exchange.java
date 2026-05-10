@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.StockSubject;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
-public class Exchange {
+public class Exchange extends StockSubject {
   private final String name;
   private int week = 1;
   private final Map<String, Stock> stockMap;
@@ -108,6 +109,7 @@ public class Exchange {
             .add(stock.getSalesPrice().multiply(BigDecimal.valueOf(random.nextDouble(maxPercentage))).setScale(2, RoundingMode.HALF_UP)));
       }
     });
+    notifyObservers(stockMap, week);
     week++;
   }
 
@@ -146,5 +148,4 @@ public class Exchange {
 
     return loserList;
   }
-
 }

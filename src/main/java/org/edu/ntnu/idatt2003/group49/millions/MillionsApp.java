@@ -7,7 +7,11 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
+import java.nio.file.Path;
 import java.util.Objects;
 
 public class MillionsApp extends Application {
@@ -16,7 +20,7 @@ public class MillionsApp extends Application {
 
   @Override
   public void start(Stage stage) {
-    nav.showDashboardView();
+    nav.goToDashboard();
 
     Scene scene = new Scene(root, 1024, 768);
     stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/images/shrek.png")).toExternalForm()));
@@ -28,8 +32,12 @@ public class MillionsApp extends Application {
 
   @Override
   public void init() {
+    Exchange exchange = new Exchange("NASDAQ", MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
     this.root = new BorderPane();
     this.nav = new NavController(root);
+
+    ViewFactory viewFactory = new ViewFactory(nav, exchange);
+    this.nav.setViewFactory(viewFactory);
   }
 
   static void main(String[] args) {

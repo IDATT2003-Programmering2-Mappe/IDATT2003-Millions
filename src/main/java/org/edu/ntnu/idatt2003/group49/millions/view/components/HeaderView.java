@@ -10,15 +10,16 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.util.Objects;
 
-public class Header extends MillionsView {
-  private final NavController navController;
+public class HeaderView extends MillionsView {
+  private final Navigator navigator;
 
-  public Header(NavController navController) {
-    this.navController = navController;
+  public HeaderView(Navigator navigator) {
+    this.navigator = navigator;
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/header.css")
     ).toExternalForm());
@@ -89,7 +90,7 @@ public class Header extends MillionsView {
 
     Button btnStocks = new Button("Stocks");
     btnStocks.getStyleClass().add("navbar-btn");
-    btnStocks.setOnAction(e -> this.navController.showDashboardView());
+    btnStocks.setOnAction(e -> this.navigator.goToDashboard());
 
     nav.getChildren().addAll(
       btnDashboard,
