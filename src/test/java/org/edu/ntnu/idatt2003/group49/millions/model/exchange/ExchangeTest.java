@@ -2,6 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,7 @@ class ExchangeTest {
 
   private Exchange exchange;
   private List<Stock> stocks;
+  private TransactionFactory transactionFactory;
   private final Stock nvidiaStock = new Stock("NVDA", "Nvidia", new BigDecimal("191.27"));
   private final Stock appleStock = new Stock("AAPL", "Apple", new BigDecimal("276.43"));
   private final Stock microsoftStock = new Stock("MSFT", "Microsoft", new BigDecimal("404.68"));
@@ -33,7 +35,9 @@ class ExchangeTest {
     stocks.add(amazonStock);
     stocks.add(googleStockA);
     stocks.add(googleStockB);
-    exchange = new Exchange("Nasdaq", stocks);
+
+    transactionFactory = new TransactionFactory();
+    exchange = new Exchange("Nasdaq", stocks, transactionFactory);
   }
 
   @Test
@@ -49,6 +53,12 @@ class ExchangeTest {
   @Test
   void constructor_ThrowsWhenStocksIsEmpty() {
     assertThrows(IllegalArgumentException.class, () -> new Exchange("Nasdaq", new ArrayList<>()));
+  }
+
+  @Test
+  void constructor_ThrowsWhenTransactionFactoryIsNull() {
+    assertThrows(NullPointerException.class,
+            () -> new Exchange("Nasdaq", stocks, null));
   }
 
   @Test
@@ -140,25 +150,28 @@ class ExchangeTest {
 
     assertTrue(purchase.isCommited());
   }
-
   @Test
   void sell_ThrowsWhenShareIsNull() {
     assertThrows(NullPointerException.class,
-        () -> exchange.sell(null, new Player("Steve", new BigDecimal("1000"))));
+            () -> exchange.sell(null, new BigDecimal("1"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void sell_ThrowsWhenPlayerIsNull() {
     assertThrows(NullPointerException.class,
-        () -> exchange.sell(new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice()), null));
+            () -> exchange.sell(
+                    new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice()),
+                    new BigDecimal("1"),
+                    null
+            ));
   }
-
   @Test
   void sell_ThrowsWhenPlayerDoesNotOwnShare() {
     Player player = new Player("Steve", new BigDecimal("1000"));
     Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
 
-    assertThrows(IllegalStateException.class, () -> exchange.sell(share, player));
+    assertThrows(IllegalStateException.class,
+            () -> exchange.sell(share, new BigDecimal("1"), player));
   }
 
   @Test
@@ -168,12 +181,42 @@ class ExchangeTest {
 
     player.getPortfolio().addShare(share);
 
-    Transaction sale = exchange.sell(share, player);
+    Transaction sale = exchange.sell(share, new BigDecimal("1"), player);
     assertTrue(sale.isCommited());
   }
 
   @Test
-  void advance_IncrementsWeekByOne() throws IOException {
+  void sell_ThrowsWhenQuantityToSellIsNull() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(NullPointerException.class,
+            () -> exchange.sell(share, null, player));
+  }
+
+  @Test
+  void sell_ThrowsWhenQuantityToSellIsZero() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.sell(share, BigDecimal.ZERO, player));
+  }
+
+  @Test
+  void sell_ThrowsWhenQuantityToSellIsGreaterThanOwnedQuantity() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.sell(share, new BigDecimal("2"), player));
+  }
+
+  @Test
+  void advance_IncrementsWeekByOne() {
     int weekBefore = exchange.getWeek();
 
     exchange.advance();
