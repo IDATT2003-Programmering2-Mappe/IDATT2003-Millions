@@ -1,7 +1,5 @@
-package org.edu.ntnu.idatt2003.group49.millions.model;
+package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

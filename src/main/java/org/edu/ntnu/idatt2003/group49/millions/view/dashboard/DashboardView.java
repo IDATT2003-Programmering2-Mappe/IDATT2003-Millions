@@ -1,25 +1,37 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.dashboard;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
+import java.math.BigDecimal;
+import java.util.Map;
 import java.util.Objects;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class DashboardView extends MillionsView {
-  private final NavController navController;
+public class DashboardView extends MillionsView implements StockObserver {
+  private final Navigator navigator;
+  private final ExchangeController exchangeController;
+  private final MillionsChart chart;
 
-  public DashboardView(NavController navController) {
-    this.navController = navController;
+  private final ObservableList<BigDecimal> stockData = FXCollections.observableArrayList();
+
+  public DashboardView(Navigator navigator, ExchangeController exchangeController) {
+    this.navigator = navigator;
+    this.exchangeController = exchangeController;
+    this.chart = new MillionsChart();
+
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/dashboard.css")
     ).toExternalForm());
@@ -28,17 +40,9 @@ public class DashboardView extends MillionsView {
 
   @Override
   protected Pane build() {
-    Random rand = new Random();
-    AtomicInteger week = new AtomicInteger(2);
-
-    MillionsChart chart = new MillionsChart();
-    chart.addData(new XYChart.Data<>(1, 50));
-
     Button advanceBtn = new Button("Advance");
     advanceBtn.setOnAction(e -> {
-      XYChart.Data<Number, Number> data = new XYChart.Data<>(week.get(), rand.nextInt(0, 100));
-      chart.addData(data);
-      week.getAndIncrement();
+      exchangeController.advance();
     });
 
     VBox bodyLeft = new VBox();
@@ -57,7 +61,7 @@ public class DashboardView extends MillionsView {
     HBox.setHgrow(bodyRight, Priority.ALWAYS);
 
     bodyRight.getChildren().add(
-      new OwnedStocks(this.navController)
+      new OwnedStocks(this.navigator)
     );
 
     HBox body = new HBox();
@@ -69,5 +73,12 @@ public class DashboardView extends MillionsView {
     );
 
     return body;
+  }
+
+  @Override
+  public void update(Map<String, Stock> stockMap, int week) {
+    System.out.println(stockMap.get("NVDA").getSalesPrice());
+    XYChart.Data<Number, Number> data = new XYChart.Data<>(week, stockMap.get("NVDA").getSalesPrice());
+    chart.addData(data);
   }
 }
