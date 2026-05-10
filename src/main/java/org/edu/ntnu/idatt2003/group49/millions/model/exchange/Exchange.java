@@ -16,17 +16,26 @@ public class Exchange extends StockSubject {
   private final Random random;
   private final TransactionFactory transactionFactory;
 
+  public Exchange(String name, List<Stock> stocks) {
+    this(name, stocks, new TransactionFactory());
+  }
 
   public Exchange(String name, List<Stock> stocks, TransactionFactory transactionFactory) {
-    Objects.requireNonNull(stocks, "name must not be null");
+    this.name = Objects.requireNonNull(name, "name cannot be null");
+    Objects.requireNonNull(stocks, "stocks cannot be null");
+
     if (stocks.isEmpty()) {
       throw new IllegalArgumentException("stocks cannot be empty");
     }
-    this.name = Objects.requireNonNull(name, "name cannot be null");
-    this.transactionFactory = Objects.requireNonNull(transactionFactory, "transactionFactory cannot be null");
+
+    this.transactionFactory = Objects.requireNonNull(
+            transactionFactory,
+            "transactionFactory cannot be null"
+    );
+
     this.stockMap = new HashMap<>();
     stocks.forEach(stock -> stockMap.put(stock.getSymbol(), stock));
-    random = new Random();
+    this.random = new Random();
   }
 
   public String getName() {
