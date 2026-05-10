@@ -9,8 +9,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
+import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.Objects;
 

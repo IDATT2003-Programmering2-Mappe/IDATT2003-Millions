@@ -28,3 +28,12 @@
 .table-row-cell:selected .table-cell {
     -fx-text-fill: black;
 }
+
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}

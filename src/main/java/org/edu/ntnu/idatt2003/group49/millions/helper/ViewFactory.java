@@ -16,6 +16,7 @@ public class ViewFactory {
   }
 
   public HeaderView createHeaderView() {
+    HeaderView header = new HeaderView(navigator);
     return new HeaderView(navigator);
   }
 
