@@ -1,8 +1,9 @@
 package org.edu.ntnu.idatt2003.group49.millions.view;
 
-import java.math.BigDecimal;
-import java.util.List;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+
+import java.util.Map;
 
 public interface StockObserver {
-  void update(List<BigDecimal> stockPrices, int week);
+  void update(Map<String, Stock> stockMap, int week);
 }

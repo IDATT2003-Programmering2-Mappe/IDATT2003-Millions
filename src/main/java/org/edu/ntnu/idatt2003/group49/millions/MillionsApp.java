@@ -2,14 +2,12 @@ package org.edu.ntnu.idatt2003.group49.millions;
 
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
-import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
-import org.edu.ntnu.idatt2003.group49.millions.model.Test;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
@@ -19,10 +17,6 @@ import java.util.Objects;
 public class MillionsApp extends Application {
   private BorderPane root;
   private NavController nav;
-  private Exchange exchange;
-  private ViewFactory viewFactory;
-
-  private Test test;
 
   @Override
   public void start(Stage stage) {
@@ -38,12 +32,11 @@ public class MillionsApp extends Application {
 
   @Override
   public void init() {
-    this.exchange = new Exchange("Nasdaq", MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
+    Exchange exchange = new Exchange("NASDAQ", MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
     this.root = new BorderPane();
     this.nav = new NavController(root);
 
-    this.test = new Test();
-    this.viewFactory = new ViewFactory(nav, test);
+    ViewFactory viewFactory = new ViewFactory(nav, exchange);
     this.nav.setViewFactory(viewFactory);
   }
 

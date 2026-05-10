@@ -2,7 +2,6 @@ package org.edu.ntnu.idatt2003.group49.millions.view.dashboard;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Node;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -11,13 +10,14 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class DashboardView extends MillionsView implements StockObserver {
@@ -40,16 +40,8 @@ public class DashboardView extends MillionsView implements StockObserver {
 
   @Override
   protected Pane build() {
-//    Random rand = new Random();
-//    AtomicInteger week = new AtomicInteger(2);
-
-//    chart.addData(new XYChart.Data<>(1, 50));
-
     Button advanceBtn = new Button("Advance");
     advanceBtn.setOnAction(e -> {
-//      XYChart.Data<Number, Number> data = new XYChart.Data<>(week.get(), rand.nextInt(0, 100));
-//      chart.addData(data);
-//      week.getAndIncrement();
       exchangeController.advance();
     });
 
@@ -84,8 +76,9 @@ public class DashboardView extends MillionsView implements StockObserver {
   }
 
   @Override
-  public void update(List<BigDecimal> stockPrices, int week) {
-    XYChart.Data<Number, Number> data = new XYChart.Data<>(week, stockPrices.getLast());
+  public void update(Map<String, Stock> stockMap, int week) {
+    System.out.println(stockMap.get("NVDA").getSalesPrice());
+    XYChart.Data<Number, Number> data = new XYChart.Data<>(week, stockMap.get("NVDA").getSalesPrice());
     chart.addData(data);
   }
 }
