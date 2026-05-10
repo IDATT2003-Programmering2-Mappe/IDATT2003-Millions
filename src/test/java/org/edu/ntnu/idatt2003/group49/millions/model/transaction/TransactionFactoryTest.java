@@ -1,8 +1,9 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.transaction;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -38,15 +39,22 @@ class TransactionFactoryTest {
 
   @Test
   void createPurchase_ThrowsWhenQuantityIsZero() {
-    assertThrows(NullPointerException.class,
+    assertThrows(IllegalArgumentException.class,
             () -> transactionFactory.createPurchase(nvidiaStock, BigDecimal.ZERO, 1));
   }
 
   @Test
   void createPurchase_ThrowsWhenQuantityIsNegative() {
-    assertThrows(NullPointerException.class,
+    assertThrows(IllegalArgumentException.class,
             () -> transactionFactory.createPurchase(nvidiaStock, new BigDecimal("-1"), 1));
   }
+
+  @Test
+  void createPurchase_ThrowsWhenWeekIsNegative() {
+    assertThrows(IllegalArgumentException.class,
+            () -> transactionFactory.createPurchase(nvidiaStock, new BigDecimal("2"), -1));
+  }
+
 
   @Test
   void createPurchase_ReturnPurchaseWithCorrectValues() {
@@ -54,9 +62,10 @@ class TransactionFactoryTest {
 
     assertAll(
             () -> assertInstanceOf(Purchase.class, transaction),
+            () -> assertInstanceOf(PurchaseCalculator.class, transaction.getCalculator()),
             () -> assertEquals(nvidiaStock, transaction.getShare().getStock()),
-            () -> assertEquals(0, new BigDecimal("2").compareTo(transaction.getShare().getQuantity())),
-            () -> assertEquals(3, transaction.getWeek()),
+            () -> assertEquals(0, new BigDecimal("10").compareTo(transaction.getShare().getQuantity())),
+            () -> assertEquals(1, transaction.getWeek()),
             () -> assertEquals(0, nvidiaStock.getSalesPrice().compareTo(transaction.getShare().getPurchasePrice()))
     );
   }
@@ -86,11 +95,19 @@ class TransactionFactoryTest {
   }
 
   @Test
+  void createSale_ThrowsWhenWeekIsNegative() {
+    assertThrows(IllegalArgumentException.class,
+            () -> transactionFactory.createSale(ownedShare, new BigDecimal("2"), -1));
+  }
+
+
+  @Test
   void createSale_ReturnsSaleTransactionWithCorrectValues() {
     Transaction transaction = transactionFactory.createSale(ownedShare, new BigDecimal("3"), 1);
 
     assertAll(
             () -> assertInstanceOf(Sale.class, transaction),
+            () -> assertInstanceOf(SaleCalculator.class, transaction.getCalculator()),
             () -> assertEquals(1, transaction.getWeek()),
             () -> assertEquals(ownedShare.getStock(), transaction.getShare().getStock()),
             () -> assertEquals(0, new BigDecimal("3").compareTo(transaction.getShare().getQuantity())),

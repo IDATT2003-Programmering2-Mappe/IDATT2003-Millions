@@ -1,7 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.transaction;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.PurchaseCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
@@ -58,14 +58,14 @@ public class TransactionFactory {
    *                                  greater than the owned quantity, or if week is negative
    */
   public Transaction createSale(Share ownedShare, BigDecimal quantityToSell, int week) {
-    Objects.requireNonNull(ownedShare, "stock cannot be null");
-    Objects.requireNonNull(quantityToSell, "quantity cannot be null");
+    Objects.requireNonNull(ownedShare, "ownedShare cannot be null");
+    Objects.requireNonNull(quantityToSell, "quantityToSell cannot be null");
 
     if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("quantity must be greater than zero");
     }
     if (quantityToSell.compareTo(ownedShare.getQuantity()) > 0) {
-      throw new IllegalArgumentException("Cannot selle more shares than owned");
+      throw new IllegalArgumentException("Cannot sell more shares than owned");
     }
 
     Share shareToSell = new Share(ownedShare.getStock(), quantityToSell, ownedShare.getPurchasePrice());

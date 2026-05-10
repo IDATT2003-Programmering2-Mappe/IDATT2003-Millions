@@ -55,6 +55,12 @@ class ExchangeTest {
   }
 
   @Test
+  void constructor_ThrowsWhenTransactionFactoryIsNull() {
+    assertThrows(NullPointerException.class,
+            () -> new Exchange("Nasdaq", stocks, null));
+  }
+
+  @Test
   void hasStock_ThrowsWhenSymbolIsNull() {
     assertThrows(NullPointerException.class, () -> exchange.hasStock(null));
   }
@@ -143,25 +149,28 @@ class ExchangeTest {
 
     assertTrue(purchase.isCommited());
   }
-
   @Test
   void sell_ThrowsWhenShareIsNull() {
     assertThrows(NullPointerException.class,
-        () -> exchange.sell(null, new Player("Steve", new BigDecimal("1000"))));
+            () -> exchange.sell(null, new BigDecimal("1"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
   void sell_ThrowsWhenPlayerIsNull() {
     assertThrows(NullPointerException.class,
-        () -> exchange.sell(new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice()), null));
+            () -> exchange.sell(
+                    new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice()),
+                    new BigDecimal("1"),
+                    null
+            ));
   }
-
   @Test
   void sell_ThrowsWhenPlayerDoesNotOwnShare() {
     Player player = new Player("Steve", new BigDecimal("1000"));
     Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
 
-    assertThrows(IllegalStateException.class, () -> exchange.sell(share, player));
+    assertThrows(IllegalStateException.class,
+            () -> exchange.sell(share, new BigDecimal("1"), player));
   }
 
   @Test
@@ -171,8 +180,38 @@ class ExchangeTest {
 
     player.getPortfolio().addShare(share);
 
-    Transaction sale = exchange.sell(share, player);
+    Transaction sale = exchange.sell(share, new BigDecimal("1"), player);
     assertTrue(sale.isCommited());
+  }
+
+  @Test
+  void sell_ThrowsWhenQuantityToSellIsNull() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(NullPointerException.class,
+            () -> exchange.sell(share, null, player));
+  }
+
+  @Test
+  void sell_ThrowsWhenQuantityToSellIsZero() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.sell(share, BigDecimal.ZERO, player));
+  }
+
+  @Test
+  void sell_ThrowsWhenQuantityToSellIsGreaterThanOwnedQuantity() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+    Share share = new Share(nvidiaStock, new BigDecimal("1"), nvidiaStock.getSalesPrice());
+    player.getPortfolio().addShare(share);
+
+    assertThrows(IllegalArgumentException.class,
+            () -> exchange.sell(share, new BigDecimal("2"), player));
   }
 
   @Test
