@@ -16,6 +16,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Objects;
@@ -42,7 +43,11 @@ public class DashboardView extends MillionsView implements StockObserver {
   protected Pane build() {
     Button advanceBtn = new Button("Advance");
     advanceBtn.setOnAction(e -> {
-      exchangeController.advance();
+      try {
+        exchangeController.advance();
+      } catch (IOException ex) {
+        throw new RuntimeException(ex);
+      }
     });
 
     VBox bodyLeft = new VBox();

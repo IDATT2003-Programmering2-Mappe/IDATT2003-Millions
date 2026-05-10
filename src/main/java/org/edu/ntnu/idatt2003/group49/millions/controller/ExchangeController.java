@@ -2,6 +2,8 @@ package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 
+import java.io.IOException;
+
 public class ExchangeController {
   private final Exchange exchange;
 
@@ -9,7 +11,7 @@ public class ExchangeController {
     this.exchange = exchange;
   }
 
-  public void advance() {
+  public void advance() throws IOException {
     System.out.println("Advance clicked");
     exchange.advance();
   }
