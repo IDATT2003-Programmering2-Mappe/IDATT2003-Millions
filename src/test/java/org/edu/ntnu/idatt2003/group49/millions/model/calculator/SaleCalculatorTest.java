@@ -1,9 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.calculator;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

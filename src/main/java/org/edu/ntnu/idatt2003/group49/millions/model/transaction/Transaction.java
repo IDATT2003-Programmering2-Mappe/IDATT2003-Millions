@@ -1,6 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.transaction;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 

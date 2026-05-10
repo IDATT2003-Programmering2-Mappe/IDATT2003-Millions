@@ -1,7 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.player;
 
-import org.edu.ntnu.idatt2003.group49.millions.model.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

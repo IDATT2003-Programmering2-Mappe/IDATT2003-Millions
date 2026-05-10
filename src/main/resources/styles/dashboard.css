@@ -1,0 +1,10 @@
+.dashboard {
+    -fx-background-color: #0f172a;
+}
+
+.body-left {
+}
+
+.body-right {
+    -fx-pref-width: 200px;
+}
