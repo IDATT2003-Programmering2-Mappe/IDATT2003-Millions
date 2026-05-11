@@ -8,8 +8,8 @@
 }
 
 .landing-menu {
-    -fx-background-color: #111827;
-    -fx-border-color: #243043;
+    -fx-background-color: #1E293B;
+    -fx-border-color: #9CA3AF;
     -fx-border-width: 2px;
     -fx-padding: 24px;
     -fx-spacing: 12px;
@@ -96,5 +96,10 @@
     -fx-background-color: #BFDDFF;
     -fx-border-color: white;
     -fx-text-fill: #0f172a;
+}
+
+.landing-error {
+    -fx-text-fill: #FF0000;
+    -fx-font-size: 14px;
 }
 
