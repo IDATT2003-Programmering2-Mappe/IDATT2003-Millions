@@ -153,6 +153,11 @@ public class Stock {
       return calculatePriceChange(startPrice, currentPrice);
     }
 
+    return null;
+  }
+
+  public BigDecimal getPriceChangeInPercent() {
+    BigDecimal currentPrice = prices.getLast();
     BigDecimal startPrice = prices.getFirst();
 
     return calculatePriceChange(startPrice, currentPrice);
