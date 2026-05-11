@@ -3,6 +3,7 @@ package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart;
 import javafx.geometry.Side;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
