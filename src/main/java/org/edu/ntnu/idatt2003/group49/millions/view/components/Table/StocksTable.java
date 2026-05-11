@@ -40,16 +40,14 @@ public class StocksTable extends MillionsView {
 
     TableColumn<Share, Number> qtyCol = columnFactory.createTableColumn(
 
-      new TableColumn<>("Quantity"),
+      new TableColumn<>("QTY"),
       (share, value) -> {
         System.out.println("Clicked share: " + share);
         System.out.println("Clicked value: " + value);
       },
 
       (cell, share, quantity) -> {
-        if (share.getQuantity().compareTo(new BigDecimal("200")) < 0) {
-          cell.setStyle("-fx-background-color: #dcfce7");
-        }
+
       }
 
     );
@@ -85,7 +83,7 @@ public class StocksTable extends MillionsView {
       },
 
       (cell, share, value) -> {
-
+        cell.setText("$" + value);
       }
     );
 
@@ -102,6 +100,17 @@ public class StocksTable extends MillionsView {
       },
 
       (cell, share, value) -> {
+        if (share.getQuantity().compareTo(new BigDecimal("150")) > 0) {
+          cell.getStyleClass().removeAll("normal-cell", "negative-change");
+          cell.getStyleClass().add("positive-change");
+
+          cell.setText("↑" + value + "%");
+        } else if (share.getQuantity().compareTo(new BigDecimal("150")) < 0) {
+          cell.getStyleClass().removeAll("normal-cell", "positive-change");
+          cell.getStyleClass().add("negative-change");
+
+          cell.setText("↓" + value + "%");
+        }
       }
 
     );

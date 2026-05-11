@@ -1,5 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components;
 
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
@@ -21,9 +23,24 @@ public class OwnedStocks extends MillionsView {
 
   @Override
   protected Pane build() {
-    VBox vBox = new VBox();
+
+    Label ownedStocksLabel = new Label("Owned Stocks");
+    ownedStocksLabel.getStyleClass().add("owned-stocks-label");
+
+    HBox title = new HBox();
+    title.getStyleClass().add("owned-stocks-title");
+    title.getChildren().add(ownedStocksLabel);
+
     StocksTable table = new StocksTable(navigator);
-    vBox.getChildren().add(table);
+
+    VBox vBox = new VBox();
+    vBox.getStyleClass().add("owned-stocks");
+    vBox.setSpacing(5);
+
+    vBox.getChildren().addAll(
+      title,
+      table
+    );
     return vBox;
   }
 }

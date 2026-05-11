@@ -21,6 +21,8 @@ public class TableColumnFactory {
         protected void updateItem(V item, boolean empty) {
           super.updateItem(item, empty);
 
+          getStyleClass().add("default-cell");
+
           if (empty || item == null) {
             setText(null);
             setGraphic(null);

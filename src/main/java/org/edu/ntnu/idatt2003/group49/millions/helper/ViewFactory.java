@@ -4,7 +4,9 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -21,8 +23,18 @@ public class ViewFactory {
   }
 
   public DashboardView createDashboardView() {
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange));
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(), createOwnedStocks());
     exchange.addObserver(dashboard);
     return dashboard;
+  }
+
+  public MillionsChart createMillionsChart() {
+    MillionsChart chart = new MillionsChart();
+    return chart;
+  }
+
+  public OwnedStocks createOwnedStocks() {
+    OwnedStocks ownedStocks = new OwnedStocks(navigator);
+    return ownedStocks;
   }
 }

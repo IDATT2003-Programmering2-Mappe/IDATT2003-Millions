@@ -24,13 +24,15 @@ public class DashboardView extends MillionsView implements StockObserver {
   private final Navigator navigator;
   private final ExchangeController exchangeController;
   private final MillionsChart chart;
+  private final OwnedStocks ownedStocks;
 
   private final ObservableList<BigDecimal> stockData = FXCollections.observableArrayList();
 
-  public DashboardView(Navigator navigator, ExchangeController exchangeController) {
+  public DashboardView(Navigator navigator, ExchangeController exchangeController, MillionsChart chart, OwnedStocks ownedStocks) {
     this.navigator = navigator;
     this.exchangeController = exchangeController;
-    this.chart = new MillionsChart();
+    this.chart = chart;
+    this.ownedStocks = ownedStocks;
 
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/dashboard.css")
@@ -61,7 +63,7 @@ public class DashboardView extends MillionsView implements StockObserver {
     HBox.setHgrow(bodyRight, Priority.ALWAYS);
 
     bodyRight.getChildren().add(
-      new OwnedStocks(this.navigator)
+      ownedStocks
     );
 
     HBox body = new HBox();
