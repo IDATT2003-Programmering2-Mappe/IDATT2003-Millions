@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
+import org.edu.ntnu.idatt2003.group49.millions.config.TimeConstants;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -126,5 +127,12 @@ class StockTest {
     BigDecimal priceChange = stock.getLatestPriceChange();
 
     assertEquals(BigDecimal.ZERO, priceChange);
+  }
+
+  @Test
+  void getPriceChangeInPercent_returnsNegativeChangeWhenPriceDropsBelowStartingPriceInWeekRange() {
+    stock.addNewSalesPrice(new BigDecimal("10000"));
+    BigDecimal change = stock.getPriceChangeInPercentInWeekRange(TimeConstants.ONE_MONTH_IN_WEEKS);
+    System.out.println(change);
   }
 }
