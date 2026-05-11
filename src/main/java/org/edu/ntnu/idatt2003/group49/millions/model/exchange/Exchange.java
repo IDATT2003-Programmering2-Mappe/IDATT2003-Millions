@@ -158,4 +158,5 @@ public class Exchange extends StockSubject {
 
     return loserList;
   }
+
 }
