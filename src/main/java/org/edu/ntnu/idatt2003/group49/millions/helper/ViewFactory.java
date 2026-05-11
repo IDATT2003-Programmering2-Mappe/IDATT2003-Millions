@@ -4,7 +4,7 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsGraph.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
