@@ -1,0 +1,20 @@
+.dashboard {
+    -fx-background-color: #0f172a;
+}
+.landing-menu {
+    -fx-background-color: #111827;
+    -fx-border-color: #243043;
+    -fx-border-width: 2px;
+    -fx-padding: 24px;
+    -fx-spacing: 12px;
+    -fx-alignment: center;
+}
+
+.landing-button {
+    -fx-pref-width: 260px;
+    -fx-pref-height: 72px;
+    -fx-background-color: #1e293b;
+    -fx-border-color: #859BB4;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
