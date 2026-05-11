@@ -16,10 +16,10 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
-public class MillionsTable extends MillionsView {
+public class StocksTable extends MillionsView {
   private final Navigator navigator;
 
-  public MillionsTable(Navigator navigator) {
+  public StocksTable(Navigator navigator) {
     this.navigator = navigator;
 
     getStylesheets().add(Objects.requireNonNull(
@@ -146,6 +146,7 @@ public class MillionsTable extends MillionsView {
     table.getColumns().forEach(col -> {
       col.setReorderable(false);
     });
+
     table.setItems(list);
 
     return table;

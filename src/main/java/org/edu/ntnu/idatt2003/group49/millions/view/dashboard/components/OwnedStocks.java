@@ -4,7 +4,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.Table.MillionsTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.Table.StocksTable;
 
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public class OwnedStocks extends MillionsView {
   @Override
   protected Pane build() {
     VBox vBox = new VBox();
-    MillionsTable table = new MillionsTable(navigator);
+    StocksTable table = new StocksTable(navigator);
     vBox.getChildren().add(table);
     return vBox;
   }

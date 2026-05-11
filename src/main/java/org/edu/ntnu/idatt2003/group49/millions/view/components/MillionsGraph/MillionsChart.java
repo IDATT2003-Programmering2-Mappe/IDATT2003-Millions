@@ -7,6 +7,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.util.StringConverter;
+import org.edu.ntnu.idatt2003.group49.millions.config.TimeConstants;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.util.ArrayList;
@@ -15,10 +16,9 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 public class MillionsChart extends MillionsView {
-  private Logger logger = Logger.getLogger(MillionsChart.class.getName());
+  private final Logger logger = Logger.getLogger(MillionsChart.class.getName());
   private final XYChart.Series<Number, Number> series;
   private NumberAxis xAxis;
-  private NumberAxis yAxis;
   private ChartMode chartMode = ChartMode.MAX;
   private final List<Button> filterButtons = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public class MillionsChart extends MillionsView {
   @Override
   protected Pane build() {
     this.xAxis = new NumberAxis(1, 2, 1);
-    this.yAxis = new NumberAxis();
+    NumberAxis yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
 
     yAxis.setTickLabelFormatter(new StringConverter<Number>() {
@@ -76,39 +76,34 @@ public class MillionsChart extends MillionsView {
   }
 
   private void updateChartBasedOnMode() {
-    int oneMonthInWeeks = 5;
-    int threeMonthsInWeeks = 13;
-    int sixMonthsInWeeks = 26;
-    int oneYearInWeeks = 52;
-
     switch (chartMode) {
       case ONE_MONTH -> {
-        if (this.xAxis.getUpperBound() > oneMonthInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - oneMonthInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.ONE_MONTH_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.ONE_MONTH_IN_WEEKS);
         }
         xAxis.setTickUnit(1);
       }
       case THREE_MONTHS -> {
-        if (this.xAxis.getUpperBound() > threeMonthsInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - threeMonthsInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.THREE_MONTHS_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.THREE_MONTHS_IN_WEEKS);
         }
         xAxis.setTickUnit(1);
       }
       case SIX_MONTHS -> {
-        if (this.xAxis.getUpperBound() > sixMonthsInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - sixMonthsInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.SIX_MONTHS_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.SIX_MONTHS_IN_WEEKS);
         }
-        xAxis.setTickUnit(Math.round((double) sixMonthsInWeeks / 10));
+        xAxis.setTickUnit(Math.round((double) TimeConstants.SIX_MONTHS_IN_WEEKS / 10));
       }
       case ONE_YEAR -> {
-        if (this.xAxis.getUpperBound() > oneYearInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - oneYearInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.ONE_YEAR_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.ONE_YEAR_IN_WEEKS);
         }
-        xAxis.setTickUnit(Math.round((double) oneYearInWeeks / 10));
+        xAxis.setTickUnit(Math.round((double) TimeConstants.ONE_YEAR_IN_WEEKS / 10));
       }
       case MAX -> {
         xAxis.setLowerBound(1);
-        if (xAxis.getUpperBound() >= threeMonthsInWeeks) {
+        if (xAxis.getUpperBound() >= TimeConstants.THREE_MONTHS_IN_WEEKS) {
           xAxis.setTickUnit(Math.round(xAxis.getUpperBound() / 10));
         }
       }
@@ -123,40 +118,40 @@ public class MillionsChart extends MillionsView {
   }
 
   private void resetFilterButtonsStyles() {
-    this.filterButtons.forEach(b -> b.setId("filters-btn"));
+    this.filterButtons.forEach(b -> b.setId("filter-btn"));
   }
 
   private HBox filters() {
     Button oneMonthBtn = new Button("1M");
-    oneMonthBtn.setId("filters-btn");
+    oneMonthBtn.setId("filter-btn");
     oneMonthBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.ONE_MONTH);
       oneMonthBtn.setId("filter-btn-clicked");
     });
 
     Button threeMonthsBtn = new Button("3M");
-    threeMonthsBtn.setId("filters-btn");
+    threeMonthsBtn.setId("filter-btn");
     threeMonthsBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.THREE_MONTHS);
       threeMonthsBtn.setId("filter-btn-clicked");
     });
 
     Button sixMonthsBtn = new Button("6M");
-    sixMonthsBtn.setId("filters-btn");
+    sixMonthsBtn.setId("filter-btn");
     sixMonthsBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.SIX_MONTHS);
       sixMonthsBtn.setId("filter-btn-clicked");
     });
 
     Button oneYearBtn = new Button("1Y");
-    oneYearBtn.setId("filters-btn");
+    oneYearBtn.setId("filter-btn");
     oneYearBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.ONE_YEAR);
       oneYearBtn.setId("filter-btn-clicked");
     });
 
     Button maxBtn = new Button("MAX");
-    maxBtn.setId("filters-btn");
+    maxBtn.setId("filter-btn");
     maxBtn.setOnAction(e -> {
       handleFilterButtonClick(ChartMode.MAX);
       maxBtn.setId("filter-btn-clicked");
@@ -168,7 +163,7 @@ public class MillionsChart extends MillionsView {
 
     HBox filters = new HBox();
     filters.setSpacing(4);
-    filters.getStyleClass().add("filters");
+    filters.getStyleClass().add("filter");
     filters.getChildren().addAll(filterButtons);
     return filters;
   }
