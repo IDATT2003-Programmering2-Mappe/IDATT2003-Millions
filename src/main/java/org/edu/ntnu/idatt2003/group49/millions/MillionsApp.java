@@ -9,8 +9,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
-import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVReader;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Objects;
 
@@ -31,8 +33,9 @@ public class MillionsApp extends Application {
   }
 
   @Override
-  public void init() {
-    Exchange exchange = new Exchange("NASDAQ", MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv")));
+  public void init() throws IOException {
+    Exchange exchange = new Exchange("NASDAQ", CSVReader.convertCSVToStocksList(Path.of("src/main/resources/sp500.csv")));
+    CSVWriter.writeStockDataToFile(Path.of("data/stock_data.csv"), exchange.getStockMap());
     this.root = new BorderPane();
     this.nav = new NavController(root);
 

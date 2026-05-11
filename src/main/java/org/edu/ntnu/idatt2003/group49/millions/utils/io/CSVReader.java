@@ -11,12 +11,8 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MillionsFileReader {
-  static Logger logger = Logger.getLogger(MillionsFileReader.class.getName());
-
-  /*
-   * Read lines from a file with a BufferedReader.
-   */
+public class CSVReader {
+  static Logger logger = Logger.getLogger(CSVReader.class.getName());
 
   /**
    * Reads data from a CSV file and converts it into a List of String[]
@@ -24,7 +20,7 @@ public class MillionsFileReader {
    * @param path filepath
    * @return a list of String[]
    */
-  public static List<String[]> readCSVFile(Path path) {
+  public static List<String[]> readCSV(Path path) {
     Objects.requireNonNull(path, "path is null");
     List<String[]> data = new ArrayList<>();
     try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
@@ -58,9 +54,9 @@ public class MillionsFileReader {
    * @param path filepath
    * @return a list of Stocks.
    */
-  public static List<Stock> convertCSVFileToStocksList(Path path) {
+  public static List<Stock> convertCSVToStocksList(Path path) {
     Objects.requireNonNull(path, "path is null");
-    List<String[]> data = readCSVFile(path);
+    List<String[]> data = readCSV(path);
     List<Stock> stocks = new ArrayList<>();
     for (String[] stocksArray : data) {
       String symbol = stocksArray[0];
@@ -70,5 +66,25 @@ public class MillionsFileReader {
       stocks.add(new Stock(symbol, company, new BigDecimal(price)));
     }
     return stocks;
+  }
+
+  public static List<BigDecimal> findStockPricesInFile(Path path, String symbol) {
+    List<BigDecimal> data = new ArrayList<>();
+    try {
+      List<String> lines = Files.readAllLines(path);
+
+      for (String line : lines) {
+        if (line.startsWith(symbol)) {
+          String[] col = line.split(",");
+
+          for(int i = 2; i < col.length; i++) {
+            data.add(new BigDecimal(col[i].trim()));
+          }
+        }
+      }
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    return data;
   }
 }

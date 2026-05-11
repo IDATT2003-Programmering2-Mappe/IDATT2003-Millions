@@ -6,6 +6,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFact
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;

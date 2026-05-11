@@ -8,16 +8,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MillionsFileReaderTest {
+class CSVReaderTest {
 
   @Test
   void readCSVFile_throwsWhenPathIsNull() {
-    assertThrows(NullPointerException.class, () -> MillionsFileReader.readCSVFile(null));
+    assertThrows(NullPointerException.class, () -> CSVReader.readCSV(null));
   }
 
   @Test
-  void convertCSVFileToStocksList_readsAllStocksFromFile() {
-    List<Stock> data = MillionsFileReader.convertCSVFileToStocksList(Path.of("src/main/resources/sp500.csv"));
+  void convertCSVFileToStocksList_readsAllStocksFrom() {
+    List<Stock> data = CSVReader.convertCSVToStocksList(Path.of("src/main/resources/sp500.csv"));
     assertEquals(503, data.size());
   }
 }
