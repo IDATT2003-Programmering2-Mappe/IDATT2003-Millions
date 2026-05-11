@@ -37,61 +37,81 @@ public class MillionsTable extends MillionsView {
 
   private TableView<Share> table() {
     TableColumnFactory columnFactory = new TableColumnFactory();
+
     TableColumn<Share, Number> qtyCol = columnFactory.createTableColumn(
+
       new TableColumn<>("Quantity"),
       (share, value) -> {
         System.out.println("Clicked share: " + share);
         System.out.println("Clicked value: " + value);
       },
+
       (cell, share, quantity) -> {
         if (share.getQuantity().compareTo(new BigDecimal("200")) < 0) {
           cell.setStyle("-fx-background-color: #dcfce7");
         }
       }
+
     );
+
     qtyCol.setCellValueFactory(cellData ->
       new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
     );
 
     TableColumn<Share, String> nameCol = columnFactory.createTableColumn(
+
       new TableColumn<>("Name"),
       (share, value) -> {
         System.out.println("Clicked share: " + share);
         System.out.println("Clicked value: " + value);
       },
+
       (cell, share, value) -> {
 
-      });
+      }
+
+    );
+
     nameCol.setCellValueFactory(cellData ->
       new SimpleStringProperty(cellData.getValue().getStock().getSymbol())
     );
 
     TableColumn<Share, Number> priceCol = columnFactory.createTableColumn(
+
       new TableColumn<>("Price"),
       (share, value) -> {
         System.out.println("Clicked share: " + share);
         System.out.println("Clicked value: " + value);
-    },
-    (cell, share, value) -> {
+      },
 
-    });
+      (cell, share, value) -> {
+
+      }
+    );
+
     priceCol.setCellValueFactory(cellData ->
       new SimpleDoubleProperty(cellData.getValue().getStock().getSalesPrice().doubleValue())
     );
 
     TableColumn<Share, Number> changeCol = columnFactory.createTableColumn(
+
       new TableColumn<>("Change"),
       (share, value) -> {
         System.out.println("Clicked share: " + share);
         System.out.println("Clicked value: " + value);
       },
+
       (cell, share, value) -> {
-      });
+      }
+
+    );
+
     changeCol.setCellValueFactory(cellData ->
       new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
     );
 
     TableView<Share> table = new TableView<>();
+
     table.setRowFactory(tv -> new TableRow<Share>() {
       @Override
       protected void updateItem(Share share, boolean empty) {
@@ -106,9 +126,10 @@ public class MillionsTable extends MillionsView {
 //        }
       }
     });
-    table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+
 
     table.getColumns().setAll(List.of(qtyCol, nameCol, priceCol, changeCol));
+
 
     ObservableList<Share> list = FXCollections.observableArrayList();
     list.setAll(
@@ -120,7 +141,13 @@ public class MillionsTable extends MillionsView {
       )
     );
 
+    table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+
+    table.getColumns().forEach(col -> {
+      col.setReorderable(false);
+    });
     table.setItems(list);
+
     return table;
   }
 }
