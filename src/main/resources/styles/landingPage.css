@@ -1,6 +1,12 @@
 .landing-body {
     -fx-background-color: #0f172a;
 }
+
+.landing-overlay {
+    -fx-background-color: #0f172a;
+    -fx-alignment: center;
+}
+
 .landing-menu {
     -fx-background-color: #111827;
     -fx-border-color: #243043;
@@ -24,3 +30,71 @@
     -fx-border-color: #BFDDFF;
     -fx-text-fill: #BFDDFF;
 }
+
+.new-game-form {
+    -fx-background-color: #111827;
+    -fx-border-color: #243043;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 24px;
+    -fx-spacing: 12px;
+    -fx-alignment: center;
+    -fx-max-width: 360px;
+    -fx-max-height: 500px;
+}
+
+.landing-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.landing-input {
+    -fx-pref-width: 270px;
+    -fx-pref-height: 44px;
+    -fx-background-color: #111827;
+    -fx-border-color: #859BB4;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #7D7F8C;
+    -fx-font-size: 16px;
+}
+
+.landing-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.capital-choices {
+    -fx-spacing: 8px;
+    -fx-alignment: center;
+}
+
+.capital-button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 44px;
+    -fx-background-color: #1e293b;
+    -fx-border-color: #859BB4;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.capital-button:selected {
+    -fx-background-color: #BFDDFF;
+    -fx-border-color: white;
+    -fx-text-fill: #0f172a;
+}
+
+.capital-button:hover {
+    -fx-background-color: #243043;
+    -fx-border-color: #BFDDFF;
+}
+
+.capital-button:selected:hover {
+    -fx-background-color: #BFDDFF;
+    -fx-border-color: white;
+    -fx-text-fill: #0f172a;
+}
+
