@@ -5,6 +5,7 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
+import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -23,5 +24,11 @@ public class ViewFactory {
     DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange));
     exchange.addObserver(dashboard);
     return dashboard;
+  }
+
+  public LandingPageView createLandingPageView() {
+    LandingPageView landingpage = new LandingPageView(navigator);
+
+    return  landingpage;
   }
 }

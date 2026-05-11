@@ -1,4 +1,4 @@
-.dashboard {
+.landing-body {
     -fx-background-color: #0f172a;
 }
 .landing-menu {
@@ -17,4 +17,10 @@
     -fx-border-color: #859BB4;
     -fx-text-fill: white;
     -fx-font-size: 24px;
+}
+
+.landing-button:hover {
+    -fx-background-color: #243043;
+    -fx-border-color: #BFDDFF;
+    -fx-text-fill: #BFDDFF;
 }

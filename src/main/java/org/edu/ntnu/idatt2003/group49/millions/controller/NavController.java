@@ -24,4 +24,11 @@ public class NavController implements Navigator {
     root.setCenter(viewFactory.createDashboardView());
     logger.info("Switched to Dashboard");
   }
+
+  @Override
+  public void goToLandingPage() {
+    root.setTop(null);
+    root.setCenter(viewFactory.createLandingPageView());
+    logger.info("Switched to Landing page");
+  }
 }
