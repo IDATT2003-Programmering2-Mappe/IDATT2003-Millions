@@ -8,20 +8,18 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.util.StringConverter;
-import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.config.TimeConstants;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
 
 public class MillionsChart extends MillionsView {
-  private Logger logger = Logger.getLogger(MillionsChart.class.getName());
-  private XYChart.Series<Number, Number> series;
+  private final Logger logger = Logger.getLogger(MillionsChart.class.getName());
+  private final XYChart.Series<Number, Number> series;
   private NumberAxis xAxis;
-  private NumberAxis yAxis;
   private ChartMode chartMode = ChartMode.MAX;
   private final List<Button> filterButtons = new ArrayList<>();
 
@@ -37,7 +35,7 @@ public class MillionsChart extends MillionsView {
   @Override
   protected Pane build() {
     this.xAxis = new NumberAxis(0, 1, 1);
-    this.yAxis = new NumberAxis();
+    NumberAxis yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
 
     yAxis.setTickLabelFormatter(new StringConverter<Number>() {
@@ -82,39 +80,34 @@ public class MillionsChart extends MillionsView {
   }
 
   private void updateChartBasedOnMode() {
-    int oneMonthInWeeks = 5;
-    int threeMonthsInWeeks = 13;
-    int sixMonthsInWeeks = 26;
-    int oneYearInWeeks = 52;
-
     switch (chartMode) {
       case ONE_MONTH -> {
-        if (this.xAxis.getUpperBound() > oneMonthInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - oneMonthInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.ONE_MONTH_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.ONE_MONTH_IN_WEEKS);
         }
         xAxis.setTickUnit(1);
       }
       case THREE_MONTHS -> {
-        if (this.xAxis.getUpperBound() > threeMonthsInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - threeMonthsInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.THREE_MONTHS_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.THREE_MONTHS_IN_WEEKS);
         }
         xAxis.setTickUnit(1);
       }
       case SIX_MONTHS -> {
-        if (this.xAxis.getUpperBound() > sixMonthsInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - sixMonthsInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.SIX_MONTHS_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.SIX_MONTHS_IN_WEEKS);
         }
-        xAxis.setTickUnit(Math.round((double) sixMonthsInWeeks / 10));
+        xAxis.setTickUnit(Math.round((double) TimeConstants.SIX_MONTHS_IN_WEEKS / 10));
       }
       case ONE_YEAR -> {
-        if (this.xAxis.getUpperBound() > oneYearInWeeks) {
-          xAxis.setLowerBound(xAxis.getUpperBound() - oneYearInWeeks);
+        if (this.xAxis.getUpperBound() > TimeConstants.ONE_YEAR_IN_WEEKS) {
+          xAxis.setLowerBound(xAxis.getUpperBound() - TimeConstants.ONE_YEAR_IN_WEEKS);
         }
-        xAxis.setTickUnit(Math.round((double) oneYearInWeeks / 10));
+        xAxis.setTickUnit(Math.round((double) TimeConstants.ONE_YEAR_IN_WEEKS / 10));
       }
       case MAX -> {
         xAxis.setLowerBound(0);
-        if (xAxis.getUpperBound() >= threeMonthsInWeeks) {
+        if (xAxis.getUpperBound() >= TimeConstants.THREE_MONTHS_IN_WEEKS) {
           xAxis.setTickUnit(Math.round(xAxis.getUpperBound() / 10));
         }
       }

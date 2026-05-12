@@ -6,5 +6,22 @@
 }
 
 .body-right {
-    -fx-pref-width: 200px;
+}
+
+.owned-stocks {
+    -fx-alignment: center;
+    -fx-padding: 5px;
+}
+
+.owned-stocks-title {
+    -fx-alignment: center;
+    -fx-background-color: #1F2937;
+    -fx-border-color: #9CA3AF;
+}
+
+.owned-stocks-label {
+    -fx-padding: 5px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
 }
