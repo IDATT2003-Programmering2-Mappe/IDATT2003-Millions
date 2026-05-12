@@ -24,10 +24,10 @@ public class GameController {
     return Optional.ofNullable(activeSession);
   }
 
-  public Optional<String> startNewGame(String name, BigDecimal startingMoney, Path path) {
+  public Optional<String> startNewGame(String name, BigDecimal startingMoney, Path csvPath) {
     try{
       Player player = new Player(name, startingMoney);
-      List<Stock> stocks = fileReader.readStocks(path);
+      List<Stock> stocks = fileReader.readStocks(csvPath);
       Exchange exchange = new Exchange("S&P 500", stocks);
 
       activeSession = new GameSession(player, exchange);
@@ -43,7 +43,5 @@ public class GameController {
   public void clearSession() {
     activeSession = null;
   }
-
-
 
 }

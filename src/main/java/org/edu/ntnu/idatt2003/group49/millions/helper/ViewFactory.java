@@ -1,7 +1,9 @@
 package org.edu.ntnu.idatt2003.group49.millions.helper;
 
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.GameController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.model.GameSession;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
@@ -11,19 +13,23 @@ import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 
 public class ViewFactory {
   private final Navigator navigator;
-  private final Exchange exchange;
+  private final GameController gameController;
 
-  public ViewFactory(Navigator navigator, Exchange exchange) {
+  public ViewFactory(Navigator navigator, GameController gameController) {
     this.navigator = navigator;
-    this.exchange = exchange;
+    this.gameController = gameController;
   }
 
   public HeaderView createHeaderView() {
-    HeaderView header = new HeaderView(navigator);
-    return new HeaderView(navigator);
+    GameSession session = gameController.getActiveSession()
+            .orElseThrow(() -> new IllegalStateException("No active game session"));
+    return new HeaderView(navigator, session.getPlayer());
   }
 
   public DashboardView createDashboardView() {
+    GameSession session = gameController.getActiveSession()
+            .orElseThrow(() -> new IllegalStateException("No active game session"));
+    Exchange exchange = session.getExchange();
     DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(), createOwnedStocks());
     exchange.addObserver(dashboard);
     return dashboard;

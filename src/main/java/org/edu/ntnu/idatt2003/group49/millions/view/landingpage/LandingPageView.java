@@ -13,6 +13,7 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.Objects;
+import java.util.Optional;
 
 
 public class LandingPageView extends MillionsView {
@@ -132,7 +133,9 @@ public class LandingPageView extends MillionsView {
       }
 
       errorLabel.setText("");
-      navigator.goToDashboard();
+
+      Optional<String> error = navigator.startNewGame(name, startingMoney, selectedCsvPath);
+      error.ifPresent(errorLabel::setText);
 
     });
 
