@@ -3,18 +3,18 @@ package org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.Table.StocksTable;
 
-import java.math.BigDecimal;
-import java.util.List;
 import java.util.Objects;
 
 public class OwnedStocks extends MillionsView {
@@ -30,35 +30,24 @@ public class OwnedStocks extends MillionsView {
 
   @Override
   protected Pane build() {
+
+    Label ownedStocksLabel = new Label("Owned Stocks");
+    ownedStocksLabel.getStyleClass().add("owned-stocks-label");
+
+    HBox title = new HBox();
+    title.getStyleClass().add("owned-stocks-title");
+    title.getChildren().add(ownedStocksLabel);
+
+    StocksTable table = new StocksTable(navigator);
+
     VBox vBox = new VBox();
-    vBox.getChildren().add(table());
-    return vBox;
-  }
+    vBox.getStyleClass().add("owned-stocks");
+    vBox.setSpacing(5);
 
-  private TableView<Share> table() {
-    TableColumn<Share, Number> qtyCol = new TableColumn<>("QTY");
-    qtyCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
+    vBox.getChildren().addAll(
+      title,
+      table
     );
-
-    TableColumn<Share, String> nameCol = new TableColumn<>("Name");
-    nameCol.setCellValueFactory(cellData ->
-      new SimpleStringProperty(cellData.getValue().getStock().getSymbol()));
-
-    TableColumn<Share, Number> priceCol = new TableColumn<>("Price");
-    priceCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getStock().getSalesPrice().doubleValue()));
-
-    TableColumn<Share, Number> changeCol = new TableColumn<>("Change");
-    changeCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue()));
-
-    TableView<Share> table = new TableView<>();
-    table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
-
-    table.getColumns().setAll(List.of(qtyCol, nameCol, priceCol, changeCol));
-
-    table.setItems(FXCollections.observableArrayList(new Share(new Stock("NVDA", "Nvidia", new BigDecimal("100")), new BigDecimal("200"), new BigDecimal("150"))));
-    return table;
+    return vBox;
   }
 }
