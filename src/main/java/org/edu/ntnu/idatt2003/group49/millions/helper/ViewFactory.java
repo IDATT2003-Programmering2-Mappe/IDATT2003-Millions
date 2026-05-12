@@ -7,6 +7,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
+import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -36,5 +37,11 @@ public class ViewFactory {
   public OwnedStocks createOwnedStocks() {
     OwnedStocks ownedStocks = new OwnedStocks(navigator);
     return ownedStocks;
+  }
+
+  public LandingPageView createLandingPageView() {
+    LandingPageView landingpage = new LandingPageView(navigator);
+
+    return  landingpage;
   }
 }
