@@ -1,16 +1,18 @@
 .dashboard {
     -fx-background-color: #0f172a;
+    -fx-spacing: 0;
 }
 
 .body-left {
+    -fx-padding: 10 0 10 10;
 }
 
 .body-right {
+    -fx-padding: 10 10 0 10;
 }
 
 .owned-stocks {
     -fx-alignment: center;
-    -fx-padding: 5px;
 }
 
 .owned-stocks-title {
@@ -24,4 +26,24 @@
     -fx-text-fill: white;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
+}
+
+.controls {
+    -fx-alignment: CENTER-RIGHT;
+    -fx-padding: 5 0;
+}
+
+.advance-btn {
+    -fx-alignment: right;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-color: derive(#1e293b, 20%);
+    -fx-border-color: white;
+}
+
+.advance-btn:hover {
+    -fx-border-color: #bfdcff;
+    -fx-text-fill: #bfdcff;
+    -fx-cursor: hand;
 }

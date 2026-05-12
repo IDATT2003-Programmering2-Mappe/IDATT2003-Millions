@@ -1,12 +1,22 @@
+.chart {
+    -fx-padding: 0;
+}
+
+.chart-content {
+    -fx-padding: 15;
+}
+
+.chart-plot-background {
+    -fx-background-insets: 0;
+}
+
 .chart-container {
     -fx-background-color: #1e293b;
-    -fx-border-width: 1px;
     -fx-border-color: rgba(100,100,100,0.8);
 }
 
-.filter {
+.filters {
     -fx-background-color: #243043;
-    -fx-border-width: 1px;
     -fx-border-color: rgba(100,100,100,0.8);
     -fx-padding: 5px;
     -fx-font-weight: bold;
@@ -27,13 +37,9 @@
     -fx-text-fill: #bfdcff;
 }
 
-.chart {
-}
-
 .chart-plot-background {
     -fx-background-color: #262626;
     -fx-border-color: #243043;
-    -fx-border-width: 1px;
 }
 
 .chart-title {
@@ -77,7 +83,7 @@
 }
 
 .chart-vertical-grid-lines {
-    -fx-stroke: #444;
+    -fx-stroke: transparent;
 }
 
 .chart-legend {
@@ -86,4 +92,57 @@
 
 .chart-legend-item {
     -fx-text-fill: transparent;
+}
+
+.info-bar {
+    -fx-padding: 10;
+    -fx-border-color: #9CA3AF;
+}
+
+.value-section {
+    -fx-spacing: 10;
+}
+
+.name {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-alignment: center;
+    -fx-border-color: #9CA3AF;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.price {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-alignment: center;
+    -fx-border-color: #9CA3AF;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.change {
+    -fx-font-size: 14px;
+    -fx-min-width: 100px;
+    -fx-font-weight: bold;
+    -fx-border-color: #9CA3AF;
+    -fx-alignment: center;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.positive-change {
+    -fx-text-fill: #4CAF50;
+}
+
+.negative-change {
+    -fx-text-fill: #E57373;
+}
+
+.zero-change {
+    -fx-text-fill: #515151;
 }
