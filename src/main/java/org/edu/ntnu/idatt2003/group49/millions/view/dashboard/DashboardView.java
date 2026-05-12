@@ -16,7 +16,6 @@ import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
@@ -44,55 +43,62 @@ public class DashboardView extends MillionsView implements StockObserver {
 
   @Override
   protected Pane build() {
-    Button advanceBtn = new Button("Advance");
-    advanceBtn.setOnAction(e -> {
-      try {
-        exchangeController.advance();
-      } catch (IOException ex) {
-        throw new RuntimeException(ex);
-      }
-    });
-
-    VBox bodyLeft = new VBox();
-    bodyLeft.getStyleClass().add("body-left");
-    bodyLeft.setFillWidth(true);
-    HBox.setHgrow(bodyLeft, Priority.ALWAYS);
-
-    bodyLeft.getChildren().addAll(
-      chart,
-      advanceBtn
-    );
-
-    VBox bodyRight = new VBox();
-    bodyRight.getStyleClass().add("body-right");
-    bodyRight.setFillWidth(true);
-    HBox.setHgrow(bodyRight, Priority.ALWAYS);
-
-    bodyRight.getChildren().add(
-      ownedStocks
-    );
-
     HBox body = new HBox();
     body.getStyleClass().add("dashboard");
 
     body.getChildren().addAll(
-      bodyLeft,
-      bodyRight
+      createLeftBody(),
+      createRightBody()
     );
 
     List<BigDecimal> nvidiaPrices = exchangeController.getStockPrices("NVDA");
     for (int i = 0; i < nvidiaPrices.size(); i++) {
-      XYChart.Data<Number, Number> data = new XYChart.Data<>(i, nvidiaPrices.get(i));
-      chart.addData(data);
+      chart.addData(i, nvidiaPrices.get(i));
     }
 
     return body;
+  }
+
+  private VBox createLeftBody() {
+    VBox leftBody = new VBox();
+    leftBody.getStyleClass().add("body-left");
+    leftBody.setFillWidth(true);
+    HBox.setHgrow(leftBody, Priority.ALWAYS);
+
+    HBox controls = new HBox();
+    controls.getStyleClass().add("controls");
+    Button advanceBtn = new Button("Advance");
+    advanceBtn.getStyleClass().add("advance-btn");
+    advanceBtn.setOnAction(e -> {
+      exchangeController.advance();
+    });
+    controls.getChildren().addAll(advanceBtn);
+
+    leftBody.getChildren().addAll(
+      chart,
+      controls
+    );
+    return leftBody;
+  }
+
+  private VBox createRightBody() {
+    VBox rightBody = new VBox();
+    rightBody.getStyleClass().add("body-right");
+    rightBody.setFillWidth(true);
+    HBox.setHgrow(rightBody, Priority.ALWAYS);
+
+    rightBody.getChildren().add(
+      ownedStocks
+    );
+    return rightBody;
   }
 
   @Override
   public void update(Map<String, Stock> stockMap, int week) {
     System.out.println(stockMap.get("NVDA").getSalesPrice());
     System.out.println("Monk");
-    chart.addData(new XYChart.Data<>(week, stockMap.get("NVDA").getSalesPrice()));
+    Stock stock = stockMap.get("NVDA");
+    chart.addData(week, stock.getSalesPrice());
+    chart.updateInfoBar(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
   }
 }
