@@ -51,7 +51,6 @@ public class LandingPageView extends MillionsView {
             loadGameBtn,
             settingsBtn
     );
-
     body.getChildren().add(menu);
     return body;
   }
@@ -99,7 +98,7 @@ public class LandingPageView extends MillionsView {
       File selectedFile = fileChooser.showOpenDialog(getScene().getWindow());
       if (selectedFile != null) {
         selectedCsvPath = selectedFile.toPath();
-        selectedCsvLabel.setText(selectedFile.getName());
+        selectedCsvLabel.setText(selectedFile.getAbsolutePath());
       }
     });
 
@@ -134,6 +133,7 @@ public class LandingPageView extends MillionsView {
 
       errorLabel.setText("");
       navigator.goToDashboard();
+
     });
 
     form.getChildren().addAll(
