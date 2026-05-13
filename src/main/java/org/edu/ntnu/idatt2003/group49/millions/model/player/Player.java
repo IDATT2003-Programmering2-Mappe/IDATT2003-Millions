@@ -81,7 +81,7 @@ public class Player {
   }
 
   public BigDecimal getNetWorth() {
-    return money.add(portfolio.getNetWorth());
+    return money.add(portfolio.getValue());
   }
 }
 
