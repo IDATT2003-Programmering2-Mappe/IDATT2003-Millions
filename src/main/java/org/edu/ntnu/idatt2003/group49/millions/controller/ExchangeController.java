@@ -17,7 +17,7 @@ public class ExchangeController {
     this.exchange = exchange;
   }
 
-  public void advance() throws IOException {
+  public void advance() {
     System.out.println("Advance clicked");
     exchange.advance();
 

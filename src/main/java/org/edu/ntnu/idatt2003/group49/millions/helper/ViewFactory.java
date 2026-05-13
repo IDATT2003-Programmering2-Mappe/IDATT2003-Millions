@@ -3,6 +3,7 @@ package org.edu.ntnu.idatt2003.group49.millions.helper;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
@@ -10,6 +11,8 @@ import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
+
+import java.math.BigDecimal;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -32,7 +35,8 @@ public class ViewFactory {
   }
 
   public MillionsChart createMillionsChart() {
-    MillionsChart chart = new MillionsChart();
+    Stock stock = exchange.getStock("NVDA");
+    MillionsChart chart = new MillionsChart(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
     return chart;
   }
 

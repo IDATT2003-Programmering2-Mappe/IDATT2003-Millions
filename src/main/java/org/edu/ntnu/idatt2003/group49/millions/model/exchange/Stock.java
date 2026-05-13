@@ -142,8 +142,8 @@ public class Stock {
 
   // TODO: make tests for this
   public BigDecimal getPriceChangeInPercentInWeekRange(int weekRange) {
-    if (weekRange <= 0) {
-      throw new IllegalArgumentException("weekRange cannot be less than 1");
+    if (weekRange < 0) {
+      throw new IllegalArgumentException("weekRange cannot be less than 0");
     }
 
     BigDecimal currentPrice = prices.getLast();
@@ -156,6 +156,14 @@ public class Stock {
     BigDecimal startPrice = prices.getFirst();
 
     return calculatePriceChange(startPrice, currentPrice);
+  }
+
+  // TODO: make test for this
+  public BigDecimal getPriceChangeInPercent() {
+    return calculatePriceChange(
+      prices.getFirst(),
+      prices.getLast()
+    );
   }
 
   // TODO: make tests for this
