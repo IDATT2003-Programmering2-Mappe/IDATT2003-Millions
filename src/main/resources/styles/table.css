@@ -78,12 +78,14 @@
 
 .buy-cell {
     -fx-text-fill: lightgreen;
+    -fx-font-weight: bold;
     -fx-alignment: CENTER;
     -fx-padding: 0 10 0 10;
 }
 
 .sell-cell {
     -fx-text-fill: red;
+    -fx-font-weight: bold;
     -fx-alignment: CENTER;
     -fx-padding: 0 10 0 10;
 }

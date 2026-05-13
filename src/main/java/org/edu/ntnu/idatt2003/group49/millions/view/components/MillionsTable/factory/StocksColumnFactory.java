@@ -125,7 +125,7 @@ public class StocksColumnFactory extends TableColumnFactory {
     );
 
     buyColumn.setCellValueFactory(cellData ->
-      new SimpleStringProperty("Buy")
+      new SimpleStringProperty("BUY")
     );
 
     return buyColumn;
@@ -146,7 +146,7 @@ public class StocksColumnFactory extends TableColumnFactory {
     );
 
     sellColumn.setCellValueFactory(cellData ->
-      new SimpleStringProperty("Sell")
+      new SimpleStringProperty("SELL")
     );
 
     return sellColumn;
