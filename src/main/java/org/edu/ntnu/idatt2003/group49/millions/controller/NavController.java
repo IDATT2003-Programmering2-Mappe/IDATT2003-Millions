@@ -31,4 +31,11 @@ public class NavController implements Navigator {
     root.setCenter(viewFactory.createLandingPageView());
     logger.info("Switched to Landing page");
   }
+
+  @Override
+  public void goToTradingPage() {
+    root.setTop(viewFactory.createHeaderView());
+    root.setCenter(viewFactory.createTradingPageView());
+    logger.info("Switched to Trading page");
+  }
 }

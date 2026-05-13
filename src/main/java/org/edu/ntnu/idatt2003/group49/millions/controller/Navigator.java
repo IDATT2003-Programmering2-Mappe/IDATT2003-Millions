@@ -3,4 +3,5 @@ package org.edu.ntnu.idatt2003.group49.millions.controller;
 public interface Navigator {
   void goToDashboard();
   void goToLandingPage();
+  void goToTradingPage();
 }

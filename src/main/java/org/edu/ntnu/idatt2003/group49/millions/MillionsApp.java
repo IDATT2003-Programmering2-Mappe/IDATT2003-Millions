@@ -22,7 +22,7 @@ public class MillionsApp extends Application {
 
   @Override
   public void start(Stage stage) {
-    nav.goToDashboard();
+    nav.goToTradingPage();
 
     Scene scene = new Scene(root, 1024, 768);
     stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/images/shrek.png")).toExternalForm()));

@@ -17,82 +17,11 @@ public class TradingTable extends MillionsTable<Share> {
 
   @Override
   protected List<TableColumn<Share, ?>> createColumns() {
-    TableColumn<Share, Number> qtyCol = columnFactory.createTableColumn(
-      new TableColumn<>("QTY"),
-      (share, value) -> {
-        System.out.println("Clicked share: " + share);
-        System.out.println("Clicked value: " + value);
-      },
-
-      (cell, share, quantity) -> {
-
-      }
-
+    return List.of(
+      columnFactory.createSymbolColumn(),
+      columnFactory.createPriceColumn(),
+      columnFactory.createChangeColumn(),
+      columnFactory.createQuantityColumn()
     );
-
-    qtyCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
-    );
-
-    TableColumn<Share, String> symbolCol = columnFactory.createTableColumn(
-      new TableColumn<>("Symbol"),
-      (share, value) -> {
-        System.out.println("Clicked share: " + share);
-        System.out.println("Clicked value: " + value);
-      },
-
-      (cell, share, value) -> {
-
-      }
-
-    );
-
-    symbolCol.setCellValueFactory(cellData ->
-      new SimpleStringProperty(cellData.getValue().getStock().getSymbol())
-    );
-
-    TableColumn<Share, Number> priceCol = columnFactory.createTableColumn(
-      new TableColumn<>("Price"),
-      (share, value) -> {
-        System.out.println("Clicked share: " + share);
-        System.out.println("Clicked value: " + value);
-      },
-
-      (cell, share, value) -> {
-        cell.setText("$" + value);
-      }
-    );
-
-    priceCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getStock().getSalesPrice().doubleValue())
-    );
-
-    TableColumn<Share, Number> changeCol = columnFactory.createTableColumn(
-      new TableColumn<>("Change"),
-      (share, value) -> {
-        System.out.println("Clicked share: " + share);
-        System.out.println("Clicked value: " + value);
-      },
-
-      (cell, share, value) -> {
-        if (share.getQuantity().compareTo(new BigDecimal("150")) > 0) {
-          cell.getStyleClass().removeAll("normal-cell", "negative-change");
-          cell.getStyleClass().add("positive-change");
-
-          cell.setText("↑" + value + "%");
-        } else if (share.getQuantity().compareTo(new BigDecimal("150")) < 0) {
-          cell.getStyleClass().removeAll("normal-cell", "positive-change");
-          cell.getStyleClass().add("negative-change");
-
-          cell.setText("↓" + value + "%");
-        }
-      }
-    );
-
-    changeCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
-    );
-
-    return List.of(qtyCol, symbolCol, priceCol, changeCol);
   }
 }
