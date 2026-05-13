@@ -33,12 +33,12 @@ public class ViewFactory {
     GameSession session = gameController.getActiveSession()
             .orElseThrow(() -> new IllegalStateException("No active game session"));
     Exchange exchange = session.getExchange();
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(), createOwnedStocks());
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(exchange), createOwnedStocks());
     exchange.addObserver(dashboard);
     return dashboard;
   }
 
-  public MillionsChart createMillionsChart() {
+  public MillionsChart createMillionsChart(Exchange exchange) {
     Stock stock = exchange.getStock("NVDA");
     MillionsChart chart = new MillionsChart(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
     return chart;
