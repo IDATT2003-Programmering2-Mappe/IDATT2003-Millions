@@ -81,5 +81,31 @@ class PortfolioTest {
   void contains_ThrowsWhenShareIsNull() {
     assertThrows(NullPointerException.class, () -> {portfolio.contains(null);});
   }
+
+
+  @Test
+  void reduceShare_ThrowsWhenSellingMoreThanOwned() {
+    assertThrows(IllegalArgumentException.class,
+            () -> portfolio.reduceShare(share, new BigDecimal("51")));
+  }
+
+  @Test
+  void reduceShare_RemovesShareWhenSellingAllShares() {
+    portfolio.reduceShare(share, new BigDecimal("50"));
+
+    assertFalse(portfolio.contains(share));
+  }
+
+  @Test
+  void reduceShare_ReplacesShareWithRemainingQuantityAfterPartialSale() {
+    portfolio.reduceShare(share, new BigDecimal("20"));
+
+    Share remainingShare = portfolio.getShares().getFirst();
+
+    assertEquals(0, new BigDecimal("30").compareTo(remainingShare.getQuantity()));
+    assertEquals(share.getStock(),remainingShare.getStock());
+  }
 }
+
+
 
