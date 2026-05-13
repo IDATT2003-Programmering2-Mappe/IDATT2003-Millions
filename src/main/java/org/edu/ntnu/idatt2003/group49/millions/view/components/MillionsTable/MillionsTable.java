@@ -29,6 +29,10 @@ public abstract class MillionsTable<T> extends MillionsView {
     getChildren().add(build());
   }
 
+  public ObservableList<T> getList() {
+    return list;
+  }
+
   @Override
   protected Pane build() {
     VBox vBox = new VBox();

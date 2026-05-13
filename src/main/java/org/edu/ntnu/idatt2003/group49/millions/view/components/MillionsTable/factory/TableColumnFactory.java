@@ -10,7 +10,9 @@ import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.Tab
 import java.util.function.BiConsumer;
 
 public abstract class TableColumnFactory {
-  public TableColumnFactory() {}
+  public TableColumnFactory() {
+
+  }
 
   public <T, V> TableColumn<T, V> createTableColumn(
     TableColumn<T, V> column,

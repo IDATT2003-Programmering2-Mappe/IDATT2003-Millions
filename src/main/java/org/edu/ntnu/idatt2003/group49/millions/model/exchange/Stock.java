@@ -47,7 +47,7 @@ public class Stock {
    */
   @Override
   public String toString() {
-    return "Stock [symbol=" + symbol + ", company=" + company + ", prices=" + getSalesPrice() + "]";
+    return "Stock [symbol=" + symbol + ", company=" + company + ", prices=" + getSalesPrice() + ", change=" + getPriceChangeInPercent() + "]";
   }
 
   /**

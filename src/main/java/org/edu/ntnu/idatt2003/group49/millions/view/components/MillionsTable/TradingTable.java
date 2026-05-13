@@ -18,9 +18,12 @@ public class TradingTable extends MillionsTable<Stock> {
   @Override
   protected List<TableColumn<Stock, ?>> createColumns() {
     return List.of(
+      columnFactory.createIndexColumn(getList()),
       columnFactory.createSymbolColumn(),
       columnFactory.createPriceColumn(),
-      columnFactory.createChangeColumn()
+      columnFactory.createChangeColumn(),
+      columnFactory.createBuyColumn(),
+      columnFactory.createSellColumn()
     );
   }
 }
