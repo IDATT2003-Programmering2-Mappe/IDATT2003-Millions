@@ -49,4 +49,40 @@ public class Portfolio {
             .map(share -> new SaleCalculator(share).calculateGross())
             .reduce(BigDecimal.ZERO, BigDecimal::add);
   }
+
+  public void reduceShare(Share share, BigDecimal quantityToSell) {
+    Objects.requireNonNull(share, "share cnnot be null");
+    Objects.requireNonNull(quantityToSell, "quantityToSell cannot be null");
+
+    if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException("quantityToSell must be greater than zero");
+    }
+
+    int shareIndex = shares.indexOf(share);
+
+    if (shareIndex == -1) {
+      throw new IllegalStateException("Cannot reduce a share that is not owned");
+    }
+
+    if (quantityToSell.compareTo(share.getQuantity()) > 0) {
+      throw new IllegalArgumentException("Cannot sell more shares than owned");
+    }
+
+    BigDecimal remainingQuantity = share.getQuantity().subtract(quantityToSell);
+
+    if (remainingQuantity.compareTo(BigDecimal.ZERO) == 0) {
+      shares.remove(shareIndex);
+      return;
+    }
+
+    Share remainingShare = new Share(
+            share.getStock(),
+            remainingQuantity,
+            share.getPurchasePrice()
+    );
+
+    shares.set(shareIndex, remainingShare);
+
+
+  }
 }
