@@ -9,6 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.TableColumnFactory;
 
 import java.util.List;
 import java.util.Objects;
@@ -17,10 +18,8 @@ public abstract class MillionsTable<T> extends MillionsView {
   private final Navigator navigator;
   private final ObservableList<T> list = FXCollections.observableArrayList();
   private final TableView<T> table;
-  protected final TableColumnFactory columnFactory;
 
   public MillionsTable(Navigator navigator) {
-    this.columnFactory = new TableColumnFactory();
     this.navigator = navigator;
     this.table = table();
 
@@ -42,8 +41,8 @@ public abstract class MillionsTable<T> extends MillionsView {
 
     table.setRowFactory(tv -> new TableRow<T>() {
       @Override
-      protected void updateItem(T share, boolean empty) {
-        super.updateItem(share, empty);
+      protected void updateItem(T item, boolean empty) {
+        super.updateItem(item, empty);
       }
     });
 

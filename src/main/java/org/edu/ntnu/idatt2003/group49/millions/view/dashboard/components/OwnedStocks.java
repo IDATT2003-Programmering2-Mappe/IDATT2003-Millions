@@ -8,6 +8,7 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.MillionsTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.OwnedSharesTable;
 
 import java.math.BigDecimal;
@@ -16,9 +17,11 @@ import java.util.Objects;
 
 public class OwnedStocks extends MillionsView {
   private final Navigator navigator;
+  private final MillionsTable<Share> table;
 
-  public OwnedStocks(Navigator navigator) {
+  public OwnedStocks(Navigator navigator, MillionsTable<Share> table) {
     this.navigator = navigator;
+    this.table = table;
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/dashboard.css")
     ).toExternalForm());
@@ -35,7 +38,6 @@ public class OwnedStocks extends MillionsView {
     title.getStyleClass().add("owned-stocks-title");
     title.getChildren().add(ownedStocksLabel);
 
-    OwnedSharesTable table = new OwnedSharesTable(navigator);
     table.setItems(List.of(
       new Share(
         new Stock("NVDA", "Nvidia", new BigDecimal("100")), new BigDecimal("200"), new BigDecimal("150")

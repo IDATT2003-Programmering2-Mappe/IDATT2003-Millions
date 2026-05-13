@@ -1,20 +1,20 @@
 package org.edu.ntnu.idatt2003.group49.millions.helper;
 
-import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.OwnedSharesTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.OwnedSharesColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
-
-import java.math.BigDecimal;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -47,7 +47,7 @@ public class ViewFactory {
   }
 
   public OwnedStocks createOwnedStocks() {
-    OwnedStocks ownedStocks = new OwnedStocks(navigator);
+    OwnedStocks ownedStocks = new OwnedStocks(navigator, createOwnedSharesTable());
     return ownedStocks;
   }
 
@@ -58,10 +58,14 @@ public class ViewFactory {
   }
 
   public TradingPageView createTradingPageView() {
-    return new TradingPageView(createTradingTable(), createMillionsChart());
+    return new TradingPageView(new ExchangeController(exchange), createTradingTable(), createMillionsChart());
+  }
+
+  public OwnedSharesTable createOwnedSharesTable() {
+    return new OwnedSharesTable(navigator, new OwnedSharesColumnFactory());
   }
 
   public TradingTable createTradingTable() {
-    return new TradingTable(navigator);
+    return new TradingTable(navigator, new StocksColumnFactory());
   }
 }
