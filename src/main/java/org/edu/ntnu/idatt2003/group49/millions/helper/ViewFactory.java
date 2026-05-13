@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.helper;
 
+import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
@@ -9,6 +10,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.Mil
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
 
@@ -29,14 +31,18 @@ public class ViewFactory {
   }
 
   public DashboardView createDashboardView() {
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(), createOwnedStocks());
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createPortfolioInfo(), createMillionsChart(), createOwnedStocks());
     exchange.addObserver(dashboard);
     return dashboard;
   }
 
+  public PortfolioInfo createPortfolioInfo() {
+    Stock stock = this.exchange.getStock("NVDA");
+    return new PortfolioInfo("Portfolio", stock.getSalesPrice(), stock.getPriceChangeInPercent());
+  }
+
   public MillionsChart createMillionsChart() {
-    Stock stock = exchange.getStock("NVDA");
-    MillionsChart chart = new MillionsChart(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
+    MillionsChart chart = new MillionsChart();
     return chart;
   }
 
@@ -52,7 +58,7 @@ public class ViewFactory {
   }
 
   public TradingPageView createTradingPageView() {
-    return new TradingPageView(createTradingTable());
+    return new TradingPageView(createTradingTable(), createMillionsChart());
   }
 
   public TradingTable createTradingTable() {

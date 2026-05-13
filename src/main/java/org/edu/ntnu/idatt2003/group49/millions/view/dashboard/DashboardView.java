@@ -4,10 +4,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
@@ -15,6 +13,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -24,14 +23,16 @@ import java.util.Objects;
 public class DashboardView extends MillionsView implements StockObserver {
   private final Navigator navigator;
   private final ExchangeController exchangeController;
+  private final PortfolioInfo portfolioInfo;
   private final MillionsChart chart;
   private final OwnedStocks ownedStocks;
 
   private final ObservableList<BigDecimal> stockData = FXCollections.observableArrayList();
 
-  public DashboardView(Navigator navigator, ExchangeController exchangeController, MillionsChart chart, OwnedStocks ownedStocks) {
+  public DashboardView(Navigator navigator, ExchangeController exchangeController, PortfolioInfo portfolioInfo, MillionsChart chart, OwnedStocks ownedStocks) {
     this.navigator = navigator;
     this.exchangeController = exchangeController;
+    this.portfolioInfo = portfolioInfo;
     this.chart = chart;
     this.ownedStocks = ownedStocks;
 
@@ -75,6 +76,7 @@ public class DashboardView extends MillionsView implements StockObserver {
     controls.getChildren().addAll(advanceBtn);
 
     leftBody.getChildren().addAll(
+      portfolioInfo,
       chart,
       controls
     );
@@ -99,6 +101,6 @@ public class DashboardView extends MillionsView implements StockObserver {
     System.out.println("Monk");
     Stock stock = stockMap.get("NVDA");
     chart.addData(week, stock.getSalesPrice());
-    chart.updateInfoBar(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
+    portfolioInfo.updateInfoBar("Portfolio", stock.getSalesPrice(), stock.getPriceChangeInPercent());
   }
 }

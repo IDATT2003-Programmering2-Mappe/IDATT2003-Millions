@@ -47,3 +47,57 @@
     -fx-text-fill: #bfdcff;
     -fx-cursor: hand;
 }
+
+.info-bar {
+    -fx-padding: 10;
+    -fx-border-color: #9CA3AF;
+    -fx-background-color: #1e293b;
+}
+
+.value-section {
+    -fx-spacing: 10;
+}
+
+.name {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-alignment: center;
+    -fx-border-color: #9CA3AF;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.price {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-alignment: center;
+    -fx-border-color: #9CA3AF;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.change {
+    -fx-font-size: 14px;
+    -fx-min-width: 100px;
+    -fx-font-weight: bold;
+    -fx-border-color: #9CA3AF;
+    -fx-alignment: center;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.positive-change {
+    -fx-text-fill: #4CAF50;
+}
+
+.negative-change {
+    -fx-text-fill: #E57373;
+}
+
+.zero-change {
+    -fx-text-fill: #515151;
+}
