@@ -34,7 +34,7 @@ public class MillionsApp extends Application {
   public void init() throws IOException {
     GameController gameController = new GameController(new CSVMillionsFileReader());
     this.root = new BorderPane();
-    this.nav = new NavController(root, gameController);
+    this.nav = new NavController(root);
 
     ViewFactory viewFactory = new ViewFactory(nav, gameController);
     this.nav.setViewFactory(viewFactory);

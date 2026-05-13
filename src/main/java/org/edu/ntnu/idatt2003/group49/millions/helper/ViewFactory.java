@@ -46,7 +46,7 @@ public class ViewFactory {
   }
 
   public LandingPageView createLandingPageView() {
-    LandingPageView landingpage = new LandingPageView(navigator);
+    LandingPageView landingpage = new LandingPageView(navigator, gameController);
 
     return  landingpage;
   }

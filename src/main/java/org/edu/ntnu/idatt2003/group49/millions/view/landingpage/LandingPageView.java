@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import org.edu.ntnu.idatt2003.group49.millions.controller.GameController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
@@ -18,11 +19,13 @@ import java.util.Optional;
 
 public class LandingPageView extends MillionsView {
   private final Navigator navigator;
+  private final GameController gameController;
   private BigDecimal selectedStartingMoney;
   private Path selectedCsvPath;
 
-  public LandingPageView(Navigator navigator) {
+  public LandingPageView(Navigator navigator, GameController gameController) {
     this.navigator = navigator;
+    this.gameController = gameController;
 
     getStylesheets().add(Objects.requireNonNull(
             getClass().getResource("/styles/landingPage.css")
@@ -134,9 +137,12 @@ public class LandingPageView extends MillionsView {
 
       errorLabel.setText("");
 
-      Optional<String> error = navigator.startNewGame(name, startingMoney, selectedCsvPath);
-      error.ifPresent(errorLabel::setText);
-
+      Optional<String> error = gameController.startNewGame(name, startingMoney, selectedCsvPath);
+      if (error.isPresent()) {
+        errorLabel.setText(error.get());
+        return;
+      }
+      navigator.goToDashboard();
     });
 
     form.getChildren().addAll(
