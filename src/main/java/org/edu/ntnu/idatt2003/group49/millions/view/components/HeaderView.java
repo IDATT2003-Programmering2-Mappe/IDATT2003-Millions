@@ -10,15 +10,18 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.util.Objects;
 
 public class HeaderView extends MillionsView {
   private final Navigator navigator;
+  private final Player player;
 
-  public HeaderView(Navigator navigator) {
+  public HeaderView(Navigator navigator, Player player) {
     this.navigator = navigator;
+    this.player = player;
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/header.css")
     ).toExternalForm());
@@ -112,7 +115,7 @@ public class HeaderView extends MillionsView {
     Label netWorth = new Label("Cash:");
     netWorth.getStyleClass().add("header-label");
 
-    Label money = new Label("100 000 000$");
+    Label money = new Label("$" + player.getMoney());
     money.getStyleClass().add("header-label");
 
     Circle avatar = new Circle(32);

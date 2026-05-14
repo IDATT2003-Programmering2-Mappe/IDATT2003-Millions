@@ -2,18 +2,16 @@ package org.edu.ntnu.idatt2003.group49.millions;
 
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import org.edu.ntnu.idatt2003.group49.millions.controller.GameController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.NavController;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
-import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVReader;
-import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVMillionsFileReader;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Objects;
 
 public class MillionsApp extends Application {
@@ -34,12 +32,11 @@ public class MillionsApp extends Application {
 
   @Override
   public void init() throws IOException {
-    Exchange exchange = new Exchange("NASDAQ", CSVReader.convertCSVToStocksList(Path.of("src/main/resources/sp500.csv")));
-    CSVWriter.writeStockDataToFile(Path.of("data/stock_data.csv"), exchange.getStockMap());
+    GameController gameController = new GameController(new CSVMillionsFileReader());
     this.root = new BorderPane();
     this.nav = new NavController(root);
 
-    ViewFactory viewFactory = new ViewFactory(nav, exchange);
+    ViewFactory viewFactory = new ViewFactory(nav, gameController);
     this.nav.setViewFactory(viewFactory);
   }
 
