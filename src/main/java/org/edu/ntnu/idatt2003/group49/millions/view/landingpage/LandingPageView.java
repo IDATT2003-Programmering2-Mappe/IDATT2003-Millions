@@ -102,7 +102,7 @@ public class LandingPageView extends MillionsView {
       File selectedFile = fileChooser.showOpenDialog(getScene().getWindow());
       if (selectedFile != null) {
         selectedCsvPath = selectedFile.toPath();
-        selectedCsvLabel.setText(selectedFile.getAbsolutePath());
+        selectedCsvLabel.setText(selectedFile.getName());
       }
     });
 
