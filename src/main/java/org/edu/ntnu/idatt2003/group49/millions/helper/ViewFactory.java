@@ -43,7 +43,10 @@ public class ViewFactory {
   }
 
   public PortfolioInfo createPortfolioInfo() {
-    Stock stock = this.exchange.getStock("NVDA");
+    GameSession session = gameController.getActiveSession()
+      .orElseThrow(() -> new IllegalStateException("No active game session"));
+    Exchange exchange = session.getExchange();
+    Stock stock = exchange.getStock("NVDA");
     return new PortfolioInfo("Portfolio", stock.getSalesPrice(), stock.getCurrentChange());
   }
 
@@ -59,6 +62,9 @@ public class ViewFactory {
   }
 
   public TradingPageView createTradingPageView() {
+    GameSession session = gameController.getActiveSession()
+      .orElseThrow(() -> new IllegalStateException("No active game session"));
+    Exchange exchange = session.getExchange();
     return new TradingPageView(new ExchangeController(exchange), createTradingTable(), createStockInfo());
   }
 
