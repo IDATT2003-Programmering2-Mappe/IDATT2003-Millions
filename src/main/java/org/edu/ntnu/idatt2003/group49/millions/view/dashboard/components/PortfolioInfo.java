@@ -43,7 +43,7 @@ public class PortfolioInfo extends MillionsView {
     valueLabel.getStyleClass().add("price");
     changeLabel.getStyleClass().add("change");
 
-    updateChange();
+    updateChangeStyle();
 
     HBox valueSection = new HBox();
     valueSection.getStyleClass().add("value-section");
@@ -69,17 +69,15 @@ public class PortfolioInfo extends MillionsView {
     valueLabel.setText(value.toString());
     changeLabel.setText(change + "%");
 
-    updateChange();
+    updateChangeStyle();
   }
 
-  private void updateChange() {
+  private void updateChangeStyle() {
     changeLabel.getStyleClass().removeAll("positive-change", "negative-change", "zero-change");
 
-    System.out.println("change updated");
     if (change.signum() > 0) {
       changeLabel.setText("+" + change + "%");
       changeLabel.getStyleClass().add("positive-change");
-      System.out.println("wasuh");
     }
     else if (change.signum() < 0) {
       changeLabel.setText(change + "%");

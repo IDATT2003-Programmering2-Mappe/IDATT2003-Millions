@@ -39,29 +39,43 @@ public class TradingPageView extends MillionsView {
 
     // Outer TradingTable wrapper
     tradingTable.setMinHeight(0);
-    tradingTable.setMaxHeight(Double.MAX_VALUE);
-    tradingTable.setMaxWidth(Double.MAX_VALUE);
+    tradingTable.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     // Inner actual TableView
     tradingTable.getTable().setMinHeight(0);
-    tradingTable.getTable().setMaxHeight(Double.MAX_VALUE);
-    tradingTable.getTable().setMaxWidth(Double.MAX_VALUE);
+    tradingTable.getTable().setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     VBox leftBody = new VBox(tradingTable);
     leftBody.getStyleClass().add("left-body");
+
     leftBody.setMinHeight(0);
     leftBody.setMaxHeight(Double.MAX_VALUE);
+
+    // Width behavior for left side
+    leftBody.setMinWidth(0);
+    leftBody.setPrefWidth(600);
+    leftBody.setMaxWidth(800);
 
     VBox.setVgrow(tradingTable, Priority.ALWAYS);
 
     VBox rightBody = new VBox(stockInfo);
     rightBody.getStyleClass().add("right-body");
+
+    rightBody.setMinHeight(0);
     rightBody.setMaxHeight(Double.MAX_VALUE);
 
+    // Width behavior for right side
+    rightBody.setMinWidth(400);
+    rightBody.setPrefWidth(400);
+    rightBody.setMaxWidth(Double.MAX_VALUE);
+
     HBox body = new HBox(leftBody, rightBody);
+    body.getStyleClass().add("trading-page");
     body.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
+    // Let both participate in horizontal growth
     HBox.setHgrow(leftBody, Priority.ALWAYS);
+    HBox.setHgrow(rightBody, Priority.ALWAYS);
 
     return body;
   }

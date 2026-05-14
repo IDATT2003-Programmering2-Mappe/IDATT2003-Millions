@@ -4,11 +4,11 @@
 }
 
 .body-left {
-    -fx-padding: 10 0 10 10;
+    -fx-padding: 5 0 5 5;
 }
 
 .body-right {
-    -fx-padding: 10 10 0 10;
+    -fx-padding: 5 5 0 5;
 }
 
 .owned-stocks {

@@ -3,6 +3,7 @@ package org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
@@ -38,17 +39,17 @@ public class StockInfo extends MillionsView {
 
   @Override
   protected Pane build() {
-    VBox body = new VBox();
-    body.getChildren().addAll(
-      title(),
-      chart,
+    VBox stockInfo = new VBox();
+    stockInfo.getStyleClass().add("stock-info");
+    stockInfo.getChildren().addAll(
+      new VBox(title(), chart),
       createInfoSection()
     );
 
     chart.addData(0, 500);
     chart.addData(1, 100);
 
-    return body;
+    return stockInfo;
   }
 
   private HBox title() {
@@ -62,37 +63,90 @@ public class StockInfo extends MillionsView {
     return title;
   }
 
-  private VBox createInfoSection() {
+  private HBox createInfoSection() {
     this.companyLabel = new Label(stock.getCompany());
     this.priceLabel = new Label(stock.getSalesPrice().toString());
     this.changeLabel = new Label(stock.getCurrentChange().toString());
     this.highestLabel = new Label(stock.getHighestPrice().toString());
     this.lowestLabel = new Label(stock.getLowestPrice().toString());
 
-    VBox infoSection = new VBox();
+    companyLabel.getStyleClass().addAll("info-label", "company-label");
+    priceLabel.getStyleClass().addAll("info-label", "price-label");
+    changeLabel.getStyleClass().addAll("info-label", "change-label");
+    highestLabel.getStyleClass().addAll("info-label", "highest-label");
+    lowestLabel.getStyleClass().addAll("info-label", "lowest-label");
+
+    HBox infoSection = new HBox();
+
+    infoSection.getStyleClass().add("info-section");
+
     infoSection.getChildren().addAll(
-      createInfoBox(new Label("Company:"), companyLabel),
-      createInfoBox(new Label("Current price:"), priceLabel),
-      createInfoBox(new Label("Change:"), changeLabel),
-      createInfoBox(new Label("Highest price:"), highestLabel),
-      createInfoBox(new Label("Lowest price:"), lowestLabel)
+      createIdentifierBox(),
+      createInfoBox()
     );
 
     return infoSection;
   }
 
-  private HBox createInfoBox(Label identifier, Label info) {
-    identifier.getStyleClass().add("identifier");
-    info.getStyleClass().add("info");
+  private VBox createIdentifierBox() {
+    Label companyIDLabel = new Label("Company:");
+    Label priceIDLabel = new Label("Current price:");
+    Label changeIDLabel = new Label("Change:");
+    Label highestIDLabel = new Label("Highest price:");
+    Label lowestIDLabel = new Label("Lowest price:");
 
-    HBox infoBox = new HBox();
+    companyIDLabel.getStyleClass().addAll("identifier-label");
+    priceIDLabel.getStyleClass().addAll("identifier-label");
+    changeIDLabel.getStyleClass().addAll("identifier-label");
+    highestIDLabel.getStyleClass().addAll("identifier-label");
+    lowestIDLabel.getStyleClass().addAll("identifier-label");
+
+    VBox identifierBox = new VBox();
+
+    identifierBox.getStyleClass().add("identifier-box");
+
+    identifierBox.getChildren().addAll(
+      companyIDLabel,
+      priceIDLabel,
+      changeIDLabel,
+      highestIDLabel,
+      lowestIDLabel
+    );
+
+    return identifierBox;
+  }
+
+  private VBox createInfoBox() {
+    VBox infoBox = new VBox();
+
     infoBox.getStyleClass().add("info-box");
+
     infoBox.getChildren().addAll(
-      identifier,
-      info
+      companyLabel,
+      priceLabel,
+      changeLabel,
+      highestLabel,
+      lowestLabel
     );
 
     return infoBox;
+  }
+
+  private void updateChangeStyle(BigDecimal change) {
+    changeLabel.getStyleClass().removeAll("positive-change", "negative-change", "zero-change");
+
+    if (change.signum() > 0) {
+      changeLabel.setText("+" + change + "%");
+      changeLabel.getStyleClass().add("positive-change");
+    }
+    else if (change.signum() < 0) {
+      changeLabel.setText(change + "%");
+      changeLabel.getStyleClass().add("negative-change");
+    }
+    else {
+      changeLabel.setText(change + "%");
+      changeLabel.getStyleClass().add("zero-change");
+    }
   }
 
   public void updateStockInfo() {
@@ -102,6 +156,8 @@ public class StockInfo extends MillionsView {
     changeLabel.setText(stock.getCurrentChange().toString());
     highestLabel.setText(stock.getHighestPrice().toString());
     lowestLabel.setText(stock.getLowestPrice().toString());
+
+    updateChangeStyle(stock.getCurrentChange());
 
     chart.clearData();
     int week = 0;
