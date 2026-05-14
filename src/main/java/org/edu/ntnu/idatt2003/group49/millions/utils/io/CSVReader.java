@@ -59,9 +59,13 @@ public class CSVReader {
     List<String[]> data = readCSV(path);
     List<Stock> stocks = new ArrayList<>();
     for (String[] stocksArray : data) {
-      String symbol = stocksArray[0];
-      String company = stocksArray[1];
-      String price = stocksArray[2];
+      String symbol = stocksArray[0].trim();
+      String company = stocksArray[1].trim();
+      String price = stocksArray[2].trim();
+
+      if (price.equals("-")) {
+        continue;
+      }
 
       stocks.add(new Stock(symbol, company, new BigDecimal(price)));
     }
