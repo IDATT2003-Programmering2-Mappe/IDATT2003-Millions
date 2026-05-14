@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -115,4 +116,20 @@ class TransactionFactoryTest {
     );
   }
 
+  @Test
+  void createAggregatedSale_ReturnsOneSaleFromDifferentAllocations() {
+    Share firstShare = new Share(nvidiaStock, BigDecimal.TEN, new BigDecimal("100"));
+    Share secondShare = new Share(nvidiaStock, BigDecimal.TEN, new BigDecimal("200"));
+
+    SaleAllocation firstAllocation = new SaleAllocation(firstShare, BigDecimal.TEN);
+    SaleAllocation secondAllocation = new SaleAllocation(secondShare, BigDecimal.TEN);
+
+    List<SaleAllocation> allocations = List.of(firstAllocation, secondAllocation);
+    Transaction transaction = transactionFactory.createAggregatedSale(allocations, new BigDecimal("20"), 1);
+
+    assertInstanceOf(Sale.class, transaction);
+    assertEquals(nvidiaStock, transaction.getShare().getStock());
+    assertEquals(0, new BigDecimal("20").compareTo(transaction.getShare().getQuantity()));
+    assertEquals(0, new BigDecimal("150").compareTo(transaction.getShare().getPurchasePrice()));
+  }
 }

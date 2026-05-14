@@ -6,7 +6,6 @@ import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFact
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -153,7 +152,7 @@ class ExchangeTest {
   @Test
   void sell_ThrowsWhenShareIsNull() {
     assertThrows(NullPointerException.class,
-            () -> exchange.sell(null, new BigDecimal("1"), new Player("Steve", new BigDecimal("1000"))));
+            () -> exchange.sell((Share) null, new BigDecimal("1"), new Player("Steve", new BigDecimal("1000"))));
   }
 
   @Test
@@ -214,6 +213,32 @@ class ExchangeTest {
     assertThrows(IllegalArgumentException.class,
             () -> exchange.sell(share, new BigDecimal("2"), player));
   }
+  @Test
+  void sell_WithSymbol_SellsFromTotalHoldingUsingFifo() {
+    Player player = new Player("Steve", new BigDecimal("1000"));
+
+    Share firstShare = new Share(nvidiaStock, BigDecimal.TEN, new BigDecimal("100"));
+    Share secondShare = new Share(nvidiaStock, BigDecimal.TEN, new BigDecimal("200"));
+
+    player.getPortfolio().addShare(firstShare);
+    player.getPortfolio().addShare(secondShare);
+
+    Transaction sale = exchange.sell("NVDA", new BigDecimal("15"), player);
+
+    assertTrue(sale.isCommited());
+
+    List<Share> remainingShares = player.getPortfolio().getShares("NVDA");
+
+    //tester at det bare er et share objekt av nvidia igjen
+    assertEquals(1, remainingShares.size());
+
+    // tester at FIFO fjernet første NVDA-lot og bare rest-lot står igjen
+    assertEquals(0, new BigDecimal("5").compareTo(remainingShares.getFirst().getQuantity()));
+
+    //tester at kjøpsprisen på de resterende sharesene er 200 per
+    assertEquals(0, new BigDecimal("200").compareTo(remainingShares.getFirst().getPurchasePrice()));
+  }
+
 
   @Test
   void advance_IncrementsWeekByOne() {

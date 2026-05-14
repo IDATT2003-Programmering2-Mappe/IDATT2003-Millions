@@ -7,6 +7,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Objects;
 
@@ -59,8 +60,8 @@ public class TransactionFactory {
    *                                  greater than the owned quantity, or if week is negative
    */
   public Transaction createSale(Share ownedShare, BigDecimal quantityToSell, int week) {
-    Objects.requireNonNull(ownedShare, "ownedShare cannot be null");
-    Objects.requireNonNull(quantityToSell, "quantityToSell cannot be null");
+    Objects.requireNonNull(ownedShare, "'ownedShare' cannot be null");
+    Objects.requireNonNull(quantityToSell, "'quantityToSell' cannot be null");
 
     if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
       throw new IllegalArgumentException("quantity must be greater than zero");
@@ -75,5 +76,32 @@ public class TransactionFactory {
     SaleAllocation allocation = new SaleAllocation(ownedShare, quantityToSell);
 
     return new Sale(shareToSell, week, calculator, List.of(allocation));
+  }
+
+  public Transaction createAggregatedSale(List<SaleAllocation> allocations, BigDecimal quantityToSell, int week) {
+    Objects.requireNonNull(allocations, "'allocations' cannot be null");
+    Objects.requireNonNull(quantityToSell, "'quantityToSell' cannot be null");
+
+    if (allocations.isEmpty()) {
+      throw new IllegalArgumentException("'allocations' cannot be empty");
+    }
+
+    if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException("quantity must be greater than zero");
+    }
+
+    Stock stock = allocations.getFirst().getShare().getStock();
+
+    BigDecimal totalPurchaseCost = allocations.stream()
+            .map(allocation -> allocation.getShare().getPurchasePrice()
+                    .multiply(allocation.getQuantity()))
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+    BigDecimal purchasePrice = totalPurchaseCost.divide(quantityToSell, 2, RoundingMode.HALF_UP);
+    Share aggregatedShare = new Share(stock, quantityToSell, purchasePrice);
+
+    TransactionCalculator calculator = new SaleCalculator(aggregatedShare, totalPurchaseCost);
+
+    return new Sale(aggregatedShare, week, calculator, allocations);
   }
 }
