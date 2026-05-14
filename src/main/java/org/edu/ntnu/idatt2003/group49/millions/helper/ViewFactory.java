@@ -7,12 +7,16 @@ import org.edu.ntnu.idatt2003.group49.millions.model.GameSession;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.OwnedSharesTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.OwnedSharesColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
-
-import java.math.BigDecimal;
+import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components.StockInfo;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -33,19 +37,21 @@ public class ViewFactory {
     GameSession session = gameController.getActiveSession()
             .orElseThrow(() -> new IllegalStateException("No active game session"));
     Exchange exchange = session.getExchange();
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createMillionsChart(exchange), createOwnedStocks());
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), createPortfolioInfo(), createOwnedStocks());
     exchange.addObserver(dashboard);
     return dashboard;
   }
 
-  public MillionsChart createMillionsChart(Exchange exchange) {
+  public PortfolioInfo createPortfolioInfo() {
+    GameSession session = gameController.getActiveSession()
+      .orElseThrow(() -> new IllegalStateException("No active game session"));
+    Exchange exchange = session.getExchange();
     Stock stock = exchange.getStock("NVDA");
-    MillionsChart chart = new MillionsChart(stock.getCompany(), stock.getSalesPrice(), stock.getPriceChangeInPercent());
-    return chart;
+    return new PortfolioInfo("Portfolio", stock.getSalesPrice(), stock.getCurrentChange());
   }
 
   public OwnedStocks createOwnedStocks() {
-    OwnedStocks ownedStocks = new OwnedStocks(navigator);
+    OwnedStocks ownedStocks = new OwnedStocks(navigator, createOwnedSharesTable());
     return ownedStocks;
   }
 
@@ -53,5 +59,24 @@ public class ViewFactory {
     LandingPageView landingpage = new LandingPageView(navigator, gameController);
 
     return  landingpage;
+  }
+
+  public TradingPageView createTradingPageView() {
+    GameSession session = gameController.getActiveSession()
+      .orElseThrow(() -> new IllegalStateException("No active game session"));
+    Exchange exchange = session.getExchange();
+    return new TradingPageView(new ExchangeController(exchange), createTradingTable(), createStockInfo());
+  }
+
+  public OwnedSharesTable createOwnedSharesTable() {
+    return new OwnedSharesTable(navigator, new OwnedSharesColumnFactory());
+  }
+
+  public TradingTable createTradingTable() {
+    return new TradingTable(navigator, new StocksColumnFactory());
+  }
+
+  public StockInfo createStockInfo() {
+    return new StockInfo();
   }
 }

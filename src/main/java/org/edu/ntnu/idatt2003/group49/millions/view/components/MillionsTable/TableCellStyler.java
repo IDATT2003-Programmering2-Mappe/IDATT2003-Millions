@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.Table;
+package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
 
 import javafx.scene.control.TableCell;
 

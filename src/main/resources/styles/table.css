@@ -31,14 +31,9 @@
     -fx-background-color: derive(#1F2937, 5%);
 }
 
-.table-row-cell .table-cell {
-    -fx-border-color: rgba(100,100,100,0.8);
-    -fx-alignment: CENTER_LEFT;
-    -fx-padding: 0 10 0 10;
-}
-
 .table-row-cell:hover {
     -fx-background-color: derive(#1F2937, 20%);
+    -fx-cursor: hand;
 }
 
 .table-row-cell:selected {
@@ -64,6 +59,9 @@
 }
 
 .default-cell {
+    -fx-border-color: rgba(100,100,100,0.8);
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10 0 10;
     -fx-text-fill: white;
 }
 
@@ -76,5 +74,33 @@
 }
 
 .zero-change {
-    -fx-text-fill: #515151;
+    -fx-text-fill: derive(#515151, 50%);
+}
+
+.buy-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 0 10 0 10;
+}
+
+.buy-cell:hover {
+    -fx-background-color: derive(#4CAF50, -20%);
+    -fx-border-color: #bfdcff;
+    -fx-text-fill: #bfdcff;
+}
+
+.sell-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #E57373;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 0 10 0 10;
+}
+
+.sell-cell:hover {
+    -fx-background-color: derive(#E57373, -20%);
+    -fx-border-color: #bfdcff;
+    -fx-text-fill: #bfdcff;
 }

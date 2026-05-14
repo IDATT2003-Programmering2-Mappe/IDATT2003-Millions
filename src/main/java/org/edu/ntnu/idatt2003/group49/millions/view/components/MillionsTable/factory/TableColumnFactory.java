@@ -1,22 +1,26 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.Table;
+package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory;
 
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableCellStyler;
 
 import java.util.function.BiConsumer;
 
-public class TableColumnFactory {
+public abstract class TableColumnFactory {
+  public TableColumnFactory() {
 
-  public TableColumnFactory() {}
+  }
 
-  public <V> TableColumn<Share, V> createTableColumn(
-    TableColumn<Share, V> column,
-    BiConsumer<Share, V> onClick,
-    TableCellStyler<Share, V> styler
+  public <T, V> TableColumn<T, V> createTableColumn(
+    TableColumn<T, V> column,
+    BiConsumer<T, V> onClick,
+    TableCellStyler<T, V> styler
   ) {
     column.setCellFactory(_ -> {
-      TableCell<Share, V> cell = new TableCell<Share, V>() {
+      TableCell<T, V> cell = new TableCell<T, V>() {
         @Override
         protected void updateItem(V item, boolean empty) {
           super.updateItem(item, empty);
@@ -30,9 +34,9 @@ public class TableColumnFactory {
             setText(item.toString());
             setGraphic(null);
 
-            Share share = getTableRow().getItem();
-            if (share != null) {
-              styler.style(this, share, item);
+            T rowItem = getTableRow().getItem();
+            if (rowItem != null) {
+              styler.style(this, rowItem, item);
             }
           }
         }
@@ -40,11 +44,11 @@ public class TableColumnFactory {
 
       cell.setOnMouseClicked(e -> {
         if (!cell.isEmpty()) {
-          Share share = cell.getTableRow().getItem();
+          T rowItem = cell.getTableRow().getItem();
           V value = cell.getItem();
 
-          if (share != null && value != null) {
-            onClick.accept(share, value);
+          if (rowItem != null && value != null) {
+            onClick.accept(rowItem, value);
           }
         }
       });
