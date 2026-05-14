@@ -50,10 +50,14 @@ public class DashboardView extends MillionsView implements StockObserver {
       createRightBody()
     );
 
-    List<BigDecimal> nvidiaPrices = exchangeController.getStockPrices("NVDA");
+    Stock nvidiaStock = exchangeController.getStock("NVDA");
+    List<BigDecimal> nvidiaPrices = exchangeController.getStockPrices(nvidiaStock.getSymbol());
     for (int i = 0; i < nvidiaPrices.size(); i++) {
       chart.addData(i, nvidiaPrices.get(i));
     }
+
+    chart.setYBounds(nvidiaStock.getHighestPrice(), nvidiaStock.getLowestPrice());
+    chart.updateYAxis();
 
     return body;
   }
@@ -96,9 +100,10 @@ public class DashboardView extends MillionsView implements StockObserver {
   @Override
   public void update(Map<String, Stock> stockMap, int week) {
     System.out.println(stockMap.get("NVDA").getSalesPrice());
-    System.out.println("Monk");
     Stock stock = stockMap.get("NVDA");
     chart.addData(week, stock.getSalesPrice());
+    chart.setYBounds(stock.getHighestPrice(), stock.getLowestPrice());
+    chart.updateYAxis();
     portfolioInfo.updateInfoBar("Portfolio", stock.getSalesPrice(), stock.getCurrentChange());
   }
 }

@@ -3,8 +3,6 @@ package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart;
 import javafx.geometry.Side;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -22,9 +20,13 @@ public class MillionsChart extends MillionsView {
   private AreaChart<Number, Number> chart;
   private final XYChart.Series<Number, Number> series;
   private NumberAxis xAxis;
+  private NumberAxis yAxis;
   private ChartMode chartMode = ChartMode.MAX;
 
   private List<Button> filterButtons;
+
+  private BigDecimal highestPrice;
+  private BigDecimal lowestPrice;
 
   public MillionsChart() {
     getStylesheets().add(Objects.requireNonNull(
@@ -41,6 +43,11 @@ public class MillionsChart extends MillionsView {
     return createChartContainer();
   }
 
+  public void setYBounds(BigDecimal highestPrice, BigDecimal lowestPrice) {
+    this.highestPrice = highestPrice;
+    this.lowestPrice = lowestPrice;
+  }
+
   private VBox createChartContainer() {
     VBox chartContainer = new VBox();
     chartContainer.getStyleClass().add("chart-container");
@@ -55,7 +62,7 @@ public class MillionsChart extends MillionsView {
   private AreaChart<Number, Number> createChart() {
     this.xAxis = new NumberAxis(0, 1, 1);
 
-    NumberAxis yAxis = new NumberAxis();
+    this.yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
 
     yAxis.setTickLabelFormatter(new StringConverter<Number>() {
@@ -77,6 +84,8 @@ public class MillionsChart extends MillionsView {
 
     chart.getData().add(series);
 
+    updateChartBasedOnMode();
+
     return chart;
   }
 
@@ -93,6 +102,58 @@ public class MillionsChart extends MillionsView {
 
   public void clearData() {
     this.series.getData().clear();
+  }
+
+  public void updateYAxis() {
+    yAxis.setAutoRanging(false);
+
+    double high = highestPrice.doubleValue();
+    double low = lowestPrice.doubleValue();
+
+    double range = high - low;
+
+    // Normal padding
+    double padding = Math.max(range * 0.05, 1);
+
+    double rawLowerBound = low - padding;
+    double rawUpperBound = high + padding;
+
+    // Tick unit based on padded range
+    double tickUnit = calculateRoundTickUnit(rawUpperBound - rawLowerBound, 5);
+
+    // Round outward, not inward
+    double lowerBound = Math.floor(rawLowerBound / tickUnit) * tickUnit;
+    double upperBound = Math.ceil(rawUpperBound / tickUnit) * tickUnit;
+
+    yAxis.setLowerBound(lowerBound);
+    yAxis.setUpperBound(upperBound);
+    yAxis.setTickUnit(tickUnit);
+  }
+
+  private double calculateRoundTickUnit(double range, int targetTickCount) {
+    if (range <= 0) {
+      return 1;
+    }
+
+    double roughTickUnit = Math.ceil(range / targetTickCount);
+
+    double exponent = Math.floor(Math.log10(roughTickUnit));
+    double base = Math.pow(10, exponent);
+    double fraction = roughTickUnit / base;
+
+    double niceFraction;
+
+    if (fraction <= 1) {
+      niceFraction = 1;
+    } else if (fraction <= 2) {
+      niceFraction = 2;
+    } else if (fraction <= 5) {
+      niceFraction = 5;
+    } else {
+      niceFraction = 10;
+    }
+
+    return niceFraction * base;
   }
 
   private void updateChartBasedOnMode() {
