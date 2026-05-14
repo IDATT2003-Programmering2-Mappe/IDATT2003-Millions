@@ -7,15 +7,28 @@ import java.math.RoundingMode;
 import java.util.Objects;
 
 public class SaleCalculator implements TransactionCalculator {
-  private final BigDecimal purchasePrice;
+  private final BigDecimal totalPurchaseCost;
   private final BigDecimal salesPrice;
   private final BigDecimal quantity;
 
   public SaleCalculator(Share share) {
+    this(Objects.requireNonNull(share, "'share' cannot be null"),
+            share.getPurchasePrice().multiply(share.getQuantity())
+    );
+  }
+
+  public SaleCalculator(Share share, BigDecimal totalPurchaseCost) {
     Objects.requireNonNull(share, "'share' cannot be null");
-    this.purchasePrice = share.getPurchasePrice();
-    this.salesPrice    = share.getStock().getSalesPrice();
-    this.quantity      = share.getQuantity();
+    Objects.requireNonNull(totalPurchaseCost, "'totalPurchaseCost' cannot be null");
+
+    if (totalPurchaseCost.compareTo(BigDecimal.ZERO) < 0) {
+      throw new IllegalArgumentException("totalPurchasePrice cannot be negative");
+    }
+
+    this.totalPurchaseCost = totalPurchaseCost;
+    this.salesPrice = share.getStock().getSalesPrice();
+    this.quantity = share.getQuantity();
+
   }
 
   @Override
@@ -34,7 +47,7 @@ public class SaleCalculator implements TransactionCalculator {
   @Override
   public BigDecimal calculateTax() {
     BigDecimal taxRate = new BigDecimal("0.30");
-    BigDecimal gain = calculateGross().subtract(calculateCommission()).subtract(purchasePrice.multiply(quantity));
+    BigDecimal gain = calculateGross().subtract(calculateCommission()).subtract(totalPurchaseCost);
 
     return taxRate.multiply(gain);
   }

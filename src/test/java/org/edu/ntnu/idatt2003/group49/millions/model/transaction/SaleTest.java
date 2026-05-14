@@ -1,11 +1,10 @@
-package org.edu.ntnu.idatt2003.group49.millions.transaction;
+package org.edu.ntnu.idatt2003.group49.millions.model.transaction;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
-import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Sale;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -59,6 +58,8 @@ class SaleTest {
 
   @Test
   void commit_ThrowsWhenTransactionIsAlreadyCommited() {
+    player.getPortfolio().addShare(share);
+
     sale.commit(player);
 
     assertThrows(IllegalArgumentException.class, () -> sale.commit(player));
@@ -66,13 +67,14 @@ class SaleTest {
 
   @Test
   void commit_ThrowsWhenPlayerDoesNotOwnShare() {
-    sale.commit(player);
+    Player playerWithoutShare = new Player("Steve", new BigDecimal("100"));
 
-    assertThrows(IllegalArgumentException.class, () -> sale.commit(player));
+    assertThrows(IllegalArgumentException.class, () -> sale.commit(playerWithoutShare));
   }
 
   @Test
   void commit_AddsSalesRevenueToPlayersMoney() {
+    player.getPortfolio().addShare(share);
     BigDecimal prevPlayerMoney = player.getMoney();
     sale.commit(player);
 
@@ -83,6 +85,8 @@ class SaleTest {
 
   @Test
   void commit_RemovesShareFromPlayerPortfolio() {
+    player.getPortfolio().addShare(share);
+
     sale.commit(player);
 
     assertFalse(player.getPortfolio().contains(share));

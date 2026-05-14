@@ -97,4 +97,21 @@ class SaleCalculatorTest {
     // Assert
     assertEquals(0, total.compareTo(expectedTotal));
   }
+
+  @Test
+  void calculateTax_UsesTotalPurchaseCostWhenProvided() {
+    Share aggregatedSaleShare = new Share(stock, new BigDecimal("15"), new BigDecimal("100"));
+
+    BigDecimal totalPurchaseCost = new BigDecimal("2000");
+    TransactionCalculator calculator = new SaleCalculator(aggregatedSaleShare, totalPurchaseCost);
+
+    BigDecimal expectedGross = stock.getSalesPrice().multiply(new BigDecimal("15"));
+    BigDecimal expectedCommission = expectedGross.multiply(new BigDecimal("0.01")).setScale(2, RoundingMode.HALF_UP);
+
+    BigDecimal expectedGain = expectedGross.subtract(expectedCommission).subtract(totalPurchaseCost);
+
+    BigDecimal expectedTax = new BigDecimal("0.30").multiply(expectedGain);
+
+    assertEquals(0, expectedTax.compareTo(calculator.calculateTax()));
+  }
 }

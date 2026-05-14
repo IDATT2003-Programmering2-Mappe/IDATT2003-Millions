@@ -2,6 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.StockSubject;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.SaleAllocation;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
 
@@ -101,6 +102,26 @@ public class Exchange extends StockSubject {
     }
 
     Transaction sale = transactionFactory.createSale(ownedShare, quantityToSell, getWeek());
+    sale.commit(player);
+    return sale;
+  }
+
+  public Transaction sell(String symbol, BigDecimal quantityToSell, Player player) {
+    Objects.requireNonNull(symbol, "symbol cannot be null");
+    Objects.requireNonNull(quantityToSell, "quantityToSell cannot be null");
+    Objects.requireNonNull(player, "player cannot be null");
+
+    if (!hasStock(symbol)) {
+      throw new IllegalArgumentException("Cannot sell a share that does not exist");
+    }
+
+    if (quantityToSell.compareTo(BigDecimal.ZERO) <= 0) {
+      throw new IllegalArgumentException("quantityToSell must be greater than zero");
+    }
+
+    List<SaleAllocation> allocations = player.getPortfolio().planSale(symbol, quantityToSell);
+
+    Transaction sale = transactionFactory.createAggregatedSale(allocations, quantityToSell, getWeek());
     sale.commit(player);
     return sale;
   }
