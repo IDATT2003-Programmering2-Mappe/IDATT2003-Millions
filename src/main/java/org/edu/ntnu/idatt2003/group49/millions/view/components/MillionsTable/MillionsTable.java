@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
@@ -23,6 +24,8 @@ public abstract class MillionsTable<T> extends MillionsView {
     this.navigator = navigator;
     this.table = table();
 
+    setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/table.css")
     ).toExternalForm());
@@ -33,15 +36,26 @@ public abstract class MillionsTable<T> extends MillionsView {
     return list;
   }
 
-  @Override
+  public TableView<T> getTable() {
+    return table;
+  }
+
   protected Pane build() {
-    VBox vBox = new VBox();
-    vBox.getChildren().add(table);
+    VBox vBox = new VBox(table);
+
+    vBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
+    VBox.setVgrow(table, Priority.ALWAYS);
+    table.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
     return vBox;
   }
 
   private TableView<T> table() {
     TableView<T> table = new TableView<>();
+
+    table.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+    table.setMinHeight(0);
 
     table.setRowFactory(tv -> new TableRow<T>() {
       @Override

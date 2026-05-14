@@ -47,7 +47,7 @@ public class Stock {
    */
   @Override
   public String toString() {
-    return "Stock [symbol=" + symbol + ", company=" + company + ", prices=" + getSalesPrice() + ", change=" + getPriceChangeInPercent() + "]";
+    return "Stock [symbol=" + symbol + ", company=" + company + ", prices=" + getSalesPrice() + ", change=" + getCurrentChange() + "]";
   }
 
   /**
@@ -76,6 +76,10 @@ public class Stock {
 
   public BigDecimal getSalesPrice() {
     return prices.getLast();
+  }
+
+  public List<BigDecimal> getPrices() {
+    return prices;
   }
 
   /**
@@ -141,7 +145,7 @@ public class Stock {
   }
 
   // TODO: make tests for this
-  public BigDecimal getPriceChangeInPercentInWeekRange(int weekRange) {
+  public BigDecimal getChangeInWeekRange(int weekRange) {
     if (weekRange < 0) {
       throw new IllegalArgumentException("weekRange cannot be less than 0");
     }
@@ -159,7 +163,7 @@ public class Stock {
   }
 
   // TODO: make test for this
-  public BigDecimal getPriceChangeInPercent() {
+  public BigDecimal getCurrentChange() {
     return calculatePriceChange(
       prices.getFirst(),
       prices.getLast()

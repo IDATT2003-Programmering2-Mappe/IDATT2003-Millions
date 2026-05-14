@@ -1,0 +1,45 @@
+.root {
+    -fx-background-color: pink;
+}
+
+.left-body {
+    -fx-background-color: blue;
+}
+
+.right-body {
+    -fx-background-color: slateblue;
+}
+
+.title {
+    /*-fx-padding: 10;*/
+    -fx-border-color: #9CA3AF;
+    /*-fx-background-color: #1e293b;*/
+}
+
+.symbol {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 100px;
+    -fx-alignment: center;
+    -fx-border-color: #9CA3AF;
+    -fx-padding: 2.5;
+    -fx-background-color: derive(#1e293b, 20%);
+}
+
+.info-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: lightblue;
+    -fx-spacing: 5;
+}
+
+.identifier {
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: gray;
+}
+
+.info {
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 100px;
+    -fx-background-color: gray;
+}

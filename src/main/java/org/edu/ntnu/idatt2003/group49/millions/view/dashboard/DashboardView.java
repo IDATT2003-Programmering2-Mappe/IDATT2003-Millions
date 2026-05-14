@@ -2,9 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.view.dashboard;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
@@ -29,11 +27,11 @@ public class DashboardView extends MillionsView implements StockObserver {
 
   private final ObservableList<BigDecimal> stockData = FXCollections.observableArrayList();
 
-  public DashboardView(Navigator navigator, ExchangeController exchangeController, PortfolioInfo portfolioInfo, MillionsChart chart, OwnedStocks ownedStocks) {
+  public DashboardView(Navigator navigator, ExchangeController exchangeController, PortfolioInfo portfolioInfo, OwnedStocks ownedStocks) {
     this.navigator = navigator;
     this.exchangeController = exchangeController;
     this.portfolioInfo = portfolioInfo;
-    this.chart = chart;
+    this.chart = new MillionsChart();
     this.ownedStocks = ownedStocks;
 
     getStylesheets().add(Objects.requireNonNull(
@@ -101,6 +99,6 @@ public class DashboardView extends MillionsView implements StockObserver {
     System.out.println("Monk");
     Stock stock = stockMap.get("NVDA");
     chart.addData(week, stock.getSalesPrice());
-    portfolioInfo.updateInfoBar("Portfolio", stock.getSalesPrice(), stock.getPriceChangeInPercent());
+    portfolioInfo.updateInfoBar("Portfolio", stock.getSalesPrice(), stock.getCurrentChange());
   }
 }

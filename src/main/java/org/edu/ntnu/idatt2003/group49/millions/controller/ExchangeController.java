@@ -30,4 +30,8 @@ public class ExchangeController {
   public List<BigDecimal> getStockPrices(String symbol) {
     return exchange.getStock(symbol).getHistoricalPrices();
   }
+
+  public Stock getStock(String symbol) {
+    return exchange.getStock(symbol);
+  }
 }

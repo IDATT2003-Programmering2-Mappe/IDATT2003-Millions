@@ -1,11 +1,9 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory;
 
-import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
-import javafx.geometry.Pos;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 
@@ -85,12 +83,12 @@ public class StocksColumnFactory extends TableColumnFactory {
       },
 
       (cell, stock, value) -> {
-        if (stock.getPriceChangeInPercent().signum() > 0) {
+        if (stock.getCurrentChange().signum() > 0) {
           cell.getStyleClass().removeAll("normal-cell", "negative-change", "zero-change");
           cell.getStyleClass().add("positive-change");
 
           cell.setText("+" + value + "%");
-        } else if (stock.getPriceChangeInPercent().signum() < 0) {
+        } else if (stock.getCurrentChange().signum() < 0) {
           cell.getStyleClass().removeAll("normal-cell", "positive-change", "zero-change");
           cell.getStyleClass().add("negative-change");
 
@@ -105,7 +103,7 @@ public class StocksColumnFactory extends TableColumnFactory {
     );
 
     changeCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getPriceChangeInPercent().doubleValue())
+      new SimpleDoubleProperty(cellData.getValue().getCurrentChange().doubleValue())
     );
 
     return changeCol;

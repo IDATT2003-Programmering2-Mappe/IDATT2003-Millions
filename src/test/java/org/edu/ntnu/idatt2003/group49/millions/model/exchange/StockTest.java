@@ -130,9 +130,9 @@ class StockTest {
   }
 
   @Test
-  void getPriceChangeInPercent_returnsNegativeChangeWhenPriceDropsBelowStartingPriceInWeekRange() {
+  void getPriceChangeInPercent_returnsNegativeChangeWhenPriceDropsBelowStartingCurrentInWeekRange() {
     stock.addNewSalesPrice(new BigDecimal("10000"));
-    BigDecimal change = stock.getPriceChangeInPercentInWeekRange(TimeConstants.ONE_MONTH_IN_WEEKS);
+    BigDecimal change = stock.getChangeInWeekRange(TimeConstants.ONE_MONTH_IN_WEEKS);
     System.out.println(change);
   }
 }

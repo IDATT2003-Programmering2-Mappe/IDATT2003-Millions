@@ -79,12 +79,12 @@ public class OwnedSharesColumnFactory extends TableColumnFactory {
       },
 
       (cell, share, value) -> {
-        if (share.getStock().getPriceChangeInPercent().signum() > 0) {
+        if (share.getStock().getCurrentChange().signum() > 0) {
           cell.getStyleClass().removeAll("normal-cell", "negative-change");
           cell.getStyleClass().add("positive-change");
 
           cell.setText("↑" + value + "%");
-        } else if (share.getStock().getPriceChangeInPercent().signum() < 0) {
+        } else if (share.getStock().getCurrentChange().signum() < 0) {
           cell.getStyleClass().removeAll("normal-cell", "positive-change");
           cell.getStyleClass().add("negative-change");
 
