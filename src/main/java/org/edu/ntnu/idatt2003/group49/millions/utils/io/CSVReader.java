@@ -63,11 +63,12 @@ public class CSVReader {
       String company = stocksArray[1].trim();
       String price = stocksArray[2].trim();
 
-      if (price.equals("-")) {
-        continue;
+      try {
+        stocks.add(new Stock(symbol, company, new BigDecimal(price)));
+      } catch (NumberFormatException e) {
+        logger.warning("Invalid price for stock " + symbol + ": " + price);
       }
 
-      stocks.add(new Stock(symbol, company, new BigDecimal(price)));
     }
     return stocks;
   }
