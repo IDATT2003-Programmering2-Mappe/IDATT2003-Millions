@@ -7,6 +7,7 @@ import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.TransactionCalculator;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -71,6 +72,8 @@ public class TransactionFactory {
     Share shareToSell = new Share(ownedShare.getStock(), quantityToSell, ownedShare.getPurchasePrice());
     TransactionCalculator calculator = new SaleCalculator(shareToSell);
 
-    return new Sale(shareToSell, week, calculator);
+    SaleAllocation allocation = new SaleAllocation(ownedShare, quantityToSell);
+
+    return new Sale(shareToSell, week, calculator, List.of(allocation));
   }
 }
