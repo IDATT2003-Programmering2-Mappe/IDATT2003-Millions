@@ -59,11 +59,16 @@ public class CSVReader {
     List<String[]> data = readCSV(path);
     List<Stock> stocks = new ArrayList<>();
     for (String[] stocksArray : data) {
-      String symbol = stocksArray[0];
-      String company = stocksArray[1];
-      String price = stocksArray[2];
+      String symbol = stocksArray[0].trim();
+      String company = stocksArray[1].trim();
+      String price = stocksArray[2].trim();
 
-      stocks.add(new Stock(symbol, company, new BigDecimal(price)));
+      try {
+        stocks.add(new Stock(symbol, company, new BigDecimal(price)));
+      } catch (NumberFormatException e) {
+        logger.warning("Invalid price for stock " + symbol + ": " + price);
+      }
+
     }
     return stocks;
   }
