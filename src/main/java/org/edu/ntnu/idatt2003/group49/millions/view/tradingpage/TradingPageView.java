@@ -1,13 +1,12 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.tradingpage;
 
-import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
-import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components.StockInfo;
 
 import java.util.List;
@@ -17,11 +16,19 @@ public class TradingPageView extends MillionsView {
   private final ExchangeController exchangeController;
   private final TradingTable tradingTable;
   private final StockInfo stockInfo;
+  private final TableSelectionModel<Stock> selectionModel;
 
-  public TradingPageView(ExchangeController exchangeController, TradingTable tradingTable, StockInfo stockInfo) {
+  public TradingPageView(ExchangeController exchangeController, TableSelectionModel<Stock> selectionModel) {
     this.exchangeController = exchangeController;
-    this.tradingTable = tradingTable;
-    this.stockInfo = stockInfo;
+    this.tradingTable = new TradingTable(new StocksColumnFactory(), selectionModel);
+    this.stockInfo = new StockInfo();
+    this.selectionModel = selectionModel;
+
+    selectionModel.selectedItemProperty().addListener((obs, oldStock, newStock) -> {
+      stockInfo.setStock(newStock);
+      stockInfo.updateStockInfo();
+      System.out.println("updated from: " + oldStock + " to " + newStock);
+    });
 
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/tradingpage.css")

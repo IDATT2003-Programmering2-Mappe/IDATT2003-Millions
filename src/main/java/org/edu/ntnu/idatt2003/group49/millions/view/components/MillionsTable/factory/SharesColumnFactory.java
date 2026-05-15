@@ -5,8 +5,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 
-public class OwnedSharesColumnFactory extends TableColumnFactory {
-  public OwnedSharesColumnFactory() {}
+public class SharesColumnFactory extends TableColumnFactory {
+  public SharesColumnFactory() {}
 
   public TableColumn<Share, Number> createQuantityColumn() {
     TableColumn<Share, Number> qtyCol = createTableColumn(

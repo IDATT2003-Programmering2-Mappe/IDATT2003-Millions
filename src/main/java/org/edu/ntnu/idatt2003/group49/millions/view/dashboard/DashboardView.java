@@ -6,11 +6,16 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
+import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
-import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedStocks;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.SharesTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.SharesColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedShares;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
 
 import java.math.BigDecimal;
@@ -21,18 +26,25 @@ import java.util.Objects;
 public class DashboardView extends MillionsView implements StockObserver {
   private final Navigator navigator;
   private final ExchangeController exchangeController;
+  private final PlayerController playerController;
+
   private final PortfolioInfo portfolioInfo;
   private final MillionsChart chart;
-  private final OwnedStocks ownedStocks;
+  private final OwnedShares ownedShares;
+  private final SharesTable sharesTable;
+  private final TableSelectionModel<Share> selectionModel;
 
   private final ObservableList<BigDecimal> stockData = FXCollections.observableArrayList();
 
-  public DashboardView(Navigator navigator, ExchangeController exchangeController, PortfolioInfo portfolioInfo, OwnedStocks ownedStocks) {
+  public DashboardView(Navigator navigator, ExchangeController exchangeController, PlayerController playerController, TableSelectionModel<Share> selectionModel) {
     this.navigator = navigator;
     this.exchangeController = exchangeController;
-    this.portfolioInfo = portfolioInfo;
+    this.playerController = playerController;
+    this.selectionModel = selectionModel;
+    this.portfolioInfo = new PortfolioInfo(playerController.getName(), playerController.getPortfolioValue(), playerController.getPortfolioChange());
     this.chart = new MillionsChart();
-    this.ownedStocks = ownedStocks;
+    this.sharesTable = new SharesTable(new SharesColumnFactory(), selectionModel);
+    this.ownedShares = new OwnedShares(sharesTable);
 
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/dashboard.css")
@@ -92,7 +104,7 @@ public class DashboardView extends MillionsView implements StockObserver {
     HBox.setHgrow(rightBody, Priority.ALWAYS);
 
     rightBody.getChildren().add(
-      ownedStocks
+      ownedShares
     );
     return rightBody;
   }
