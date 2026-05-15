@@ -1,6 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 
 import java.util.logging.Logger;

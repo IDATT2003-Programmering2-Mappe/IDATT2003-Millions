@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.helper;
 
+import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.GameController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
@@ -14,6 +15,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.Tab
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.dialogs.BuyStockPopup;
 
 public class ViewFactory {
   private final Navigator navigator;

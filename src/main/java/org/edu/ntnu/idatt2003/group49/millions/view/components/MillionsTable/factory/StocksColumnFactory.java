@@ -6,10 +6,18 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.PurchaseRequest;
+import org.edu.ntnu.idatt2003.group49.millions.view.dialogs.BuyStockPopup;
+import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
+
+import java.util.Optional;
 
 public class StocksColumnFactory extends TableColumnFactory {
-  public StocksColumnFactory() {}
+  private BuyStockPopup buyStockPopup;
+
+  public StocksColumnFactory(BuyStockPopup buyStockPopup) {
+    this.buyStockPopup = buyStockPopup;
+  }
 
   public TableColumn<Stock, Number> createIndexColumn(ObservableList<Stock> originalItems) {
     TableColumn<Stock, Number> indexCol = createTableColumn(
@@ -114,6 +122,10 @@ public class StocksColumnFactory extends TableColumnFactory {
     TableColumn<Stock, String> buyColumn = createTableColumn(
       new TableColumn<>(""),
       (stock, value) -> {
+        buyStockPopup.show(stock, request -> {
+          System.out.println("trying to purchase");
+        });
+
         System.out.println("Clicked stock: " + stock);
         System.out.println("Clicked value: " + value);
       },

@@ -1,0 +1,9 @@
+.buy-popup {
+    -fx-background-color: #1f2937;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-spacing: 8;
+
+    -fx-max-width: 300;
+    -fx-max-height: 180;
+}

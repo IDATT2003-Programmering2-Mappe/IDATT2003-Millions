@@ -11,15 +11,16 @@ import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVMillionsFileReader;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class MillionsApp extends Application {
+  private Stage mainStage;
   private BorderPane root;
   private NavController nav;
 
   @Override
   public void start(Stage stage) {
+    this.mainStage = stage;
     nav.goToLandingPage();
 
     Scene scene = new Scene(root, 1024, 768);
@@ -31,7 +32,7 @@ public class MillionsApp extends Application {
   }
 
   @Override
-  public void init() throws IOException {
+  public void init() {
     GameController gameController = new GameController(new CSVMillionsFileReader());
     this.root = new BorderPane();
     this.nav = new NavController(root);

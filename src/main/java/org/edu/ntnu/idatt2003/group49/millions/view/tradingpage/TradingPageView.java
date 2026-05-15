@@ -7,6 +7,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.dialogs.BuyStockPopup;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components.StockInfo;
 
 import java.util.List;
@@ -20,24 +21,25 @@ public class TradingPageView extends MillionsView {
 
   public TradingPageView(ExchangeController exchangeController, TableSelectionModel<Stock> selectionModel) {
     this.exchangeController = exchangeController;
-    this.tradingTable = new TradingTable(new StocksColumnFactory(), selectionModel);
-    this.stockInfo = new StockInfo();
     this.selectionModel = selectionModel;
+    BuyStockPopup buyStockPopup = new BuyStockPopup();
+    this.tradingTable = new TradingTable(new StocksColumnFactory(buyStockPopup),  selectionModel);
+    this.stockInfo = new StockInfo();
 
+    getStylesheets().add(Objects.requireNonNull(
+      getClass().getResource("/styles/tradingpage.css")
+    ).toExternalForm());
+    getChildren().addAll(build(), buyStockPopup);
+  }
+
+  @Override
+  protected Pane build() {
     selectionModel.selectedItemProperty().addListener((obs, oldStock, newStock) -> {
       stockInfo.setStock(newStock);
       stockInfo.updateStockInfo();
       System.out.println("updated from: " + oldStock + " to " + newStock);
     });
 
-    getStylesheets().add(Objects.requireNonNull(
-      getClass().getResource("/styles/tradingpage.css")
-    ).toExternalForm());
-    getChildren().add(build());
-  }
-
-  @Override
-  protected Pane build() {
     List<Stock> stocks = exchangeController.getStockMap().values().stream().toList();
     tradingTable.setItems(stocks);
 
@@ -58,7 +60,7 @@ public class TradingPageView extends MillionsView {
     leftBody.setMaxHeight(Double.MAX_VALUE);
 
     // Width behavior for left side
-    leftBody.setMinWidth(0);
+    leftBody.setMinWidth(500);
     leftBody.setPrefWidth(600);
     leftBody.setMaxWidth(800);
 
