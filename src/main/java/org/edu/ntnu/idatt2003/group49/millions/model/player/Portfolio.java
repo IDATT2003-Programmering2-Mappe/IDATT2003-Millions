@@ -7,20 +7,18 @@ import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVReader;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class Portfolio {
   static Logger logger = Logger.getLogger(CSVReader.class.getName());
 
   private final List<Share> shares;
-  private final List<BigDecimal> values;
+  private final Map<Integer, BigDecimal> valueMap;
 
   public Portfolio() {
     shares = new ArrayList<>();
-    values = new ArrayList<>();
+    valueMap = new HashMap<>();
   }
 
   public boolean addShare(Share share) {
@@ -52,22 +50,46 @@ public class Portfolio {
     );
   }
 
+  public Map<Integer, BigDecimal> getValueMap() {
+    return valueMap;
+  }
+
   public BigDecimal getValue() {
     return shares.stream()
             .map(share -> new SaleCalculator(share).calculateGross())
             .reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 
+  /**
+   * returns the highest price of the portfolio
+   *
+   * @return the highest value
+   */
+  public BigDecimal getHighestValue() {
+    return valueMap.values().stream().max(BigDecimal::compareTo)
+      .orElse(BigDecimal.ZERO);
+  }
+
+  /**
+   * returns the lowest value of the portfolio
+   *
+   * @return the lowest value
+   */
+  public BigDecimal getLowestValue() {
+    return valueMap.values().stream().min(BigDecimal::compareTo)
+      .orElse(BigDecimal.ZERO);
+  }
+
   // TODO: make test for this
   public BigDecimal getCurrentChange() {
-    if (values.isEmpty()) {
-      logger.warning("No values in the Portfolio");
+    if (valueMap.isEmpty()) {
+      logger.warning("No values in Portfolio");
       return BigDecimal.ZERO;
     }
 
     return calculatePriceChange(
-      values.getFirst(),
-      values.getLast()
+      valueMap.values().stream().toList().getFirst(),
+      valueMap.values().stream().toList().getLast()
     );
   }
 

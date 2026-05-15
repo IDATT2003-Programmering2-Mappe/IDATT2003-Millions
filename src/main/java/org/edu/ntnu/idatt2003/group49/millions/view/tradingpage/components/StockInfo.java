@@ -166,7 +166,6 @@ public class StockInfo extends MillionsView {
       week++;
     }
 
-    chart.setYBounds(stock.getHighestPrice(), stock.getLowestPrice());
-    chart.updateYAxis();
+    chart.updateYAxis(stock.getHighestPrice(), stock.getLowestPrice());
   }
 }

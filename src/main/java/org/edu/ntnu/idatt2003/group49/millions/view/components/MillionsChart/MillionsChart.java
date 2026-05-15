@@ -25,9 +25,6 @@ public class MillionsChart extends MillionsView {
 
   private List<Button> filterButtons;
 
-  private BigDecimal highestPrice;
-  private BigDecimal lowestPrice;
-
   public MillionsChart() {
     getStylesheets().add(Objects.requireNonNull(
       getClass().getResource("/styles/chart.css")
@@ -41,11 +38,6 @@ public class MillionsChart extends MillionsView {
   @Override
   protected Pane build() {
     return createChartContainer();
-  }
-
-  public void setYBounds(BigDecimal highestPrice, BigDecimal lowestPrice) {
-    this.highestPrice = highestPrice;
-    this.lowestPrice = lowestPrice;
   }
 
   private VBox createChartContainer() {
@@ -104,7 +96,7 @@ public class MillionsChart extends MillionsView {
     this.series.getData().clear();
   }
 
-  public void updateYAxis() {
+  public void updateYAxis(BigDecimal highestPrice, BigDecimal lowestPrice) {
     yAxis.setAutoRanging(false);
 
     double high = highestPrice.doubleValue();

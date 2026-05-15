@@ -3,6 +3,8 @@ package org.edu.ntnu.idatt2003.group49.millions.controller;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.Map;
 
 public class PlayerController {
   private final Player player;
@@ -19,7 +21,19 @@ public class PlayerController {
     return player.getPortfolio().getCurrentChange();
   }
 
-  public BigDecimal getPortfolioValue() {
+  public BigDecimal getCurrentPortfolioValue() {
     return player.getPortfolio().getValue();
+  }
+
+  public Map<Integer, BigDecimal> getPortfolioValues() {
+    return player.getPortfolio().getValueMap();
+  }
+
+  public BigDecimal getHighestPortfolioValue() {
+    return player.getPortfolio().getHighestValue();
+  }
+
+  public BigDecimal getLowestPortfolioValue() {
+    return player.getPortfolio().getLowestValue();
   }
 }

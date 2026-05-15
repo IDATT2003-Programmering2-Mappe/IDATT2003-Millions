@@ -41,7 +41,7 @@ public class DashboardView extends MillionsView implements StockObserver {
     this.exchangeController = exchangeController;
     this.playerController = playerController;
     this.selectionModel = selectionModel;
-    this.portfolioInfo = new PortfolioInfo(playerController.getName(), playerController.getPortfolioValue(), playerController.getPortfolioChange());
+    this.portfolioInfo = new PortfolioInfo("Portfolio", playerController.getCurrentPortfolioValue(), playerController.getPortfolioChange());
     this.chart = new MillionsChart();
     this.sharesTable = new SharesTable(new SharesColumnFactory(), selectionModel);
     this.ownedShares = new OwnedShares(sharesTable);
@@ -62,32 +62,38 @@ public class DashboardView extends MillionsView implements StockObserver {
       createRightBody()
     );
 
-    Stock nvidiaStock = exchangeController.getStock("NVDA");
-    List<BigDecimal> nvidiaPrices = exchangeController.getStockPrices(nvidiaStock.getSymbol());
-    for (int i = 0; i < nvidiaPrices.size(); i++) {
-      chart.addData(i, nvidiaPrices.get(i));
-    }
+    Map<Integer, BigDecimal> values = playerController.getPortfolioValues();
+    values.forEach(chart::addData);
 
-    chart.setYBounds(nvidiaStock.getHighestPrice(), nvidiaStock.getLowestPrice());
-    chart.updateYAxis();
+    List<Integer> keys = playerController.getPortfolioValues().keySet().stream().toList();
+    keys.forEach(key -> {
+      chart.addData(key, playerController.getPortfolioValues().get(key));
+    });
+    values.forEach(chart::addData);
+
+    chart.updateYAxis(playerController.getHighestPortfolioValue(), playerController.getLowestPortfolioValue());
 
     return body;
   }
 
   private VBox createLeftBody() {
-    VBox leftBody = new VBox();
-    leftBody.getStyleClass().add("body-left");
-    leftBody.setFillWidth(true);
-    HBox.setHgrow(leftBody, Priority.ALWAYS);
-
-    HBox controls = new HBox();
-    controls.getStyleClass().add("controls");
     Button advanceBtn = new Button("Advance");
     advanceBtn.getStyleClass().add("advance-btn");
+
     advanceBtn.setOnAction(e -> {
       exchangeController.advance();
     });
+
+    HBox controls = new HBox();
+    controls.getStyleClass().add("controls");
+
     controls.getChildren().addAll(advanceBtn);
+
+    VBox leftBody = new VBox();
+    leftBody.getStyleClass().add("body-left");
+
+    leftBody.setFillWidth(true);
+    HBox.setHgrow(leftBody, Priority.ALWAYS);
 
     leftBody.getChildren().addAll(
       portfolioInfo,
@@ -111,11 +117,8 @@ public class DashboardView extends MillionsView implements StockObserver {
 
   @Override
   public void update(Map<String, Stock> stockMap, int week) {
-    System.out.println(stockMap.get("NVDA").getSalesPrice());
-    Stock stock = stockMap.get("NVDA");
-    chart.addData(week, stock.getSalesPrice());
-    chart.setYBounds(stock.getHighestPrice(), stock.getLowestPrice());
-    chart.updateYAxis();
-    portfolioInfo.updateInfoBar("Portfolio", stock.getSalesPrice(), stock.getCurrentChange());
+    chart.addData(week, playerController.getCurrentPortfolioValue());
+    chart.updateYAxis(playerController.getHighestPortfolioValue(), playerController.getLowestPortfolioValue());
+    portfolioInfo.updateInfoBar("Portfolio", playerController.getCurrentPortfolioValue(), playerController.getPortfolioChange());
   }
 }
