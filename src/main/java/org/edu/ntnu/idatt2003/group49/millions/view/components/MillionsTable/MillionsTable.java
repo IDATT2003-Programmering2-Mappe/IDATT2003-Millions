@@ -16,13 +16,11 @@ import java.util.List;
 import java.util.Objects;
 
 public abstract class MillionsTable<T> extends MillionsView {
-  private final Navigator navigator;
   private final ObservableList<T> list = FXCollections.observableArrayList();
-  private final TableView<T> table;
+  protected final TableView<T> table;
 
-  public MillionsTable(Navigator navigator) {
-    this.navigator = navigator;
-    this.table = table();
+  public MillionsTable() {
+    this.table = createTable();
 
     setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
@@ -51,18 +49,11 @@ public abstract class MillionsTable<T> extends MillionsView {
     return vBox;
   }
 
-  private TableView<T> table() {
+  private TableView<T> createTable() {
     TableView<T> table = new TableView<>();
 
     table.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
     table.setMinHeight(0);
-
-    table.setRowFactory(tv -> new TableRow<T>() {
-      @Override
-      protected void updateItem(T item, boolean empty) {
-        super.updateItem(item, empty);
-      }
-    });
 
     table.getColumns().setAll(createColumns());
 

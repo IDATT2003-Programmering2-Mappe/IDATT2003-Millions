@@ -6,6 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
 
 public class StocksColumnFactory extends TableColumnFactory {
   public StocksColumnFactory() {}

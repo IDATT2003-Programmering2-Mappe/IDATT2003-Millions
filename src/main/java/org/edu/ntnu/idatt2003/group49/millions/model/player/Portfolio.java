@@ -3,17 +3,24 @@ package org.edu.ntnu.idatt2003.group49.millions.model.player;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.calculator.SaleCalculator;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.SaleAllocation;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVReader;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public class Portfolio {
+  static Logger logger = Logger.getLogger(CSVReader.class.getName());
+
   private final List<Share> shares;
+  private final List<BigDecimal> values;
 
   public Portfolio() {
     shares = new ArrayList<>();
+    values = new ArrayList<>();
   }
 
   public boolean addShare(Share share) {
@@ -49,6 +56,27 @@ public class Portfolio {
     return shares.stream()
             .map(share -> new SaleCalculator(share).calculateGross())
             .reduce(BigDecimal.ZERO, BigDecimal::add);
+  }
+
+  // TODO: make test for this
+  public BigDecimal getCurrentChange() {
+    if (values.isEmpty()) {
+      logger.warning("No values in the Portfolio");
+      return BigDecimal.ZERO;
+    }
+
+    return calculatePriceChange(
+      values.getFirst(),
+      values.getLast()
+    );
+  }
+
+  // TODO: make tests for this
+  public BigDecimal calculatePriceChange(BigDecimal startPrice, BigDecimal currentPrice) {
+    return (currentPrice.subtract(startPrice))
+      .divide(startPrice, 4, RoundingMode.HALF_UP)
+      .multiply(new BigDecimal("100"))
+      .setScale(2, RoundingMode.HALF_UP);
   }
 
   public void reduceShare(Share share, BigDecimal quantityToSell) {
