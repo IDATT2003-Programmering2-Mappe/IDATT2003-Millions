@@ -41,7 +41,6 @@ public class TradingPageView extends MillionsView {
     List<Stock> stocks = exchangeController.getStockMap().values().stream().toList();
     tradingTable.setItems(stocks);
 
-    stockInfo.setStock(exchangeController.getStock("NVDA"));
     stockInfo.updateStockInfo();
 
     // Outer TradingTable wrapper
