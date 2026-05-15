@@ -34,7 +34,7 @@ public class Exchange extends StockSubject {
             "transactionFactory cannot be null"
     );
 
-    this.stockMap = new HashMap<>();
+    this.stockMap = new LinkedHashMap<>();
     stocks.forEach(stock -> stockMap.put(stock.getSymbol(), stock));
     this.random = new Random();
   }
