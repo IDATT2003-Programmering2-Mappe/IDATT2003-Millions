@@ -6,16 +6,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.model.transaction.PurchaseRequest;
-import org.edu.ntnu.idatt2003.group49.millions.view.dialogs.BuyStockPopup;
-import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
-
-import java.util.Optional;
+import org.edu.ntnu.idatt2003.group49.millions.view.popups.BuySharePopup;
 
 public class StocksColumnFactory extends TableColumnFactory {
-  private BuyStockPopup buyStockPopup;
+  private BuySharePopup buyStockPopup;
 
-  public StocksColumnFactory(BuyStockPopup buyStockPopup) {
+  public StocksColumnFactory(BuySharePopup buyStockPopup) {
     this.buyStockPopup = buyStockPopup;
   }
 

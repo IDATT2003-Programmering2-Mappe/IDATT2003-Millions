@@ -1,9 +1,40 @@
 .buy-popup {
-    -fx-background-color: #1f2937;
-    -fx-background-radius: 12;
-    -fx-padding: 16;
-    -fx-spacing: 8;
+    -fx-text-fill: white;
+    -fx-border-color: #9CA3AF;
+    -fx-background-color: #1e293b;
+    -fx-alignment: CENTER;
+}
 
-    -fx-max-width: 300;
-    -fx-max-height: 180;
+.controls {
+    -fx-background-color: derive(#1e293b, 20%);
+    -fx-border-color: #9CA3AF;
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+.exit-button {
+    -fx-text-fill: lightgray;
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+
+    -fx-padding: 5 15;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.exit-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #e22a27;
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-text-fill: white;
 }

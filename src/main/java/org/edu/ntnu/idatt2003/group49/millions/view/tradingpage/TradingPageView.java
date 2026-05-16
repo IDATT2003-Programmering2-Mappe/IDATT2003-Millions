@@ -2,12 +2,13 @@ package org.edu.ntnu.idatt2003.group49.millions.view.tradingpage;
 
 import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
-import org.edu.ntnu.idatt2003.group49.millions.view.dialogs.BuyStockPopup;
+import org.edu.ntnu.idatt2003.group49.millions.view.popups.BuySharePopup;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components.StockInfo;
 
 import java.util.List;
@@ -15,14 +16,16 @@ import java.util.Objects;
 
 public class TradingPageView extends MillionsView {
   private final ExchangeController exchangeController;
+  private final PlayerController playerController;
   private final TradingTable tradingTable;
   private final StockInfo stockInfo;
   private final TableSelectionModel<Stock> selectionModel;
 
-  public TradingPageView(ExchangeController exchangeController, TableSelectionModel<Stock> selectionModel) {
+  public TradingPageView(ExchangeController exchangeController, PlayerController playerController, TableSelectionModel<Stock> selectionModel) {
     this.exchangeController = exchangeController;
+    this.playerController = playerController;
     this.selectionModel = selectionModel;
-    BuyStockPopup buyStockPopup = new BuyStockPopup();
+    BuySharePopup buyStockPopup = new BuySharePopup(playerController);
     this.tradingTable = new TradingTable(new StocksColumnFactory(buyStockPopup),  selectionModel);
     this.stockInfo = new StockInfo();
 

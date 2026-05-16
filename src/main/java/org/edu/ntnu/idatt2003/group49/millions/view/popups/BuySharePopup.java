@@ -1,37 +1,46 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.dialogs;
+package org.edu.ntnu.idatt2003.group49.millions.view.popups;
 
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.PurchaseRequest;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.function.Consumer;
 
-public class BuyStockPopup extends StackPane {
+public class BuySharePopup extends Popup {
+  private final PlayerController playerController;
+
+  private final Label errorLabel = new Label();
   private final TextField quantityField = new TextField();
   private final Button buyButton = new Button("Buy");
   private final Button cancelButton = new Button("Cancel");
-  private final Label errorLabel = new Label();
 
   private Stock stock;
   private Consumer<PurchaseRequest> onBuy;
 
-  public BuyStockPopup() {
-    getStylesheets().add(Objects.requireNonNull(
-      getClass().getResource("/styles/popup.css")
-    ).toExternalForm());
-    getStyleClass().add("popup-overlay");
-    setVisible(false);
-    setManaged(false);
+  public BuySharePopup(PlayerController playerController) {
+    this.playerController = playerController;
+    super();
 
-    VBox popupBox = new VBox(12);
-    popupBox.getStyleClass().add("buy-popup");
+    getPopupPane().setCenter(buildPopup());
 
-    Label titleLabel = new Label("Buy Stock");
+    buyButton.setOnAction(event -> {
+      int quantity = Integer.parseInt(quantityField.getText());
 
+      PurchaseRequest request = new PurchaseRequest(stock.getSymbol(), BigDecimal.valueOf(quantity), playerController.getPlayer());
+
+      if (onBuy != null) {
+        onBuy.accept(request);
+      }
+
+      hide();
+    });
+  }
+
+  private VBox buildPopup() {
     quantityField.setPromptText("Quantity");
 
     errorLabel.getStyleClass().add("error-label");
@@ -42,44 +51,27 @@ public class BuyStockPopup extends StackPane {
 
     quantityField.textProperty().addListener((obs, oldValue, newValue) -> validateInput());
 
-    buyButton.setOnAction(event -> {
-      int quantity = Integer.parseInt(quantityField.getText());
-
-      PurchaseRequest request = new PurchaseRequest(stock, quantity);
-
-      if (onBuy != null) {
-        onBuy.accept(request);
-      }
-
-      hide();
-    });
-
     cancelButton.setOnAction(event -> hide());
 
+    VBox popupBox = new VBox();
     popupBox.getChildren().addAll(
-      titleLabel,
       quantityField,
-      errorLabel,
-      new HBox(10, cancelButton, buyButton)
+      buyButton
     );
 
-    getChildren().add(popupBox);
+    return popupBox;
   }
 
   public void show(Stock stock, Consumer<PurchaseRequest> onBuy) {
     this.stock = Objects.requireNonNull(stock);
     this.onBuy = Objects.requireNonNull(onBuy);
 
+    setTitle("Buy " + stock.getCompany() + " Shares");
     quantityField.clear();
     validateInput();
 
     setVisible(true);
     setManaged(true);
-  }
-
-  public void hide() {
-    setVisible(false);
-    setManaged(false);
   }
 
   private void validateInput() {
