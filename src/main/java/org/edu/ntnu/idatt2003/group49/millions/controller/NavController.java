@@ -38,4 +38,10 @@ public class NavController implements Navigator {
     root.setCenter(viewFactory.createTradingPageView());
     logger.info("Switched to Trading page");
   }
+
+  @Override
+  public  void  goToPlayerPage() {
+    root.setTop(viewFactory.createHeaderView());
+    root.setCenter(viewFactory.createPlayerPageView());
+  }
 }

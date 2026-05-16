@@ -95,9 +95,14 @@ public class HeaderView extends MillionsView {
     btnTrade.getStyleClass().add("navbar-btn");
     btnTrade.setOnAction(e -> navigator.goToTradingPage());
 
+    Button btnPlayer = new Button("Player");
+    btnPlayer.getStyleClass().add("navbar-btn");
+    btnPlayer.setOnAction(e -> navigator.goToPlayerPage());
+
     nav.getChildren().addAll(
       btnDashboard,
-      btnTrade
+      btnTrade,
+      btnPlayer
     );
     return nav;
   }

@@ -4,4 +4,5 @@ public interface Navigator {
   void goToDashboard();
   void goToLandingPage();
   void goToTradingPage();
+  void goToPlayerPage();
 }

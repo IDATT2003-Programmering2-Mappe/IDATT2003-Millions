@@ -13,6 +13,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.PlayerPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
 
 public class ViewFactory {
@@ -53,5 +54,9 @@ public class ViewFactory {
     Exchange exchange = session.getExchange();
     TableSelectionModel<Stock> selectionModel = new TableSelectionModel<>();
     return new TradingPageView(new ExchangeController(exchange), selectionModel);
+  }
+
+  public PlayerPageView createPlayerPageView() {
+    return  new PlayerPageView();
   }
 }
