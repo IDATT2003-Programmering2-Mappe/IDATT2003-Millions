@@ -1,23 +1,72 @@
 package org.edu.ntnu.idatt2003.group49.millions.view.playerpage;
 
+import javafx.geometry.Pos;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
+import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
+import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.components.PlayerInfoPanel;
+
+import java.util.Objects;
 
 public class PlayerPageView extends MillionsView {
-  public PlayerPageView() {
+  private final PlayerController playerController;
+
+  public PlayerPageView(PlayerController playerController) {
+    this.playerController = playerController;
+
+    getStylesheets().add(Objects.requireNonNull(
+            getClass().getResource("/styles/playerpage.css")
+    ).toExternalForm());
+
     getChildren().add(build());
   }
 
   @Override
   protected Pane build() {
-    VBox body = new VBox();
+    HBox body = new HBox();
     body.getStyleClass().add("player-page");
 
-    // Midlertidig bare for å se at siden vises
-    body.getChildren().add(new Label("Player Page"));
+    VBox archiveSection = createArchiveSection();
+    VBox sidePanel = createSidePanel();
 
+    HBox.setHgrow(archiveSection, Priority.ALWAYS);
+
+    body.getChildren().addAll(archiveSection, sidePanel);
     return body;
+  }
+
+  private VBox createArchiveSection() {
+    VBox archiveSection = new VBox();
+    archiveSection.getStyleClass().add("archive-section");
+    archiveSection.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
+    Label title = new Label("Transaction Archive");
+    title.getStyleClass().add("section-title");
+    title.setMaxWidth(Double.MAX_VALUE);
+    title.setAlignment(Pos.CENTER);
+
+    archiveSection.getChildren().addAll(
+            title
+            );
+
+    return archiveSection;
+  }
+
+  private VBox createSidePanel() {
+    VBox sidePanel = new VBox();
+    sidePanel.getStyleClass().add("player-side-panel");
+
+    sidePanel.setMinWidth(300);
+    sidePanel.setPrefWidth(360);
+    sidePanel.setMaxWidth(420);
+
+    PlayerInfoPanel playerInfoPanel = new PlayerInfoPanel(playerController);
+
+    sidePanel.getChildren().add(playerInfoPanel);
+    return sidePanel;
   }
 }

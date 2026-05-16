@@ -57,6 +57,11 @@ public class ViewFactory {
   }
 
   public PlayerPageView createPlayerPageView() {
-    return  new PlayerPageView();
+    GameSession session = gameController.getActiveSession()
+            .orElseThrow(() -> new IllegalStateException("No active game session"));
+
+    Player player = session.getPlayer();
+
+    return new PlayerPageView(new PlayerController(player));
   }
 }
