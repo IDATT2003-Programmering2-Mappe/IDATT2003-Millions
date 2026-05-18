@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.dashboard;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.dashboard;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,12 +11,10 @@ import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.StockObserver;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.SharesTable;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.SharesColumnFactory;
-import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.OwnedShares;
-import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components.PortfolioInfo;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsChart.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.SharesTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.SharesColumnFactory;
 
 import java.math.BigDecimal;
 import java.util.List;
