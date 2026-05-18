@@ -5,21 +5,14 @@ import org.edu.ntnu.idatt2003.group49.millions.controller.GameController;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.model.GameSession;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.HeaderView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
-import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
-import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
-import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.PlayerPageView;
-import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.landingpage.LandingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.PlayerPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.tradingpage.TradingPageView;
+
 
 public class ViewFactory {
   private final Navigator navigator;
