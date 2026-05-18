@@ -1,9 +1,9 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable;
 
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.StocksColumnFactory;
 
 import java.util.List;
 

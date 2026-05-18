@@ -1,16 +1,13 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.TableColumnFactory;
 
 import java.util.List;
 import java.util.Objects;

@@ -1,17 +1,24 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
+import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Portfolio;
 import org.edu.ntnu.idatt2003.group49.millions.view.popups.BuySharePopup;
 
+import java.util.logging.Logger;
+
 public class StocksColumnFactory extends TableColumnFactory {
+  static Logger logger = Logger.getLogger(StocksColumnFactory.class.getName());
+  private final ExchangeController exchangeController;
   private BuySharePopup buyStockPopup;
 
-  public StocksColumnFactory(BuySharePopup buyStockPopup) {
+  public StocksColumnFactory(ExchangeController exchangeController, BuySharePopup buyStockPopup) {
+    this.exchangeController = exchangeController;
     this.buyStockPopup = buyStockPopup;
   }
 
@@ -119,7 +126,16 @@ public class StocksColumnFactory extends TableColumnFactory {
       new TableColumn<>(""),
       (stock, value) -> {
         buyStockPopup.show(stock, request -> {
-          System.out.println("trying to purchase");
+          logger.info("Trying to purchase " + stock.getCompany() + " shares");
+          try {
+            exchangeController.buy(request);
+            logger.info("Player [" + request.player().getName() + "] successfully purchased [" + request.quantity() + "] shares of [" + stock.getCompany() + "] stock");
+          } catch (NullPointerException | IllegalArgumentException | IllegalStateException e) {
+            logger.severe("Could not continue with purchase! " + e.getMessage());
+          }
+
+          request.player().getTransactionArchive().getPurchases(exchangeController.getWeek()).forEach(System.out::println);
+          System.out.println(request.player().getMoney());
         });
 
         System.out.println("Clicked stock: " + stock);

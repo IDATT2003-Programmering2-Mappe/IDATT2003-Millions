@@ -2,6 +2,7 @@ package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Exchange;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.PurchaseRequest;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
 
 import java.math.BigDecimal;
@@ -33,5 +34,13 @@ public class ExchangeController {
 
   public Stock getStock(String symbol) {
     return exchange.getStock(symbol);
+  }
+
+  public void buy(PurchaseRequest request) {
+    exchange.buy(request.symbol(), request.quantity(), request.player());
+  }
+
+  public int getWeek() {
+    return exchange.getWeek();
   }
 }

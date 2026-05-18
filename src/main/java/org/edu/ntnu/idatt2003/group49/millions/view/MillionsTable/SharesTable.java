@@ -1,8 +1,8 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable;
 
 import javafx.scene.control.*;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.SharesColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.SharesColumnFactory;
 
 import java.util.List;
 

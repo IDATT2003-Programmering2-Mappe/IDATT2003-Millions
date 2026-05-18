@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.tradingpage;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -7,7 +7,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsChart.MillionsChart;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsChart.MillionsChart;
 
 import java.math.BigDecimal;
 import java.util.Objects;

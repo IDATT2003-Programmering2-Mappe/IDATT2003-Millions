@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components;
+package org.edu.ntnu.idatt2003.group49.millions.view;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,7 +11,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import org.edu.ntnu.idatt2003.group49.millions.controller.Navigator;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
-import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.util.Objects;
 

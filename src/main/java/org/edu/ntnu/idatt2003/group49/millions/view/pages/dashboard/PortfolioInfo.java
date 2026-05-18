@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.dashboard.components;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.dashboard;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;

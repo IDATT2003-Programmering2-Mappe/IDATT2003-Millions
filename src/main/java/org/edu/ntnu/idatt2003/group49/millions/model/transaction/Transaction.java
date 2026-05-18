@@ -22,6 +22,13 @@ public abstract class Transaction {
     this.commited   = false;
   }
 
+  @Override
+  public String toString() {
+    return "Transaction [stock=" + share.getStock().getCompany() +
+      ", quantity=" + share.getQuantity() +
+      ", week=" + week + "]";
+  }
+
   public Share getShare() {
     return share;
   }
