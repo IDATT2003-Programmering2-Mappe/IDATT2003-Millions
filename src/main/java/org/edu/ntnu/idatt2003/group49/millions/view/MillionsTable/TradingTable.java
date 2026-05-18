@@ -31,11 +31,11 @@ public class TradingTable extends MillionsTable<Stock> {
   protected List<TableColumn<Stock, ?>> createColumns() {
     return List.of(
       columnFactory.createIndexColumn(getList()),
+      columnFactory.createCompanyColumn(),
       columnFactory.createSymbolColumn(),
       columnFactory.createPriceColumn(),
       columnFactory.createChangeColumn(),
-      columnFactory.createBuyColumn(),
-      columnFactory.createSellColumn()
+      columnFactory.createBuyColumn()
     );
   }
 }

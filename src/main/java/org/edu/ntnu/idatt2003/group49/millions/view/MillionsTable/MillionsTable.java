@@ -31,10 +31,6 @@ public abstract class MillionsTable<T> extends MillionsView {
     return list;
   }
 
-  public TableView<T> getTable() {
-    return table;
-  }
-
   protected Pane build() {
     VBox vBox = new VBox(table);
 

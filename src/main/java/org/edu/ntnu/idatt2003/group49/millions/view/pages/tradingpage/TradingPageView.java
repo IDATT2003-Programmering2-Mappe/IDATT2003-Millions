@@ -52,8 +52,8 @@ public class TradingPageView extends MillionsView {
     tradingTable.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     // Inner actual TableView
-    tradingTable.getTable().setMinHeight(0);
-    tradingTable.getTable().setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+//    tradingTable.getTable().setMinHeight(0);
+//    tradingTable.getTable().setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     VBox leftBody = new VBox(tradingTable);
     leftBody.getStyleClass().add("left-body");
@@ -64,7 +64,7 @@ public class TradingPageView extends MillionsView {
     // Width behavior for left side
     leftBody.setMinWidth(500);
     leftBody.setPrefWidth(600);
-    leftBody.setMaxWidth(800);
+    leftBody.setMaxWidth(1200);
 
     VBox.setVgrow(tradingTable, Priority.ALWAYS);
 

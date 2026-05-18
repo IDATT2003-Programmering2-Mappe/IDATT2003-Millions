@@ -42,7 +42,30 @@ public class StocksColumnFactory extends TableColumnFactory {
       return new SimpleIntegerProperty(index);
     });
 
+    indexCol.setPrefWidth(50);
     return indexCol;
+  }
+
+  public TableColumn<Stock, String> createCompanyColumn() {
+    TableColumn<Stock, String> companyCol = createTableColumn(
+      new TableColumn<>("Company"),
+      (stock, value) -> {
+        System.out.println("Clicked stock: " + stock);
+        System.out.println("Clicked value: " + value);
+      },
+
+      (cell, stock, value) -> {
+
+      }
+
+    );
+
+    companyCol.setCellValueFactory(cellData ->
+      new SimpleStringProperty(cellData.getValue().getCompany())
+    );
+
+    companyCol.setMinWidth(200);
+    return companyCol;
   }
 
   public TableColumn<Stock, String> createSymbolColumn() {
