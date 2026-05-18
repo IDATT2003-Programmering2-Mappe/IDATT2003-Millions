@@ -15,7 +15,7 @@ public class PlayerPageView extends MillionsView {
   private final PlayerController playerController;
 
   public PlayerPageView(PlayerController playerController) {
-    this.playerController = playerController;
+    this.playerController = Objects.requireNonNull(playerController, "playerController cannot be null");
 
     getStylesheets().add(Objects.requireNonNull(
             getClass().getResource("/styles/playerpage.css")
@@ -29,7 +29,7 @@ public class PlayerPageView extends MillionsView {
     HBox body = new HBox();
     body.getStyleClass().add("player-page");
 
-    VBox archiveSection = createArchiveSection();
+    Pane archiveSection = createArchiveSection();
     VBox sidePanel = createSidePanel();
 
     HBox.setHgrow(archiveSection, Priority.ALWAYS);
@@ -38,21 +38,8 @@ public class PlayerPageView extends MillionsView {
     return body;
   }
 
-  private VBox createArchiveSection() {
-    VBox archiveSection = new VBox();
-    archiveSection.getStyleClass().add("archive-section");
-    archiveSection.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-
-    Label title = new Label("Transaction Archive");
-    title.getStyleClass().add("section-title");
-    title.setMaxWidth(Double.MAX_VALUE);
-    title.setAlignment(Pos.CENTER);
-
-    archiveSection.getChildren().addAll(
-            title
-            );
-
-    return archiveSection;
+  private Pane createArchiveSection() {
+    return new TransactionArchiveView(playerController);
   }
 
   private VBox createSidePanel() {

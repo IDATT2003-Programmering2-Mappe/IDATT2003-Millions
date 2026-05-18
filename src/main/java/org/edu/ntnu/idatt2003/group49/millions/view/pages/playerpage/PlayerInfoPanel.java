@@ -3,23 +3,38 @@ package org.edu.ntnu.idatt2003.group49.millions.view.pages.playerpage;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.util.Objects;
 
-public class PlayerInfoPanel extends VBox {
+public class PlayerInfoPanel extends MillionsView {
   private final PlayerController playerController;
 
   public PlayerInfoPanel(PlayerController playerController) {
     this.playerController = Objects.requireNonNull(playerController, "playerController cannot be null");
 
-    getStyleClass().add("player-info-panel");
-    getChildren().addAll(
-            createTitle(),
-            createInfoRow("Name", playerController.getName()),
-            createInfoRow("Portfolio", "$" + playerController.getPortfolioValue())
+    getChildren().add(build());
+  }
+
+  @Override
+  protected Pane build() {
+    VBox panel = new VBox();
+    panel.getStyleClass().add("player-info-panel");
+
+    panel.getChildren().addAll(
+        createTitle(),
+        createInfoRow("Name", playerController.getName()),
+        createInfoRow("Cash", "$" + playerController.getMoney()),
+        createInfoRow("Portfolio", "$" + playerController.getPortfolioValue()),
+        createInfoRow("Net Worth", "$" + playerController.getNetWorth()),
+        createInfoRow("Status", playerController.getStatus().toString())
+
     );
+
+    return panel;
   }
 
   private Label createTitle() {
@@ -43,4 +58,5 @@ public class PlayerInfoPanel extends VBox {
     row.getChildren().addAll(label, value);
     return row;
   }
+
 }

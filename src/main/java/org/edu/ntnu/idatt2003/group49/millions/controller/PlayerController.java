@@ -1,6 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Status;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 
 import java.math.BigDecimal;
@@ -31,6 +32,14 @@ public class PlayerController {
 
   public BigDecimal getPortfolioValue() {
     return player.getPortfolio().getValue();
+  }
+
+  public BigDecimal getNetWorth() {
+    return player.getNetWorth();
+  }
+
+  public Status getStatus() {
+    return player.getStatus();
   }
 
   public List<Transaction> getTransactions() {
