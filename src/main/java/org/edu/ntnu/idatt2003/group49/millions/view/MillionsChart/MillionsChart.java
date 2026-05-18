@@ -37,14 +37,14 @@ public class MillionsChart extends MillionsView {
 
   @Override
   protected Pane build() {
-    return createChartContainer();
-  }
-
-  private VBox createChartContainer() {
     VBox chartContainer = new VBox(filters(), createChart());
     chartContainer.getStyleClass().add("chart-container");
 
     return chartContainer;
+  }
+
+  public AreaChart<Number, Number> getChart() {
+    return chart;
   }
 
   private AreaChart<Number, Number> createChart() {

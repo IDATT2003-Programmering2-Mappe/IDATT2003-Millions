@@ -81,6 +81,8 @@ public class TradingPageView extends MillionsView {
     HBox.setHgrow(leftBody, Priority.ALWAYS);
     HBox.setHgrow(rightBody, Priority.ALWAYS);
 
+    VBox.setVgrow(stockInfo, Priority.ALWAYS);
+
     return body;
   }
 }

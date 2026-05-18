@@ -43,11 +43,16 @@
 
 .identifier-box {
     -fx-spacing: 5;
-    -fx-alignment: CENTER_RIGHT;
+    -fx-alignment: CENTER;
 }
 
 .info-box {
     -fx-spacing: 5;
+    -fx-alignment: CENTER;
+}
+
+.stock-info {
+    -fx-background-color: skyblue;
 }
 
 .identifier-label {

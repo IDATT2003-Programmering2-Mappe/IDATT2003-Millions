@@ -24,8 +24,6 @@ public class StockInfo extends MillionsView {
   private Label highestLabel;
   private Label lowestLabel;
 
-  private HBox infoSection;
-
   public StockInfo() {
     this.chart = new MillionsChart();
     this.stock = new Stock("Milli", "Millions", new BigDecimal("6767"));
@@ -42,12 +40,26 @@ public class StockInfo extends MillionsView {
 
   @Override
   protected Pane build() {
-    infoSection = createInfoSection();
+    HBox infoSection = createInfoSection();
+    VBox chartSection = new VBox(title(), chart);
 
-    VBox stockInfo = new VBox(new VBox(title(), chart), infoSection);
+    VBox stockInfo = new VBox(chartSection, infoSection);
     stockInfo.getStyleClass().add("stock-info");
 
-    VBox.setVgrow(infoSection, Priority.ALWAYS);
+    stockInfo.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+    chartSection.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
+    chart.setMaxHeight(Double.MAX_VALUE);
+    chart.getChart().setMaxHeight(Double.MAX_VALUE);
+
+    chartSection.setMinHeight(0);
+
+    VBox.setVgrow(chart.getChart(), Priority.ALWAYS);
+    VBox.setVgrow(chart, Priority.ALWAYS);
+    VBox.setVgrow(chartSection, Priority.ALWAYS);
+
+    // Usually do NOT let this grow if it should only take its natural height
+    VBox.setVgrow(infoSection, Priority.NEVER);
 
     return stockInfo;
   }
@@ -83,7 +95,6 @@ public class StockInfo extends MillionsView {
     changeLabel.setMaxWidth(Double.MAX_VALUE);
     highestLabel.setMaxWidth(Double.MAX_VALUE);
     lowestLabel.setMaxWidth(Double.MAX_VALUE);
-
 
     VBox identifierBox = createIdentifierBox();
     VBox infoBox = createInfoBox();
