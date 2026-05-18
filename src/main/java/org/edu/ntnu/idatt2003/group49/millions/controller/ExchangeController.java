@@ -9,8 +9,11 @@ import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class ExchangeController {
+  static Logger logger = Logger.getLogger(ExchangeController.class.getName());
+
   private final Exchange exchange;
 
   public ExchangeController(Exchange exchange) {
@@ -18,7 +21,7 @@ public class ExchangeController {
   }
 
   public void advance() {
-    System.out.println("Advance clicked");
+    logger.info("Advanced to week " + exchange.getWeek());
     exchange.advance();
 
     CSVWriter.appendStockPricesToFile(Path.of("data/stock_data.csv"), getStockMap());

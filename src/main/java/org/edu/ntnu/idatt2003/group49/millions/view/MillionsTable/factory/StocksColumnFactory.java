@@ -153,11 +153,11 @@ public class StocksColumnFactory extends TableColumnFactory {
           try {
             exchangeController.buy(request);
             logger.info("Player [" + request.player().getName() + "] successfully purchased [" + request.quantity() + "] shares of [" + stock.getCompany() + "] stock");
+            request.player().getTransactionArchive().getPurchases(exchangeController.getWeek()).forEach(System.out::println);
           } catch (NullPointerException | IllegalArgumentException | IllegalStateException e) {
             logger.severe("Could not continue with purchase! " + e.getMessage());
           }
 
-          request.player().getTransactionArchive().getPurchases(exchangeController.getWeek()).forEach(System.out::println);
           System.out.println(request.player().getMoney());
         });
 

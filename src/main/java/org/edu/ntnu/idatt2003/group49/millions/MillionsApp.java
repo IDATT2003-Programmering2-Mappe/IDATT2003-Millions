@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.edu.ntnu.idatt2003.group49.millions.helper.ViewFactory;
 import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVMillionsFileReader;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.MillionsFileReader;
 
 import java.util.Objects;
 

@@ -32,11 +32,8 @@ public class ViewFactory {
   public DashboardView createDashboardView() {
     GameSession session = gameController.getActiveSession()
             .orElseThrow(() -> new IllegalStateException("No active game session"));
-    Exchange exchange = session.getExchange();
-    Player player = session.getPlayer();
-    TableSelectionModel<Share> selectionModel = new TableSelectionModel<>();
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), new PlayerController(player), selectionModel);
-    exchange.addObserver(dashboard);
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()), new TableSelectionModel<>());
+    session.getExchange().addObserver(dashboard);
     return dashboard;
   }
 

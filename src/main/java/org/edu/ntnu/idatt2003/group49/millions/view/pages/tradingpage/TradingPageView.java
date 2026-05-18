@@ -15,14 +15,12 @@ import java.util.Objects;
 
 public class TradingPageView extends MillionsView {
   private final ExchangeController exchangeController;
-  private final PlayerController playerController;
   private final TradingTable tradingTable;
   private final StockInfo stockInfo;
   private final TableSelectionModel<Stock> selectionModel;
 
   public TradingPageView(ExchangeController exchangeController, PlayerController playerController, TableSelectionModel<Stock> selectionModel) {
     this.exchangeController = exchangeController;
-    this.playerController = playerController;
     this.selectionModel = selectionModel;
     BuySharePopup buyStockPopup = new BuySharePopup(playerController);
     this.tradingTable = new TradingTable(new StocksColumnFactory(exchangeController, buyStockPopup),  selectionModel);
@@ -50,10 +48,6 @@ public class TradingPageView extends MillionsView {
     // Outer TradingTable wrapper
     tradingTable.setMinHeight(0);
     tradingTable.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-
-    // Inner actual TableView
-//    tradingTable.getTable().setMinHeight(0);
-//    tradingTable.getTable().setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     VBox leftBody = new VBox(tradingTable);
     leftBody.getStyleClass().add("left-body");
