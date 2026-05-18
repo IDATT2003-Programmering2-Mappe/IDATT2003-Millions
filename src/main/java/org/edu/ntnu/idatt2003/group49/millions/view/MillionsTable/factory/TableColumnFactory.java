@@ -1,11 +1,8 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
-import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableCellStyler;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableCellStyler;
 
 import java.util.function.BiConsumer;
 
@@ -14,6 +11,16 @@ public abstract class TableColumnFactory {
 
   }
 
+  /**
+   *
+   *
+   * @param column
+   * @param onClick
+   * @param styler
+   * @return
+   * @param <T>
+   * @param <V>
+   */
   public <T, V> TableColumn<T, V> createTableColumn(
     TableColumn<T, V> column,
     BiConsumer<T, V> onClick,

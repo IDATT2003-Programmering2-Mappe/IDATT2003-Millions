@@ -1,13 +1,14 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.tradingpage;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.tradingpage;
 
 import javafx.scene.layout.*;
 import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
+import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TradingTable;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
-import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.components.StockInfo;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TradingTable;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.StocksColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.popups.BuySharePopup;
 
 import java.util.List;
 import java.util.Objects;
@@ -18,39 +19,35 @@ public class TradingPageView extends MillionsView {
   private final StockInfo stockInfo;
   private final TableSelectionModel<Stock> selectionModel;
 
-  public TradingPageView(ExchangeController exchangeController, TableSelectionModel<Stock> selectionModel) {
+  public TradingPageView(ExchangeController exchangeController, PlayerController playerController, TableSelectionModel<Stock> selectionModel) {
     this.exchangeController = exchangeController;
-    this.tradingTable = new TradingTable(new StocksColumnFactory(), selectionModel);
-    this.stockInfo = new StockInfo();
     this.selectionModel = selectionModel;
+    BuySharePopup buyStockPopup = new BuySharePopup(playerController);
+    this.tradingTable = new TradingTable(new StocksColumnFactory(exchangeController, buyStockPopup),  selectionModel);
+    this.stockInfo = new StockInfo();
 
+    getStylesheets().add(Objects.requireNonNull(
+      getClass().getResource("/styles/tradingpage.css")
+    ).toExternalForm());
+    getChildren().addAll(build(), buyStockPopup);
+  }
+
+  @Override
+  protected Pane build() {
     selectionModel.selectedItemProperty().addListener((obs, oldStock, newStock) -> {
       stockInfo.setStock(newStock);
       stockInfo.updateStockInfo();
       System.out.println("updated from: " + oldStock + " to " + newStock);
     });
 
-    getStylesheets().add(Objects.requireNonNull(
-      getClass().getResource("/styles/tradingpage.css")
-    ).toExternalForm());
-    getChildren().add(build());
-  }
-
-  @Override
-  protected Pane build() {
     List<Stock> stocks = exchangeController.getStockMap().values().stream().toList();
     tradingTable.setItems(stocks);
 
-    stockInfo.setStock(exchangeController.getStock("NVDA"));
     stockInfo.updateStockInfo();
 
     // Outer TradingTable wrapper
     tradingTable.setMinHeight(0);
     tradingTable.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-
-    // Inner actual TableView
-    tradingTable.getTable().setMinHeight(0);
-    tradingTable.getTable().setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
     VBox leftBody = new VBox(tradingTable);
     leftBody.getStyleClass().add("left-body");
@@ -59,9 +56,9 @@ public class TradingPageView extends MillionsView {
     leftBody.setMaxHeight(Double.MAX_VALUE);
 
     // Width behavior for left side
-    leftBody.setMinWidth(0);
+    leftBody.setMinWidth(500);
     leftBody.setPrefWidth(600);
-    leftBody.setMaxWidth(800);
+    leftBody.setMaxWidth(1200);
 
     VBox.setVgrow(tradingTable, Priority.ALWAYS);
 

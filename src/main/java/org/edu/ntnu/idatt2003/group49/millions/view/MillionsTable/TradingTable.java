@@ -1,9 +1,9 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable;
 
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory.StocksColumnFactory;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.StocksColumnFactory;
 
 import java.util.List;
 
@@ -31,11 +31,11 @@ public class TradingTable extends MillionsTable<Stock> {
   protected List<TableColumn<Stock, ?>> createColumns() {
     return List.of(
       columnFactory.createIndexColumn(getList()),
+      columnFactory.createCompanyColumn(),
       columnFactory.createSymbolColumn(),
       columnFactory.createPriceColumn(),
       columnFactory.createChangeColumn(),
-      columnFactory.createBuyColumn(),
-      columnFactory.createSellColumn()
+      columnFactory.createBuyColumn()
     );
   }
 }

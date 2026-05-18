@@ -1,0 +1,3381 @@
+
+NVDA,NVIDIA Corporation,225.83,Technology
+GOOGL,Alphabet Inc.,402.62,Communication Services
+GOOG,Alphabet Inc.,399.04,Communication Services
+AAPL,Apple Inc.,298.87,Technology
+MSFT,Microsoft Corporation,405.21,Technology
+AMZN,Amazon.com Inc.,270.13,Consumer Discretionary
+AVGO,Broadcom Inc.,416.79,Technology
+TSLA,Tesla Inc.,445.27,Consumer Discretionary
+META,Meta Platforms Inc.,616.63,Communication Services
+WMT,Walmart Inc.,131.47,Consumer Staples
+MU,Micron Technology Inc.,803.63,Technology
+AMD,Advanced Micro Devices Inc.,445.50,Technology
+INTC,Intel Corporation,120.29,Technology
+ASML,ASML Holding N.V.,1581.58,Technology
+COST,Costco Wholesale Corporation,1033.08,Consumer Staples
+CSCO,Cisco Systems Inc.,101.87,Technology
+LRCX,Lam Research Corporation,295.44,Technology
+NFLX,Netflix Inc.,87.56,Communication Services
+AMAT,Applied Materials Inc.,436.61,Technology
+PLTR,Palantir Technologies Inc.,130.05,Technology
+TXN,Texas Instruments Incorporated,306.34,Technology
+KLAC,KLA Corporation,1849.71,Technology
+LIN,Linde plc,513.26,Materials
+ARM,Arm Holdings plc,221.21,Technology
+QCOM,QUALCOMM Incorporated,213.17,Technology
+SNDK,Sandisk Corporation,1447.23,Technology
+ADI,Analog Devices Inc.,432.39,Technology
+TMUS,T-Mobile US Inc.,190.28,Communication Services
+PEP,PepsiCo Inc.,149.27,Consumer Staples
+PANW,Palo Alto Networks Inc.,227.79,Technology
+STX,Seagate Technology Holdings plc,817.35,Technology
+AMGN,Amgen Inc.,336.45,Healthcare
+WDC,Western Digital Corporation,494.09,Technology
+GILD,Gilead Sciences Inc.,133.05,Healthcare
+MRVL,Marvell Technology Inc.,177.95,Technology
+ISRG,Intuitive Surgical Inc.,432.27,Healthcare
+APP,AppLovin Corporation,453.53,Communication Services
+CRWD,CrowdStrike Holdings Inc.,562.57,Technology
+PDD,PDD Holdings Inc.,99.60,Consumer Discretionary
+HON,Honeywell International Inc.,217.96,Industrials
+SHOP,Shopify Inc.,95.40,Technology
+SBUX,Starbucks Corporation,105.95,Consumer Discretionary
+BKNG,Booking Holdings Inc.,155.03,Consumer Discretionary
+VRTX,Vertex Pharmaceuticals Incorporated,453.06,Healthcare
+CME,CME Group Inc.,297.13,Financials
+EQIX,Equinix Inc.,1077.28,Real Estate
+INTU,Intuit Inc.,371.71,Technology
+SNY,Sanofi,42.42,Healthcare
+CEG,Constellation Energy Corporation,274.89,Utilities
+CDNS,Cadence Design Systems Inc.,354.55,Technology
+SNPS,Synopsys Inc.,509.28,Technology
+ADBE,Adobe Inc.,236.07,Technology
+MAR,Marriott International Inc.,350.19,Consumer Discretionary
+CMCSA,Comcast Corporation,24.94,Communication Services
+FTNT,Fortinet Inc.,117.69,Technology
+MNST,Monster Beverage Corporation,85.93,Consumer Staples
+ADP,Automatic Data Processing Inc.,208.63,Technology
+CSX,CSX Corporation,44.40,Industrials
+MPWR,Monolithic Power Systems Inc.,1650.35,Technology
+MELI,MercadoLibre Inc.,1562.00,Consumer Discretionary
+MDLZ,Mondelez International Inc.,61.52,Consumer Staples
+ABNB,Airbnb Inc.,132.97,Consumer Discretionary
+NXPI,NXP Semiconductors N.V.,298.41,Technology
+NTES,NetEase Inc.,119.86,Communication Services
+ORLY,O'Reilly Automotive Inc.,89.70,Consumer Discretionary
+LITE,Lumentum Holdings Inc.,1030.37,Technology
+REGN,Regeneron Pharmaceuticals Inc.,719.88,Healthcare
+DDOG,Datadog Inc.,205.31,Technology
+RKLB,Rocket Lab Corporation,124.15,Industrials
+AEP,American Electric Power Company Inc.,127.95,Utilities
+HOOD,Robinhood Markets Inc.,76.75,Financials
+WBD,Warner Bros. Discovery Inc.,27.25,Communication Services
+ROST,Ross Stores Inc.,211.76,Consumer Discretionary
+CTAS,Cintas Corporation,163.55,Industrials
+DASH,DoorDash Inc.,149.07,Consumer Discretionary
+BKR,Baker Hughes Company,65.41,Energy
+MSTR,Strategy Inc,178.03,Technology
+CRWV,CoreWeave Inc.,111.31,Technology
+PCAR,PACCAR Inc,111.78,Industrials
+TER,Teradyne Inc.,363.38,Technology
+FANG,Diamondback Energy Inc.,201.10,Energy
+COIN,Coinbase Global Inc.,201.80,Financials
+NBIS,Nebius Group N.V.,207.27,Communication Services
+FLEX,Flex Ltd.,143.80,Technology
+MCHP,Microchip Technology Incorporated,96.71,Technology
+BIDU,Baidu Inc.,150.50,Communication Services
+NDAQ,Nasdaq Inc.,90.21,Financials
+MDLN,Medline Inc.,38.71,Healthcare
+FAST,Fastenal Company,43.77,Industrials
+EA,Electronic Arts Inc.,200.18,Communication Services
+EBAY,eBay Inc.,113.01,Consumer Discretionary
+ARGX,argenx SE,802.70,Healthcare
+XEL,Xcel Energy Inc.,79.91,Utilities
+ADSK,Autodesk Inc.,231.03,Technology
+FER,Ferrovial N.V.,67.90,Industrials
+JD,JD.com Inc.,33.77,Consumer Discretionary
+ON,ON Semiconductor Corporation,115.71,Technology
+EXC,Exelon Corporation,44.27,Utilities
+FITB,Fifth Third Bancorp,47.17,Financials
+ERIC,Telefonaktiebolaget LM Ericsson (publ),12.53,Technology
+TTWO,Take-Two Interactive Software Inc.,226.99,Communication Services
+IDXX,IDEXX Laboratories Inc.,528.68,Healthcare
+GFS,GLOBALFOUNDRIES Inc.,74.99,Technology
+CCEP,Coca-Cola Europacific Partners PLC,91.42,Consumer Staples
+PYPL,PayPal Holdings Inc.,45.23,Financials
+KDP,Keurig Dr Pepper Inc.,29.31,Consumer Staples
+ODFL,Old Dominion Freight Line Inc.,189.18,Industrials
+ALNY,Alnylam Pharmaceuticals Inc.,291.48,Healthcare
+SATS,EchoStar Corporation,133.23,Communication Services
+ALAB,Astera Labs Inc.,224.09,Technology
+IBKR,Interactive Brokers Group Inc.,85.12,Financials
+ESLT,Elbit Systems Ltd.,779.42,Industrials
+TRI,Thomson Reuters Corporation,82.03,Industrials
+VOD,Vodafone Group Public Limited Company,15.51,Communication Services
+ONC,BeOne Medicines AG,316.55,Healthcare
+CRDO,Credo Technology Group Holding Ltd,189.36,Technology
+RYAAY,Ryanair Holdings plc,54.94,Industrials
+STLD,Steel Dynamics Inc.,237.08,Materials
+TCOM,Trip.com Group Limited,52.28,Consumer Discretionary
+CASY,Casey's General Stores Inc.,888.36,Consumer Discretionary
+ACGL,Arch Capital Group Ltd.,93.32,Financials
+PAYX,Paychex Inc.,89.92,Technology
+KMB,Kimberly-Clark Corporation,97.04,Consumer Staples
+ROP,Roper Technologies Inc.,316.25,Technology
+RVMD,Revolution Medicines Inc.,149.94,Healthcare
+CPRT,Copart Inc.,32.94,Industrials
+HBAN,Huntington Bancshares Incorporated,15.35,Financials
+UAL,United Airlines Holdings Inc.,95.70,Industrials
+RPRX,Royalty Pharma plc,53.25,Healthcare
+TSEM,Tower Semiconductor Ltd.,270.77,Technology
+AXON,Axon Enterprise Inc.,376.82,Industrials
+BIIB,Biogen Inc.,204.53,Healthcare
+ZM,Zoom Communications Inc.,102.43,Technology
+NTRS,Northern Trust Corporation,162.97,Financials
+SYM,Symbotic Inc.,49.73,Industrials
+MTSI,MACOM Technology Solutions Holdings Inc.,381.55,Technology
+WDAY,Workday Inc.,116.50,Technology
+ASTS,AST SpaceMobile Inc.,74.81,Technology
+GEHC,GE HealthCare Technologies Inc.,61.89,Healthcare
+NTRA,Natera Inc.,195.32,Healthcare
+FOXA,Fox Corporation,66.47,Communication Services
+FISV,Fiserv Inc.,52.37,Technology
+KHC,The Kraft Heinz Company,23.18,Consumer Staples
+FTAI,FTAI Aviation Ltd.,267.09,Industrials
+VRSN,VeriSign Inc.,295.14,Technology
+FOX,Fox Corporation,59.47,Communication Services
+STRL,Sterling Infrastructure Inc.,854.28,Industrials
+EXPE,Expedia Group Inc.,217.55,Consumer Discretionary
+TW,Tradeweb Markets Inc.,109.87,Financials
+INSM,Insmed Incorporated,117.99,Healthcare
+CINF,Cincinnati Financial Corporation,163.26,Financials
+FSLR,First Solar Inc.,234.60,Technology
+UTHR,United Therapeutics Corporation,579.54,Healthcare
+ZS,Zscaler Inc.,152.43,Technology
+MDB,MongoDB Inc.,303.00,Technology
+LPLA,LPL Financial Holdings Inc.,301.18,Financials
+FCNCA,First Citizens BancShares Inc.,1909.53,Financials
+AKAM,Akamai Technologies Inc.,161.14,Technology
+NTAP,NetApp Inc.,118.58,Technology
+BNTX,BioNTech SE,92.23,Healthcare
+FWONK,Formula One Group,91.86,Communication Services
+EXE,Expand Energy Corporation,95.65,Energy
+WTW,Willis Towers Watson Public Limited Company,242.12,Financials
+DXCM,DexCom Inc.,58.57,Healthcare
+FWONA,Formula One Group,83.87,Communication Services
+JBHT,J.B. Hunt Transport Services Inc.,237.80,Industrials
+ENTG,Entegris Inc.,145.04,Technology
+TROW,T. Rowe Price Group Inc.,103.01,Financials
+SITM,SiTime Corporation,835.31,Technology
+WWD,Woodward Inc.,369.78,Industrials
+SBAC,SBA Communications Corporation,207.66,Real Estate
+ILMN,Illumina Inc.,145.00,Healthcare
+CTSH,Cognizant Technology Solutions Corporation,45.97,Technology
+PFG,Principal Financial Group Inc.,100.42,Financials
+LI,Li Auto Inc.,20.02,Consumer Discretionary
+ULTA,Ulta Beauty Inc.,492.15,Consumer Discretionary
+MKSI,MKS Inc.,317.31,Technology
+AFRM,Affirm Holdings Inc.,63.53,Financials
+VRSK,Verisk Analytics Inc.,161.47,Industrials
+ROIV,Roivant Sciences Ltd.,29.22,Healthcare
+RGLD,Royal Gold Inc.,244.99,Materials
+TEAM,Atlassian Corporation,80.62,Technology
+NXT,Nextpower Inc.,136.37,Technology
+VTRS,Viatris Inc.,17.37,Healthcare
+FFIV,F5 Inc.,357.40,Technology
+FUTU,Futu Holdings Limited,142.74,Financials
+MRNA,Moderna Inc.,50.42,Healthcare
+CHTR,Charter Communications Inc.,143.06,Communication Services
+INCY,Incyte Corporation,98.82,Healthcare
+IREN,IREN Limited,55.17,Financials
+SOFI,SoFi Technologies Inc.,15.31,Financials
+SMCI,Super Micro Computer Inc.,32.00,Technology
+CHRW,C.H. Robinson Worldwide Inc.,163.26,Industrials
+EVRG,Evergy Inc.,82.46,Utilities
+LNT,Alliant Energy Corporation,72.30,Utilities
+ROKU,Roku Inc.,125.68,Communication Services
+AMKR,Amkor Technology Inc.,74.61,Technology
+RIVN,Rivian Automotive Inc.,14.27,Consumer Discretionary
+AAOI,Applied Optoelectronics Inc.,223.10,Technology
+CG,The Carlyle Group Inc.,49.16,Financials
+TTMI,TTM Technologies Inc.,168.82,Technology
+VNOM,Viper Energy Inc.,48.36,Energy
+LSCC,Lattice Semiconductor Corporation,125.65,Technology
+WMG,Warner Music Group Corp.,32.69,Communication Services
+DLTR,Dollar Tree Inc.,86.80,Consumer Staples
+KSPI,Joint Stock Company Kaspi.kz,88.00,Technology
+AUR,Aurora Innovation Inc.,8.40,Consumer Discretionary
+TPG,TPG Inc.,42.58,Financials
+EWBC,East West Bancorp Inc.,119.04,Financials
+PTC,PTC Inc.,140.81,Technology
+NBIX,Neurocrine Biosciences Inc.,161.32,Healthcare
+GMAB,Genmab A/S,26.55,Healthcare
+NVMI,Nova Ltd.,503.65,Technology
+TLN,Talen Energy Corporation,351.03,Utilities
+TSCO,Tractor Supply Company,29.85,Consumer Discretionary
+SSNC,SS&C Technologies Holdings Inc.,64.77,Technology
+NDSN,Nordson Corporation,278.93,Industrials
+PAA,Plains All American Pipeline L.P.,21.89,Energy
+NWS,News Corporation,30.68,Communication Services
+ASND,Ascendis Pharma A/S,243.58,Healthcare
+HST,Host Hotels & Resorts Inc.,21.56,Real Estate
+LOGI,Logitech International S.A.,103.99,Technology
+LAMR,Lamar Advertising Company,146.62,Real Estate
+GRAB,Grab Holdings Limited,3.630,Technology
+SMMT,Summit Therapeutics Inc.,18.79,Healthcare
+RMBS,Rambus Inc.,134.85,Technology
+JAZZ,Jazz Pharmaceuticals plc,232.33,Healthcare
+NWSA,News Corporation,26.66,Communication Services
+LECO,Lincoln Electric Holdings Inc.,265.26,Industrials
+ARXS,Arxis Inc.,35.40,Industrials
+HTHT,H World Group Limited,46.93,Consumer Discretionary
+REG,Regency Centers Corporation,76.67,Real Estate
+GEN,Gen Digital Inc.,23.29,Technology
+VICR,Vicor Corporation,309.27,Technology
+SOLS,Solstice Advanced Materials Inc.,88.57,Materials
+LULU,lululemon athletica inc.,121.21,Consumer Discretionary
+WSE,Wise plc,13.62,-
+OKTA,Okta Inc.,78.20,Technology
+GLPI,Gaming and Leisure Properties Inc.,46.97,Real Estate
+TIGO,Millicom International Cellular S.A.,81.98,Communication Services
+RGC,Regencell Bioscience Holdings Limited,27.32,Healthcare
+IESC,IES Holdings Inc.,677.78,Industrials
+ARCC,Ares Capital Corporation,18.78,Financials
+BBIO,BridgeBio Pharma Inc.,68.61,Healthcare
+PAYP,PayPay Corporation,19.69,Financials
+HAS,Hasbro Inc.,94.01,Consumer Discretionary
+APA,APA Corporation,36.97,Energy
+GH,Guardant Health Inc.,98.47,Healthcare
+CSGP,CoStar Group Inc.,31.97,Real Estate
+SMTC,Semtech Corporation,139.74,Technology
+APLD,Applied Digital Corporation,45.48,Technology
+AEIS,Advanced Energy Industries Inc.,339.19,Industrials
+EXEL,Exelixis Inc.,51.29,Healthcare
+CDW,CDW Corporation,100.40,Technology
+IONS,Ionis Pharmaceuticals Inc.,77.60,Healthcare
+TRMB,Trimble Inc.,54.90,Technology
+SANM,Sanmina Corporation,238.62,Technology
+ENLT,Enlight Renewable Energy Ltd,92.11,Utilities
+VIAV,Viavi Solutions Inc.,53.63,Technology
+DKNG,DraftKings Inc.,25.03,Consumer Discretionary
+AGNC,AGNC Investment Corp.,10.63,Real Estate
+HUT,Hut 8 Corp.,108.32,Financials
+AGNCM,AGNC Investment Corp.,24.88,Real Estate
+LFUS,Littelfuse Inc.,481.02,Technology
+XE,X-Energy Inc.,30.99,Industrials
+AXSM,Axsome Therapeutics Inc.,235.32,Healthcare
+MEDP,Medpace Holdings Inc.,423.76,Healthcare
+GLXY,Galaxy Digital Inc.,30.81,Financials
+CHKP,Check Point Software Technologies Ltd.,115.17,Technology
+MDGL,Madrigal Pharmaceuticals Inc.,518.87,Healthcare
+NTNX,Nutanix Inc.,44.50,Technology
+TXRH,Texas Roadhouse Inc.,179.30,Consumer Discretionary
+LGN,Legence Corp.,100.00,Industrials
+ZBRA,Zebra Technologies Corporation,246.76,Technology
+PSKY,Paramount Skydance Corporation,10.47,Communication Services
+BTSG,BrightSpring Health Services Inc.,56.50,Healthcare
+FIVE,Five Below Inc.,209.99,Consumer Discretionary
+COO,The Cooper Companies Inc.,59.47,Healthcare
+ALGN,Align Technology Inc.,161.75,Healthcare
+SAIA,Saia Inc.,431.42,Industrials
+WULF,TeraWulf Inc.,23.12,Financials
+DRS,Leonardo DRS Inc.,42.50,Industrials
+ERIE,Erie Indemnity Company,212.66,Financials
+SEIC,SEI Investments Company,92.24,Financials
+AAON,AAON Inc.,135.37,Industrials
+COKE,Coca-Cola Consolidated Inc.,164.98,Consumer Staples
+ARWR,Arrowhead Pharmaceuticals Inc.,77.88,Healthcare
+POWL,Powell Industries Inc.,300.84,Industrials
+GSAT,Globalstar Inc.,82.33,Communication Services
+CGNX,Cognex Corporation,63.64,Technology
+FRVO,Fervo Energy Company,36.54,Utilities
+BMRN,BioMarin Pharmaceutical Inc.,53.55,Healthcare
+ENSG,The Ensign Group Inc.,178.00,Healthcare
+PODD,Insulet Corporation,148.84,Healthcare
+DPZ,Domino's Pizza Inc.,308.48,Consumer Discretionary
+SWKS,Skyworks Solutions Inc.,68.14,Technology
+FORM,FormFactor Inc.,129.31,Technology
+LINE,Lineage Inc.,39.81,Real Estate
+JKHY,Jack Henry & Associates Inc.,141.43,Technology
+SFD,Smithfield Foods Inc.,25.23,Consumer Staples
+WTFC,Wintrust Financial Corporation,146.63,Financials
+KTOS,Kratos Defense & Security Solutions Inc.,52.49,Industrials
+WYNN,Wynn Resorts Limited,96.21,Consumer Discretionary
+FCFS,FirstCash Holdings Inc.,224.25,Financials
+BSY,Bentley Systems Incorporated,31.25,Technology
+ABVX,ABIVAX Société Anonyme,121.91,Healthcare
+PRAX,Praxis Precision Medicines Inc.,346.84,Healthcare
+TTD,The Trade Desk Inc.,20.49,Communication Services
+CYTK,Cytokinetics Incorporated,77.22,Healthcare
+UMBF,UMB Financial Corporation,126.37,Financials
+VSAT,Viasat Inc.,70.58,Technology
+MWH,SOLV Energy Inc.,46.77,Utilities
+RIOT,Riot Platforms Inc.,24.92,Financials
+CART,Maplebear Inc.,39.95,Consumer Discretionary
+MASI,Masimo Corporation,178.41,Healthcare
+VFS,VinFast Auto Ltd.,3.980,Consumer Discretionary
+BILI,Bilibili Inc.,22.34,Communication Services
+BPOP,Popular Inc.,143.06,Financials
+KRYS,Krystal Biotech Inc.,312.58,Healthcare
+SNEX,StoneX Group Inc.,116.03,Financials
+SIMO,Silicon Motion Technology Corporation,269.87,Technology
+GDS,GDS Holdings Limited,45.70,Technology
+LLYVK,Liberty Live Holdings Inc.,99.19,Communication Services
+ONB,Old National Bancorp,23.44,Financials
+ICLR,ICON Public Limited Company,117.38,Healthcare
+FIGR,Figure Technology Solutions Inc.,40.51,Financials
+XP,XP Inc.,17.29,Financials
+ZG,Zillow Group Inc.,38.88,Communication Services
+SIRI,Sirius XM Holdings Inc.,26.36,Communication Services
+MBLY,Mobileye Global Inc.,10.53,Consumer Discretionary
+Z,Zillow Group Inc.,38.53,Communication Services
+ZION,Zions Bancorporation National Association,59.64,Financials
+DOCU,DocuSign Inc.,45.07,Technology
+CIFR,Cipher Digital Inc.,21.24,Technology
+FRHC,Freedom Holding Corp.,141.89,Financials
+IBRX,ImmunityBio Inc.,8.15,Healthcare
+ALGM,Allegro MicroSystems Inc.,45.97,Technology
+CRUS,Cirrus Logic Inc.,166.45,Technology
+MTCH,Match Group Inc.,36.07,Communication Services
+AAL,American Airlines Group Inc.,12.71,Industrials
+NUVL,Nuvalent Inc.,105.22,Healthcare
+COLB,Columbia Banking System Inc.,28.71,Financials
+HALO,Halozyme Therapeutics Inc.,70.03,Healthcare
+SFM,Sprouts Farmers Market Inc.,88.27,Consumer Staples
+TEM,Tempus AI Inc.,45.90,Healthcare
+AVAV,AeroVironment Inc.,160.99,Industrials
+QRVO,Qorvo Inc.,91.51,Technology
+CHRD,Chord Energy Corporation,142.03,Energy
+HSIC,Henry Schein Inc.,69.45,Healthcare
+MXL,MaxLinear Inc.,87.73,Technology
+WFRD,Weatherford International plc,109.08,Energy
+PCVX,Vaxcyte Inc.,54.25,Healthcare
+CAMT,Camtek Ltd.,168.88,Technology
+FROG,JFrog Ltd.,64.18,Technology
+AXTI,AXT Inc.,121.94,Technology
+LUNR,Intuitive Machines Inc.,35.68,Industrials
+BOKF,BOK Financial Corporation,126.93,Financials
+CORZ,Core Scientific Inc.,24.00,Technology
+LLYVA,Liberty Live Holdings Inc.,96.49,Communication Services
+MANH,Manhattan Associates Inc.,125.56,Technology
+CBSH,Commerce Bancshares Inc.,50.32,Financials
+MYRG,MYR Group Inc.,467.97,Industrials
+SSRM,SSR Mining Inc.,34.75,Materials
+VLY,Valley National Bancorp,13.00,Financials
+ROAD,Construction Partners Inc.,126.87,Industrials
+GGAL,Grupo Financiero Galicia S.A.,41.79,Financials
+SLAB,Silicon Laboratories Inc.,216.95,Technology
+CELH,Celsius Holdings Inc.,27.86,Consumer Staples
+AVT,Avnet Inc.,86.22,Technology
+KYMR,Kymera Therapeutics Inc.,85.59,Healthcare
+TECH,Bio-Techne Corporation,44.89,Healthcare
+TTEK,Tetra Tech Inc.,27.06,Industrials
+PLXS,Plexus Corp.,261.91,Technology
+IDCC,InterDigital Inc.,270.21,Technology
+HQY,HealthEquity Inc.,82.18,Healthcare
+MIDD,The Middleby Corporation,147.45,Industrials
+QMMM,QMMM Holdings Limited,119.40,Communication Services
+BZ,Kanzhun Limited,14.74,Communication Services
+LKQ,LKQ Corporation,26.37,Consumer Discretionary
+SAIL,SailPoint Inc.,11.81,Technology
+PTGX,Protagonist Therapeutics Inc.,103.88,Healthcare
+BRKR,Bruker Corporation,43.85,Healthcare
+MIRM,Mirum Pharmaceuticals Inc.,109.16,Healthcare
+PPC,Pilgrim's Pride Corporation,27.86,Consumer Staples
+SYRE,Spyre Therapeutics Inc.,76.31,Healthcare
+CHYM,Chime Financial Inc.,17.39,Technology
+AUGO,Aura Minerals Inc.,79.26,Materials
+LBRDA,Liberty Broadband Corporation,33.31,Communication Services
+STEP,StepStone Group Inc.,54.60,Financials
+EQPT,EquipmentShare.com Inc.,25.95,Industrials
+CGON,CG Oncology Inc.,74.00,Healthcare
+CBC,Central Bancompany Inc.,27.20,Financials
+ALKS,Alkermes plc,38.91,Healthcare
+DOX,Amdocs Limited,59.93,Technology
+RYTM,Rhythm Pharmaceuticals Inc.,93.72,Healthcare
+POOL,Pool Corporation,175.37,Industrials
+CENX,Century Aluminum Company,64.34,Materials
+GRFS,Grifols S.A.,7.71,Healthcare
+MORN,Morningstar Inc.,166.22,Financials
+FLY,Firefly Aerospace Inc.,39.37,Industrials
+APGE,Apogee Therapeutics Inc.,83.94,Healthcare
+LNTH,Lantheus Holdings Inc.,96.46,Healthcare
+CORT,Corcept Therapeutics Incorporated,57.08,Healthcare
+CNTA,Centessa Pharmaceuticals plc,39.58,Healthcare
+RGTI,Rigetti Computing Inc.,18.42,Technology
+DBX,Dropbox Inc.,26.20,Technology
+PTCT,PTC Therapeutics Inc.,73.46,Healthcare
+CPB,The Campbell's Company,20.35,Consumer Staples
+TGTX,TG Therapeutics Inc.,42.65,Healthcare
+BLTE,Belite Bio Inc,153.52,Healthcare
+RGEN,Repligen Corporation,107.03,Healthcare
+CELC,Celcuity Inc.,124.47,Healthcare
+SRRK,Scholar Rock Holding Corporation,50.17,Healthcare
+NXST,Nexstar Media Group Inc.,195.97,Communication Services
+CHDN,Churchill Downs Incorporated,85.56,Consumer Discretionary
+ACT,Enact Holdings Inc.,42.67,Financials
+IMVT,Immunovant Inc.,29.25,Healthcare
+FSV,FirstService Corporation,129.13,Real Estate
+LSTR,Landstar System Inc.,174.99,Industrials
+GTX,Garrett Motion Inc.,31.35,Consumer Discretionary
+COGT,Cogent Biosciences Inc.,34.29,Healthcare
+UBSI,United Bankshares Inc.,42.15,Financials
+GLNG,Golar LNG Limited,56.68,Energy
+VSNT,Versant Media Group Inc.,40.44,Communication Services
+DSGX,The Descartes Systems Group Inc.,66.31,Technology
+URBN,Urban Outfitters Inc.,66.41,Consumer Discretionary
+PCTY,Paylocity Holding Corporation,104.23,Technology
+MRCY,Mercury Systems Inc.,92.50,Industrials
+ALM,Almonty Industries Inc.,19.53,Materials
+EMAT,Evolution Metals & Technologies Corp.,9.34,Materials
+USAR,USA Rare Earth Inc.,25.42,Materials
+OTEX,Open Text Corporation,22.83,Technology
+ENPH,Enphase Energy Inc.,42.00,Technology
+NOVT,Novanta Inc.,155.44,Technology
+PLUG,Plug Power Inc.,3.960,Industrials
+CACC,Credit Acceptance Corporation,525.00,Financials
+PAGP,Plains GP Holdings L.P.,23.51,Energy
+PEGA,Pegasystems Inc.,32.72,Technology
+PECO,Phillips Edison & Company Inc.,39.36,Real Estate
+KLIC,Kulicke and Soffa Industries Inc.,104.27,Technology
+CZR,Caesars Entertainment Inc.,26.79,Consumer Discretionary
+VCTR,Victory Capital Holdings Inc.,87.00,Financials
+RUSHA,Rush Enterprises Inc.,70.08,Consumer Discretionary
+XENE,Xenon Pharmaceuticals Inc.,55.88,Healthcare
+KC,Kingsoft Cloud Holdings Limited,17.92,Technology
+CWST,Casella Waste Systems Inc.,84.31,Industrials
+TTAN,ServiceTitan Inc.,56.16,Technology
+BGC,BGC Group Inc.,11.16,Financials
+QS,QuantumScape Corporation,8.66,Consumer Discretionary
+APPF,AppFolio Inc.,150.53,Technology
+SBRA,Sabra Health Care REIT Inc.,21.10,Real Estate
+LEGN,Legend Biotech Corporation,28.67,Healthcare
+HWC,Hancock Whitney Corporation,65.19,Financials
+CAR,Avis Budget Group Inc.,148.84,Industrials
+APLS,Apellis Pharmaceuticals Inc.,41.03,Healthcare
+LYFT,Lyft Inc.,13.68,Technology
+BCPC,Balchem Corporation,160.65,Materials
+OMAB,Grupo Aeroportuario del Centro Norte S.A.B. de C.V.,105.86,Industrials
+LQDA,Liquidia Corporation,57.59,Healthcare
+IEP,Icahn Enterprises L.P.,08.01,Energy
+SIGI,Selective Insurance Group Inc.,85.17,Financials
+ATAT,Atour Lifestyle Holdings Limited,37.06,Consumer Discretionary
+OZK,Bank OZK,46.61,Financials
+CRSP,CRISPR Therapeutics AG,52.75,Healthcare
+RRR,Red Rock Resorts Inc.,51.04,Consumer Discretionary
+VSEC,VSE Corporation,180.53,Industrials
+SYNA,Synaptics Incorporated,131.06,Technology
+CIGI,Colliers International Group Inc.,98.72,Real Estate
+NICE,NICE Ltd.,86.38,Technology
+RELY,Remitly Global Inc.,23.75,Technology
+ACLS,Axcelis Technologies Inc.,162.15,Technology
+MKTX,MarketAxess Holdings Inc.,139.28,Financials
+NVTS,Navitas Semiconductor Corporation,21.17,Technology
+MEOH,Methanex Corporation,63.54,Materials
+DUOL,Duolingo Inc.,104.98,Technology
+GNTX,Gentex Corporation,22.90,Consumer Discretionary
+HLNE,Hamilton Lane Incorporated,86.74,Financials
+MARA,MARA Holdings Inc.,12.75,Financials
+CROX,Crocs Inc.,96.93,Consumer Discretionary
+LBRDK,Liberty Broadband Corporation,33.40,Communication Services
+PSMT,PriceSmart Inc.,158.11,Consumer Staples
+DNTH,Dianthus Therapeutics Inc.,85.74,Healthcare
+WSC,WillScot Holdings Corporation,25.89,Industrials
+DIOD,Diodes Incorporated,101.96,Technology
+GLBE,Global-E Online Ltd.,27.54,Consumer Discretionary
+UFPI,UFP Industries Inc.,81.48,Materials
+LAUR,Laureate Education Inc.,32.67,Consumer Staples
+IRDM,Iridium Communications Inc.,43.09,Communication Services
+PTEN,Patterson-UTI Energy Inc.,12.00,Energy
+KNSA,Kiniksa Pharmaceuticals International plc,59.12,Healthcare
+REYN,Reynolds Consumer Products Inc.,21.56,Consumer Discretionary
+LASR,nLIGHT Inc.,80.42,Technology
+XMTR,Xometry Inc.,86.19,Industrials
+RUSHB,Rush Enterprises Inc.,64.29,Consumer Discretionary
+NAVN,Navan Inc.,18.07,Technology
+IPGP,IPG Photonics Corporation,106.60,Technology
+OLLI,Ollie's Bargain Outlet Holdings Inc.,74.22,Consumer Staples
+PI,Impinj Inc.,147.74,Technology
+FFIN,First Financial Bankshares Inc.,31.31,Financials
+XNDU,Xanadu Quantum Technologies Limited,14.89,Technology
+LGND,Ligand Pharmaceuticals Incorporated,221.21,Healthcare
+IBOC,International Bancshares Corporation,71.27,Financials
+SHC,Sotera Health Company,15.48,Healthcare
+FTDR,Frontdoor Inc.,62.64,Consumer Discretionary
+OPEN,Opendoor Technologies Inc.,4.580,Real Estate
+MAAS,Maase Inc.,9.90,Financials
+NWE,NorthWestern Energy Group Inc.,71.18,Utilities
+ONDS,Ondas Inc.,8.86,Technology
+NAMS,NewAmsterdam Pharma Company N.V.,37.75,Healthcare
+MAT,Mattel Inc.,14.82,Consumer Discretionary
+FELE,Franklin Electric Co. Inc.,97.37,Industrials
+ACMR,ACM Research Inc.,64.75,Technology
+COCO,The Vita Coco Company Inc.,74.77,Consumer Staples
+OLED,Universal Display Corporation,90.79,Technology
+EBC,Eastern Bankshares Inc.,19.34,Financials
+NTSK,Netskope Inc.,10.56,Technology
+LOPE,Grand Canyon Education Inc.,160.74,Consumer Staples
+TCBI,Texas Capital Bancshares Inc.,95.99,Financials
+MRX,Marex Group plc,58.25,Financials
+TFSL,TFS Financial Corporation,14.95,Financials
+BLLN,BillionToOne Inc.,90.59,Healthcare
+RDNT,RadNet Inc.,52.98,Healthcare
+CAI,Caris Life Sciences Inc.,14.69,Healthcare
+EXLS,ExlService Holdings Inc.,27.16,Technology
+ACIW,ACI Worldwide Inc.,40.81,Technology
+TVTX,Travere Therapeutics Inc.,44.55,Healthcare
+CVLT,Commvault Systems Inc.,99.81,Technology
+MMYT,MakeMyTrip Limited,43.13,Consumer Discretionary
+FLNC,Fluence Energy Inc.,22.10,Utilities
+DOO,BRP Inc.,54.87,Consumer Discretionary
+SLM,SLM Corporation,21.32,Financials
+HYMC,Hycroft Mining Holding Corporation,43.63,Materials
+LIVN,LivaNova PLC,72.44,Healthcare
+PPTA,Perpetua Resources Corp.,31.77,Materials
+POWI,Power Integrations Inc.,71.15,Technology
+AMRX,Amneal Pharmaceuticals Inc.,12.39,Healthcare
+CRNX,Crinetics Pharmaceuticals Inc.,37.48,Healthcare
+FULT,Fulton Financial Corporation,20.67,Financials
+LBTYA,Liberty Global Ltd.,11.67,Communication Services
+VEON,VEON Ltd.,56.89,Communication Services
+PONY,Pony AI Inc.,09.02,Technology
+SAIC,Science Applications International Corporation,90.41,Technology
+SRAD,Sportradar Group AG,12.45,Technology
+BULL,Webull Corporation,07.08,Technology
+NMRK,Newmark Group Inc.,15.84,Real Estate
+CPRX,Catalyst Pharmaceuticals Inc.,31.16,Healthcare
+UCTT,Ultra Clean Holdings Inc.,85.03,Technology
+ORKA,Oruka Therapeutics Inc.,63.18,Healthcare
+ACAD,ACADIA Pharmaceuticals Inc.,22.18,Healthcare
+FRMI,Fermi Inc.,6.00,Real Estate
+ALHC,Alignment Healthcare Inc.,18.27,Healthcare
+IRTC,iRhythm Holdings Inc.,114.66,Healthcare
+CALM,Cal-Maine Foods Inc.,79.51,Consumer Staples
+HSAI,Hesai Group,24.04,Consumer Discretionary
+OTTR,Otter Tail Corporation,89.33,Industrials
+CATY,Cathay General Bancorp,55.82,Financials
+MMSI,Merit Medical Systems Inc.,62.62,Healthcare
+GTLB,GitLab Inc.,22.05,Technology
+TNGX,Tango Therapeutics Inc.,25.51,Healthcare
+INDB,Independent Bank Corp.,76.17,Financials
+VKTX,Viking Therapeutics Inc.,31.70,Healthcare
+VECO,Veeco Instruments Inc.,60.26,Technology
+TLX,Telix Pharmaceuticals Limited,10.52,Healthcare
+ITRI,Itron Inc.,82.22,Technology
+SOUN,SoundHound AI Inc.,8.42,Technology
+BANF,BancFirst Corporation,108.40,Financials
+EWTX,Edgewise Therapeutics Inc.,33.76,Healthcare
+WSFS,WSFS Financial Corporation,69.73,Financials
+OSIS,OSI Systems Inc.,218.49,Technology
+AMBA,Ambarella Inc.,82.10,Technology
+HIMX,Himax Technologies Inc.,20.59,Technology
+CVCO,Cavco Industries Inc.,462.63,Consumer Discretionary
+DLO,DLocal Limited,12.17,Technology
+WAY,Waystar Holding Corp.,18.69,Healthcare
+TSAT,Telesat Corporation,53.62,Technology
+LBTYB,Liberty Global Ltd.,14.83,Communication Services
+LBTYK,Liberty Global Ltd.,11.37,Communication Services
+BHF,Brighthouse Financial Inc.,61.29,Financials
+ADEA,Adeia Inc.,31.72,Technology
+DORM,Dorman Products Inc.,116.32,Consumer Discretionary
+CVBF,CVB Financial Corp.,19.60,Financials
+RUN,Sunrun Inc.,14.46,Technology
+SEZL,Sezzle Inc.,102.40,Financials
+MNDY,monday.com Ltd.,67.70,Technology
+CLSK,CleanSpark Inc.,13.30,Financials
+GBDC,Golub Capital BDC Inc.,13.09,Financials
+TRMD,TORM plc,32.64,Energy
+TWST,Twist Bioscience Corporation,54.39,Healthcare
+HWKN,Hawkins Inc.,161.83,Materials
+SKYW,SkyWest Inc.,84.92,Industrials
+KYIV,Kyivstar Group Ltd.,14.55,Communication Services
+FIBK,First Interstate BancSystem Inc.,34.11,Financials
+WING,Wingstop Inc.,120.61,Consumer Discretionary
+ETOR,eToro Group Ltd.,41.29,Financials
+CHEF,The Chefs' Warehouse Inc.,80.50,Consumer Staples
+FIZZ,National Beverage Corp.,34.81,Consumer Staples
+ERAS,Erasca Inc.,10.46,Healthcare
+AEHR,Aehr Test Systems Inc.,103.25,Technology
+LIF,Life360 Inc.,40.16,Technology
+ASO,Academy Sports and Outdoors Inc.,49.97,Consumer Discretionary
+BTDR,Bitdeer Technologies Group,13.22,Technology
+VNET,VNET Group Inc.,11.28,Technology
+BATRK,Atlanta Braves Holdings Inc.,50.78,Communication Services
+ARLP,Alliance Resource Partners L.P.,24.83,Energy
+WSBC,WesBanco Inc.,33.16,Financials
+FHB,First Hawaiian Inc.,26.13,Financials
+BEAM,Beam Therapeutics Inc.,31.85,Healthcare
+ALMS,Alumis Inc.,24.86,Healthcare
+MCHB,Mechanics Bancorp,14.26,Financials
+DNLI,Denali Therapeutics Inc.,19.80,Healthcare
+LFST,LifeStance Health Group Inc.,8.10,Healthcare
+PATK,Patrick Industries Inc.,95.50,Consumer Discretionary
+MMED,MiniMed Group Inc.,11.18,Healthcare
+MZTI,The Marzetti Company,114.25,Consumer Staples
+USLM,United States Lime & Minerals Inc.,109.35,Materials
+FFBC,First Financial Bancorp.,29.76,Financials
+TOWN,TowneBank,34.06,Financials
+OPCH,Option Care Health Inc.,19.78,Healthcare
+VRNS,Varonis Systems Inc.,27.01,Technology
+VC,Visteon Corporation,114.95,Consumer Discretionary
+AYA,Aya Gold & Silver Inc.,21.40,Materials
+PLAB,Photronics Inc.,51.86,Technology
+DAVE,Dave Inc.,240.07,Technology
+VCYT,Veracyte Inc.,38.25,Healthcare
+ICUI,ICU Medical Inc.,122.04,Healthcare
+DYN,Dyne Therapeutics Inc.,18.44,Healthcare
+QLYS,Qualys Inc.,86.50,Technology
+BELFA,Bel Fuse Inc.,239.92,Technology
+IAC,IAC Inc.,40.74,Communication Services
+CLBT,Cellebrite DI Ltd.,12.10,Technology
+MGEE,MGE Energy Inc.,74.90,Utilities
+SFNC,Simmons First National Corporation,20.58,Financials
+CECO,CECO Environmental Corp.,83.14,Industrials
+PTRN,Pattern Group Inc.,16.88,Technology
+SUPN,Supernus Pharmaceuticals Inc.,51.36,Healthcare
+JOYY,JOYY Inc.,59.61,Communication Services
+EXTR,Extreme Networks Inc.,22.77,Technology
+SBLK,Star Bulk Carriers Corp.,26.69,Industrials
+CRVL,CorVel Corporation,58.12,Financials
+COLM,Columbia Sportswear Company,58.05,Consumer Discretionary
+BELFB,Bel Fuse Inc.,266.92,Technology
+INOD,Innodata Inc.,89.95,Technology
+KALU,Kaiser Aluminum Corporation,179.42,Materials
+LWLG,Lightwave Logic Inc.,18.22,Materials
+SBCF,Seacoast Banking Corporation of Florida,30.01,Financials
+BWIN,The Baldwin Insurance Group Inc.,20.14,Financials
+ATRO,Astronics Corporation,80.09,Industrials
+PLMR,Palomar Holdings Inc.,108.16,Financials
+FSLY,Fastly Inc.,18.31,Technology
+NN,NextNav Inc.,21.03,Technology
+PRVA,Privia Health Group Inc.,22.63,Healthcare
+NTCT,NetScout Systems Inc.,39.40,Technology
+IPAR,Interparfums Inc.,88.76,Consumer Staples
+RUM,Rumble Inc.,8.32,Communication Services
+NMIH,NMI Holdings Inc.,37.08,Financials
+CARG,CarGurus Inc.,31.22,Consumer Discretionary
+SHOO,Steven Madden Ltd.,38.51,Consumer Discretionary
+EOSE,Eos Energy Enterprises Inc.,8.28,Industrials
+VERA,Vera Therapeutics Inc.,39.15,Healthcare
+CAKE,The Cheesecake Factory Incorporated,56.53,Consumer Discretionary
+MGRC,McGrath RentCorp,114.19,Industrials
+TARS,Tarsus Pharmaceuticals Inc.,64.66,Healthcare
+SLNO,Soleno Therapeutics Inc.,52.95,Healthcare
+UNIT,Uniti Group Inc.,11.30,Real Estate
+CLMT,Calumet Inc.,31.43,Materials
+KLRA,Kailera Therapeutics Inc.,21.11,Healthcare
+ARQT,Arcutis Biotherapeutics Inc.,21.69,Healthcare
+INTR,Inter & Co Inc.,6.14,Financials
+GPCR,Structure Therapeutics Inc.,38.08,Healthcare
+NESR,National Energy Services Reunited Corp.,26.69,Energy
+HTFL,HeartFlow Inc.,31.20,Healthcare
+FA,First Advantage Corporation,15.68,Industrials
+WDFC,WD-40 Company,199.56,Materials
+IRON,Disc Medicine Inc.,70.03,Healthcare
+TXG,10x Genomics Inc.,21.07,Healthcare
+AMSC,American Superconductor Corporation,55.73,Industrials
+ELVN,Enliven Therapeutics Inc.,43.56,Healthcare
+EEFT,Euronet Worldwide Inc.,69.87,Technology
+EXPO,Exponent Inc.,54.54,Industrials
+NSIT,Insight Enterprises Inc.,87.32,Technology
+FORTY,Formula Systems (1985) Ltd.,138.89,Technology
+SEDG,SolarEdge Technologies Inc.,42.77,Technology
+RARE,Ultragenyx Pharmaceutical Inc.,26.46,Healthcare
+VISN,Vistance Networks Inc.,11.51,Technology
+GRAL,GRAIL Inc.,60.47,Healthcare
+UPST,Upstart Holdings Inc.,26.99,Financials
+ICHR,Ichor Holdings Ltd.,74.32,Technology
+PLBL,Polibeli Group Ltd,07.02,Consumer Discretionary
+BATRA,Atlanta Braves Holdings Inc.,54.40,Communication Services
+NKTR,Nektar Therapeutics,75.95,Healthcare
+WRD,WeRide Inc.,7.65,Technology
+WAFD,WaFd Inc.,34.59,Financials
+CLDX,Celldex Therapeutics Inc.,32.51,Healthcare
+TRMK,Trustmark Corporation,43.46,Financials
+IDYA,IDEAYA Biosciences Inc.,28.90,Healthcare
+RLAY,Relay Therapeutics Inc.,13.22,Healthcare
+PSNY,Polestar Automotive Holding UK PLC,22.27,Consumer Discretionary
+IMNM,Immunome Inc.,22.20,Healthcare
+NBTX,Nanobiotix S.A.,52.04,Healthcare
+KEEL,Keel Infrastructure Corp.,4.150,Technology
+ACHC,Acadia Healthcare Company Inc.,27.15,Healthcare
+LCID,Lucid Group Inc.,6.39,Consumer Discretionary
+QUBT,Quantum Computing Inc.,11.03,Technology
+FRME,First Merchants Corporation,39.45,Financials
+ARCB,ArcBest Corporation,111.48,Industrials
+DJT,Trump Media & Technology Group Corp.,8.95,Communication Services
+CCC,CCC Intelligent Solutions Holdings Inc.,4.220,Technology
+KOD,Kodiak Sciences Inc.,39.61,Healthcare
+DGII,Digi International Inc.,65.33,Technology
+PENG,Penguin Solutions Inc.,48.27,Technology
+TMC,TMC the metals company Inc.,5.64,Materials
+BCRX,BioCryst Pharmaceuticals Inc.,9.60,Healthcare
+NYAX,Nayax Ltd.,68.51,Technology
+ANDE,The Andersons Inc.,71.62,Consumer Staples
+DFTX,Definium Therapeutics Inc.,22.01,Healthcare
+FBNC,First Bancorp,57.82,Financials
+CENT,Central Garden & Pet Company,38.23,Consumer Staples
+CHRN,ChronoScale Corporation,16.63,-
+FRPT,Freshpet Inc.,48.63,Consumer Staples
+STNE,StoneCo Ltd.,9.69,Technology
+HTO,H2O America,56.52,Utilities
+OSW,OneSpaWorld Holdings Limited,23.29,Consumer Discretionary
+MCW,Mister Car Wash Inc.,07.08,Consumer Discretionary
+HUBG,Hub Group Inc.,37.95,Industrials
+COHU,Cohu Inc.,49.16,Technology
+NBTB,NBT Bancorp Inc.,44.54,Financials
+WIX,Wix.com Ltd.,55.32,Technology
+ZLAB,Zai Lab Limited,20.47,Healthcare
+PTON,Peloton Interactive Inc.,5.26,Consumer Discretionary
+TENB,Tenable Holdings Inc.,20.58,Technology
+DXPE,DXP Enterprises Inc.,146.26,Industrials
+FRSH,Freshworks Inc.,8.20,Technology
+NEXT,NextDecade Corporation,8.54,Energy
+BLBD,Blue Bird Corporation,71.00,Industrials
+LMAT,LeMaitre Vascular Inc.,98.17,Healthcare
+CSGS,CSG Systems International Inc.,80.69,Technology
+TMDX,TransMedics Group Inc.,64.18,Healthcare
+MLYS,Mineralys Therapeutics Inc.,26.86,Healthcare
+BRZE,Braze Inc.,19.43,Technology
+GCMG,GCM Grosvenor Inc.,10.87,Financials
+POET,POET Technologies Inc.,14.37,Technology
+BUSE,First Busey Corporation,25.93,Financials
+HCM,HUTCHMED (China) Limited,12.67,Healthcare
+TBBK,The Bancorp Inc.,52.62,Financials
+PRDO,Perdoceo Education Corporation,34.92,Consumer Staples
+PLUS,ePlus inc.,83.22,Technology
+OUST,Ouster Inc.,34.17,Technology
+TRVI,Trevi Therapeutics Inc.,15.27,Healthcare
+SYBT,Stock Yards Bancorp Inc.,69.70,Financials
+CMPR,Cimpress plc,89.28,Industrials
+PHVS,Pharvaris N.V.,32.94,Healthcare
+TYRA,Tyra Biosciences Inc.,36.19,Healthcare
+BANR,Banner Corporation,63.26,Financials
+DRH,DiamondRock Hospitality Company,10.47,Real Estate
+AXGN,Axogen Inc.,40.29,Healthcare
+WB,Weibo Corporation,8.71,Communication Services
+EFSC,Enterprise Financial Services Corp,58.48,Financials
+MLCO,Melco Resorts & Entertainment Limited,5.45,Consumer Discretionary
+DHC,Diversified Healthcare Trust,8.73,Real Estate
+ADPT,Adaptive Biotechnologies Corporation,13.13,Healthcare
+SGML,Sigma Lithium Corporation,18.83,Materials
+NVCR,NovoCure Limited,18.10,Healthcare
+ALRM,Alarm.com Holdings Inc.,42.34,Technology
+XRAY,DENTSPLY SIRONA Inc.,10.44,Healthcare
+DRVN,Driven Brands Holdings Inc.,12.68,Consumer Discretionary
+SLDE,Slide Insurance Holdings Inc.,18.20,Financials
+WERN,Werner Enterprises Inc.,34.58,Industrials
+MBIN,Merchants Bancorp,45.08,Financials
+GENB,Generate Biomedicines Inc.,16.22,Healthcare
+AUPH,Aurinia Pharmaceuticals Inc.,16.03,Healthcare
+MCRI,Monarch Casino & Resort Inc.,116.14,Consumer Discretionary
+PDFS,PDF Solutions Inc.,51.57,Technology
+VRRM,Verra Mobility Corporation,13.43,Technology
+VERX,Vertex Inc.,12.74,Technology
+AVPT,AvePoint Inc.,9.59,Technology
+EZPW,EZCORP Inc.,32.99,Financials
+ESTA,Establishment Labs Holdings Inc.,69.08,Healthcare
+OCUL,Ocular Therapeutix Inc.,9.24,Healthcare
+PENN,PENN Entertainment Inc.,15.83,Consumer Discretionary
+CLBK,Columbia Financial Inc.,19.30,Financials
+CHA,Chagee Holdings Limited,10.46,Consumer Discretionary
+NTLA,Intellia Therapeutics Inc.,14.28,Healthcare
+SRPT,Sarepta Therapeutics Inc.,18.84,Healthcare
+RNW,ReNew Energy Global Plc,5.44,Utilities
+NWBI,Northwest Bancshares Inc.,13.52,Financials
+STOK,Stoke Therapeutics Inc.,31.70,Healthcare
+ASTH,Astrana Health Inc.,39.76,Healthcare
+ADMA,ADMA Biologics Inc.,8.50,Healthcare
+OMCL,Omnicell Inc.,43.17,Healthcare
+IOSP,Innospec Inc.,79.69,Materials
+MGRT,Mega Fortune Company Limited,142.20,Technology
+FLYW,Flywire Corporation,15.83,Technology
+SION,Sionna Therapeutics Inc.,43.12,Healthcare
+MESO,Mesoblast Limited,14.73,Healthcare
+TSHA,Taysha Gene Therapies Inc.,6.67,Healthcare
+NEOG,Neogen Corporation,8.69,Healthcare
+AAPG,Ascentage Pharma Group International,21.38,Healthcare
+CENTA,Central Garden & Pet Company,34.36,Consumer Staples
+WBTN,WEBTOON Entertainment Inc.,13.83,Communication Services
+CLOV,Clover Health Investments Corp.,3.550,Healthcare
+HTZ,Hertz Global Holdings Inc.,5.90,Industrials
+IMOS,ChipMOS TECHNOLOGIES INC.,54.55,Technology
+LKFT,Lakefront Biotherapeutics NV,28.14,Healthcare
+OCS,Oculis Holding AG,31.37,Healthcare
+SGRY,Surgery Partners Inc.,14.31,Healthcare
+SNDX,Syndax Pharmaceuticals Inc.,20.89,Healthcare
+MGNI,Magnite Inc.,12.91,Communication Services
+PCT,PureCycle Technologies Inc.,10.20,Industrials
+PGNY,Progyny Inc.,23.51,Healthcare
+QURE,uniQure N.V.,29.17,Healthcare
+AGYS,Agilysys Inc.,65.56,Technology
+SPSC,SPS Commerce Inc.,49.91,Technology
+ANAB,AnaptysBio Inc.,62.69,Healthcare
+PAX,Patria Investments Limited,11.29,Financials
+RAPP,Rapport Therapeutics Inc.,38.08,Healthcare
+ZYME,Zymeworks Inc.,24.57,Healthcare
+SKWD,Skyward Specialty Insurance Group Inc.,44.03,Financials
+MBX,MBX Biosciences Inc.,37.50,Healthcare
+HRMY,Harmony Biosciences Holdings Inc.,30.83,Healthcare
+ALKT,Alkami Technology Inc.,16.57,Technology
+STRA,Strategic Education Inc.,78.74,Consumer Staples
+CAPR,Capricor Therapeutics Inc.,30.33,Healthcare
+VRDN,Viridian Therapeutics Inc.,17.04,Healthcare
+TH,Target Hospitality Corp.,17.50,Industrials
+JBLU,JetBlue Airways Corporation,4.700,Industrials
+SONO,Sonos Inc.,14.64,Technology
+PVLA,Palvella Therapeutics Inc.,120.57,Healthcare
+ADUS,Addus HomeCare Corporation,94.51,Healthcare
+INBX,Inhibrx Biosciences Inc.,117.95,Healthcare
+SRCE,1st Source Corporation,71.57,Financials
+SKYT,SkyWater Technology Inc.,34.90,Technology
+NWL,Newell Brands Inc.,4.040,Consumer Staples
+EVCM,EverCommerce Inc.,9.70,Technology
+CHCO,City Holding Company,121.54,Financials
+ANIP,ANI Pharmaceuticals Inc.,80.88,Healthcare
+AGIO,Agios Pharmaceuticals Inc.,28.77,Healthcare
+INVA,Innoviva Inc.,23.14,Healthcare
+QFIN,Qfin Holdings Inc.,13.97,Financials
+PLPC,Preformed Line Products Company,347.12,Industrials
+UFPT,UFP Technologies Inc.,219.23,Healthcare
+ECPG,Encore Capital Group Inc.,79.02,Financials
+CASH,Pathward Financial Inc.,79.93,Financials
+VCEL,Vericel Corporation,32.84,Healthcare
+YSWY,Yesway Inc.,26.52,Consumer Staples
+NRIX,Nurix Therapeutics Inc.,16.18,Healthcare
+PWP,Perella Weinberg Partners,17.98,Financials
+NCNO,nCino Inc.,15.33,Technology
+WLTH,Wealthfront Corporation,11.15,Technology
+GT,The Goodyear Tire & Rubber Company,5.81,Consumer Discretionary
+INTA,Intapp Inc.,21.49,Technology
+AHG,Akso Health Group,1.930,Healthcare
+PAYO,Payoneer Global Inc.,4.930,Technology
+LINC,Lincoln Educational Services Corporation,52.02,Consumer Staples
+MQ,Marqeta Inc.,3.880,Technology
+FSUN,FirstSun Capital Bancorp,35.19,Financials
+AIP,Arteris Inc.,35.55,Technology
+PLSE,Pulse Biosciences Inc.,23.96,Healthcare
+IOVA,Iovance Biotherapeutics Inc.,3.660,Healthcare
+BAND,Bandwidth Inc.,51.01,Technology
+OPRA,Opera Limited,18.19,Communication Services
+AMLX,Amylyx Pharmaceuticals Inc.,14.58,Healthcare
+IMKTA,Ingles Markets Incorporated,85.24,Consumer Staples
+RXRX,Recursion Pharmaceuticals Inc.,3.050,Healthcare
+FIVN,Five9 Inc.,21.12,Technology
+CRML,Critical Metals Corp.,11.46,Materials
+TILE,Interface Inc.,27.71,Consumer Discretionary
+BFC,Bank First Corporation,143.54,Financials
+GLUE,Monte Rosa Therapeutics Inc.,18.96,Healthcare
+ALMR,Alamar Biosciences Inc.,23.01,Healthcare
+GABC,German American Bancorp Inc.,42.21,Financials
+CNXN,PC Connection Inc.,62.84,Technology
+ARDX,Ardelyx Inc.,6.38,Healthcare
+VIR,Vir Biotechnology Inc.,9.33,Healthcare
+STBA,S&T Bancorp Inc.,43.72,Financials
+HURN,Huron Consulting Group Inc.,103.47,Industrials
+TCBK,TriCo Bancshares,49.28,Financials
+WEN,The Wendy's Company,8.19,Consumer Discretionary
+ATAI,AtaiBeckley Inc.,4.240,Healthcare
+ENVX,Enovix Corporation,7.29,Industrials
+PICS,PicS N.V.,11.87,Technology
+LIFE,Ethos Technologies Inc.,24.44,Financials
+HOPE,Hope Bancorp Inc.,11.97,Financials
+SHLS,Shoals Technologies Group Inc.,9.11,Technology
+LILA,Liberty Latin America Ltd.,7.55,Communication Services
+NVAX,Novavax Inc.,9.23,Healthcare
+TRIN,Trinity Capital Inc.,16.82,Financials
+RMIX,Suncrete Inc.,17.63,Materials
+URGN,UroGen Pharma Ltd.,30.94,Healthcare
+ZD,Ziff Davis Inc.,40.53,Communication Services
+MAZE,Maze Therapeutics Inc.,26.96,Healthcare
+WLFC,Willis Lease Finance Corporation,211.67,Industrials
+ELVR,Elevra Lithium Limited,89.67,Materials
+RBCAA,Republic Bancorp Inc.,75.87,Financials
+BL,BlackLine Inc.,25.23,Technology
+STGW,Stagwell Inc.,5.97,Communication Services
+PGEN,Precigen Inc.,4.150,Healthcare
+CMPS,COMPASS Pathways plc,10.96,Healthcare
+HCSG,Healthcare Services Group Inc.,21.50,Healthcare
+AVAH,Aveanna Healthcare Holdings Inc.,6.77,Healthcare
+GLIBK,GCI Liberty Inc.,27.29,Communication Services
+IMCR,Immunocore Holdings plc,28.95,Healthcare
+HLMN,Hillman Solutions Corp.,7.49,Industrials
+KDK,Kodiak AI Inc.,7.99,Technology
+CNOB,ConnectOne Bancorp Inc.,29.27,Financials
+KARO,Karooooo Ltd.,47.47,Technology
+QCRH,QCR Holdings Inc.,88.76,Financials
+STAA,STAAR Surgical Company,29.40,Healthcare
+BRAI,Braiin Limited,7.10,Technology
+PRCT,PROCEPT BioRobotics Corporation,25.70,Healthcare
+DMRA,Damora Therapeutics Inc.,24.16,Healthcare
+ABCL,AbCellera Biologics Inc.,4.770,Healthcare
+HLIT,Harmonic Inc.,13.35,Technology
+LKFN,Lakeland Financial Corporation,58.11,Financials
+IMTX,Immatics N.V.,10.79,Healthcare
+LILAK,Liberty Latin America Ltd.,7.72,Communication Services
+AHCO,AdaptHealth Corp.,10.81,Healthcare
+RXT,Rackspace Technology Inc.,5.77,Technology
+TRS,TriMas Corporation,39.93,Consumer Discretionary
+PAHC,Phibro Animal Health Corporation,35.26,Healthcare
+VMET,Versamet Royalties Corporation,13.25,Financials
+KALV,KalVista Pharmaceuticals Inc.,26.80,Healthcare
+BLKB,Blackbaud Inc.,31.34,Technology
+CNXC,Concentrix Corporation,23.25,Technology
+HBNB,Hotel101 Global Holdings Corp.,06.06,Real Estate
+IPX,IperionX Limited,41.53,Materials
+CSWC,Capital Southwest Corporation,23.44,Financials
+NNE,NANO Nuclear Energy Inc.,27.05,Industrials
+GCT,GigaCloud Technology Inc.,38.10,Technology
+TBLA,Taboola.com Ltd.,5.13,Communication Services
+MPLT,MapLight Therapeutics Inc.,30.67,Healthcare
+BCAX,Bicara Therapeutics Inc.,20.99,Healthcare
+WLDN,Willdan Group Inc.,91.06,Industrials
+APPN,Appian Corporation,18.72,Technology
+ALGT,Allegiant Travel Company,75.21,Industrials
+SBET,Sharplink Inc.,6.96,Financials
+OLPX,Olaplex Holdings Inc.,2.040,Consumer Discretionary
+PLTK,Playtika Holding Corp.,3.600,Communication Services
+FTRE,Fortrea Holdings Inc.,14.47,Healthcare
+BRUN,Boost Run Inc.,21.00,-
+CSIQ,Canadian Solar Inc.,20.05,Technology
+GHRS,GH Research PLC,21.88,Healthcare
+EYE,National Vision Holdings Inc.,16.92,Consumer Discretionary
+NSSC,Napco Security Technologies Inc.,37.89,Industrials
+ARRY,Array Technologies Inc.,8.79,Technology
+AVBP,ArriVent BioPharma Inc.,28.93,Healthcare
+ATRC,AtriCure Inc.,26.59,Healthcare
+WVE,Wave Life Sciences Ltd.,6.99,Healthcare
+JJSF,J&J Snack Foods Corp.,71.57,Consumer Staples
+MLTX,MoonLake Immunotherapeutics,18.41,Healthcare
+SVRA,Savara Inc.,5.27,Healthcare
+CRVS,Corvus Pharmaceuticals Inc.,15.84,Healthcare
+DMLP,Dorchester Minerals L.P.,27.07,Energy
+GSHD,Goosehead Insurance Inc.,36.39,Financials
+AVLN,Avalyn Pharma Inc.,30.83,Healthcare
+ACDC,ProFrac Holding Corp.,7.11,Energy
+AEVA,Aeva Technologies Inc.,20.26,Technology
+ADTN,ADTRAN Holdings Inc.,15.77,Technology
+AFYA,Afya Limited,14.10,Consumer Staples
+WABC,Westamerica Bancorporation,53.85,Financials
+COAG,Hemab Therapeutics Holdings Inc.,28.56,Healthcare
+WINA,Winmark Corporation,352.26,Consumer Discretionary
+METCB,Ramaco Resources Inc.,10.12,Materials
+ZBIO,Zenas BioPharma Inc.,19.93,Healthcare
+DSGR,Distribution Solutions Group Inc.,27.17,Industrials
+KMTS,Kestra Medical Technologies Ltd.,21.45,Healthcare
+BHRB,Burke & Herbert Financial Services Corp.,62.04,Financials
+BLDP,Ballard Power Systems Inc.,4.140,Industrials
+UFCS,United Fire Group Inc.,48.68,Financials
+ELE,Elemental Royalty Corporation,19.43,Materials
+AOSL,Alpha and Omega Semiconductor Limited,41.59,Technology
+GIII,G-III Apparel Group Ltd.,29.43,Consumer Discretionary
+LIND,Lindblad Expeditions Holdings Inc.,18.88,Consumer Discretionary
+JBIO,Jade Biosciences Inc.,25.07,Healthcare
+PNTG,The Pennant Group Inc.,35.59,Healthcare
+CCEC,Capital Clean Energy Carriers Corp.,20.37,Industrials
+MRTN,Marten Transport Ltd.,15.00,Industrials
+ASST,Strive Asset Management LLC,16.74,Financials
+SLS,SELLAS Life Sciences Group Inc.,6.53,Healthcare
+SATL,Satellogic Inc.,8.10,Industrials
+AMAL,Amalgamated Financial Corp.,40.01,Financials
+ABTC,American Bitcoin Corp.,1.120,Financials
+PEBO,Peoples Bancorp Inc.,33.06,Financials
+OLMA,Olema Pharmaceuticals Inc.,13.58,Healthcare
+GILT,Gilat Satellite Networks Ltd.,15.65,Technology
+TIGR,UP Fintech Holding Limited,6.64,Financials
+GPRE,Green Plains Inc.,16.81,Materials
+ITRN,Ituran Location and Control Ltd.,58.99,Technology
+CTBI,Community Trust Bancorp Inc.,64.52,Financials
+DBVT,DBV Technologies S.A.,19.60,Healthcare
+SIFY,Sify Technologies Limited,16.18,Communication Services
+GTM,ZoomInfo Technologies Inc.,3.960,Technology
+IVA,Inventiva S.A.,5.54,Healthcare
+ATEC,Alphatec Holdings Inc.,7.55,Healthcare
+IART,Integra LifeSciences Holdings Corporation,14.90,Healthcare
+WGS,GeneDx Holdings Corp.,38.94,Healthcare
+ATLC,Atlanticus Holdings Corporation,76.32,Financials
+RCAT,Red Cat Holdings Inc.,9.40,Industrials
+JCAP,Jefferson Capital Inc.,18.66,Financials
+ALVO,Alvotech,3.670,Healthcare
+IQ,iQIYI Inc.,1.180,Communication Services
+RDWR,Radware Ltd.,26.95,Technology
+REAL,The RealReal Inc.,9.41,Consumer Discretionary
+ROCK,Gibraltar Industries Inc.,38.22,Industrials
+XPEL,XPEL Inc.,41.06,Consumer Discretionary
+COLL,Collegium Pharmaceutical Inc.,34.87,Healthcare
+MRVI,Maravai LifeSciences Holdings Inc.,4.370,Healthcare
+ASTE,Astec Industries Inc.,49.05,Industrials
+EYPT,EyePoint Inc.,13.43,Healthcare
+FMBH,First Mid Bancshares Inc.,42.18,Financials
+TRIP,Tripadvisor Inc.,9.63,Consumer Discretionary
+PRCH,Porch Group Inc.,10.24,Financials
+SEPN,Septerna Inc.,24.75,Healthcare
+HROW,Harrow Inc.,29.83,Healthcare
+XERS,Xeris Biopharma Holdings Inc.,6.43,Healthcare
+PRGS,Progress Software Corporation,26.37,Technology
+NNNN,Anbio Biotechnology,25.24,Healthcare
+PSEC,Prospect Capital Corporation,2.250,Financials
+NWPX,NWPX Infrastructure Inc.,113.48,Materials
+GLIBA,GCI Liberty Inc.,27.44,Communication Services
+PGY,Pagaya Technologies Ltd.,13.16,Technology
+IRMD,IRADIMED CORPORATION,85.27,Healthcare
+ULCC,Frontier Group Holdings Inc.,4.720,Industrials
+ICFI,ICF International Inc.,59.90,Industrials
+LXRX,Lexicon Pharmaceuticals Inc.,2.440,Healthcare
+EVLV,Evolv Technologies Holdings Inc.,06.02,Industrials
+AKTS,Aktis Oncology Inc.,19.53,Healthcare
+HFWA,Heritage Financial Corporation,26.19,Financials
+PFBC,Preferred Bank,91.07,Financials
+NEO,NeoGenomics Inc.,8.26,Healthcare
+PZZA,Papa John's International Inc.,32.70,Consumer Discretionary
+SVC,Service Properties Trust,1.650,Real Estate
+CDNA,CareDx Inc.,20.61,Healthcare
+CEVA,CEVA Inc.,38.15,Technology
+ALNT,Allient Inc.,62.51,Technology
+OSBC,Old Second Bancorp Inc.,20.65,Financials
+OCSL,Oaktree Specialty Lending Corporation,12.00,Financials
+LGIH,LGI Homes Inc.,45.48,Consumer Discretionary
+FCEL,FuelCell Energy Inc.,19.92,Industrials
+UVSP,Univest Financial Corporation,37.79,Financials
+OCFC,OceanFirst Financial Corp.,18.18,Financials
+TWFG,TWFG Inc.,18.90,Financials
+RZLV,Rezolve AI PLC,2.620,Technology
+OMER,Omeros Corporation,14.38,Healthcare
+CCB,Coastal Financial Corporation,68.23,Financials
+PSIX,Power Solutions International Inc.,45.11,Industrials
+WYFI,WhiteFiber Inc.,27.03,Technology
+RJET,Republic Airways Holdings Inc.,22.13,Industrials
+UPWK,Upwork Inc.,8.39,Communication Services
+ATEX,Anterix Inc.,55.29,Communication Services
+BLFS,BioLife Solutions Inc.,21.17,Healthcare
+LQDT,Liquidity Services Inc.,33.17,Consumer Discretionary
+IGIC,International General Insurance Holdings Ltd.,24.61,Financials
+CRON,Cronos Group Inc.,2.730,Healthcare
+SAFT,Safety Insurance Group Inc.,69.70,Financials
+INDI,indie Semiconductor Inc.,4.510,Technology
+NBN,Northeast Bank,118.61,Financials
+LZ,LegalZoom.com Inc.,5.91,Industrials
+SMPL,The Simply Good Foods Company,11.20,Consumer Staples
+SBGI,Sinclair Inc.,14.04,Communication Services
+MRLN,Merlin Inc.,7.79,Industrials
+UPBD,Upbound Group Inc.,17.28,Technology
+MLKN,MillerKnoll Inc.,14.72,Consumer Discretionary
+CGEM,Cullinan Therapeutics Inc.,16.33,Healthcare
+INNV,InnovAge Holding Corp.,7.39,Healthcare
+METC,Ramaco Resources Inc.,15.31,Materials
+PHAT,Phathom Pharmaceuticals Inc.,12.56,Healthcare
+APC,ARKO Petroleum Corp.,20.96,Energy
+TRON,Tron Inc.,2.100,Consumer Discretionary
+MNKD,MannKind Corporation,3.210,Healthcare
+HBT,HBT Financial Inc.,27.10,Financials
+TRUP,Trupanion Inc.,22.59,Financials
+HDL,Super Hi International Holding Ltd.,14.41,Consumer Discretionary
+DSGN,Design Therapeutics Inc.,15.62,Healthcare
+NHP,National Healthcare Properties Inc.,13.16,Real Estate
+APEI,American Public Education Inc.,52.91,Consumer Staples
+MSEX,Middlesex Water Company,52.03,Utilities
+TNDM,Tandem Diabetes Care Inc.,14.11,Healthcare
+DAKT,Daktronics Inc.,20.01,Technology
+MRAM,Everspin Technologies Inc.,41.46,Technology
+HTLD,Heartland Express Inc.,12.32,Industrials
+OMDA,Omada Health Inc.,16.04,Healthcare
+SDGR,Schrödinger Inc.,12.75,Healthcare
+EVO,Evotec SE,2.715,Healthcare
+THRM,Gentherm Incorporated,30.76,Consumer Discretionary
+SENEA,Seneca Foods Corporation,137.65,Consumer Staples
+CFFN,Capitol Federal Financial Inc.,7.58,Financials
+PHAR,Pharming Group N.V.,12.97,Healthcare
+HEPS,D-Market Elektronik Hizmetler ve Ticaret A.S.,2.620,Consumer Discretionary
+SCZM,Santacruz Silver Mining Ltd.,10.02,Materials
+MOMO,Hello Group Inc.,6.29,Communication Services
+LBRX,LB Pharmaceuticals Inc,32.31,Healthcare
+FBYD,Falcon's Beyond Global Inc.,9.86,Industrials
+MGTX,MeiraGTx Holdings plc,9.97,Healthcare
+LOT,Lotus Technology Inc.,1.430,Consumer Discretionary
+XNCR,Xencor Inc.,12.38,Healthcare
+HNRG,Hallador Energy Company,19.42,Energy
+HBNC,Horizon Bancorp Inc.,17.75,Financials
+NUTX,Nutex Health Inc.,131.90,Healthcare
+MFIC,MidCap Financial Investment Corporation,11.01,Financials
+PCRX,Pacira BioSciences Inc.,23.04,Healthcare
+HMH,HMH Holding Inc.,21.00,Energy
+GERN,Geron Corporation,1.410,Healthcare
+ROOT,Root Inc.,57.08,Financials
+MCBS,MetroCity Bankshares Inc.,31.41,Financials
+CRAI,CRA International Inc.,139.03,Industrials
+ANNX,Annexon Inc.,5.45,Healthcare
+JANX,Janux Therapeutics Inc.,14.61,Healthcare
+SANA,Sana Biotechnology Inc.,3.200,Healthcare
+ORIC,ORIC Pharmaceuticals Inc.,8.60,Healthcare
+INMD,InMode Ltd.,14.04,Healthcare
+CCNE,CNB Financial Corporation,30.31,Financials
+SHAZ,SharonAI Holdings Inc.,55.03,Technology
+KOPN,Kopin Corporation,05.02,Technology
+JBSS,John B. Sanfilippo & Son Inc.,75.68,Consumer Staples
+GDRX,GoodRx Holdings Inc.,2.610,Healthcare
+BFST,Business First Bancshares Inc.,27.04,Financials
+AVO,Mission Produce Inc.,12.46,Consumer Staples
+SHEN,Shenandoah Telecommunications Company,15.85,Communication Services
+SNCY,Sun Country Airlines Holdings Inc.,16.17,Industrials
+SPTX,Seaport Therapeutics Inc.,16.50,Healthcare
+MBWM,Mercantile Bank Corporation,50.60,Financials
+BJRI,BJ's Restaurants Inc.,41.34,Consumer Discretionary
+BVS,Bioventus Inc.,10.40,Healthcare
+FSBC,Five Star Bancorp,40.60,Financials
+TALK,Talkspace Inc.,5.18,Healthcare
+MATW,Matthews International Corporation,27.79,Industrials
+VOR,Vor Biopharma Inc.,15.91,Healthcare
+TBPH,Theravance Biopharma Inc.,16.67,Healthcare
+HAFC,Hanmi Financial Corporation,29.05,Financials
+ESQ,Esquire Financial Holdings Inc.,104.42,Financials
+LMB,Limbach Holdings Inc.,71.74,Industrials
+SCSC,ScanSource Inc.,42.01,Technology
+ABUS,Arbutus Biopharma Corporation,4.310,Healthcare
+BIOA,BioAge Labs Inc.,19.14,Healthcare
+NB,NioCorp Developments Ltd.,5.95,Materials
+DRTS,Alpha Tau Medical Ltd.,9.64,Healthcare
+LYTS,LSI Industries Inc.,23.79,Technology
+ODTX,Odyssey Therapeutics Inc.,17.94,Healthcare
+CRESY,Cresud Sociedad Anónima Comercial Inmobiliaria Financiera y Agropecuaria,10.60,Industrials
+TRST,TrustCo Bank Corp NY,48.41,Financials
+HPK,HighPeak Energy Inc.,6.69,Energy
+ETON,Eton Pharmaceuticals Inc.,30.82,Healthcare
+KURA,Kura Oncology Inc.,9.48,Healthcare
+CDNL,Cardinal Infrastructure Group Inc.,54.90,Industrials
+OPK,OPKO Health Inc.,1.110,Healthcare
+AEBI,Aebi Schmidt Holding AG,10.77,Industrials
+ARHS,Arhaus Inc.,5.87,Consumer Discretionary
+DRUG,Bright Minds Biosciences Inc.,84.58,Healthcare
+AURA,Aura Biosciences Inc.,08.02,Healthcare
+CRCT,Cricut Inc.,3.940,Technology
+ABSI,Absci Corporation,5.30,Healthcare
+CTMX,CytomX Therapeutics Inc.,3.790,Healthcare
+SCHL,Scholastic Corporation,38.72,Communication Services
+AGNT,eXp World Holdings Inc.,05.02,Financials
+CSHR,CoinShares PLC,6.22,Financials
+NBBK,NB Bancorp Inc.,19.72,Financials
+WEST,Westrock Coffee Company,8.38,Consumer Staples
+FMNB,Farmers National Banc Corp.,13.76,Financials
+IHRT,iHeartMedia Inc.,5.21,Communication Services
+CRTO,Criteo S.A.,16.15,Communication Services
+AMPH,Amphastar Pharmaceuticals Inc.,18.32,Healthcare
+ALLO,Allogene Therapeutics Inc.,2.330,Healthcare
+CAC,Camden National Corporation,47.52,Financials
+ADAM,Adamas Trust Inc.,8.94,Real Estate
+ESPR,Esperion Therapeutics Inc.,3.120,Healthcare
+SSII,SS Innovations International Inc.,3.990,Healthcare
+SGP,SpyGlass Pharma Inc.,23.82,Healthcare
+NMFC,New Mountain Finance Corporation,08.08,Financials
+ASPI,ASP Isotopes Inc.,6.32,Materials
+SPRY,ARS Pharmaceuticals Inc.,08.01,Healthcare
+CRSR,Corsair Gaming Inc.,7.42,Technology
+AMPL,Amplitude Inc.,5.98,Technology
+MPB,Mid Penn Bancorp Inc.,31.24,Financials
+FCBC,First Community Bankshares Inc.,41.88,Financials
+RLMD,Relmada Therapeutics Inc.,7.49,Healthcare
+AZTA,Azenta Inc.,17.03,Healthcare
+CCBG,Capital City Bank Group Inc.,45.83,Financials
+THFF,First Financial Corporation,65.86,Financials
+CGBD,Carlyle Secured Lending Inc.,11.12,Financials
+ARKO,Arko Corp.,6.94,Consumer Discretionary
+LMRI,Lumexa Imaging Holdings Inc.,08.05,Healthcare
+SENEB,Seneca Foods Corporation,138.75,Consumer Staples
+GO,Grocery Outlet Holding Corp.,7.74,Consumer Staples
+KRNT,Kornit Digital Ltd.,16.48,Industrials
+EGBN,Eagle Bancorp Inc.,24.97,Financials
+TMCR,The Metals Royalty Company Inc.,13.71,Materials
+IMSR,Terrestrial Energy Inc.,7.12,Utilities
+QDEL,QuidelOrtho Corporation,11.05,Healthcare
+CCOI,Cogent Communications Holdings Inc.,15.77,Communication Services
+PURR,Hyperliquid Strategies Inc.,06.07,Financials
+APOG,Apogee Enterprises Inc.,35.21,Industrials
+SPFI,South Plains Financial Inc.,38.99,Financials
+CERT,Certara Inc.,4.790,Healthcare
+SMBC,Southern Missouri Bancorp Inc.,67.37,Financials
+NAVI,Navient Corporation,7.89,Financials
+GSBC,Great Southern Bancorp Inc.,67.91,Financials
+SSYS,Stratasys Ltd.,8.56,Technology
+EH,EHang Holdings Limited,10.16,Industrials
+PGC,Peapack-Gladstone Financial Corporation,41.59,Financials
+WOOF,Petco Health and Wellness Company Inc.,2.560,Consumer Discretionary
+SLDB,Solid Biosciences Inc.,7.38,Healthcare
+GSM,Ferroglobe PLC,3.880,Materials
+MAKO,Mako Mining Corp.,8.27,Materials
+ODD,Oddity Tech Ltd.,12.66,Consumer Staples
+BMM,Blue Moon Metals Inc.,7.33,-
+ACRS,Aclaris Therapeutics Inc.,05.09,Healthcare
+SLRC,SLR Investment Corp.,13.00,Financials
+TRNS,Transcat Inc.,75.98,Industrials
+BLMN,Bloomin' Brands Inc.,8.28,Consumer Discretionary
+CGNT,Cognyte Software Ltd.,9.70,Technology
+BBSI,Barrett Business Services Inc.,28.77,Industrials
+HIVE,HIVE Digital Technologies Ltd.,2.760,Financials
+FDUS,Fidus Investment Corporation,18.60,Financials
+TBLD,Thornburg Income Builder Opportunities Trust,21.94,Financials
+TENX,Tenax Therapeutics Inc.,11.91,Healthcare
+ORRF,Orrstown Financial Services Inc.,35.60,Financials
+LPTH,LightPath Technologies Inc.,12.12,Technology
+GRPN,Groupon Inc.,18.38,Communication Services
+DGICB,Donegal Group Inc.,17.59,Financials
+NTGR,NETGEAR Inc.,25.68,Technology
+SLDP,Solid Power Inc.,3.060,Consumer Discretionary
+VINP,Vinci Compass Investments Ltd.,10.51,Financials
+DSP,Viant Technology Inc.,10.48,Technology
+IBCP,Independent Bank Corporation,33.17,Financials
+AXG,Solowin Holdings,3.610,Financials
+FOXF,Fox Factory Holding Corp.,16.25,Consumer Discretionary
+ADSE,ADS-TEC Energy PLC,11.32,Industrials
+SABR,Sabre Corporation,1.720,Technology
+CBLL,CeriBell Inc.,17.91,Healthcare
+WRLD,World Acceptance Corporation,149.88,Financials
+FISI,Financial Institutions Inc.,34.24,Financials
+PSNL,Personalis Inc.,6.39,Healthcare
+HSTM,HealthStream Inc.,22.89,Healthcare
+ALRS,Alerus Financial Corporation,26.61,Financials
+CYRX,Cryoport Inc.,13.25,Industrials
+VLGEA,Village Super Market Inc.,45.26,Consumer Staples
+SERV,Serve Robotics Inc.,8.63,Industrials
+EVER,EverQuote Inc.,18.86,Communication Services
+RSVR,Reservoir Media Inc.,10.16,Communication Services
+EIKN,Eikon Therapeutics Inc.,12.31,Healthcare
+GYRE,Gyre Therapeutics Inc.,7.28,Healthcare
+FWRG,First Watch Restaurant Group Inc.,10.78,Consumer Discretionary
+QNST,QuinStreet Inc.,11.55,Communication Services
+BTBT,Bit Digital Inc.,2.030,Financials
+YB,Yuanbao Inc.,14.30,Technology
+SUJA,Suja Life Inc.,17.03,Consumer Staples
+ZVRA,Zevra Therapeutics Inc.,11.12,Healthcare
+STRO,Sutro Biopharma Inc.,39.60,Healthcare
+CADL,Candel Therapeutics Inc.,8.94,Healthcare
+KYTX,Kyverna Therapeutics Inc.,10.78,Healthcare
+CBIO,Crescent Biopharma Inc.,19.61,Healthcare
+SWBI,Smith & Wesson Brands Inc.,14.64,Industrials
+TLRY,Tilray Brands Inc.,5.46,Healthcare
+DJCO,Daily Journal Corporation,471.52,Technology
+NKLR,Terra Innovatum Global N.V.,5.86,Utilities
+CBRL,Cracker Barrel Old Country Store Inc.,28.95,Consumer Discretionary
+BBOT,BridgeBio Oncology Therapeutics Inc.,08.08,Healthcare
+BWAY,BrainsWay Ltd.,16.31,Healthcare
+RDVT,Red Violet Inc.,45.69,Technology
+SHBI,Shore Bancshares Inc.,19.22,Financials
+TDIC,Dreamland Limited,23.05,Communication Services
+TRAX,First Tracks Biotherapeutics Inc.,18.43,Healthcare
+DMII,Drugs Made In America Acquisition II Corp.,10.03,Financials
+ARVN,Arvinas Inc.,9.87,Healthcare
+HQ,Horizon Quantum Holdings Ltd.,12.31,Technology
+TIPT,Tiptree Inc.,16.87,Financials
+AVR,Anteris Technologies Global Corp.,6.53,Healthcare
+RR,Richtech Robotics Inc.,2.820,Industrials
+SIBN,SI-BONE Inc.,14.16,Healthcare
+MITK,Mitek Systems Inc.,13.89,Technology
+GAIN,Gladstone Investment Corporation,15.74,Financials
+VELO,Velo3D Inc.,21.01,Technology
+FBRX,Forte Biosciences Inc.,24.66,Healthcare
+DGICA,Donegal Group Inc.,17.01,Financials
+RMR,The RMR Group Inc.,19.38,Real Estate
+EVGO,EVgo Inc.,1.950,Consumer Discretionary
+OIO,OIO Group,1.750,Financials
+KRUS,Kura Sushi USA Inc.,49.99,Consumer Discretionary
+IRWD,Ironwood Pharmaceuticals Inc.,3.680,Healthcare
+FEIM,Frequency Electronics Inc.,61.11,Technology
+GOOD,Gladstone Commercial Corporation,12.41,Real Estate
+KE,Kimball Electronics Inc.,24.95,Industrials
+BCAL,California BanCorp,18.60,Financials
+UROY,Uranium Royalty Corp.,4.080,Energy
+WASH,Washington Trust Bancorp Inc.,31.37,Financials
+DGXX,Digi Power X Inc.,8.46,Utilities
+RIGL,Rigel Pharmaceuticals Inc.,32.13,Healthcare
+CARE,Carter Bankshares Inc.,26.60,Financials
+PRME,Prime Medicine Inc.,3.270,Healthcare
+LAES,SEALSQ Corp,2.960,Technology
+CASS,Cass Information Systems Inc.,45.71,Industrials
+CRMD,CorMedix Inc.,7.50,Healthcare
+CEPF,Cantor Equity Partners IV Inc.,10.29,Financials
+ALT,Altimmune Inc.,3.020,Healthcare
+INV,Innventure Inc.,7.15,Financials
+AROW,Arrow Financial Corporation,35.46,Financials
+GEMI,Gemini Space Station Inc.,4.920,Financials
+RRBI,Red River Bancshares Inc.,88.97,Financials
+CABA,Cabaletta Bio Inc.,3.590,Healthcare
+DDI,DoubleDown Interactive Co. Ltd.,11.80,Communication Services
+NFBK,Northfield Bancorp Inc.,13.97,Financials
+ZSQR,Z Squared Inc.,11.30,Technology
+GLRE,Greenlight Capital Re Ltd.,17.43,Financials
+CLFD,Clearfield Inc.,42.51,Technology
+ALMU,Aeluma Inc.,31.49,Technology
+HIFS,Hingham Institution for Savings,262.31,Financials
+PFIS,Peoples Financial Services Corp.,57.49,Financials
+BWMN,Bowman Consulting Group Ltd.,32.75,Industrials
+VALN,Valneva SE,5.87,Healthcare
+DNUT,Krispy Kreme Inc.,3.310,Consumer Staples
+CCXI,Churchill Capital Corp XI,10.24,Financials
+AMSF,AMERISAFE Inc.,30.18,Financials
+SWIM,Latham Group Inc.,4.800,Industrials
+GOGO,Gogo Inc.,4.150,Communication Services
+PRAA,PRA Group Inc.,14.70,Financials
+MBUU,Malibu Boats Inc.,28.14,Consumer Discretionary
+ANL,Adlai Nortye Ltd.,13.94,Healthcare
+MLAB,Mesa Laboratories Inc.,100.79,Technology
+IMMX,Immix Biopharma Inc.,10.49,Healthcare
+MAMA,Mama's Creations Inc.,13.67,Consumer Staples
+VBNK,VersaBank,17.31,Financials
+MSBI,Midland States Bancorp Inc.,26.67,Financials
+AGMB,AgomAb Therapeutics NV,11.18,Healthcare
+CSTL,Castle Biosciences Inc.,18.15,Healthcare
+BETR,Better Home & Finance Holding Company,29.00,Financials
+FDMT,4D Molecular Therapeutics Inc.,10.45,Healthcare
+CLYM,Climb Bio Inc.,11.41,Healthcare
+TROO,TROOPS Inc.,4.300,Financials
+TECX,Tectonic Therapeutic Inc.,28.81,Healthcare
+KRT,Karat Packaging Inc.,27.23,Consumer Discretionary
+TDUP,ThredUp Inc.,4.200,Consumer Discretionary
+PANL,Pangaea Logistics Solutions Ltd.,8.26,Industrials
+NPCE,NeuroPace Inc.,15.81,Healthcare
+ACNB,ACNB Corporation,52.53,Financials
+LEGH,Legacy Housing Corporation,22.41,Consumer Discretionary
+ALOY,REalloys Inc.,8.89,Materials
+AVTX,Avalo Therapeutics Inc.,19.85,Healthcare
+UXIN,Uxin Limited,2.570,Consumer Discretionary
+XWIN,XMax Inc.,8.32,Consumer Discretionary
+CTNM,Contineum Therapeutics Inc.,14.15,Healthcare
+PROK,ProKidney Corp.,1.750,Healthcare
+IIIV,i3 Verticals Inc.,18.89,Technology
+SFST,Southern First Bancshares Inc.,55.74,Financials
+FIP,FTAI Infrastructure Inc.,4.460,Industrials
+GDYN,Grid Dynamics Holdings Inc.,6.30,Technology
+CCSI,Consensus Cloud Solutions Inc.,28.57,Technology
+TCMD,Tactile Systems Technology Inc.,23.29,Healthcare
+MTC,MMTec Inc.,5.27,Technology
+ASTL,Algoma Steel Group Inc.,5.00,Materials
+MDXG,MiMedx Group Inc.,3.520,Healthcare
+XOMA,XOMA Royalty Corporation,41.80,Healthcare
+UNTY,Unity Bancorp Inc.,52.06,Financials
+ELVA,Electrovaya Inc.,10.55,Industrials
+FFIC,Flushing Financial Corporation,15.39,Financials
+HELE,Helen of Troy Limited,22.40,Consumer Staples
+CERS,Cerus Corporation,2.600,Healthcare
+NRIM,Northrim BanCorp Inc.,23.41,Financials
+RGNX,REGENXBIO Inc.,10.04,Healthcare
+AQST,Aquestive Therapeutics Inc.,4.130,Healthcare
+BMBL,Bumble Inc.,3.400,Communication Services
+NGNE,Neurogene Inc.,32.62,Healthcare
+ACIC,American Coastal Insurance Corporation,10.74,Financials
+NRDS,NerdWallet Inc.,7.79,Communication Services
+AMWD,American Woodmark Corporation,35.15,Consumer Discretionary
+ILPT,Industrial Logistics Properties Trust,7.68,Real Estate
+OWLS,Obook Holdings Inc.,5.79,Technology
+STTK,Shattuck Labs Inc.,6.75,Healthcare
+UPB,Upstream Bio Inc.,9.36,Healthcare
+CIVB,Civista Bancshares Inc.,24.45,Financials
+TASK,TaskUs Inc.,5.54,Technology
+MVST,Microvast Holdings Inc.,1.520,Consumer Discretionary
+BWB,Bridgewater Bancshares Inc.,18.13,Financials
+TREE,LendingTree Inc.,36.17,Financials
+MCTA,Charming Medical Limited,29.11,Healthcare
+ASMB,Assembly Biosciences Inc.,31.72,Healthcare
+PRTA,Prothena Corporation plc,9.60,Healthcare
+ESEA,Euroseas Ltd.,70.87,Industrials
+WILC,G. Willi-Food International Ltd.,35.75,Consumer Staples
+OCGN,Ocugen Inc.,1.470,Healthcare
+KRNY,Kearny Financial Corp.,7.89,Financials
+NUAI,New Era Energy & Digital Inc.,4.990,Technology
+APPS,Digital Turbine Inc.,4.120,Technology
+OFIX,Orthofix Medical Inc.,12.21,Healthcare
+HBCP,Home Bancorp Inc.,62.75,Financials
+CXII,Churchill Capital Corp XII,10.15,Financials
+CBNK,Capital Bancorp Inc.,30.10,Financials
+ALTI,AlTi Global Inc.,3.260,Financials
+CD,Chaince Digital Holdings Inc.,6.17,Financials
+MLAA,Mountain Lake Acquisition Corp. II,10.00,Financials
+NEGG,Newegg Commerce Inc.,23.27,Consumer Discretionary
+OVID,Ovid Therapeutics Inc.,2.800,Healthcare
+ABAT,American Battery Technology Company,3.550,Industrials
+CCAP,Crescent Capital BDC Inc.,13.07,Financials
+FULC,Fulcrum Therapeutics Inc.,7.25,Healthcare
+GLOO,Gloo Holdings Inc.,5.99,Technology
+CRNC,Cerence Inc.,10.68,Technology
+ELMT,The Elmet Group Co.,16.72,Industrials
+CVGW,Calavo Growers Inc.,26.90,Consumer Staples
+CWCO,Consolidated Water Co. Ltd.,30.04,Utilities
+YORW,The York Water Company,29.55,Utilities
+PRTH,Priority Technology Holdings Inc.,5.81,Technology
+BSRR,Sierra Bancorp,36.94,Financials
+MNRO,Monro Inc.,15.88,Consumer Discretionary
+CTKB,Cytek Biosciences Inc.,3.680,Healthcare
+ANSC,Agriculture & Natural Solutions Acquisition Corporation,11.34,Financials
+CRAN,Crane Harbor Acquisition Corp. II,10.03,Financials
+SRTA,Strata Critical Medical Inc.,5.43,Healthcare
+SGMT,Sagimet Biosciences Inc.,7.60,Healthcare
+EPRX,Eupraxia Pharmaceuticals Inc.,7.55,Healthcare
+PRLD,Prelude Therapeutics Incorporated,4.660,Healthcare
+TOYO,TOYO Co. Ltd.,12.76,Technology
+GTEN,Gores Holdings X Inc.,10.36,Financials
+ROMA,Roma Green Finance Limited,7.81,Industrials
+ADV,Advantage Solutions Inc.,34.95,Communication Services
+NVEC,NVE Corporation,95.60,Technology
+DVLT,Datavault AI Inc.,0.538,Technology
+APXT,Apex Treasury Corporation,10.00,Financials
+RBBN,Ribbon Communications Inc.,2.600,Technology
+KIDS,OrthoPediatrics Corp.,17.79,Healthcare
+FBIZ,First Business Financial Services Inc.,54.54,Financials
+IMXI,International Money Express Inc.,15.15,Technology
+ACTG,Acacia Research Corporation,4.720,Industrials
+COFS,ChoiceOne Financial Services Inc.,30.42,Financials
+ZURA,Zura Bio Limited,4.800,Healthcare
+AUTL,Autolus Therapeutics plc,1.710,Healthcare
+BTQ,BTQ Technologies Corp.,3.140,Technology
+FLGT,Fulgent Genetics Inc.,15.96,Healthcare
+LXEO,Lexeo Therapeutics Inc.,5.76,Healthcare
+ANGO,AngioDynamics Inc.,10.84,Healthcare
+CLNE,Clean Energy Fuels Corp.,2.050,Energy
+AGCC,Agencia Comercial Spirits Ltd,19.78,Consumer Staples
+KMDA,Kamada Ltd.,7.86,Healthcare
+TITN,Titan Machinery Inc.,19.77,Industrials
+LYEL,Lyell Immunopharma Inc.,19.24,Healthcare
+CWBC,Community West Bancshares,23.35,Financials
+OSPN,OneSpan Inc.,12.06,Technology
+OBT,Orange County Bancorp Inc.,33.15,Financials
+GSIT,GSI Technology Inc.,12.26,Technology
+EOLS,Evolus Inc.,6.72,Healthcare
+BLZE,Backblaze Inc.,7.37,Technology
+SCVL,Shoe Carnival Inc.,16.07,Consumer Discretionary
+PUBM,PubMatic Inc.,9.48,Technology
+AIOT,PowerFleet Inc.,3.290,Technology
+ITIC,Investors Title Company,232.00,Financials
+REPL,Replimune Group Inc.,5.30,Healthcare
+IEAG,Infinite Eagle Acquisition Corp.,10.04,Financials
+MBVI,M3-Brigade Acquisition Vi Corp.,10.13,Financials
+GRVY,Gravity Co. Ltd.,62.71,Communication Services
+GLAD,Gladstone Capital Corporation,19.23,Financials
+TATT,TAT Technologies Ltd.,33.41,Industrials
+VOXR,Vox Royalty Corp.,6.28,Materials
+PRTC,PureTech Health plc,17.51,Healthcare
+IACO,Idea Acquisition Corp.,9.86,Financials
+ADUR,Aduro Clean Technologies Inc.,12.75,Industrials
+DCBO,Docebo Inc.,16.68,Technology
+MESH,Meshflow Acquisition Corp.,9.96,Financials
+BBNX,Beta Bionics Inc.,9.63,Healthcare
+ERII,Energy Recovery Inc.,8.31,Industrials
+FSTR,L.B. Foster Company,40.92,Industrials
+DBCA,D. Boral Acquisition I Corp.,9.89,Financials
+BCAR,D. Boral ARC Acquisition I Corp.,10.38,Financials
+CMCO,Columbus McKinnon Corporation,15.02,Industrials
+SFIX,Stitch Fix Inc.,3.125,Consumer Discretionary
+KRAQ,KRAKacquisition Corp.,9.89,Financials
+BOT,Robostrategy Inc.,21.01,-
+LRMR,Larimar Therapeutics Inc.,4.100,Healthcare
+PDLB,Ponce Financial Group Inc.,17.56,Financials
+VREX,Varex Imaging Corporation,10.07,Healthcare
+CCRN,Cross Country Healthcare Inc.,13.12,Healthcare
+NEXN,Nexxen International Ltd.,7.61,Communication Services
+LTBR,Lightbridge Corporation,12.91,Industrials
+CDRO,Codere Online Luxembourg S.A.,9.27,Consumer Discretionary
+NRC,NRC Health,18.67,Healthcare
+CAEP,Cantor Equity Partners III Inc.,11.98,Financials
+SUPX,SuperX AI Technology Limited,9.65,Technology
+CGC,Canopy Growth Corporation,1.090,Healthcare
+LWAY,Lifeway Foods Inc.,27.25,Consumer Staples
+IVVD,Invivyd Inc.,1.470,Healthcare
+VSTM,Verastem Inc.,4.720,Healthcare
+NATH,Nathan's Famous Inc.,101.22,Consumer Discretionary
+SOHU,Sohu.com Limited,15.89,Communication Services
+GCBC,Greene County Bancorp Inc.,24.33,Financials
+PKOH,Park-Ohio Holdings Corp.,30.07,Industrials
+RPD,Rapid7 Inc.,6.18,Technology
+KFII,K&F Growth Acquisition Corp. II,10.50,Financials
+MNPR,Monopar Therapeutics Inc.,61.44,Healthcare
+ECX,ECARX Holdings Inc.,1.080,Consumer Discretionary
+IPSC,Century Therapeutics Inc.,2.280,Healthcare
+LAND,Gladstone Land Corporation,9.53,Real Estate
+PERI,Perion Network Ltd.,10.45,Communication Services
+GEVO,Gevo Inc.,1.730,Materials
+FRPH,FRP Holdings Inc.,21.41,Real Estate
+GBLI,Global Indemnity Group LLC,28.04,Financials
+BMRC,Bank of Marin Bancorp,25.59,Financials
+GCGR,General Catalyst Global Resilience Merger Corp.,10.17,Financials
+TOI,The Oncology Institute Inc.,4.080,Healthcare
+IBEX,IBEX Limited,30.44,Technology
+ENTA,Enanta Pharmaceuticals Inc.,14.03,Healthcare
+PNRG,PrimeEnergy Resources Corporation,251.50,Energy
+JOUT,Johnson Outdoors Inc.,39.43,Consumer Discretionary
+CCCC,C4 Therapeutics Inc.,3.680,Healthcare
+MCFT,MasterCraft Boat Holdings Inc.,24.89,Consumer Discretionary
+BYND,Beyond Meat Inc.,0.780,Consumer Staples
+ZUMZ,Zumiez Inc.,23.28,Consumer Discretionary
+DCTH,Delcath Systems Inc.,11.61,Healthcare
+ATNI,ATN International Inc.,26.91,Communication Services
+MOBI,Mobia Medical Inc.,12.11,Healthcare
+LOCO,El Pollo Loco Holdings Inc.,13.14,Consumer Discretionary
+LSAK,Lesaka Technologies Inc.,4.810,Technology
+BNTC,Benitec Biopharma Inc.,11.65,Healthcare
+XFOR,X4 Pharmaceuticals Inc.,4.230,Healthcare
+XNET,Xunlei Limited,6.33,Technology
+BSVN,Bank7 Corp.,41.78,Financials
+TTGT,TechTarget Inc.,5.50,Technology
+BBCQ,Bleichroeder Acquisition Corp. II,10.36,Financials
+NPAC,New Providence Acquisition Corp. III,10.34,Financials
+GBFH,GBank Financial Holdings Inc.,27.40,Financials
+BGIN,Bgin Blockchain Limited,3.500,Technology
+CCIX,Churchill Capital Corp IX,10.78,Financials
+PACB,Pacific Biosciences of California Inc.,1.270,Healthcare
+LAB,Standard BioTools Inc.,1.010,Healthcare
+RBB,RBB Bancorp,23.24,Financials
+RCKT,Rocket Pharmaceuticals Inc.,3.600,Healthcare
+WTBA,West Bancorporation Inc.,23.08,Financials
+VTVT,vTv Therapeutics Inc.,31.67,Healthcare
+OSS,One Stop Systems Inc.,15.86,Technology
+NATR,Nature's Sunshine Products Inc.,22.33,Consumer Staples
+CDZI,Cadiz Inc.,4.690,Utilities
+BWFG,Bankwell Financial Group Inc.,50.49,Financials
+GPAT,GP-Act III Acquisition Corp.,10.89,Financials
+MBAV,M3-Brigade Acquisition V Corp.,10.85,Financials
+ALF,Centurion Acquisition Corp.,10.84,Financials
+TACO,Berto Acquisition Corp.,10.37,Financials
+CBK,Commercial Bancgroup Inc.,28.33,Financials
+ZKP,Lafayette Digital Acquisition Corp. I,9.91,Financials
+QUIK,QuickLogic Corporation,21.83,Technology
+MGPI,MGP Ingredients Inc.,18.10,Consumer Staples
+VNDA,Vanda Pharmaceuticals Inc.,6.43,Healthcare
+MEVO,M Evo Global Acquisition Corp II,9.89,Financials
+RDAG,Republic Digital Acquisition Company,10.26,Financials
+WENN,Wen Acquisition Corp.,10.25,Financials
+GRRR,Gorilla Technology Group Inc.,13.86,Technology
+BRCB,Black Rock Coffee Bar Inc.,7.65,Consumer Discretionary
+ATOM,Atomera Incorporated,9.89,Technology
+TBRG,TruBridge Inc.,25.84,Healthcare
+ATII,Archimedes Tech SPAC Partners II Co.,10.86,Financials
+ISTR,Investar Holding Corporation,27.63,Financials
+SPT,Sprout Social Inc.,6.31,Technology
+CAN,Canaan Inc.,0.507,Technology
+CEPT,Cantor Equity Partners II Inc.,12.31,Financials
+REAX,The Real Brokerage Inc.,1.750,Real Estate
+GASS,StealthGas Inc.,10.09,Industrials
+NAUT,Nautilus Biotechnology Inc.,2.950,Healthcare
+HACQ,HCM IV Acquisition Corp.,9.95,Financials
+CZNC,Citizens & Northern Corporation,20.75,Financials
+ALOV,Aldabra 4 Liquidity Opportunity Vehicle Inc.,9.88,Financials
+FRBA,First Bank,14.79,Financials
+NEWT,NewtekOne Inc.,12.84,Financials
+BBCP,Concrete Pumping Holdings Inc.,7.30,Industrials
+AMCX,AMC Global Media Inc.,8.39,Communication Services
+BRBI,BRBI BR Partners S.A.,13.80,Financials
+SNDL,SNDL Inc.,1.410,Consumer Staples
+ISSC,Innovative Aerosystems Inc.,20.59,Industrials
+ALLT,Allot Ltd.,7.48,Technology
+GIW,GigCapital8 Corp.,10.03,Financials
+AVIR,Atea Pharmaceuticals Inc.,4.570,Healthcare
+YDES,YD Bio Limited,5.20,Healthcare
+CLPT,ClearPoint Neuro Inc.,12.19,Healthcare
+PBYI,Puma Biotechnology Inc.,7.17,Healthcare
+JLHL,Julong Holding Limited,17.00,Industrials
+HNST,The Honest Company Inc.,3.310,Consumer Staples
+VMD,Viemed Healthcare Inc.,9.49,Healthcare
+FUFU,BitFuFu Inc.,2.180,Financials
+FMAO,Farmers & Merchants Bancorp Inc.,26.70,Financials
+SDHI,Siddhi Acquisition Corp.,10.38,Financials
+PBFS,Pioneer Bancorp Inc.,14.80,Financials
+OIM,OneIM Acquisition Corp.,9.99,Financials
+GIX,GigCapital9 Corp.,9.87,Financials
+KELYB,Kelly Services Inc.,16.15,Industrials
+IRD,Opus Genetics Inc.,05.03,Healthcare
+CGCT,Cartesian Growth Corporation III,10.38,Financials
+TACH,Titan Acquisition Corp,-,Financials
+DMAA,Drugs Made In America Acquisition Corp.,10.60,Financials
+IONR,ioneer Ltd,4.720,Materials
+FWDI,Forward Industries Inc.,4.640,Consumer Discretionary
+VITL,Vital Farms Inc.,8.33,Consumer Staples
+PLBC,Plumas Bancorp,51.19,Financials
+FVAV,Fortress Value Acquisition Corp. V,10.10,Financials
+IPCX,Inflection Point Acquisition Corp. III,10.30,Financials
+CCII,Cohen Circle Acquisition Corp. II,10.23,Financials
+ALTO,Alto Ingredients Inc.,4.590,Materials
+CMPX,Compass Therapeutics Inc.,1.970,Healthcare
+OPAL,OPAL Fuels Inc.,2.030,Utilities
+KCHV,Kochav Defense Acquisition Corp.,10.32,Financials
+PKBK,Parke Bancorp Inc.,30.05,Financials
+MYGN,Myriad Genetics Inc.,3.730,Healthcare
+CLMB,Climb Global Solutions Inc.,19.17,Technology
+HCIC,Hennessy Capital Investment Corp. VIII,9.89,Financials
+GLSI,Greenwich LifeSciences Inc.,25.30,Healthcare
+AENT,Alliance Entertainment Holding Corporation,6.87,Communication Services
+CV,CapsoVision Inc.,7.00,Healthcare
+SVCO,Silvaco Group Inc.,10.67,Technology
+BDCI,BTC Development Corp.,10.03,Financials
+TCPC,BlackRock TCP Capital Corp.,4.150,Financials
+IMRX,Immuneering Corporation,5.38,Healthcare
+RZLT,Rezolute Inc.,3.330,Healthcare
+ORGO,Organogenesis Holdings Inc.,2.700,Healthcare
+PLAY,Dave & Buster's Entertainment Inc.,10.00,Communication Services
+BLZR,Trailblazer Acquisition Corp.,10.10,Financials
+CTRN,Citi Trends Inc.,41.50,Consumer Discretionary
+OYSE,Oyster Enterprises II Acquisition Corp,10.23,Financials
+TLNC,Talon Capital Corp.,10.20,Financials
+SHIP,Seanergy Maritime Holdings Corp.,15.99,Industrials
+ACAA,Averin Capital Acquisition Corp.,9.94,Financials
+SRZN,Surrozen Inc.,30.14,Healthcare
+FRST,Primis Financial Corp.,13.97,Financials
+KBON,Karbon Capital Partners Corp.,10.08,Financials
+SORN,Soren Acquisition Corp.,9.90,Financials
+ARTC,Art Technology Acquisition Corp.,9.86,Financials
+NNDM,Nano Dimension Ltd.,1.650,Technology
+SHMD,SCHMID Group N.V.,6.17,Industrials
+HCMA,HCM III Acquisition Corp.,10.15,Financials
+LE,Lands' End Inc.,11.11,Consumer Discretionary
+SSSS,SuRo Capital Corp.,13.39,Financials
+CURR,CURRENC Group Inc.,4.460,Technology
+LX,LexinFintech Holdings Ltd.,2.070,Financials
+ARCI,Archimedes Tech SPAC Partners III Co.,9.94,Financials
+BUUU,BUUU Group Limited,20.43,Industrials
+EGHT,8x8 Inc.,2.440,Technology
+KELYA,Kelly Services Inc.,9.77,Industrials
+DSAC,Daedalus Special Acquisition Corp.,9.95,Financials
+AACI,Armada Acquisition Corp. III,9.93,Financials
+SIMA,SIM Acquisition Corp. I,11.00,Financials
+DMAC,DiaMedica Therapeutics Inc.,6.26,Healthcare
+VACH,Voyager Acquisition Corp.,10.63,Financials
+PCB,PCB Bancorp,23.74,Financials
+PTOR,Praetorian Acquisition Corp.,9.89,Financials
+ARTNA,Artesian Resources Corporation,32.37,Utilities
+SWMR,Swarmer Inc,30.29,Industrials
+USCB,USCB Financial Holdings Inc.,18.20,Financials
+RREV,RRE Ventures Acquisition Corp.,9.97,Financials
+XRX,Xerox Holdings Corporation,2.540,Industrials
+MTRX,Matrix Service Company,11.80,Industrials
+IPFX,Inflection Point Acquisition Corp. VI,10.16,Financials
+API,Agora Inc.,3.920,Technology
+SBC,SBC Medical Group Holdings Incorporated,3.230,Industrials
+CUB,Lionheart Holdings,10.80,Financials
+BLUW,Blue Water Acquisition Corp. III,10.25,Financials
+BCYC,Bicycle Therapeutics plc,4.740,Healthcare
+BEAG,Bold Eagle Acquisition Corp.,10.54,Financials
+STRZ,Starz Entertainment Corp.,19.64,Communication Services
+SLN,Silence Therapeutics plc,6.98,Healthcare
+XRPN,Armada Acquisition Corp. II,10.43,Financials
+MVBF,MVB Financial Corp.,25.62,Financials
+BCML,BayCom Corp,30.36,Financials
+AIRS,AirSculpt Technologies Inc.,4.660,Healthcare
+MLAC,Mountain Lake Acquisition Corp.,10.60,Financials
+RMNI,Rimini Street Inc.,3.540,Technology
+MTLS,Materialise NV,5.59,Technology
+RTAC,Renatus Tactical Acquisition Corp I,10.47,Financials
+PAYS,Paysign Inc.,5.83,Technology
+PHOE,Phoenix Asia Holdings Limited,15.08,Industrials
+ABEO,Abeona Therapeutics Inc.,5.71,Healthcare
+NMRA,Neumora Therapeutics Inc.,1.780,Healthcare
+ULH,Universal Logistics Holdings Inc.,12.34,Industrials
+TSSI,TSS Inc.,11.58,Technology
+CEPV,Cantor Equity Partners V Inc.,10.23,Financials
+PCAP,ProCap Acquisition Corp,10.24,Financials
+FERA,Fifth Era Acquisition Corp I,10.36,Financials
+IKT,Inhibikase Therapeutics Inc.,1.900,Healthcare
+SOPH,SOPHiA GENETICS SA,4.510,Healthcare
+DRDB,Roman DBDR Acquisition Corp. II,10.52,Financials
+SZZL,Sizzle Acquisition Corp. II,10.31,Financials
+OBA,Oxley Bridge Acquisition Limited,10.18,Financials
+SVAC,Spring Valley Acquisition Corp. III,10.45,Financials
+CRAQ,Cal Redwood Acquisition Corp.,10.23,Financials
+EVOX,Evolution Global Acquisition Corp,10.00,Financials
+CHMG,Chemung Financial Corporation,66.38,Financials
+AVBH,Avidbank Holdings Inc.,29.20,Financials
+NVCT,Nuvectis Pharma Inc.,12.04,Healthcare
+KOYN,CSLM Digital Asset Acquisition Corp III Ltd,10.12,Financials
+SAAQ,Space Asset Acquisition Corp.,10.20,Financials
+WEYS,Weyco Group Inc.,33.91,Consumer Discretionary
+SSP,The E.W. Scripps Company,3.480,Communication Services
+ORBS,Eightco Holdings Inc.,0.848,Consumer Discretionary
+NWFL,Norwood Financial Corp.,29.32,Financials
+PMTR,Perimeter Acquisition Corp. I,10.30,Financials
+ALDF,Aldel Financial II Inc.,10.63,Financials
+ACHV,Achieve Life Sciences Inc.,5.96,Healthcare
+FNLC,The First Bancorp Inc.,28.11,Financials
+WSBF,Waterstone Financial Inc.,18.41,Financials
+AKBA,Akebia Therapeutics Inc.,1.180,Healthcare
+CNCK,Coincheck Group N.V.,1.940,Financials
+NUCL,Eagle Nuclear Energy Corp.,10.69,Energy
+POLE,Andretti Acquisition Corp. II,10.71,Financials
+PLTS,Platinum Analytics Cayman Limited,17.50,Technology
+AMRN,Amarin Corporation plc,15.02,Healthcare
+VALU,Value Line Inc.,33.55,Financials
+RNGT,Range Capital Acquisition Corp II,10.05,Financials
+TVA,Texas Ventures Acquisition III Corp,10.49,Financials
+PDYN,Palladyne AI Corp.,6.65,Technology
+OTLY,Oatly Group AB,10.05,Consumer Staples
+PALI,Palisade Bio Inc.,1.870,Healthcare
+ESOA,Energy Services of America Corporation,16.80,Industrials
+TLS,Telos Corporation,4.180,Technology
+AEAQ,Activate Energy Acquisition Corp.,9.96,Financials
+AACO,Abony Acquisition Corp. I,9.94,Financials
+CMII,Columbus Circle Capital Corp II,9.90,Financials
+TSBK,Timberland Bancorp Inc.,39.61,Financials
+LPAA,Launch One Acquisition Corp.,10.78,Financials
+SIGA,SIGA Technologies Inc.,4.310,Healthcare
+ILLU,Illumination Acquisition Corp I,9.87,Financials
+CAQ,Cambridge Acquisition Corp.,9.86,Financials
+LPBB,Launch Two Acquisition Corp.,10.66,Financials
+ALCO,Alico Inc.,41.32,Consumer Staples
+PTLO,Portillo's Inc.,4.040,Consumer Discretionary
+EU,enCore Energy Corp.,1.590,Energy
+ASLE,AerSale Corporation,6.48,Industrials
+LWAC,LightWave Acquisition Corp.,10.18,Financials
+ITHA,ITHAX Acquisition Corp III,9.98,Financials
+TMTS,Spartacus Acquisition Corp. II,9.97,Financials
+VHCP,Vine Hill Capital Investment Corp. II,9.95,Financials
+ZNTL,Zentalis Pharmaceuticals Inc.,4.280,Healthcare
+RDNW,RideNow Group Inc.,7.89,Consumer Discretionary
+BIXI,Bitcoin Infrastructure Acquisition Corp Ltd.,9.97,Financials
+CXDO,Crexendo Inc.,9.34,Communication Services
+CZFS,Citizens Financial Services Inc.,62.96,Financials
+EFTY,Etoiles Capital Group Co. Ltd,15.02,Industrials
+CLLS,Cellectis S.A.,3.980,Healthcare
+LOKV,Live Oak Acquisition Corp. V,10.47,Financials
+ASYS,Amtech Systems Inc.,20.71,Technology
+NAGE,Niagen Bioscience Inc.,3.760,Healthcare
+ELDN,Eledon Pharmaceuticals Inc.,3.880,Healthcare
+OTGA,OTG Acquisition Corp. I,10.11,Financials
+ISBA,Isabella Bank Corporation,40.65,Financials
+HVMC,Highview Merger Corp.,10.11,Financials
+GSRF,GSR IV Acquisition Corp.,10.11,Financials
+VFF,Village Farms International Inc.,2.600,Consumer Staples
+PRE,Prenetics Global Limited,17.57,Healthcare
+RILY,BRC Group Holdings Inc.,8.39,Financials
+NGEN,NervGen Pharma Corp.,3.640,Healthcare
+CAII,Collective Acquisition Corp. II,9.97,Financials
+TYGO,Tigo Energy Inc.,3.870,Technology
+GPAC,General Purpose Acquisition Corp.,9.97,Financials
+FNKO,Funko Inc.,5.24,Consumer Discretionary
+IRHO,Iron Horse Acquisitions Corp. II,9.99,Financials
+NECB,Northeast Community Bancorp Inc.,23.62,Financials
+USAU,U.S. Gold Corp.,17.72,Materials
+TARA,Protara Therapeutics Inc.,5.20,Healthcare
+HCAC,Hall Chadwick Acquisition Corp.,10.00,Financials
+SVAQ,Silicon Valley Acquisition Corp.,9.95,Financials
+NHIC,NewHold Investment Corp III,10.56,Financials
+RPAY,Repay Holdings Corporation,3.310,Technology
+OABI,OmniAb Inc.,2.010,Healthcare
+FNRN,First Northern Community Bancorp,17.74,Financials
+BACC,Blue Acquisition Corp.,10.41,Financials
+SY,So-Young International Inc.,2.900,Healthcare
+PACH,Pioneer Acquisition I Corp,10.20,Financials
+FLXS,Flexsteel Industries Inc.,54.11,Consumer Discretionary
+JMSB,John Marshall Bancorp Inc.,20.60,Financials
+GDEV,GDEV Inc.,15.93,Communication Services
+AZ,A2Z Cust2Mate Solutions Corp.,6.47,Technology
+HRZN,Horizon Technology Finance Corporation,4.220,Financials
+AACB,Artius II Acquisition Inc.,10.40,Financials
+UCFI,CN Healthy Food Tech Group Corp.,5.51,Financials
+LPCV,Launchpad Cadenza Acquisition Corp I,9.97,Financials
+ADAC,American Drive Acquisition Company,9.93,Financials
+AVXL,Anavex Life Sciences Corp.,3.080,Healthcare
+FGII,FG Imperii Acquisition Corp.,9.94,Financials
+MASS,908 Devices Inc.,7.54,Healthcare
+MKTW,MarketWise Inc.,18.22,Financials
+EDIT,Editas Medicine Inc.,2.900,Healthcare
+IACQ,Irenic Acquisition Corp.,10.02,Financials
+ACIU,AC Immune SA,2.840,Healthcare
+OFLX,Omega Flex Inc.,27.87,Industrials
+NODK,NI Holdings Inc.,13.72,Financials
+NCMI,National CineMedia Inc.,2.980,Communication Services
+TVAI,Thayer Ventures Acquisition Corporation II,10.27,Financials
+XCBE,X3 Acquisition Corp. Ltd.,9.90,Financials
+SABS,SAB Biotherapeutics Inc.,3.960,Healthcare
+CARL,Carlsmed Inc.,10.23,Healthcare
+MYFW,First Western Financial Inc.,28.57,Financials
+AXIN,Axiom Intelligence Acquisition Corp 1,10.19,Financials
+FCCO,First Community Corporation,29.49,Financials
+RWAY,Runway Growth Finance Corp.,6.52,Financials
+FVCB,FVCBankcorp Inc.,15.37,Financials
+FWRD,Forward Air Corporation,8.74,Industrials
+SLP,Simulations Plus Inc.,13.57,Healthcare
+SENS,Senseonics Holdings Inc.,5.50,Healthcare
+FLWS,1-800-FLOWERS.COM Inc.,4.270,Consumer Discretionary
+ALXO,ALX Oncology Holdings Inc.,2.030,Healthcare
+XSLL,Xsolla SPAC 1,9.86,Financials
+OVLY,Oak Valley Bancorp,32.88,Financials
+AFRI,Forafric Global PLC,10.10,Consumer Staples
+ACGC,ACP Holdings Acquisition Corp,10.00,Financials
+HVII,Hennessy Capital Investment Corp. VII,10.41,Financials
+MUZE,Muzero Acquisition Corp,9.88,Financials
+CEPO,Cantor Equity Partners I Inc.,10.57,Financials
+CGEN,Compugen Ltd.,2.850,Healthcare
+ATGL,Alpha Technology Group Limited,16.35,Technology
+DEFT,DeFi Technologies Inc.,0.689,Financials
+OPTX,Syntec Optics Holdings Inc.,6.74,Technology
+PCYO,Pure Cycle Corporation,11.14,Utilities
+SVIV,Spring Valley Acquisition Corp. IV,10.05,Financials
+DNMX,Dynamix Corporation III,9.99,Financials
+SILC,Silicom Ltd.,46.93,Technology
+SGHT,Sight Sciences Inc.,4.900,Healthcare
+PPIH,Perma-Pipe International Holdings Inc.,32.61,Industrials
+TRDA,Entrada Therapeutics Inc.,7.32,Healthcare
+SIDU,Sidus Space Inc.,3.260,Industrials
+FDBC,Fidelity D & D Bancorp Inc.,45.40,Financials
+CHRS,Coherus Oncology Inc.,1.705,Healthcare
+AIRJ,AirJoule Technologies Corporation,3.830,Industrials
+WNEB,Western New England Bancorp Inc.,13.24,Financials
+OACC,Oaktree Acquisition Corp. III Life Sciences,-,Financials
+TWIN,Twin Disc Incorporated,18.11,Industrials
+STRT,Strattec Security Corporation,62.45,Consumer Discretionary
+RDCM,RADCOM Ltd.,15.58,Communication Services
+ARTV,Artiva Biotherapeutics Inc.,10.50,Healthcare
+RAAQ,Real Asset Acquisition Corp.,11.28,Financials
+HELP,Cybin Inc.,5.18,Healthcare
+PLMK,Plum Acquisition Corp. IV,10.66,Financials
+PROF,Profound Medical Corp.,7.10,Healthcare
+FACT,FACT II Acquisition Corp,10.58,Financials
+NTWO,Newbury Street II Acquisition Corp,10.64,Financials
+ANNA,AleAnna Inc.,3.820,Energy
+TRGS,TRG Latin America Acquisitions Corp.,9.87,Financials
+VNME,Vendome Acquisition Corporation I,10.15,Financials
+ESCA,Escalade Incorporated,18.37,Consumer Discretionary
+LENZ,LENZ Therapeutics Inc.,08.05,Healthcare
+AFJK,Aimei Health Technology Co. Ltd,41.15,Financials
+HWBK,Hawthorn Bancshares Inc.,36.51,Financials
+VUZI,Vuzix Corporation,3.020,Technology
+HUMA,Humacyte Inc.,1.130,Healthcare
+VYGR,Voyager Therapeutics Inc.,4.150,Healthcare
+FRAF,Franklin Financial Services Corporation,55.80,Financials
+RCKY,Rocky Brands Inc.,33.18,Consumer Discretionary
+QADR,QDRO Acquisition Corp.,9.98,Financials
+AREC,American Resources Corporation,2.330,Materials
+SCII,SC II Acquisition Corp.,10.00,Financials
+FATE,Fate Therapeutics Inc.,2.135,Healthcare
+MVIS,MicroVision Inc.,0.760,Technology
+RNAC,Cartesian Therapeutics Inc.,8.42,Healthcare
+MKLY,McKinley Acquisition Corporation,10.14,Financials
+HUHU,HUHUTECH International Group Inc.,9.67,Industrials
+JAKK,JAKKS Pacific Inc.,21.51,Consumer Discretionary
+AIRO,AIRO Group Holdings Inc.,7.83,Industrials
+ATLO,Ames National Corporation,27.74,Financials
+INSG,Inseego Corp.,15.06,Technology
+FHTX,Foghorn Therapeutics Inc.,4.170,Healthcare
+SLNH,Soluna Holdings Inc.,2.160,Financials
+ADAG,Adagene Inc.,3.700,Healthcare
+DUOT,Duos Technologies Group Inc.,8.33,Technology
+JACK,Jack in the Box Inc.,12.79,Consumer Discretionary
+WHWK,Whitehawk Therapeutics Inc.,4.930,Healthcare
+GTER,Globa Terra Acquisition Corporation,10.40,Financials
+GTER.A,Globa Terra Acquisition Corporation,10.27,Financials
+NERV,Minerva Neurosciences Inc.,5.55,Healthcare
+LTRX,Lantronix Inc.,6.13,Technology
+CFFI,C&F Financial Corporation,74.74,Financials
+ASUR,Asure Software Inc.,8.48,Technology
+OBIO,Orchestra BioMed Holdings Inc.,4.060,Healthcare
+OPRT,Oportun Financial Corporation,5.30,Financials
+UONEK,Urban One Inc.,5.49,Communication Services
+RGCO,RGC Resources Inc.,23.24,Utilities
+NHIV,NewHold Investment Corp IV,10.11,Financials
+FXNC,First National Corporation,26.68,Financials
+MCGA,Yorkville Acquisition Corp.,10.20,Financials
+REFI,Chicago Atlantic Real Estate Finance Inc.,11.34,Real Estate
+LMNR,Limoneira Company,13.26,Consumer Staples
+STRS,Stratus Properties Inc.,30.01,Real Estate
+SOCA,Solarius Capital Acquisition Corp.,10.20,Financials
+PTNM,Pitanium Limited,10.39,Consumer Staples
+SLGL,Sol-Gel Technologies Ltd.,73.05,Healthcare
+FUNC,First United Corporation,37.03,Financials
+ALEC,Alector Inc.,2.150,Healthcare
+IGAC,Invest Green Acquisition Corporation,9.97,Financials
+DYNC,Dynamix Corporation,10.75,Financials
+RELL,Richardson Electronics Ltd.,16.34,Technology
+KROS,Keros Therapeutics Inc.,11.99,Healthcare
+DAAQ,Digital Asset Acquisition Corp.,10.31,Financials
+NBP,NovaBridge Biosciences,2.050,Healthcare
+MAGH,Magnitude International Ltd,6.81,Industrials
+YDDL,One and one Green Technologies. Inc,4.220,Industrials
+BPRN,Princeton Bancorp Inc.,34.60,Financials
+JFIN,Jiayin Group Inc.,4.500,Financials
+FENC,Fennec Pharmaceuticals Inc.,6.77,Healthcare
+TDWD,Tailwind 2.0 Acquisition Corp.,9.98,Financials
+ARCT,Arcturus Therapeutics Holdings Inc.,8.26,Healthcare
+NIU,Niu Technologies,2.990,Consumer Discretionary
+MACI,Melar Acquisition Corp. I,10.83,Financials
+MIST,Milestone Pharmaceuticals Inc.,1.720,Healthcare
+CAMP,Camp4 Therapeutics Corporation,4.500,Healthcare
+VABK,Virginia National Bankshares Corporation,42.92,Financials
+SNFCA,Security National Financial Corporation,9.42,Financials
+TWLV,Twelve Seas Investment Company III,9.92,Financials
+DMRC,Digimarc Corporation,10.56,Technology
+HCKT,The Hackett Group Inc.,9.22,Technology
+NVA,Nova Minerals Limited,6.13,Materials
+LATA,Galata Acquisition Corp. II,10.05,Financials
+SSAC,SPACSphere Acquisition Corp.,9.95,Financials
+DYOR,Insight Digital Partners II,9.99,Financials
+RXST,RxSight Inc.,5.55,Healthcare
+CRNT,Ceragon Networks Ltd.,2.520,Technology
+FOSL,Fossil Group Inc.,4.100,Consumer Discretionary
+TDAC,Translational Development Acquisition Corp.,10.64,Financials
+BLRK,Bluerock Acquisition Corp.,9.94,Financials
+CMRC,Commerce.com Inc.,2.770,Technology
+SPOK,Spok Holdings Inc.,10.94,Healthcare
+AACP,Apogee Acquisition Corp,10.05,Financials
+CDXS,Codexis Inc.,2.500,Healthcare
+UNCY,Unicycive Therapeutics Inc.,8.51,Healthcare
+SVCC,Stellar V Capital Corp.,10.50,Financials
+LCNB,LCNB Corp.,15.82,Financials
+POWW,Outdoor Holding Company,1.920,Industrials
+HLXC,Helix Acquisition Corp. III,10.16,Financials
+NKSH,National Bankshares Inc.,35.18,Financials
+IMPP,Imperial Petroleum Inc.,4.940,Energy
+CNDT,Conduent Incorporated,1.440,Technology
+SUMA,SUMA Acquisition Corporation,9.83,Financials
+PAMT,PAMT CORP,10.63,Industrials
+LOVE,The Lovesac Company,15.15,Consumer Discretionary
+TNXP,Tonix Pharmaceuticals Holding Corp.,13.84,Healthcare
+ONCH,1RT Acquisition Corp.,10.20,Financials
+LFMD,LifeMD Inc.,4.540,Healthcare
+MGNX,MacroGenics Inc.,3.450,Healthcare
+NKTX,Nkarta Inc.,3.060,Healthcare
+AUDC,AudioCodes Ltd.,8.45,Technology
+LPRO,Open Lending Corporation,1.850,Financials
+TBCH,Turtle Beach Corporation,10.99,Technology
+KLTR,Kaltura Inc.,1.450,Technology
+FBLA,FB Bancorp Inc.,14.00,Financials
+CRAC,Crown Reserve Acquisition Corp. I,10.08,Financials
+CNTX,Context Therapeutics Inc.,2.360,Healthcare
+MFIN,Medallion Financial Corp.,9.37,Financials
+ARQQ,Arqit Quantum Inc.,13.83,Technology
+MNTK,Montauk Renewables Inc.,1.520,Materials
+MAMK,MaxsMaking Inc.,13.00,Industrials
+CRBP,Corbus Pharmaceuticals Holdings Inc.,12.15,Healthcare
+DTIL,Precision BioSciences Inc.,8.34,Healthcare
+OVBC,Ohio Valley Banc Corp.,45.65,Financials
+MPAA,Motorcar Parts of America Inc.,11.19,Consumer Discretionary
+KVHI,KVH Industries Inc.,10.97,Communication Services
+FSBW,FS Bancorp Inc.,40.03,Financials
+NFE,New Fortress Energy Inc.,0.744,Energy
+GSHR,Gesher Acquisition Corp. II,10.39,Financials
+HITI,High Tide Inc.,2.410,Healthcare
+TONX,TON Strategy Company,3.750,Technology
+PEBK,Peoples Bancorp of North Carolina Inc.,39.90,Financials
+WALD,Waldencast plc,1.650,Financials
+IMMR,Immersion Corporation,6.39,Technology
+CPSS,Consumer Portfolio Services Inc.,9.71,Financials
+EGHA,EGH Acquisition Corp.,10.27,Financials
+IPOD,Collective Acquisition Corp.,10.39,Financials
+TRVG,trivago N.V.,2.970,Communication Services
+TKNO,Alpha Teknova Inc.,3.910,Healthcare
+OSUR,OraSure Technologies Inc.,3.040,Healthcare
+MDWD,MediWound Ltd.,16.25,Healthcare
+INBK,First Internet Bancorp,23.94,Financials
+HAVA,Harvard Ave Acquisition Corporation,10.07,Financials
+CRBU,Caribou Biosciences Inc.,2.120,Healthcare
+TNYA,Tenaya Therapeutics Inc.,0.960,Healthcare
+ELTX,Elicio Therapeutics Inc.,11.30,Healthcare
+OPBK,OP Bancorp,13.95,Financials
+ANTA,Antalpha Platform Holding Company,8.65,Financials
+LIEN,Chicago Atlantic BDC Inc.,09.07,Financials
+HDSN,Hudson Technologies Inc.,4.920,Materials
+MRBK,Meridian Corporation,17.38,Financials
+RNA,Atrium Therapeutics Inc.,13.30,Healthcare
+AIFU,AIFU Inc.,1.670,Financials
+BZAI,Blaize Holdings Inc.,1.675,Technology
+KINS,Kingstone Companies Inc.,14.16,Financials
+UTMD,Utah Medical Products Inc.,64.05,Healthcare
+III,Information Services Group Inc.,4.260,Technology
+RCMT,RCM Technologies Inc.,29.01,Industrials
+TC,Token Cat Limited,9.38,Communication Services
+QSI,Quantum-Si incorporated,0.929,Healthcare
+CZWI,Citizens Community Bancorp Inc.,20.98,Financials
+WTF,Waton Financial Limited,4.150,Financials
+KTWO,K2 Capital Acquisition Corporation,9.96,Financials
+KPTI,Karyopharm Therapeutics Inc.,8.85,Healthcare
+WLII,Willow Lane Acquisition Corp. II,10.00,Financials
+CNTN,Canton Strategic Holdings Inc.,3.510,Healthcare
+AVNW,Aviat Networks Inc.,15.35,Technology
+ACB,Aurora Cannabis Inc.,3.340,Healthcare
+ANGI,Angi Inc.,4.900,Communication Services
+SND,Smart Sand Inc.,4.610,Energy
+FIGX,FIGX Capital Acquisition Corp.,10.19,Financials
+ANIK,Anika Therapeutics Inc.,14.80,Healthcare
+INVZ,Innoviz Technologies Ltd.,0.917,Consumer Discretionary
+LFAC,Leapfrog Acquisition Corporation,9.99,Financials
+INSE,Inspired Entertainment Inc.,7.35,Consumer Discretionary
+EFSI,Eagle Financial Services Inc.,36.79,Financials
+RFIL,RF Industries Ltd.,18.07,Industrials
+DPRO,Draganfly Inc.,5.31,Technology
+SMTI,Sanara MedTech Inc.,21.10,Healthcare
+LUCD,Lucid Diagnostics Inc.,1.020,Healthcare
+OMSE,OMS Energy Technologies Inc.,4.530,Energy
+GWRS,Global Water Resources Inc.,6.66,Utilities
+TLSA,Tiziana Life Sciences Ltd,1.500,Healthcare
+PALO,Paloma Acquisition Corp I,9.86,Financials
+JRVR,James River Group Holdings Inc.,4.100,Financials
+SEVN,Seven Hills Realty Trust,8.30,Real Estate
+VERI,Veritone Inc.,2.015,Technology
+KGEI,Kolibri Global Energy Inc.,5.25,Energy
+GIG,GigCapital7 Corp.,5.61,Financials
+FCAP,First Capital Inc.,55.78,Financials
+RICK,RCI Hospitality Holdings Inc.,24.37,Consumer Discretionary
+EPSN,Epsilon Energy Ltd.,6.15,Energy
+EMBC,Embecta Corp.,3.120,Healthcare
+ORMP,Oramed Pharmaceuticals Inc.,4.560,Healthcare
+INGN,Inogen Inc.,6.81,Healthcare
+LNZA,LanzaTech Global Inc.,18.24,Industrials
+SGC,Superior Group of Companies Inc.,11.75,Consumer Discretionary
+PDEX,Pro-Dex Inc.,57.44,Healthcare
+IFRX,InflaRx N.V.,2.520,Healthcare
+PAAC,Proem Acquisition Corp I,9.91,Financials
+ONEW,OneWater Marine Inc.,10.94,Consumer Discretionary
+CVGI,Commercial Vehicle Group Inc.,5.31,Consumer Discretionary
+PMTS,CPI Card Group Inc.,15.78,Financials
+CTW,CTW Cayman,2.900,Communication Services
+AMBR,Amber International Holding Limited,1.930,Technology
+ZJK,ZJK Industrial Co. Ltd.,2.800,Industrials
+PESI,Perma-Fix Environmental Services Inc.,9.70,Industrials
+ABOS,Acumen Pharmaceuticals Inc.,2.490,Healthcare
+GPRO,GoPro Inc.,1.095,Technology
+PRQR,ProQR Therapeutics N.V.,1.700,Healthcare
+PONO,Pono Capital Four Inc.,9.87,Financials
+FINW,FinWise Bancorp,13.01,Financials
+CBFV,CB Financial Services Inc.,35.14,Financials
+EGAN,eGain Corporation,6.48,Technology
+KRMD,KORU Medical Systems Inc.,3.850,Healthcare
+BNR,Burning Rock Biotech Limited,16.76,Healthcare
+ENLV,Enlivex Ltd.,0.732,Healthcare
+IMUX,Immunic Inc.,12.95,Healthcare
+USGO,U.S. GoldMining Inc.,13.19,Materials
+CURI,CuriosityStream Inc.,2.950,Communication Services
+CHEC,Chenghe Acquisition III Co.,10.11,Financials
+CHCI,Comstock Holding Companies Inc.,17.02,Real Estate
+CFBK,CF Bankshares Inc.,26.79,Financials
+LEE,Lee Enterprises Incorporated,7.82,Communication Services
+HQI,HireQuest Inc.,12.47,Industrials
+NUTR,NusaTrip Incorporated,9.00,Consumer Discretionary
+HERE,Here Group Limited,3.190,Consumer Discretionary
+EBMT,Eagle Bancorp Montana Inc.,22.13,Financials
+HRTX,Heron Therapeutics Inc.,0.914,Healthcare
+LAWR,Robot Consulting Co. Ltd.,3.750,Industrials
+RBKB,Rhinebeck Bancorp Inc.,15.80,Financials
+FLX,BingEx Limited,2.540,Industrials
+RANG,Range Capital Acquisition Corp.,10.60,Financials
+LARK,Landmark Bancorp Inc.,27.70,Financials
+LFCR,Lifecore Biomedical Inc.,4.500,Healthcare
+TAVI,Tavia Acquisition Corp.,10.60,Financials
+SHIM,Shimmick Corporation,4.640,Industrials
+BCBP,BCB Bancorp Inc.,9.62,Financials
+DIBS,1stdibs.Com Inc.,4.550,Communication Services
+TCX,Tucows Inc.,14.80,Technology
+PYXS,Pyxis Oncology Inc.,2.620,Healthcare
+IMDX,Insight Molecular Diagnostics Inc.,5.10,Healthcare
+CTAA,ClearThink 1 Acquisition Corp.,9.86,Financials
+TMCI,Treace Medical Concepts Inc.,2.530,Healthcare
+TLSI,TriSalus Life Sciences Inc.,2.670,Healthcare
+BDTX,Black Diamond Therapeutics Inc.,2.860,Healthcare
+OXSQ,Oxford Square Capital Corp.,1.750,Financials
+NMP,NMP Acquisition Corp.,-,Financials
+SNWV,SANUWAVE Health Inc.,18.94,Healthcare
+TAYD,Taylor Devices Inc.,50.40,Industrials
+HNVR,Hanover Bancorp Inc.,22.65,Financials
+PLBY,Playboy Inc.,1.400,Consumer Discretionary
+KRRO,Korro Bio Inc.,11.20,Healthcare
+APYX,Apyx Medical Corporation,3.840,Healthcare
+BVFL,BV Financial Inc.,19.82,Financials
+BRR,ProCap Financial Inc.,1.920,Financials
+STEX,Streamex Corp.,0.883,Financials
+LCUT,Lifetime Brands Inc.,7.00,Consumer Discretionary
+KZIA,Kazia Therapeutics Limited,14.00,Healthcare
+ECBK,ECB Bancorp Inc.,18.23,Financials
+HURA,TuHURA Biosciences Inc.,2.510,Healthcare
+EMIS,Emmis Acquisition Corp.,10.10,Financials
+PLYX,Polaryx Therapeutics Inc.,3.365,Healthcare
+RDZN,Roadzen Inc.,1.880,Technology
+LKSP,Lake Superior Acquisition Corp.,10.11,Financials
+OGI,Organigram Global Inc.,1.115,Healthcare
+EMPD,Empery Digital Inc.,5.22,Consumer Discretionary
+LAFA,LaFayette Acquisition Corp.,10.01,Financials
+YOOV,Concorde International Group Ltd.,0.693,Industrials
+SMID,Smith-Midland Corporation,29.61,Materials
+TUSK,Mammoth Energy Services Inc.,3.260,Industrials
+ARCL,ARC Group Acquisition I Corp,10.03,Financials
+HYPR,Hyperfine Inc.,1.590,Healthcare
+SPEG,Silver Pegasus Acquisition Corp.,10.21,Financials
+WHF,WhiteHorse Finance Inc.,7.24,Financials
+EDAP,EDAP TMS S.A.,4.160,Healthcare
+SPRB,Spruce Biosciences Inc.,57.55,Healthcare
+MENS,Jyong Biotech Ltd.,2.020,Healthcare
+DOMO,Domo Inc.,3.440,Technology
+ANTX,AN2 Therapeutics Inc.,4.310,Healthcare
+FRD,Friedman Industries Incorporated,21.79,Materials
+SPWR,SunPower Inc.,1.060,Technology
+MNSB,MainStreet Bancshares Inc.,22.44,Financials
+RAIL,FreightCar America Inc.,08.03,Industrials
+SKYX,SKYX Platforms Corp.,1.140,Industrials
+CRDL,Cardiol Therapeutics Inc.,1.360,Healthcare
+THRY,Thryv Holdings Inc.,3.440,Technology
+OBTC,Osprey Bitcoin Trust,25.60,Financials
+HTLM,HomesToLife Ltd.,1.690,Consumer Discretionary
+PAL,Proficient Auto Logistics Inc.,5.44,Industrials
+BOOM,DMC Global Inc.,7.38,Industrials
+AMTX,Aemetis Inc.,2.210,Materials
+ASRT,Assertio Holdings Inc.,23.32,Healthcare
+INAC,Indigo Acquisition Corp.,10.20,Financials
+GUTS,Fractyl Health Inc.,0.948,Healthcare
+NVX,NOVONIX Limited,0.650,Industrials
+CEPS,Cantor Equity Partners VI Inc.,10.17,Financials
+RGP,Resources Connection Inc.,4.340,Industrials
+BZUN,Baozun Inc.,2.760,Consumer Discretionary
+BDSX,Biodesix Inc.,14.64,Healthcare
+GALT,Galectin Therapeutics Inc.,2.230,Healthcare
+ATLX,Atlas Lithium Corporation,5.28,Materials
+EQ,Equillium Inc.,2.310,Healthcare
+FGBI,First Guaranty Bancshares Inc.,9.11,Financials
+MBOT,Microbot Medical Inc.,2.170,Healthcare
+BNAI,Brand Engagement Network Inc.,24.87,Technology
+EMPG,Empro Group Inc.,17.36,Healthcare
+GAMB,Gambling.com Group Limited,4.120,Consumer Discretionary
+AGEN,Agenus Inc.,3.470,Healthcare
+MOLN,Molecular Partners AG,4.000,Healthcare
+AARD,Aardvark Therapeutics Inc.,6.59,Healthcare
+DERM,Journey Medical Corporation,5.19,Healthcare
+SAMG,Silvercrest Asset Management Group Inc.,12.02,Financials
+GNLX,Genelux Corporation,3.190,Healthcare
+SPRO,Spero Therapeutics Inc.,2.440,Healthcare
+NICM,Nicola Mining Inc.,6.63,Materials
+DOYU,DouYu International Holdings Limited,4.660,Communication Services
+CAAS,China Automotive Systems Inc.,4.650,Consumer Discretionary
+ALPS,Alps Group Inc,0.840,Healthcare
+RENT,Rent the Runway Inc.,4.170,Consumer Discretionary
+BHAV,BHAV Acquisition Corp,10.11,Financials
+RMBI,Richmond Mutual Bancorporation Inc.,14.30,Financials
+CVRX,CVRx Inc.,5.22,Healthcare
+CNTB,Connect Biopharma Holdings Limited,2.450,Healthcare
+SBFG,SB Financial Group Inc.,21.96,Financials
+MYX,Maywood Acquisition Corp. 2,10.09,Financials
+OKUR,OnKure Therapeutics Inc.,3.400,Healthcare
+MRDN,Meridian Holdings Inc.,10.85,Communication Services
+DFDV,DeFi Development Corp.,4.650,Financials
+LICN,Lichen International Limited,8.33,Industrials
+AFBI,Affinity Bancshares Inc.,22.46,Financials
+FNWD,Finward Bancorp,31.60,Financials
+SUIG,SUI Group Holdings Limited,1.780,Financials
+SANG,Sangoma Technologies Corporation,4.090,Technology
+NTHI,NeOnc Technologies Holdings Inc.,5.42,Healthcare
+FTHA,Forefront Tech Holdings Acquisition Corp.,9.96,Financials
+SCPQ,Social Commerce Partners Corporation,9.94,Financials
+QTRX,Quanterix Corporation,2.880,Healthcare
+SRBK,SR Bancorp Inc.,18.11,Financials
+EDSA,Edesa Biotech Inc.,15.24,Healthcare
+IPHA,Innate Pharma S.A.,1.320,Healthcare
+HOFT,Hooker Furnishings Corporation,12.60,Consumer Discretionary
+VWAV,VisionWave Holdings Inc.,5.61,Industrials
+TORO,Toro Corp.,5.20,Energy
+CODA,Coda Octopus Group Inc.,11.67,Industrials
+BNC,CEA Industries Inc.,3.060,Industrials
+RCEL,AVITA Medical Inc.,4.260,Healthcare
+BLNK,Blink Charging Co.,0.910,Industrials
+WATT,Energous Corporation,23.62,Technology
+ACOG,Alpha Cognition Inc.,5.95,Healthcare
+BREZ,Breeze Acquisition Corp. II,10.00,Financials
+QMCO,Quantum Corporation,8.81,Technology
+NYXH,Nyxoah SA,3.080,Healthcare
+VTIX,Virtuix Holdings Inc.,4.030,Technology
+HSDT,Solana Company,2.210,Financials
+NEOV,NeoVolta Inc.,2.990,Industrials
+DH,Definitive Healthcare Corp.,0.886,Healthcare
+NIPG,NIP Group Inc.,0.567,Communication Services
+VRCA,Verrica Pharmaceuticals Inc.,7.37,Healthcare
+ACNT,Ascent Industries Co.,13.93,Materials
+HYNE,Hoyne Bancorp Inc.,15.53,Financials
+AIFC,AI Financial Corporation,0.988,-
+EML,The Eastern Company,20.82,Industrials
+GLND,Greenland Energy Company,2.960,Energy
+PCSC,Perceptive Capital Solutions Corp,11.30,Financials
+NNOX,Nano-X Imaging Ltd.,1.790,Healthcare
+TTEC,TTEC Holdings Inc.,2.560,Technology
+FFAI,Faraday Future Intelligent Electric Inc.,0.410,Consumer Discretionary
+IPEX,Inflection Point Acquisition Corp. V,10.45,Financials
+PNBK,Patriot National Bancorp Inc.,1.060,Financials
+LSBK,Lake Shore Bancorp Inc.,15.77,Financials
+ANPA,Rich Sparkle Holdings Limited,6.36,Industrials
+ARBE,Arbe Robotics Ltd.,1.010,Technology
+BRLT,Brilliant Earth Group Inc.,1.230,Consumer Discretionary
+FONR,FONAR Corporation,18.86,Healthcare
+BSET,Bassett Furniture Industries Incorporated,14.26,Consumer Discretionary
+PEPG,PepGen Inc.,1.780,Healthcare
+FORR,Forrester Research Inc.,6.29,Industrials
+ATLN,Atlantic International Corp.,1.520,Industrials
+TTRX,Turn Therapeutics Inc.,4.010,Healthcare
+QSEA,Quartzsea Acquisition Corporation,10.46,Financials
+NNBR,NN Inc.,2.260,Industrials
+WSBK,Winchester Bancorp Inc.,12.77,Financials
+MB,MasterBeef Group,6.89,Consumer Discretionary
+CHAR,Charlton Aria Acquisition Corporation,10.74,Financials
+NAKA,Nakamoto Inc.,0.170,Financials
+SAFX,XCF Global Inc.,0.397,Utilities
+NXTT,Next Technology Holding Inc.,1.530,Technology
+DLTH,Duluth Holdings Inc.,3.050,Consumer Discretionary
+PGAC,Pantages Capital Acquisition Corporation,10.54,Financials
+QUMS,Quantumsphere Acquisition Corporation,10.17,Financials
+CRDF,Cardiff Oncology Inc.,1.690,Healthcare
+ROC,Rank One Computing Corporation,06.05,Technology
+INVE,Identiv Inc.,4.820,Industrials
+NEXM,NexMetals Mining Corp.,3.230,Materials
+AMCI,AMC Robotics Corporation,05.06,Technology
+FGMC,FG Merger II Corp.,10.31,Financials
+ZENA,ZenaTech Inc.,2.020,Technology
+JYNT,The Joint Corp.,8.30,Healthcare
+RPID,Rapid Micro Biosystems Inc.,2.480,Healthcare
+BYRN,Byrna Technologies Inc.,5.00,Industrials
+MGYR,Magyar Bancorp Inc.,17.46,Financials
+LAKE,Lakeland Industries Inc.,10.52,Consumer Discretionary
+HOVR,New Horizon Aircraft Ltd.,2.480,Industrials
+GOAI,Eva Live Inc.,3.560,Technology
+ALOT,AstroNova Inc.,14.55,Technology
+RVSB,Riverview Bancorp Inc.,5.42,Financials
+KLRS,Kalaris Therapeutics Inc.,4.830,Healthcare
+CBUS,Cibus Inc.,1.455,Healthcare
+CMTL,Comtech Telecommunications Corp.,3.730,Technology
+LIDR,AEye Inc.,2.430,Technology
+EXFY,Expensify Inc.,1.140,Technology
+AOUT,American Outdoor Brands Inc.,8.72,Consumer Discretionary
+INO,Inovio Pharmaceuticals Inc.,1.340,Healthcare
+ARQ,Arq Inc.,2.550,Industrials
+MXCT,MaxCyte Inc.,1.020,Healthcare
+REKR,Rekor Systems Inc.,0.797,Technology
+UNB,Union Bankshares Inc.,23.60,Financials
+KEQU,Kewaunee Scientific Corporation,37.67,Consumer Discretionary
+DTI,Drilling Tools International Corporation,3.060,Energy
+HFFG,HF Foods Group Inc.,2.010,Consumer Staples
+NCSM,NCS Multistage Holdings Inc.,42.03,Energy
+CGTX,Cognition Therapeutics Inc.,1.200,Healthcare
+BMEA,Biomea Fusion Inc.,1.480,Healthcare
+MMLP,Martin Midstream Partners L.P.,2.670,Energy
+BSBK,Bogota Financial Corp.,8.48,Financials
+COYA,Coya Therapeutics Inc.,4.540,Healthcare
+PROV,Provident Financial Holdings Inc.,17.00,Financials
+FLL,Full House Resorts Inc.,2.930,Consumer Discretionary
+HURC,Hurco Companies Inc.,16.48,Industrials
+SFBC,Sound Financial Bancorp Inc.,41.54,Financials
+CRGO,Freightos Limited,2.050,Industrials
+DWSN,Dawson Geophysical Company,3.410,Energy
+SCOR,comScore Inc.,07.01,Technology
+ZTEK,Zentek Ltd.,1.010,Healthcare
+STIM,Neuronetics Inc.,1.510,Healthcare
+RANI,Rani Therapeutics Holdings Inc.,1.050,Healthcare
+BOTJ,Bank of the James Financial Group Inc.,23.02,Financials
+STHO,Star Holdings,8.64,Real Estate
+FMAC,Future Money Acquisition Corporation,10.04,Financials
+RFAM,RF Acquisition Corp III,9.86,Financials
+CHPG,ChampionsGate Acquisition Corporation,10.33,Financials
+ENGN,enGene Therapeutics Inc.,1.540,Healthcare
+SPKL,Spark I Acquisition Corporation,11.90,Financials
+GEOS,Geospace Technologies Corporation,7.97,Energy
+ALDX,Aldeyra Therapeutics Inc.,1.700,Healthcare
+BTCS,BTCS Inc.,2.060,Financials
+SEAT,Vivid Seats Inc.,9.29,Communication Services
+CYPH,Cypherpunk Technologies Inc.,1.040,Financials
+OCC,Optical Cable Corporation,11.50,Technology
+ONCY,Oncolytics Biotech Inc.,0.871,Healthcare
+HIT,Health In Tech Inc.,1.540,Technology
+BMHL,Bluemount Holdings Limited,3.950,Financials
+QTTB,Q32 Bio Inc.,5.94,Healthcare
+CRMT,America's Car-Mart Inc.,12.08,Consumer Discretionary
+BAER,Bridger Aerospace Group Holdings Inc.,1.740,Industrials
+MDXH,MDxHealth SA,1.950,Healthcare
+NOEM,CO2 Energy Transition Corp.,10.44,Financials
+VANI,Vivani Medical Inc.,1.160,Healthcare
+SEER,Seer Inc.,1.770,Healthcare
+SUNS,Sunrise Realty Trust Inc.,7.35,Real Estate
+HCAT,Health Catalyst Inc.,1.340,Healthcare
+ISPR,Ispire Technology Inc.,1.720,Consumer Staples
+BCIC,BCP Investment Corp.,7.96,Financials
+PODC,PodcastOne Inc.,3.560,Communication Services
+ULBI,Ultralife Corporation,5.88,Industrials
+TZOO,Travelzoo,8.92,Communication Services
+NRXP,NRx Pharmaceuticals Inc.,2.950,Healthcare
+CLAR,Clarus Corporation,2.530,Consumer Discretionary
+ANIX,Anixa Biosciences Inc.,2.900,Healthcare
+UPXI,Upexi Inc.,1.390,Communication Services
+LONA,LeonaBio Inc.,10.32,Healthcare
+GRWG,GrowGeneration Corp.,1.610,Consumer Discretionary
+WW,WW International Inc.,9.64,Healthcare
+CUE,Cue Biopharma Inc.,29.47,Healthcare
+SVRE,SaverOne 2014 Ltd.,4.700,Technology
+VRA,Vera Bradley Inc.,3.360,Consumer Discretionary
+NCTY,The9 Limited,6.24,Financials
+VIRC,Virco Mfg. Corporation,06.03,Consumer Discretionary
+RTB,RTB Digital Inc.,7.20,-
+PMN,ProMIS Neurosciences Inc.,10.57,Healthcare
+SEV,Aptera Motors Corp.,2.590,Consumer Discretionary
+LGO,Largo Inc.,1.120,Materials
+CSPI,CSP Inc.,9.28,Technology
+SLSN,Solesence Inc.,1.320,Consumer Staples
+TEAD,Teads Holding Co.,0.956,Communication Services
+BYFC,Broadway Financial Corporation,9.96,Financials
+OPRX,OptimizeRx Corporation,4.915,Healthcare
+LCCC,Lakeshore Acquisition III Corp.,10.35,Financials
+HCHL,Happy City Holdings Limited,3.080,Consumer Discretionary
+SSBI,Summit State Bank,13.52,Financials
+PROP,Prairie Operating Co.,0.935,Energy
+BODI,The Beachbody Company Inc.,12.61,Communication Services
+RFAI,RF Acquisition Corp II,10.93,Financials
+BHST,BioHarvest Sciences Inc.,4.005,Consumer Staples
+RNTX,Rein Therapeutics Inc.,1.160,Healthcare
+AEC,Anfield Energy Inc.,05.05,Energy
+BWEN,Broadwind Inc.,3.850,Industrials
+CCLD,CareCloud Inc.,2.120,Healthcare
+IDN,Intellicheck Inc.,4.450,Technology
+FUSB,First US Bancshares Inc.,15.90,Financials
+SDA,SunCar Technology Group Inc.,0.880,Consumer Discretionary
+UBCP,United Bancorp Inc.,15.57,Financials
+FTLF,FitLife Brands Inc.,9.53,Consumer Staples
+AEYE,AudioEye Inc.,7.18,Technology
+ATRA,Atara Biotherapeutics Inc.,10.48,Healthcare
+MMTX,Miluna Acquisition Corp,10.07,Financials
+DOMH,Dominari Holdings Inc.,3.920,Financials
+KG,Kestrel Group Ltd,11.31,Financials
+ORIQ,Origin Investment Corp I,10.26,Financials
+VHUB,VenHub Global Inc.,1.030,Consumer Staples
+SPAI,Safe Pro Group Inc.,4.210,Industrials
+CTOR,Citius Oncology Inc.,0.987,Healthcare
+HLP,Hongli Group Inc.,1.160,Materials
+NAMM,Namib Minerals,1.580,Materials
+MAYS,J.W. Mays Inc.,42.54,Real Estate
+CPSH,CPS Technologies Corporation,4.800,Technology
+AISP,Airship AI Holdings Inc.,2.470,Technology
+OKYO,OKYO Pharma Limited,1.620,Healthcare
+TWG,Top Wealth Group Holding Limited,3.280,Consumer Staples
+ALIS,Calisa Acquisition Corp,10.08,Financials
+ACET,Adicet Bio Inc.,08.07,Healthcare
+PBHC,Pathfinder Bancorp Inc.,13.50,Financials
+DTCX,Datacentrex Inc.,2.330,Financials
+AIRG,Airgain Inc.,6.65,Technology
+SKIN,SkinHealth Systems Inc.,0.650,Consumer Staples
+JATT,JATT II Acquisition Corp.,10.76,Financials
+EXOZ,eXoZymes Inc.,9.88,Healthcare
+XGN,Exagen Inc.,3.470,Healthcare
+INTG,The InterGroup Corporation,38.94,Consumer Discretionary
+GNSS,Genasys Inc.,1.850,Technology
+CSBR,Champions Oncology Inc.,06.02,Healthcare
+KLXE,KLX Energy Services Holdings Inc.,4.270,Energy
+AUBN,Auburn National Bancorporation Inc.,23.73,Financials
+PARK,Park Dental Partners Inc.,18.30,Healthcare
+FEAM,5E Advanced Materials Inc.,1.990,Materials
+GDHG,Golden Heaven Group Holdings Ltd.,1.750,Consumer Discretionary
+AGH,Aureus Greenway Holdings Inc.,4.060,Consumer Discretionary
+ACRV,Acrivon Therapeutics Inc.,1.920,Healthcare
+LSE,Leishen Energy Holding Co. Ltd.,4.820,Energy
+CPHC,Canterbury Park Holding Corporation,15.93,Consumer Discretionary
+FVN,Future Vision II Acquisition Corp.,10.84,Financials
+FNWB,First Northwest Bancorp,9.22,Financials
+UYSC,UY Scuti Acquisition Corp.,10.66,Financials
+APAC,StoneBridge Acquisition II Corporation,10.10,Financials
+GOSS,Gossamer Bio Inc.,0.344,Healthcare
+PYPD,PolyPid Ltd.,4.220,Healthcare
+LGCL,Lucas GC Limited,1.880,Technology
+WSTN,Westin Acquisition Corp,10.03,Financials
+RSSS,Research Solutions Inc.,2.510,Technology
+FDSB,Fifth District Bancorp Inc.,15.12,Financials
+WRAP,Wrap Technologies Inc.,1.440,Technology
+GECC,Great Elm Capital Corp.,5.75,Financials
+DLHC,DLH Holdings Corp.,5.50,Industrials
+BEEP,Mobile Infrastructure Corporation,1.935,Industrials
+SSTI,SoundThinking Inc.,6.14,Technology
+SOTK,Sono-Tek Corporation,05.05,Technology
+ZKIN,ZK International Group Co. Ltd.,1.380,Materials
+ATHE,Alterity Therapeutics Limited,4.620,Healthcare
+WSHP,WeShop Holdings Limited,7.17,Communication Services
+AURE,Aurelion Inc.,2.270,Financials
+BVC,BitVentures Limited,9.30,Technology
+FLNT,Fluent Inc.,2.620,Communication Services
+PFX,PhenixFIN Corporation,39.01,Financials
+HNNA,Hennessy Advisors Inc.,9.86,Financials
+SSEA,Starry Sea Acquisition Corp,10.17,Financials
+GGR,Gogoro Inc.,3.860,Consumer Discretionary
+JFB,JFB Construction Holdings,5.44,Real Estate
+OPXS,Optex Systems Holdings Inc,11.22,Industrials
+HOUR,Hour Loop Inc.,2.190,Consumer Discretionary
+CLNN,Clene Inc.,6.50,Consumer Staples
+ICG,Intchains Group Limited,1.260,Technology
+BSAA,BEST SPAC I Acquisition Corp.,10.33,Financials
+XBIT,XBiotech Inc.,2.500,Healthcare
+MDIA,MediaCo Holding Inc.,0.932,Communication Services
+QTI,QT Imaging Holdings Inc.,6.32,Healthcare
+NTIC,Northern Technologies International Corporation,8.00,Materials
+GANX,Gain Therapeutics Inc.,1.780,Healthcare
+RLYB,Rallybio Corporation,14.35,Healthcare
+STSS,Sharps Technology Inc.,1.960,Healthcare
+ICCC,ImmuCell Corporation,8.36,Healthcare
+ODYS,Odysight.ai Inc.,4.510,Technology
+WTG,Wintergreen Acquisition Corp.,10.30,Financials
+NDLS,Noodles & Company,12.73,Consumer Discretionary
+MCRB,Seres Therapeutics Inc.,7.76,Healthcare
+NBRG,Newbridge Acquisition Limited,9.90,Financials
+LVO,LiveOne Inc.,5.53,Communication Services
+GENK,GEN Restaurant Group Inc.,2.260,Consumer Discretionary
+PDSB,PDS Biotechnology Corporation,1.330,Healthcare
+FBIO,Fortress Biotech Inc.,2.230,Healthcare
+BPAC,Blueport Acquisition Ltd,10.03,Financials
+ASPS,Altisource Portfolio Solutions S.A.,6.56,Real Estate
+MOB,Mobilicom Limited,5.83,Industrials
+SLNG,Stabilis Solutions Inc.,3.940,Energy
+VGAS,Verde Clean Fuels Inc.,1.760,Utilities
+SFWL,Shengfeng Development Limited,0.880,Industrials
+CPIX,Cumberland Pharmaceuticals Inc.,4.850,Healthcare
+FSEA,First Seacoast Bancorp Inc.,16.65,Financials
+SYPR,Sypris Solutions Inc.,3.150,Consumer Discretionary
+PLRX,Pliant Therapeutics Inc.,1.170,Healthcare
+BTMD,biote Corp.,2.030,Healthcare
+OM,Outset Medical Inc.,3.890,Healthcare
+GEG,Great Elm Group Inc.,2.200,Financials
+SIEB,Siebert Financial Corp.,1.750,Financials
+FLD,Fold Holdings Inc.,1.410,Financials
+VIVO,VivoPower PLC,4.230,Technology
+XTIA,XTI Aerospace Inc.,1.840,Industrials
+ACTU,Actuate Therapeutics Inc.,2.970,Healthcare
+CBAT,CBAK Energy Technology Inc.,0.794,Industrials
+HAIN,The Hain Celestial Group Inc.,0.779,Consumer Staples
+RGS,Regis Corporation,28.05,Consumer Discretionary
+MCHX,Marchex Inc.,1.600,Communication Services
+AEI,Alset Inc.,1.800,Real Estate
+LNSR,LENSAR Inc.,5.77,Healthcare
+STKE,Sol Strategies Inc.,2.060,Financials
+TCRX,TScan Therapeutics Inc.,1.160,Healthcare
+AFCG,Advanced Flower Capital Inc.,2.960,Financials
+LOOP,Loop Industries Inc.,1.440,Materials
+PMVP,PMV Pharmaceuticals Inc.,1.290,Healthcare
+CPBI,Central Plains Bancshares Inc.,17.53,Financials
+KVAC,Keen Vision Acquisition Corporation,12.46,Financials
+FTCI,FTC Solar Inc.,4.330,Technology
+RRGB,Red Robin Gourmet Burgers Inc.,3.770,Consumer Discretionary
+PLCE,The Children's Place Inc.,3.070,Consumer Discretionary
+WKEY,WISeKey International Holding AG,8.55,Technology
+BRID,Bridgford Foods Corporation,7.46,Consumer Staples
+FORA,Forian Inc.,2.160,Healthcare
+MNOV,MediciNova Inc.,1.370,Healthcare
+TOUR,Tuniu Corporation,6.19,Consumer Discretionary
+IZEA,IZEA Worldwide Inc.,3.870,Communication Services
+NSTS,NSTS Bancorp Inc.,13.64,Financials
+OMEX,Odyssey Marine Exploration Inc.,1.140,Materials
+LFVN,LifeVantage Corporation,5.27,Consumer Staples
+SORA,AsiaStrategy,2.640,Consumer Discretionary
+THCH,TH International Limited,2.050,Consumer Discretionary
+VIOT,Viomi Technology Co. Ltd,0.974,Consumer Discretionary
+FNGR,FingerMotion Inc.,1.070,Communication Services
+IPWR,Ideal Power Inc.,5.38,Technology
+FRMM,Forum Markets Incorporated,4.460,Technology
+MDAI,Spectral AI Inc.,2.040,Healthcare
+TJGC,TJGC Group Limited,2.140,Communication Services
+SNT,Senstar Technologies Corporation,2.770,Industrials
+IMA,ImageneBio Inc.,5.77,Healthcare
+GMM,Global Mofy AI Limited,1.300,Technology
+ELBM,Electra Battery Materials Corporation,0.617,Materials
+CLST,Catalyst Bancorp Inc.,15.86,Financials
+GAIA,Gaia Inc.,2.530,Communication Services
+YOUL,Youlife Group Inc.,0.840,Consumer Staples
+EDRY,EuroDry Ltd.,22.09,Industrials
+SGA,Saga Communications Inc.,10.02,Communication Services
+ASRV,AmeriServ Financial Inc.,3.750,Financials
+IMMP,Immutep Limited,0.464,Healthcare
+AMPG,AmpliTech Group Inc.,2.480,Technology
+HYFT,MindWalk Holdings Corp.,1.260,Healthcare
+RCON,Recon Technology Ltd.,0.690,Energy
+SERA,Sera Prognostics Inc.,1.590,Healthcare
+DWTX,Dogwood Therapeutics Inc.,1.860,Healthcare
+SOGP,Sound Group Inc.,14.91,Communication Services
+PSIG,PS International Group Ltd.,7.19,Industrials
+IBAC,IB Acquisition Corp.,10.79,Financials
+MIND,MIND Technology Inc.,6.81,Technology
+DXR,Daxor Corporation,10.50,Healthcare
+MCAH,Mountain Crest Acquisition 6 Corp.,10.04,Financials
+SPCB,SuperCom Ltd.,11.32,Industrials
+SELF,Global Self Storage Inc.,5.32,Real Estate
+SCYX,SCYNEXIS Inc.,0.761,Healthcare
+CING,Cingulate Inc.,4.920,Healthcare
+ENTX,Entera Bio Ltd.,1.290,Healthcare
+INLF,INLIF Limited,4.320,Industrials
+BYSI,BeyondSpring Inc.,1.450,Healthcare
+NA,Nano Labs Ltd,2.580,Technology
+FLNA,Filana Therapeutics Inc.,1.230,Healthcare
+STKS,The ONE Group Hospitality Inc.,1.890,Consumer Discretionary
+DRIO,DarioHealth Corp.,8.10,Healthcare
+MYPS,PLAYSTUDIOS Inc.,0.460,Communication Services
+APWC,Asia Pacific Wire & Cable Corporation Limited,1.430,Industrials
+EHTH,eHealth Inc.,1.850,Financials
+CAST,FreeCast Inc.,1.420,Communication Services
+HFBL,Home Federal Bancorp Inc. of Louisiana,19.75,Financials
+ELWT,Elauwit Connection Inc.,8.84,Communication Services
+SCAG,Scage Future,0.802,Industrials
+MNY,MoneyHero Limited,1.330,Communication Services
+CAPN,Cayson Acquisition Corp,11.00,Financials
+CAPN,Cayson Acquisition Corp,11.00,Financials
+RYM,RYTHM Inc.,27.04,Consumer Staples
+LIXT,Lixte Biotechnology Holdings Inc.,5.00,Healthcare
+DCGO,DocGo Inc.,0.588,Healthcare
+SNAL,Snail Inc.,1.400,Communication Services
+KBSX,FST Corp.,1.290,Materials
+FATN,FatPipe Inc.,4.140,Technology
+AIRT,Air T Inc.,21.26,Industrials
+GCL,GCL Global Holdings Ltd,0.466,Communication Services
+KALA,KALA BIO Inc.,3.060,Healthcare
+SRTS,Sensus Healthcare Inc.,3.450,Healthcare
+CCG,Cheche Group Inc.,0.682,Communication Services
+LINK,Interlink Electronics Inc.,3.580,Technology
+NSPR,InspireMD Inc.,1.170,Healthcare
+LUNG,Pulmonx Corporation,1.330,Healthcare
+IBIO,iBio Inc.,1.550,Healthcare
+HTCO,High-Trend International Group,8.30,Industrials
+WFCF,Where Food Comes From Inc.,11.01,Industrials
+EURK,Eureka Acquisition Corp,11.51,Financials
+KMRK,K-TECH Solutions Company Limited,2.630,Consumer Discretionary
+NOMA,Nomadar Corp.,3.300,Consumer Discretionary
+FSHP,Flag Ship Acquisition Corporation,10.98,Financials
+INKT,MiNK Therapeutics Inc.,11.05,Healthcare
+FIEE,FiEE Inc.,6.60,Technology
+DSWL,Deswell Industries Inc.,3.440,Technology
+DUO,Fangdd Network Group Ltd.,1.420,Real Estate
+CNVS,Cineverse Corp.,2.570,Communication Services
+TIL,Instil Bio Inc.,08.02,Healthcare
+MERC,Mercer International Inc.,0.813,Materials
+BRAG,Bragg Gaming Group Inc.,2.120,Consumer Discretionary
+VNCE,Vince Holding Corp.,4.220,Consumer Discretionary
+BEAT,HeartBeam Inc.,1.010,Healthcare
+YTRA,Yatra Online Inc.,0.940,Consumer Discretionary
+IXHL,Incannex Healthcare Inc.,3.850,Healthcare
+BLNE,Beeline Holdings Inc.,1.750,Financials
+ALAR,Alarum Technologies Ltd.,07.05,Technology
+HPAI,Helport AI Limited,1.420,Technology
+GMHS,Gamehaus Holdings Inc.,1.000,Communication Services
+AIOS,AIOS Tech Inc.,16.40,Technology
+VHC,VirnetX Holding Corporation,12.72,Technology
+KNDI,Kandi Technologies Group Inc.,0.641,Consumer Discretionary
+YI,111 Inc.,6.10,Healthcare
+NTWK,NetSol Technologies Inc.,4.440,Technology
+BDMD,Baird Medical Investment Holdings Limited,1.700,Healthcare
+XHG,XChange TEC.INC,1.014,Financials
+YIBO,Planet Image International Limited,0.880,Technology
+ELTK,Eltek Ltd.,7.75,Technology
+MGX,Metagenomi Therapeutics Inc.,1.380,Healthcare
+HSPT,Horizon Space Acquisition II Corp.,8.81,Financials
+SPWH,Sportsman's Warehouse Holdings Inc.,1.330,Consumer Discretionary
+GRML,Greenland Mines Ltd,0.425,Materials
+CSTE,Caesarstone Ltd.,1.490,Industrials
+XCH,XCHG Limited,0.710,Industrials
+ABLV,Able View Global Inc.,1.040,Consumer Discretionary
+PRPO,Precipio Inc.,28.70,Healthcare
+ESLA,Estrella Immunopharma Inc.,1.200,Healthcare
+ECOR,electroCore Inc.,6.32,Healthcare
+RIBB,Ribbon Acquisition Corp.,10.63,Financials
+AACG,ATA Creativity Global,1.190,Consumer Staples
+HMR,Heidmar Maritime Holdings Corp.,0.868,Industrials
+COCH,Envoy Medical Inc.,0.658,Healthcare
+POCI,Precision Optics Corporation Inc.,4.600,Healthcare
+PRPL,Purple Innovation Inc.,0.457,Consumer Discretionary
+WAVE,Eco Wave Power Global AB (publ),8.53,Utilities
+HYPD,Hyperion DeFi Inc.,3.500,Healthcare
+COLA,Columbus Acquisition Corp,11.05,Financials
+ALCY,Alchemy Investments Acquisition Corp 1,11.80,Financials
+SDM,Smart Digital Group Limited,1.850,Communication Services
+BZFD,BuzzFeed Inc.,1.310,Communication Services
+SKBL,Skyline Builders Group Holding Limited,3.440,Industrials
+BKHA,Black Hawk Acquisition Corporation,11.81,Financials
+RADX,Radiopharm Theranostics Limited,4.520,Healthcare
+ONMD,OneMedNet Corporation,0.931,Healthcare
+UEIC,Universal Electronics Inc.,3.850,Technology
+LFS,Leifras Co. Ltd.,1.850,Communication Services
+RDAC,Rising Dragon Acquisition Corp.,8.12,Financials
+PETS,PetMed Express Inc.,2.260,Healthcare
+BGM,BGM Group Ltd.,0.262,Healthcare
+ZEO,Zeo Energy Corp.,0.830,Technology
+NCEW,New Century Logistics (BVI) Limited,15.00,Industrials
+LOAN,Manhattan Bridge Capital Inc.,4.180,Real Estate
+USEG,U.S. Energy Corp.,0.900,Energy
+AAME,Atlantic American Corporation,2.330,Financials
+CVV,CVD Equipment Corporation,6.84,Industrials
+KSCP,Knightscope Inc.,2.900,Industrials
+ZOOZ,ZOOZ Strategy Ltd.,0.291,Consumer Discretionary
+SJ,Scienjoy Holding Corporation,1.110,Communication Services
+BOF,BranchOut Food Inc.,3.230,Consumer Staples
+ILLR,Triller Group Inc.,0.238,Technology
+ENGS,Energys Group Limited,1.500,Industrials
+PPSI,Pioneer Power Solutions Inc.,4.220,Industrials
+TLPH,Talphera Inc.,0.901,Healthcare
+ASTI,Ascent Solar Technologies Inc.,4.930,Technology
+PRTS,CarParts.com Inc.,0.661,Consumer Discretionary
+XLO,Xilio Therapeutics Inc.,7.76,Healthcare
+ELUT,Elutia Inc.,1.050,Healthcare
+JFU,9F Inc.,3.940,Technology
+YHNA,YHN Acquisition I Limited,10.80,Financials
+SCLX,Scilex Holding Company,6.58,Healthcare
+NXXT,NextNRG Inc.,0.295,Utilities
+SLMT,Brera Holdings PLC,5.59,Communication Services
+BENF,Beneficient,3.210,Financials
+MBBC,Marathon Bancorp Inc.,15.46,Financials
+INCR,InterCure Ltd.,0.820,Healthcare
+JYD,Jayud Global Logistics Limited,5.49,Industrials
+PAVM,PAVmed Inc.,6.31,Healthcare
+ZYBT,Zhengye Biotechnology Holding Limited,0.959,Healthcare
+TCBS,Texas Community Bancshares Inc.,16.82,Financials
+STAK,STAK Inc.,2.360,Energy
+JXG,JX Luxventure Group Inc.,4.850,Consumer Discretionary
+ATHR,Aether Holdings Inc.,3.704,Technology
+QXL,Quantum X Labs Inc.,3.370,Technology
+FTEK,Fuel Tech Inc.,1.440,Industrials
+OFS,OFS Capital Corporation,3.330,Financials
+ATOS,Atossa Therapeutics Inc.,5.16,Healthcare
+STI,Solidion Technology Inc.,5.72,Industrials
+GLBS,Globus Maritime Limited,2.050,Industrials
+PXS,Pyxis Tankers Inc.,4.320,Energy
+AVX,Avax One Technology Ltd.,0.492,Financials
+MLGO,MicroAlgo Inc.,4.020,Technology
+ACFN,Acorn Energy Inc.,17.53,Technology
+PFAI,Pinnacle Food Group Limited,3.740,Consumer Staples
+MATH,Metalpha Technology Holding Limited,0.959,Financials
+PHUN,Phunware Inc.,2.130,Technology
+TELA,TELA Bio Inc.,0.960,Healthcare
+LITS,Lite Strategy Inc.,1.180,Healthcare
+TAOX,TAO Synergies Inc.,5.70,Technology
+NTRB,Nutriband Inc.,3.500,Healthcare
+GAME,GameSquare Holdings Inc.,0.455,Communication Services
+TELO,Telomir Pharmaceuticals Inc.,1.230,Healthcare
+LIVE,Live Ventures Incorporated,13.75,Consumer Discretionary
+PLUT,Plutus Financial Group Limited,2.750,Financials
+QETA,Quetta Acquisition Corporation,11.26,Financials
+JRSH,Jerash Holdings (US) Inc.,3.300,Consumer Discretionary
+WETO,Wetour Robotics Limited,0.510,Technology
+CULP,Culp Inc.,3.300,Consumer Discretionary
+FUSE,Fusemachines Inc.,1.440,Technology
+BGL,Blue Gold Limited,1.020,Materials
+MREO,Mereo BioPharma Group plc,0.260,Healthcare
+RMCO,Royalty Management Holding Corporation,2.730,Financials
+DARE,Daré Bioscience Inc.,2.840,Healthcare
+HGBL,Heritage Global Inc.,1.190,Financials
+ALGS,Aligos Therapeutics Inc.,6.67,Healthcare
+FGNX,FG Nexus Inc.,6.52,Financials
+MIRA,MIRA Pharmaceuticals Inc.,0.971,Healthcare
+SNBR,Sleep Number Corporation,1.770,Consumer Discretionary
+DTSQ,DT Cloud Star Acquisition Corporation,11.14,Financials
+BIRD,Allbirds Inc.,4.630,Consumer Discretionary
+MAMO,Massimo Group,0.966,Consumer Discretionary
+FKWL,Franklin Wireless Corp.,3.410,Technology
+UCL,uCloudlink Group Inc.,1.050,Communication Services
+TPCS,TechPrecision Corporation,3.990,Industrials
+MLCI,Mount Logan Capital Inc.,3.570,Financials
+VTSI,VirTra Inc.,3.510,Technology
+PSTV,Plus Therapeutics Inc.,5.70,Healthcare
+BEEM,Beam Global,1.850,Technology
+HOLO,MicroCloud Hologram Inc.,1.700,Technology
+NSYS,Nortech Systems Incorporated,13.96,Healthcare
+ATYR,aTyr Pharma Inc.,0.396,Healthcare
+INMB,INmune Bio Inc.,1.460,Healthcare
+SCWO,374Water Inc.,2.220,Industrials
+GSIW,Garden Stage Limited,28.95,Financials
+JG,Aurora Mobile Limited,6.42,Technology
+OESX,Orion Energy Systems Inc.,9.44,Industrials
+RNXT,RenovoRx Inc.,0.849,Healthcare
+RAVE,Rave Restaurant Group Inc.,2.690,Consumer Discretionary
+NMTC,NeuroOne Medical Technologies Corporation,4.510,Healthcare
+CREX,Creative Realities Inc.,3.605,Technology
+PXLW,Pixelworks Inc.,5.97,Technology
+RDIB,Reading International Inc.,9.40,Communication Services
+NEPH,Nephros Inc.,3.550,Healthcare
+SOWG,Sow Good Inc.,1.880,Consumer Staples
+MDBH,MDB Capital Holdings LLC,3.650,Financials
+FNUC,Frontier Nuclear and Minerals Inc.,2.080,Materials
+BRFH,Barfresh Food Group Inc.,2.310,Consumer Staples
+TVRD,Tvardi Therapeutics Inc.,3.950,Healthcare
+WKHS,Workhorse Group Inc.,3.540,Consumer Discretionary
+CDLX,Cardlytics Inc.,0.665,Communication Services
+AHMA,Ambitions Enterprise Management Co. L.L.C,1.230,Consumer Discretionary
+CNTY,Century Casinos Inc.,1.290,Consumer Discretionary
+MNTS,Momentus Inc.,5.88,Industrials
+VERU,Veru Inc.,2.260,Healthcare
+USIO,Usio Inc.,1.310,Technology
+DXLG,Destination XL Group Inc.,0.660,Consumer Discretionary
+EUDA,EUDA Health Holdings Limited,14.38,Real Estate
+RYET,Ruanyun Edai Technology Inc.,1.000,Consumer Staples
+RCT,RedCloud Holdings plc,0.651,Technology
+KOSS,Koss Corporation,3.800,Technology
+ARAY,Accuray Incorporated,0.302,Healthcare
+AGPU,Axe Compute Inc.,6.48,Technology
+CTSO,Cytosorbents Corporation,0.571,Healthcare
+FOXX,Foxx Development Holdings Inc.,05.05,Technology
+NXTC,NextCure Inc.,9.80,Healthcare
+PLUR,Pluri Inc.,3.510,Healthcare
+STRR,Star Equity Holdings Inc.,9.51,Industrials
+TACT,TransAct Technologies Incorporated,3.420,Technology
+DGNX,Diginex Limited,1.200,Industrials
+GRCE,Grace Therapeutics Inc.,2.250,Healthcare
+EVAX,Evaxion A/S,4.160,Healthcare
+KFFB,Kentucky First Federal Bancorp,4.290,Financials
+BOLD,Boundless Bio Inc.,1.540,Healthcare
+CRVO,CervoMed Inc.,3.720,Healthcare
+WPRT,Westport Fuel Systems Inc.,1.970,Consumer Discretionary
+NTRP,NextTrip Inc.,2.510,Consumer Discretionary
+AERT,Aeries Technology Inc,0.696,Industrials
+MKDW,MKDWELL Tech Inc.,7.11,Consumer Discretionary
+LASE,Laser Photonics Corporation,0.880,Industrials
+PTLE,PTL Limited,5.40,Consumer Discretionary
+KTCC,Key Tronic Corporation,3.120,Technology
+ARAI,Arrive AI Inc.,0.702,Technology
+NAAS,NaaS Technology Inc.,2.760,Consumer Discretionary
+BGDE,Big Digital Energy Inc.,6.00,Financials
+QCLS,Q/C Technologies Inc.,4.190,Technology
+SPHL,Springview Holdings Ltd,2.675,Consumer Discretionary
+BAYA,Bayview Acquisition Corp,11.96,Financials
+ANGH,Anghami Inc.,3.610,Communication Services
+QNTM,Quantum BioPharma Ltd.,5.47,Healthcare
+SWAG,Stran & Company Inc.,1.740,Communication Services
+BOSC,B.O.S. Better Online Solutions Ltd.,4.590,Technology
+RAND,Rand Capital Corporation,10.89,Financials
+BTAI,BioXcel Therapeutics Inc.,1.190,Healthcare
+UG,United-Guardian Inc.,6.99,Consumer Staples
+GROW,U.S. Global Investors Inc.,2.550,Financials
+BCG,Binah Capital Group Inc.,1.900,Financials
+RMTI,Rockwell Medical Inc.,0.801,Healthcare
+RITR,Reitar Logtech Holdings Limited,0.501,Industrials
+TOP,TOP Financial Group Limited,0.835,Financials
+YXT,YXT.COM Group Holding Limited,0.496,Technology
+SNTI,Senti Biosciences Holdings Inc.,0.987,Healthcare
+PC,Premium Catering (Holdings) Limited,9.40,Industrials
+BBGI,Beasley Broadcast Group Inc.,16.80,Communication Services
+BCTX,BriaCell Therapeutics Corp.,4.180,Healthcare
+ZTG,Zenta Group Company Limited,2.560,Industrials
+EVTV,Envirotech Vehicles Inc.,2.330,Consumer Discretionary
+PMEC,Primech Holdings Ltd.,0.783,Industrials
+SMXT,SolarMax Technology Inc.,0.525,Technology
+CLPS,CLPS Incorporation,1.000,Technology
+APLM,Apollomics Inc.,13.53,Healthcare
+LSTA,Lisata Therapeutics Inc.,3.280,Healthcare
+GRNQ,Greenpro Capital Corp.,1.640,Industrials
+KPLT,Katapult Holdings Inc.,6.71,Technology
+CRWS,Crown Crafts Inc.,2.760,Consumer Discretionary
+NRSN,NeuroSense Therapeutics Ltd.,0.833,Healthcare
+BTM,Bitcoin Depot Inc.,2.620,Financials
+SUUN,PowerBank Corporation,0.645,Utilities
+YYAI,AiRWA Inc.,0.684,Technology
+SKYE,Skye Bioscience Inc.,0.820,Healthcare
+FMST,Foremost Clean Energy Ltd.,1.770,Materials
+NAMI,Jinxin Technology Holding Company,0.362,Communication Services
+BMR,Beamr Imaging Ltd.,1.840,Technology
+BRLS,Borealis Foods Inc.,1.330,Consumer Staples
+GIFT,Giftify Inc.,0.845,Communication Services
+PLRZ,Polyrizon Ltd.,15.18,Healthcare
+HOWL,Werewolf Therapeutics Inc.,0.584,Healthcare
+KYNB,Kyntra Bio Inc.,7.00,Healthcare
+WIMI,WiMi Hologram Cloud Inc.,1.540,Communication Services
+SNSE,Sensei Biotherapeutics Inc.,21.08,Healthcare
+TVGN,Tevogen Bio Holdings Inc.,6.77,Healthcare
+LTRN,Lantern Pharma Inc.,2.510,Healthcare
+BAFN,BayFirst Financial Corp.,6.79,Financials
+BRNS,Barinthus Biotherapeutics plc,0.680,Healthcare
+NEON,Neonode Inc.,1.640,Technology
+EPOW,E-Power Inc.,0.710,Industrials
+REFR,Research Frontiers Incorporated,0.790,Technology
+AIXC,AIxCrypto Holdings Inc.,1.340,Technology
+SPPL,Simpple Ltd.,2.770,Industrials
+XBP,XBP Global Holdings Inc.,2.300,Technology
+NPT,Texxon Holding Limited,1.220,Consumer Discretionary
+WDAF,Wisdomtree Trust - WisdomTree Asia Defense Fund,34.90,Financials
+AWRE,Aware Inc.,1.250,Technology
+ELSE,Electro-Sensors Inc.,7.63,Technology
+AIFF,Firefly Neuroscience Inc.,1.820,Technology
+ATCX,Atlas Critical Minerals Corporation,5.38,Materials
+NEUP,Neuphoria Therapeutics Inc.,4.980,Healthcare
+LVLU,Lulu's Fashion Lounge Holdings Inc.,9.30,Consumer Discretionary
+ABVC,ABVC BioPharma Inc.,1.070,Healthcare
+ASPC,A SPAC III Acquisition Corp.,11.30,Financials
+BLIV,BeLive Holdings,2.430,Technology
+TPST,Tempest Therapeutics Inc.,1.840,Healthcare
+VEEA,Veea Inc.,0.521,Technology
+ABVE,Above Food Ingredients Inc.,0.513,Consumer Staples
+YSXT,YSX Tech. Co. Ltd,1.120,Industrials
+NTCL,NetClass Technology Inc,0.425,Technology
+DAIO,Data I/O Corporation,2.770,Technology
+VTGN,Vistagen Therapeutics Inc.,0.656,Healthcare
+BIOX,Bioceres Crop Solutions Corp.,0.409,Materials
+UTSI,UTStarcom Holdings Corp.,2.732,Technology
+LPSN,LivePerson Inc.,2.150,Technology
+YQ,17 Education & Technology Group Inc.,2.400,Consumer Staples
+DYAI,Dyadic International Inc.,0.711,Healthcare
+PIII,P3 Health Partners Inc.,3.570,Healthcare
+JSPR,Jasper Therapeutics Inc.,0.920,Healthcare
+MSGM,Motorsport Games Inc.,05.07,Communication Services
+IPM,Intelligent Protection Management Corp.,1.950,Technology
+PLSM,Pulsenmore Ltd.,4.620,Healthcare
+GOCO,GoHealth Inc.,0.865,Financials
+WYHG,Wing Yip Food Holdings Group Limited,0.770,Consumer Staples
+UFG,Uni-Fuels Holdings Limited,0.775,Industrials
+HBIO,Harvard Bioscience Inc.,5.57,Healthcare
+UONE,Urban One Inc.,6.47,Communication Services
+OFAL,OFA Group,0.720,Industrials
+CPOP,Pop Culture Group Co. Ltd,0.303,Communication Services
+EFOI,Energy Focus Inc.,3.920,Consumer Discretionary
+JVA,Coffee Holding Co. Inc.,4.320,Consumer Staples
+NHTC,Natural Health Trends Corp.,2.860,Consumer Discretionary
+ZBAO,Zhibao Technology Inc.,0.720,Financials
+MRNO,Murano Global Investments Plc,0.307,Real Estate
+XOS,Xos Inc.,2.030,Industrials
+EHLD,Euroholdings Ltd.,8.63,Industrials
+UCAR,U Power Limited,1.360,Consumer Discretionary
+SLGB,Smart Logistics Global Limited,0.590,Industrials
+AYTU,Aytu BioPharma Inc.,2.250,Healthcare
+JL,J-Long Group Limited,6.40,Consumer Discretionary
+CLIR,ClearSign Technologies Corporation,4.450,Industrials
+OTLK,Outlook Therapeutics Inc.,0.230,Healthcare
+GRAN,Grande Group Limited,0.964,Financials
+RDI,Reading International Inc.,1.050,Communication Services
+MRKR,Marker Therapeutics Inc.,1.430,Healthcare
+ARKR,Ark Restaurants Corp.,6.61,Consumer Discretionary
+DFLI,Dragonfly Energy Holdings Corp.,1.960,Industrials
+ALLR,Allarity Therapeutics Inc.,1.540,Healthcare
+CHAI,Core AI Holdings Inc.,1.190,Communication Services
+RMCF,Rocky Mountain Chocolate Factory Inc.,2.530,Consumer Staples
+TXMD,TherapeuticsMD Inc.,2.020,Healthcare
+MKZR,MacKenzie Realty Capital Inc.,2.300,Real Estate
+CYN,Cyngn Inc.,1.710,Technology
+FTHM,Fathom Holdings Inc.,0.708,Real Estate
+FEMY,Femasys Inc.,0.381,Healthcare
+MSW,Ming Shing Group Holdings Limited,1.750,Industrials
+CELU,Celularity Inc.,0.787,Healthcare
+DETX,Liberty Defense Holdings Ltd.,3.940,Industrials
+SDST,Stardust Power Inc.,2.260,Industrials
+ORIO,Orion Digital Corp.,0.941,Technology
+GREE,Greenidge Generation Holdings Inc.,1.340,Financials
+QRHC,Quest Resource Holding Corporation,1.070,Industrials
+QUCY,Quantum Cyber N.V.,1.789,Healthcare
+VYNE,VYNE Therapeutics Inc.,0.670,Healthcare
+PDC,Perpetuals.com Ltd,7.28,Technology
+LGVN,Longeveron Inc.,0.755,Healthcare
+SAIH,SAIHEAT Limited,12.00,Technology
+PSHG,Performance Shipping Inc.,1.760,Industrials
+LIQT,LiqTech International Inc.,2.190,Industrials
+FLUX,Flux Power Holdings Inc.,1.020,Industrials
+USEA,United Maritime Corporation,2.280,Industrials
+INTJ,Intelligent Group Limited,10.15,Industrials
+SMSI,Smith Micro Software Inc.,0.834,Technology
+GRDX,GridAI Technologies Corp.,3.450,Healthcare
+TRSG,Tungray Technologies Inc.,1.306,Industrials
+RYOJ,rYojbaba Co. Ltd.,1.838,Industrials
+HHS,Harte Hanks Inc.,2.810,Industrials
+ICMB,Investcorp Credit Management BDC Inc.,1.440,Financials
+YAAS,Youxin Technology Ltd,0.912,Technology
+OMH,Ohmyhome Limited,0.890,Real Estate
+NCI,Neo-Concept International Group Holdings Limited,1.080,Consumer Discretionary
+OSRH,OSR Holdings Inc.,0.617,Healthcare
+FRGT,Freight Technologies Inc.,0.929,Technology
+MDRR,Medalist Diversified Inc.,11.15,Real Estate
+YHC,LQR House Inc.,0.950,Consumer Staples
+UPLD,Upland Software Inc.,0.689,Technology
+FAMI,Farmmi Inc.,1.460,Consumer Staples
+MGIH,Millennium Group International Holdings Limited,1.790,Consumer Discretionary
+ACCL,Acco Group Holdings Limited,1.440,Industrials
+XCUR,Exicure Inc.,3.140,Healthcare
+ADGM,Adagio Medical Holdings Inc.,0.901,Healthcare
+CRIS,Curis Inc.,0.500,Healthcare
+WETH,Wetouch Technology Inc.,1.670,Technology
+QNCX,Quince Therapeutics Inc.,1.220,Healthcare
+KTTA,Pasithea Therapeutics Corp.,0.785,Healthcare
+LSH,Lakeside Holding Limited,0.566,Industrials
+ICCM,IceCure Medical Ltd,0.237,Healthcare
+AUID,authID Inc.,1.190,Technology
+ZJYL,Jin Medical International Ltd.,2.450,Healthcare
+LEDS,SemiLEDs Corporation,2.310,Technology
+MNDO,MIND C.T.I. Ltd,0.932,Technology
+TLF,Tandy Leather Factory Inc.,2.320,Consumer Discretionary
+CTRM,Castor Maritime Inc.,1.950,Industrials
+PASW,Ping An Biomedical Co. Ltd.,0.150,Consumer Discretionary
+LPCN,Lipocine Inc.,2.320,Healthcare
+KWM,K Wave Media Ltd.,0.282,Communication Services
+DFNS,T3 Defense Inc.,0.437,Industrials
+RECT,Rectitude Holdings Ltd,1.280,Consumer Discretionary
+FOFO,Hang Feng Technology Innovation Co. Ltd.,2.450,Industrials
+JF,J and Friends Holdings Limited,1.011,Financials
+LFWD,Lifeward Ltd.,6.63,Healthcare
+ICU,SeaStar Medical Holding Corporation,4.600,Healthcare
+DLPN,Dolphin Entertainment Inc.,1.410,Communication Services
+AEHL,Antelope Enterprise Holdings Limited,3.620,Industrials
+CGTL,Creative Global Technology Holdings Limited,0.700,Consumer Discretionary
+MOBX,Mobix Labs Inc.,1.740,Technology
+IRIX,IRIDEX Corporation,1.030,Healthcare
+MODD,Modular Medical Inc.,3.300,Healthcare
+PASG,Passage Bio Inc.,5.52,Healthcare
+MDCX,Medicus Pharma Ltd.,0.320,Healthcare
+IINN,Inspira Technologies Oxy B.H.N. Ltd.,0.405,Healthcare
+COCP,Cocrystal Pharma Inc.,1.280,Healthcare
+CTXR,Citius Pharmaceuticals Inc.,0.650,Healthcare
+PRHI,Presurance Holdings Inc.,0.670,Financials
+COOT,Australian Oilseeds Holdings Limited,0.629,Consumer Staples
+LRE,Lead Real Estate Co. Ltd,1.285,Real Estate
+TRAW,Traws Pharma Inc.,1.720,Healthcare
+EPSM,Epsium Enterprise Limited,1.300,Consumer Staples
+NCEL,NewcelX Ltd.,3.240,Healthcare
+NXPL,NextPlat Corp,6.41,Technology
+BNKK,Bonk Inc.,2.200,Financials
+NIXX,Nixxy Inc.,0.630,Industrials
+REBN,Reborn Coffee Inc.,2.060,Consumer Discretionary
+SGRP,SPAR Group Inc.,0.671,Industrials
+YMT,Yimutian Inc.,0.147,Technology
+AQMS,Aqua Metals Inc.,05.01,Industrials
+MFI,mF International Limited,10.11,Technology
+SEGG,Sports Entertainment Gaming Global Corporation,1.320,Consumer Discretionary
+SWVL,Swvl Holdings Corp.,1.670,Industrials
+SCNX,Scienture Holdings Inc.,0.409,Healthcare
+TOMZ,TOMI Environmental Solutions Inc.,0.806,Industrials
+LHAI,Linkhome Holdings Inc.,1.020,Real Estate
+GYRO,Gyrodyne LLC,7.48,Real Estate
+MWYN,Marwynn Holdings Inc.,0.812,Consumer Discretionary
+DOGZ,Dogness (International) Corporation,1.130,Consumer Discretionary
+GIGM,GigaMedia Limited,1.480,Communication Services
+CVKD,Cadrenal Therapeutics Inc.,5.31,Healthcare
+RPGL,Republic Power Group Limited,0.378,Technology
+NAII,Natural Alternatives International Inc.,2.710,Consumer Staples
+EDTK,Skillful Craftsman Education Technology Limited,1.020,Consumer Staples
+HUDI,Huadi International Group Co. Ltd.,1.120,Materials
+INAB,IN8bio Inc.,1.590,Healthcare
+THH,TryHard Holdings Limited,0.311,Industrials
+SAGT,Sagtec Global Limited,1.220,Technology
+INTZ,Intrusion Inc.,0.763,Technology
+COSM,Cosmos Health Inc.,0.300,Healthcare
+POM,Pomdoctor Limited,0.128,Healthcare
+HUIZ,Huize Holding Limited,1.500,Financials
+CMCT,Creative Media & Community Trust Corporation,5.74,Real Estate
+RVSN,Rail Vision Ltd.,6.87,Industrials
+RMSG,Real Messenger Corporation,1.440,Technology
+TBH,Brag House Holdings Inc.,0.640,Communication Services
+SURG,SurgePays Inc.,0.598,Communication Services
+LEXX,Lexaria Bioscience Corp.,0.602,Healthcare
+ZDAI,DirectBooking Technology Co. Ltd.,1.830,Industrials
+GAUZ,Gauzy Ltd.,0.785,Technology
+MBAI,Check-Cap Ltd.,2.000,Healthcare
+TURB,Turbo Energy S.A.,1.200,Technology
+YMAT,J-Star Holding Co. Ltd.,0.834,Materials
+GFAI,Guardforce AI Co. Limited,0.455,Industrials
+LZMH,LZ Technology Holdings Limited,0.0899,Technology
+BTOC,Armlogi Holding Corp.,0.312,Industrials
+HKPD,Cellyan Biotechnology Co. Ltd,0.600,Healthcare
+AGAE,Allied Gaming & Entertainment Inc.,0.373,Communication Services
+SEED,Origin Agritech Limited,1.150,Materials
+NWGL,CL Workshop Group Limited,0.842,Materials
+BNGO,Bionano Genomics Inc.,1.250,Healthcare
+GNTA,Genenta Science S.p.A.,0.587,Healthcare
+WVVI,Willamette Valley Vineyards Inc.,2.760,Consumer Staples
+GTEC,Greenland Technologies Holding Corporation,0.547,Consumer Discretionary
+PRZO,ParaZero Technologies Ltd.,0.554,Industrials
+ERNA,Ernexa Therapeutics Inc.,11.68,Healthcare
+ONEG,OneConstruction Group Limited,0.850,Industrials
+BMGL,Basel Medical Group Ltd,0.723,Healthcare
+HIND,Vyome Holdings Inc.,1.920,Healthcare
+BLRX,BioLineRx Ltd.,3.130,Healthcare
+ARTW,Art's-Way Manufacturing Co. Inc.,2.580,Industrials
+LESL,Leslie's Inc.,1.430,Consumer Discretionary
+EBON,Ebang International Holdings Inc.,2.030,Technology
+CYCN,Cyclerion Therapeutics Inc.,3.130,Healthcare
+CISO,CISO Global Inc.,0.290,Technology
+PHIO,Phio Pharmaceuticals Corp.,1.130,Healthcare
+GTIM,Good Times Restaurants Inc.,1.240,Consumer Discretionary
+CABR,Caring Brands Inc.,1.060,Healthcare
+BIYA,Baiya International Group Inc.,0.810,Technology
+CSAI,Cloudastructure Inc.,0.531,Technology
+AKAN,Akanda Corp.,24.31,Healthcare
+SVRN,OceanPal Inc.,6.90,Industrials
+BANL,CBL International Limited,0.468,Energy
+FEBO,Fenbo Holdings Limited,1.150,Technology
+JZ,Jianzhi Education Technology Group Company Limited,0.931,Technology
+INTS,Intensity Therapeutics Inc.,4.770,Healthcare
+EDUC,Educational Development Corporation,1.480,Communication Services
+HOTH,Hoth Therapeutics Inc.,0.656,Healthcare
+CMMB,Chemomab Therapeutics Ltd.,1.740,Healthcare
+CLRB,Cellectar Biosciences Inc.,2.940,Healthcare
+PN,Skycorp Solar Group Ltd,4.910,Technology
+AIMD,Ainos Inc.,1.710,Technology
+PRSO,Peraso Inc.,0.979,Technology
+RAIN,Rain Enhancement Technologies Holdco Inc.,1.510,Industrials
+TAOP,Taoping Inc.,1.330,Technology
+STFS,Star Fashion Culture Holdings Limited,10.28,Communication Services
+JUNS,Jupiter Neurosciences Inc.,0.336,Healthcare
+WGRX,Wellgistics Health Inc.,0.0970,Healthcare
+GGRP,The Glimpse Group Inc.,0.578,Technology
+AIRE,reAlpha Tech Corp.,2.260,Real Estate
+TRIB,Trinity Biotech plc,0.590,Healthcare
+KPRX,Kiora Pharmaceuticals Inc.,2.690,Healthcare
+REE,REE Automotive Ltd.,0.413,Consumer Discretionary
+PBM,Psyence Biomedical Ltd.,5.16,Healthcare
+MSAI,MultiSensor AI Holdings Inc.,5.83,Technology
+BCDA,BioCardia Inc.,1.070,Healthcare
+BFRG,Bullfrog AI Holdings Inc.,0.630,Healthcare
+FGI,FGI Industries Ltd.,5.99,Consumer Discretionary
+HCAI,Huachen AI Parking Management Technology Holding Co. Ltd,9.86,Industrials
+MBRX,Moleculin Biotech Inc.,2.140,Healthcare
+XELB,Xcel Brands Inc.,1.880,Consumer Discretionary
+JZ,Jianzhi Education Technology Group Company Limited,0.823,Technology
+AMOD,Alpha Modus Holdings Inc.,0.220,Technology
+HCAI,Huachen AI Parking Management Technology Holding Co. Ltd,9.61,Industrials
+KPRX,Kiora Pharmaceuticals Inc.,2.520,Healthcare
+ZBAI,ATIF Holdings Limited,8.50,Financials
+IDAI,T Stamp Inc.,-,Technology
+BFRI,Biofrontera Inc.,0.950,Healthcare
+OBAI,Our Bond Inc.,0.530,Technology
+JBDI,JBDI Holdings Limited,0.575,Consumer Discretionary
+NOTV,Inotiv Inc.,0.316,Healthcare
+XWEL,XWELL Inc.,-,Healthcare
+GVH,Globavend Holdings Limited,05.09,Industrials
+APRE,Aprea Therapeutics Inc.,0.898,Healthcare
+BTCT,BTC Digital Ltd.,1.130,Technology
+CALC,CalciMedica Inc.,0.680,Healthcare
+FGL,Founder Group Limited,2.040,Industrials
+ZSTK,ZeroStack Corp.,4.370,Financials
+LNAI,Lunai Bioworks Inc.,0.293,Healthcare
+WKSP,Worksport Ltd.,0.885,Consumer Discretionary
+QNRX,Quoin Pharmaceuticals Ltd.,5.86,Healthcare
+NVNI,Nvni Group Limited,1.140,Technology
+SELX,Semilux International Ltd.,0.242,Technology
+PCLA,PicoCELA Inc.,-,Communication Services
+RIME,Algorhythm Holdings Inc.,0.712,Technology
+RAY,Raytech Holding Limited,-,Consumer Staples
+BIVI,BioVie Inc.,1.369,Healthcare
+SINT,Sintx Technologies Inc.,2.490,Healthcare
+SKYQ,Sky Quarry Inc.,2.730,Energy
+INBS,Intelligent Bio Solutions Inc.,4.700,Healthcare
+PETZ,TDH Holdings Inc.,-,Consumer Discretionary
+RBNE,Robin Energy Ltd.,1.330,Energy
+WGRX,Wellgistics Health Inc.,0.0797,Healthcare
+MARPS,Marine Petroleum Trust,-,Energy
+ELOG,Eastern International Ltd.,-,Industrials
+WFF,WF Holding Limited,-,Industrials
+SFHG,Samfine Creation Holdings Group Limited,-,Industrials
+ATER,Aterian Inc.,1.040,Consumer Discretionary
+TLIH,Ten-League International Holdings Limited,3.350,Industrials
+ALP,Alpha Compute Corp,0.420,Financials
+DFSC,DEFSEC Technologies Inc.,4.900,Industrials
+VVOS,Vivos Therapeutics Inc.,-,Healthcare
+IMNN,Imunon Inc.,2.500,Healthcare
+SKK,SKK Holdings Limited,4.000,Industrials
+DTST,Data Storage Corporation,4.420,Technology
+VRME,VerifyMe Inc.,0.730,Industrials
+CXAI,CXApp Inc.,0.139,Technology
+MTEX,Mannatech Incorporated,4.830,Consumer Staples
+BTTC,Black Titan Corporation,1.260,Financials
+BOLT,Bolt Biotherapeutics Inc.,-,Healthcare
+ETS,Elite Express Holding Inc.,-,Industrials
+CETY,Clean Energy Technologies Inc.,0.759,Industrials
+CDT,CDT Equity Inc.,1.900,Healthcare
+HTOO,Fusion Fuel Green PLC,3.050,Utilities
+FTRK,Fast Track Group,0.421,Communication Services
+INEO,INNEOVA Holdings Limited,0.552,Consumer Discretionary
+PMCB,PharmaCyte Biotech Inc.,0.850,Healthcare
+OST,Ostin Technology Group Co. Ltd.,1.695,Technology
+KITT,Nauticus Robotics Inc.,2.069,Industrials
+GNPX,Genprex Inc.,0.863,Healthcare
+LOBO,Lobo Technologies Ltd.,0.542,Consumer Discretionary
+GDTC,CytoMed Therapeutics Limited,-,Healthcare
+CLWT,Euro Tech Holdings Company Limited,-,Industrials
+SNES,SenesTech Inc.,1.680,Materials
+CLRO,ClearOne Inc.,-,Technology
+ELAB,PMGC Holdings Inc.,1.980,Healthcare
+TKLF,Tokyo Lifestyle Co. Ltd.,-,Consumer Discretionary
+CCHH,CCH Holdings Ltd,0.400,Consumer Discretionary
+KXIN,Kaixin Holdings,5.60,Consumer Discretionary
+YJ,Yunji Inc.,-,Consumer Discretionary
+GLE,Global Engine Group Holding Limited,0.475,Technology
+GDC,GD Culture Group Limited,0.143,Communication Services
+DSY,Big Tree Cloud Holdings Limited,-,Consumer Staples
+ARBB,ARB IOT Group Limited,4.890,Technology
+GXAI,Gaxos.ai Inc.,1.200,Communication Services
+TGHL,The Growhub Limited,0.337,Technology
+DTSS,Datasea Intelligent Technology Ltd.,0.815,Technology
+BIAF,bioAffinity Technologies Inc.,1.890,Healthcare
+ILAG,Intelligent Living Application Group Inc.,4.080,Industrials
+VSEE,VSee Health Inc.,0.179,Healthcare
+LIMN,Liminatus Pharma Inc.,0.188,Healthcare
+TNON,Tenon Medical Inc.,0.745,Healthcare
+TDTH,Trident Digital Tech Holdings Ltd,1.745,Technology
+ANY,Sphere 3D Corp.,2.150,Financials
+ACON,Aclarion Inc.,3.330,Healthcare
+CELZ,Creative Medical Technology Holdings Inc.,2.200,Healthcare
+EVGN,Evogene Ltd.,0.755,Healthcare
+HWH,HWH International Inc.,1.070,Consumer Discretionary
+YHGJ,Yunhong Green CTI Ltd.,-,Consumer Discretionary
+MIMI,Mint Incorporation Limited,3.150,Industrials
+NCNA,NuCana plc,1.893,Healthcare
+IFBD,Infobird Co. Ltd,-,Technology
+FMFC,Kandal M Venture Limited,0.429,Consumer Discretionary
+DLXY,Delixy Holdings Limited,0.479,Energy
+LCFY,Locafy Limited,-,Communication Services
+CETX,Cemtrex Inc.,0.755,Technology
+BMRA,Biomerica Inc.,2.460,Healthcare
+SONM,DNA X Inc.,-,Technology
+AUUD,Auddia Inc.,1.350,Technology
+MRM,MEDIROM Healthcare Technologies Inc.,0.949,Consumer Discretionary
+JCSE,JE Cleantech Holdings Limited,1.400,Industrials
+WAFU,Wah Fu Education Group Limited,1.680,Consumer Staples
+KRKR,36Kr Holdings Inc.,-,Communication Services
+FBGL,FBS Global Limited,-,Industrials
+ISPC,iSpecimen Inc.,4.080,Healthcare
+CYAB,Cyabra Inc.,0.532,Technology
+BON,Bon Natural Life Limited,1.190,Materials
+BCAB,BioAtla Inc.,-,Healthcare
+XBIO,Xenetic Biosciences Inc.,-,Healthcare
+JDZG,JIADE Limited,1.680,Consumer Staples
+SNOA,Sonoma Pharmaceuticals Inc.,1.140,Healthcare
+DKI,Darkiris Inc.,5.76,Communication Services
+MYSE,Myseum.AI Inc.,1.669,Technology
+OXBR,Oxbridge Re Holdings Limited,0.886,Financials
+ACXP,Acurx Pharmaceuticals Inc.,1.950,Healthcare
+AGRZ,Agroz Inc.,0.330,Consumer Staples
+ADXN,Addex Therapeutics Ltd,-,Healthcare
+XAIR,Beyond Air Inc.,0.538,Healthcare
+TGL,Treasure Global Inc.,-,Technology
+NDRA,ENDRA Life Sciences Inc.,-,Healthcare
+SCKT,Socket Mobile Inc.,0.852,Technology
+JCTC,Jewett-Cameron Trading Company Ltd.,-,Materials
+TULP,Bloomia Holdings Inc.,-,Communication Services
+CWD,CaliberCos Inc.,0.980,Financials
+MSGY,Masonglory Limited,0.479,Industrials
+NXL,Nexalin Technology Inc.,0.330,Healthcare
+PCSA,Processa Pharmaceuticals Inc.,-,Healthcare
+ORGN,Origin Materials Inc.,-,Materials
+BTBD,BT Brands Inc.,1.080,Consumer Discretionary
+RNAZ,TransCode Therapeutics Inc.,-,Healthcare
+ADVB,Advanced Biomed Inc.,4.840,Healthcare
+IMRN,Immuron Limited,-,Healthcare
+FABC,Fabric.AI Inc.,4.510,Consumer Discretionary
+XPON,Expion360 Inc.,0.602,Industrials
+SNTG,Sentage Holdings Inc.,2.320,Financials
+XTLB,XTL Biopharmaceuticals Ltd.,-,Healthcare
+HKIT,Hitek Global Inc.,0.672,Technology
+UGRO,urban-gro Inc.,5.74,Industrials
+WCT,Wellchange Holdings Company Limited,-,Technology
+APM,Aptorum Group Limited,0.790,Healthcare
+LUCY,Lucyd Inc,1.020,Healthcare
+MTVA,MetaVia Inc.,1.240,Healthcare
+IQST,iQSTEL Inc.,1.260,Communication Services
+SILO,Silo Pharma Inc.,0.392,Healthcare
+PPBT,Purple Biotech Ltd,-,Healthcare
+MEGL,Magic Empire Global Limited,1.240,Financials
+MLEC,Moolec Science SA,8.62,Healthcare
+NVNO,enVVeno Medical Corporation,-,Healthcare
+FTFT,Future FinTech Group Inc.,1.180,Technology
+ONFO,Onfolio Holdings Inc.,1.050,Communication Services
+IPDN,Professional Diversity Network Inc.,0.580,Industrials
+STKH,Steakholder Foods Ltd.,1.520,Consumer Staples
+CLGN,CollPlant Biotechnologies Ltd.,0.419,Healthcare
+HSCS,HeartSciences Inc.,-,Healthcare
+GLXG,Galaxy Payroll Group Limited,1.010,Industrials
+TCRT,Alaunos Therapeutics Inc.,-,Healthcare
+FBLG,FibroBiologics Inc.,1.110,Healthcare
+ORKT,Orangekloud Technology Inc.,-,Technology
+SLE,Super League Enterprise Inc.,4.070,Communication Services
+VSTD,Vestand Inc.,-,Consumer Discretionary
+POLA,Polar Power Inc.,1.632,Industrials
+MGN,Megan Holdings Limited,0.160,Industrials
+MGRX,Mangoceuticals Inc.,0.349,Healthcare
+HXHX,Haoxin Holdings Limited,0.430,Industrials
+ZCMD,Zhongchao Inc.,1.530,Healthcare
+GURE,Gulf Resources Inc.,-,Materials
+WBUY,Webuy Global Ltd,1.130,Consumer Discretionary
+PMAX,Powell Max Limited,3.400,Industrials
+AIXI,Xiao-I Corporation,10.95,Technology
+XHLD,TEN Holdings Inc.,1.450,Communication Services
+CENN,Cenntro Inc.,-,Consumer Discretionary
+BGMS,Bio Green Med Solution Inc.,1.040,Healthcare
+NWTG,Newton Golf Company Inc.,1.240,Consumer Discretionary
+SSM,Sono Group N.V.,3.850,Consumer Discretionary
+SMTK,SmartKem Inc.,0.265,Technology
+OLB,The OLB Group Inc.,0.446,Technology
+CDIO,Cardio Diagnostics Holdings Inc.,1.880,Healthcare
+CODX,Co-Diagnostics Inc.,1.530,Healthcare
+CMND,Clearmind Medicine Inc.,0.540,Healthcare
+AZI,Autozi Internet Technology (Global) Ltd.,1.200,Consumer Discretionary
+APVO,Aptevo Therapeutics Inc.,4.610,Healthcare
+ITOC,iTonic Holdings Ltd.,0.316,Healthcare
+RENX,RenX Enterprises Corp.,2.150,Real Estate
+GP,GreenPower Motor Company Inc.,1.070,Industrials
+TANH,Tantech Holdings Ltd,0.404,Consumer Staples
+BNZI,Banzai International Inc.,05.06,Technology
+VSA,VisionSys AI Inc.,0.440,Consumer Staples
+VS,Versus Systems Inc.,1.090,Technology
+IOTR,iOThree Limited,2.080,Communication Services
+IZM,ICZOOM Group Inc.,0.440,Technology
+SUNE,SUNation Energy Inc.,1.550,Technology
+CJMB,Callan JMB Inc.,0.938,Industrials
+DCX,Digital Currency X Technology Inc.,-,Consumer Discretionary
+JWEL,Jowell Global Ltd.,-,Consumer Discretionary
+CUPR,Cuprina Holdings (Cayman) Limited,0.241,Healthcare
+GITS,Global Interactive Technologies Inc.,1.400,Communication Services
+CYCU,Cycurion Inc.,0.929,Technology
+SOBR,SOBR Safe Inc.,1.820,Technology
+WXM,WF International Limited,0.498,Industrials
+DAIC,CID HoldCo Inc.,0.173,Technology
+RDHL,RedHill Biopharma Ltd.,-,Healthcare
+CLIK,Click Holdings Limited,1.530,Consumer Discretionary
+SUGP,SU Group Holdings Limited,3.400,Industrials
+CDTG,CDT Environmental Technology Investment Holdings Limited,0.366,Industrials
+DRMA,Dermata Therapeutics Inc.,1.230,Healthcare
+YDKG,Yueda Digital Holding,0.889,Communication Services
+CHNR,China Natural Resources Inc.,3.920,Materials
+ENVB,Enveric Biosciences Inc.,2.480,Healthcare
+AIHS,Senmiao Technology Limited,1.080,Industrials
+UBXG,U-BX Technology Ltd.,0.161,Technology
+HYFM,Hydrofarm Holdings Group Inc.,-,Industrials
+FRSX,Foresight Autonomous Holdings Ltd.,2.030,Consumer Discretionary
+GIBO,GIBO Holdings Limited,-,Communication Services
+BGLC,BioNexus Gene Lab Corp.,1.980,Materials
+MBIO,Mustang Bio Inc.,0.630,Healthcare
+TWAV,TaoWeave Inc.,1.430,Financials
+CREG,Smart Powerr Corp.,0.207,Utilities
+ICON,Icon Energy Corp.,1.470,Industrials
+BRTX,BioRestorative Therapies Inc.,0.185,Healthcare
+HCTI,Healthcare Triangle Inc.,2.390,Healthcare
+NXGL,NEXGEL Inc.,0.550,Healthcare
+CRE,Cre8 Enterprise Limited,2.310,Industrials
+BAOS,Baosheng Media Group Holdings Limited,3.030,Communication Services
+PULM,Pulmatrix Inc.,-,Healthcare
+AQB,AquaBounty Technologies Inc.,0.898,Consumer Staples
+EEIQ,EpicQuest Education Group International Limited,3.080,Consumer Staples
+EJH,E-Home Household Service Holdings Limited,1.420,Consumer Discretionary
+YYGH,YY Group Holding Limited,1.060,Consumer Discretionary
+OLOX,Olenox Industries Inc.,-,Industrials
+RVPH,Reviva Pharmaceuticals Holdings Inc.,-,Healthcare
+LGCB,Linkage Global Inc,0.370,Consumer Discretionary
+ASTC,Astrotech Corporation,2.650,Technology
+SXTC,China SXT Pharmaceuticals Inc.,1.500,Healthcare
+GELS,Gelteq Limited,0.413,Healthcare
+AMST,Amesite Inc.,0.828,Technology
+WAI,Top KingWin Ltd,-,Financials
+SNYR,Synergy CHC Corp.,0.292,Healthcare
+CIIT,Tianci International Inc.,1.200,Industrials
+OCG,Oriental Culture Holding LTD,2.240,Consumer Discretionary
+CNEY,CN Energy Group. Inc.,-,Materials
+CNSP,CNS Pharmaceuticals Inc.,5.12,Healthcare
+MNDR,Mobile-health Network Solutions,0.997,Healthcare
+JTAI,Jet.AI Inc.,6.41,Technology
+EDHL,Everbright Digital Holding Limited,2.480,Communication Services
+EHGO,Eshallgo Inc.,1.980,Industrials
+SXTP,60 Degrees Pharmaceuticals Inc.,1.500,Healthcare
+REVB,Revelation Biosciences Inc.,1.060,Healthcare
+INDP,Indaptus Therapeutics Inc.,-,Healthcare
+ATXG,Addentax Group Corp.,05.02,Industrials
+SQFT,Presidio Property Trust Inc.,-,Real Estate
+AMIX,Autonomix Medical Inc.,0.340,Healthcare
+GSUN,Golden Sun Technology Group Limited,-,Consumer Staples
+CTNT,Cheetah Net Supply Chain Service Inc.,1.950,Industrials
+SNGX,Soligenix Inc.,0.370,Healthcare
+ALZN,Alzamend Neuro Inc.,1.000,Healthcare
+SHPH,Shuttle Pharmaceuticals Holdings Inc.,0.679,Healthcare
+VEEE,Twin Vee Powercats Co.,07.07,Consumer Discretionary
+LMFA,LM Funding America Inc.,0.230,Financials
+ELPW,Elong Power Holding Limited,2.590,Industrials
+CAPS,Capstone Holding Corp.,0.320,Materials
+AKTX,Akari Therapeutics Plc,3.230,Healthcare
+VIVS,VivoSim Labs Inc.,1.260,Healthcare
+GOVX,GeoVax Labs Inc.,1.260,Healthcare
+HIHO,Highway Holdings Limited,0.780,Industrials
+GLMD,Galmed Pharmaceuticals Ltd.,0.550,Healthcare
+IPST,IP Strategy Holdings Inc.,6.60,Financials
+WLDS,Wearable Devices Ltd.,1.010,Technology
+HTCR,HeartCore Enterprises Inc.,2.780,Technology
+AEMD,Aethlon Medical Inc.,2.200,Healthcare
+RAYA,Erayak Power Solution Group Inc.,3.510,Industrials
+NXTS,Nexentis Technologies Inc.,-,Materials
+MSS,Maison Solutions Inc.,1.070,Consumer Staples
+GRI,GRI Bio Inc.,2.318,Healthcare
+SOPA,Society Pass Incorporated,0.256,Communication Services
+NCT,Intercont (Cayman) Limited,-,Industrials
+CHR,Cheer Holding Inc.,-,Communication Services
+DXST,Decent Holding Inc.,1.750,Industrials
+BOXL,Boxlight Corporation,0.790,Technology
+IVDA,Iveda Solutions Inc.,0.283,Industrials
+SGLY,Singularity Future Technology Ltd.,0.429,Industrials
+GWAV,Greenwave Technology Solutions Inc.,3.715,Industrials
+BYAH,Park Ha Biological Technology Co. Ltd.,1.470,Consumer Staples
+VIVK,Vivakor Inc.,1.480,Energy
+NCRA,Nocera Inc.,0.179,Consumer Staples
+XXII,22nd Century Group Inc.,0.680,Consumer Staples
+NCPL,Netcapital Inc.,0.386,Financials
+VBIO,Valion Bio Inc.,0.960,Healthcare
+LBGJ,Li Bang International Corporation Inc.,0.893,Industrials
+FLYE,Fly-E Group Inc.,-,Consumer Discretionary
+SPRC,SciSparc Ltd.,05.02,Healthcare
+INM,InMed Pharmaceuticals Inc.,-,Healthcare
+SBFM,Sunshine Biopharma Inc.,0.570,Healthcare
+NUWE,Nuwellis Inc.,1.050,Healthcare
+BTOG,Bit Origin Ltd,1.694,Financials
+WOK,WORK Medical Technology Group LTD,2.220,Healthcare
+DRCT,Direct Digital Holdings Inc.,-,Communication Services
+ZNB,Zeta Network Group,1.690,Communication Services
+BNBX,BNB Plus Corp.,0.470,Financials
+VRAX,Virax Biolabs Group Limited,0.134,Healthcare
+MYSZ,My Size Inc.,0.550,Technology
+IVF,INVO Fertility Inc.,1.610,Healthcare
+AGMH,AGM Group Holdings Inc.,1.120,Technology
+DCOY,Decoy Therapeutics Inc.,-,Healthcare
+ALBT,Avalon GloboCare Corp.,0.300,Real Estate
+EZRA,Reliance Global Group Inc.,0.117,Financials
+CNET,ZW Data Action Technologies Inc.,-,Communication Services
+ENSC,Ensysce Biosciences Inc.,0.267,Healthcare
+VSME,VS MEDIA Holdings Limited,0.887,Communication Services
+GCTK,GlucoTrack Inc.,0.663,Healthcare
+BDRX,Biodexa Pharmaceuticals Plc,3.610,Healthcare
+BBLG,Bone Biologics Corporation,-,Healthcare
+HCWB,HCW Biologics Inc.,0.340,Healthcare
+JEM,707 Cayman Holdings Limited,1.270,Consumer Discretionary
+ORIS,Oriental Rise Holdings Limited,0.451,Consumer Staples
+TRUG,TruGolf Holdings Inc.,1.600,Consumer Discretionary
+NVVE,Nuvve Holding Corp.,0.423,Consumer Discretionary
+RKDA,Arcadia Biosciences Inc.,-,Consumer Staples
+ARTL,Artelo Biosciences Inc.,2.300,Healthcare
+SCNI,Scinai Immunotherapeutics Ltd.,0.540,Healthcare
+ABTS,Abits Group Inc.,0.900,Financials
+ATPC,Agape ATP Corporation,2.130,Consumer Staples
+MASK,3 E Network Technology Group Limited,1.910,Technology
+SLXN,Silexion Therapeutics Corp,0.616,Healthcare
+WNW,Meiwu Technology Company Limited,3.320,Consumer Discretionary
+LXEH,Lixiang Education Holding Co. Ltd.,1.050,Consumer Staples
+ADIL,Adial Pharmaceuticals Inc.,1.400,Healthcare
+SHFS,SHF Holdings Inc.,0.437,Financials
+IMTE,Integrated Media Technology Limited,0.560,Technology
+PFSA,Profusa Inc.,0.431,Healthcare
+MEHA,Functional Brands Inc.,0.0867,Consumer Staples
+BJDX,Bluejay Diagnostics Inc.,-,Healthcare
+TNMG,TNL Mediagene,-,Communication Services
+VCIG,VCI Global Limited,0.792,Industrials
+CCTG,CCSC Technology International Holdings Limited,0.460,Industrials
+KUST,Kustom Entertainment Inc.,3.360,Communication Services
+JZXN,Jiuzi Holdings Inc.,1.300,Consumer Discretionary
+CISS,C3is Inc.,3.170,Industrials
+WTO,UTime Limited,0.985,Technology
+HAO,Haoxi Health Technology Limited,0.0277,Communication Services
+GV,Visionary Holdings Inc.,0.291,Consumer Staples
+PPCB,Propanc Biopharma Inc.,0.0775,Healthcare
+IBG,Innovation Beverage Group Limited,0.890,Consumer Staples
+RUBI,Rubico Inc.,2.070,Industrials
+IMCC,IM Cannabis Corp.,0.255,Healthcare
+UPC,Universe Pharmaceuticals INC,-,Healthcare
+GIPR,Generation Income Properties Inc.,0.263,Real Estate
+GMEX,GMEX Robotics Corporation,1.650,Technology
+UK,Ucommune International Ltd,3.050,Real Estate
+PRFX,PRF Technologies Ltd.,1.610,Healthcare
+FCUV,Focus Universal Inc.,0.850,Technology
+BNRG,Brenmiller Energy Ltd,2.490,Utilities
+ARBK,Argo Blockchain plc,4.009,Financials
+JAGX,Jaguar Health Inc.,-,Healthcare
+SMX,SMX (Security Matters) Public Limited Company,8.59,Industrials
+VMAR,Vision Marine Technologies Inc.,0.825,Consumer Discretionary
+FEED,ENvue Medical Inc.,1.170,Healthcare
+MTEN,Mingteng International Corporation Inc.,1.030,Industrials
+NEXR,Nexera Technologies Ltd,1.530,Consumer Discretionary
+PAVS,Paranovus Entertainment Technology Ltd.,1.140,Consumer Staples
+RETO,ReTo Eco-Solutions Inc.,0.629,Materials
+IPW,iPower Inc.,0.797,Consumer Discretionary
+ASBP,Aspire Biopharma Holdings Inc.,5.29,Healthcare
+GNLN,Greenlane Holdings Inc.,4.380,Consumer Staples
+DEVS,DevvStream Corp.,0.150,Industrials
+WHLR,Wheeler Real Estate Investment Trust Inc.,1.225,Real Estate
+KIDZ,Classover Holdings Inc.,0.510,Consumer Staples
+NIVF,NewGenIvf Group Limited,1.050,Healthcare
+EZGO,EZGO Technologies Ltd.,0.0278,Consumer Discretionary
+INHD,Inno Holdings Inc.,1.350,Materials
+CHSN,Chanson International Holding,1.400,Consumer Discretionary
+TRNR,Interactive Strength Inc.,0.910,Consumer Discretionary
+EDBL,Edible Garden AG Incorporated,0.483,Consumer Staples
+SDOT,Sadot Group Inc.,0.210,Consumer Staples
+ONCO,Onconetix Inc.,0.385,Healthcare
+HUBC,HUB Cyber Security Ltd.,0.134,Technology
+RDGT,Ridgetech Inc.,1.380,Healthcare
+LGHL,Lion Group Holding Ltd.,0.733,Financials
+LNKS,Linkers Industries Limited,1.750,Industrials
+FCHL,Fitness Champs Holdings Limited,1.965,Consumer Staples
+LRHC,La Rosa Holdings Corp.,1.400,Real Estate
+ADTX,Aditxt Inc.,0.0637,Healthcare

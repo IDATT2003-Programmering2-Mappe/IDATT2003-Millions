@@ -55,8 +55,12 @@ public class CSVWriter {
           continue;
         }
 
-        String[] columns = lines.get(i).split(",");
-        lines.set(i, lines.get(i) + ", " + stockMap.get(columns[0]).getSalesPrice());
+        try {
+          String[] columns = lines.get(i).split(",");
+          lines.set(i, lines.get(i) + ", " + stockMap.get(columns[0]).getSalesPrice());
+        } catch (NumberFormatException e) {
+          logger.warning("Invalid price for stock ");
+        }
       }
 
       Files.write(path, lines);

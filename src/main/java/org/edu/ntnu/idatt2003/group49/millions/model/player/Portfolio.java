@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class Portfolio {
-  static Logger logger = Logger.getLogger(CSVReader.class.getName());
+  static Logger logger = Logger.getLogger(Portfolio.class.getName());
 
   private final List<Share> shares;
   private final Map<Integer, BigDecimal> valueMap;

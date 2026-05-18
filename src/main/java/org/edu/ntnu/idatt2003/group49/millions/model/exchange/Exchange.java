@@ -5,12 +5,18 @@ import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.SaleAllocation;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 import org.edu.ntnu.idatt2003.group49.millions.model.transaction.TransactionFactory;
+import org.edu.ntnu.idatt2003.group49.millions.utils.io.CSVWriter;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory.StocksColumnFactory;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.file.Path;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class Exchange extends StockSubject {
+  static Logger logger = Logger.getLogger(Exchange.class.getName());
+
   private final String name;
   private int week = 1;
   private final Map<String, Stock> stockMap;
@@ -34,9 +40,11 @@ public class Exchange extends StockSubject {
             "transactionFactory cannot be null"
     );
 
-    this.stockMap = new HashMap<>();
+    this.stockMap = new LinkedHashMap<>();
     stocks.forEach(stock -> stockMap.put(stock.getSymbol(), stock));
     this.random = new Random();
+
+    CSVWriter.writeStockDataToFile(Path.of("data/stock_data.csv"), stockMap);
   }
 
   public String getName() {

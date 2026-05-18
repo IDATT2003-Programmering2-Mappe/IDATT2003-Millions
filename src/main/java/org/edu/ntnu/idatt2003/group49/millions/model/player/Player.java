@@ -24,6 +24,13 @@ public class Player {
     this.transactionArchive = new TransactionArchive();
   }
 
+  @Override
+  public String toString() {
+    return "Player [name=" + name +
+      ", startingMoney=" + startingMoney +
+      ", money=" + money + "]";
+  }
+
   public String getName() {
     return name;
   }

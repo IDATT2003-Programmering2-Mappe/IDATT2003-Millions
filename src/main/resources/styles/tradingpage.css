@@ -19,18 +19,18 @@
 .title {
     /*-fx-padding: 10;*/
     -fx-border-color: #9CA3AF;
-    /*-fx-background-color: #1e293b;*/
+    -fx-background-color: #1e293b;
+    -fx-alignment: CENTER;
 }
 
-.symbol {
+.company-label {
     -fx-text-fill: white;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-min-width: 100px;
     -fx-alignment: center;
-    -fx-border-color: #9CA3AF;
+    /*-fx-border-color: #9CA3AF;*/
     -fx-padding: 2.5;
-    -fx-background-color: derive(#1e293b, 20%);
+    /*-fx-background-color: derive(#1e293b, 20%);*/
 }
 
 .info-section {
@@ -38,7 +38,7 @@
     -fx-border-color: #9CA3AF;
     -fx-background-color: #1e293b;
     -fx-spacing: 10;
-    -fx-padding: 5;
+    -fx-padding: 5 20;
 }
 
 .identifier-box {
@@ -54,7 +54,7 @@
     -fx-text-fill: derive(#bfdcff, 50%);
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-min-width: 120px;
+    -fx-alignment: CENTER;
     -fx-border-color: #9CA3AF;
     -fx-padding: 2.5 5;
     -fx-background-color: derive(#1e293b, 20%);
@@ -64,15 +64,13 @@
     -fx-text-fill: white;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-min-width: 100px;
     -fx-alignment: CENTER;
     -fx-border-color: #9CA3AF;
-    -fx-padding: 2.5;
+    -fx-padding: 2.5 5;
     -fx-background-color: derive(#1e293b, 20%);
 }
 
-.company-label {
-}
+.symbol-label {}
 
 .price-label {}
 
