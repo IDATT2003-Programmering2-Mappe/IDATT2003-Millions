@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsStyler;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 
 import java.math.BigDecimal;
@@ -43,7 +44,7 @@ public class PortfolioInfo extends MillionsView {
     valueLabel.getStyleClass().add("price");
     changeLabel.getStyleClass().add("change");
 
-    updateChangeStyle();
+    MillionsStyler.updateChangeStyle(change, changeLabel);
 
     HBox valueSection = new HBox();
     valueSection.getStyleClass().add("value-section");
@@ -69,23 +70,6 @@ public class PortfolioInfo extends MillionsView {
     valueLabel.setText(value.toString());
     changeLabel.setText(change + "%");
 
-    updateChangeStyle();
-  }
-
-  private void updateChangeStyle() {
-    changeLabel.getStyleClass().removeAll("positive-change", "negative-change", "zero-change");
-
-    if (change.signum() > 0) {
-      changeLabel.setText("+" + change + "%");
-      changeLabel.getStyleClass().add("positive-change");
-    }
-    else if (change.signum() < 0) {
-      changeLabel.setText(change + "%");
-      changeLabel.getStyleClass().add("negative-change");
-    }
-    else {
-      changeLabel.setText(change + "%");
-      changeLabel.getStyleClass().add("zero-change");
-    }
+    MillionsStyler.updateChangeStyle(change, changeLabel);
   }
 }

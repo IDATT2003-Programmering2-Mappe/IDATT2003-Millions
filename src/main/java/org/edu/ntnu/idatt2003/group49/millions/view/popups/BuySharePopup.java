@@ -28,9 +28,9 @@ public class BuySharePopup extends Popup {
     getPopupPane().setCenter(buildPopup());
 
     buyButton.setOnAction(event -> {
-      int quantity = Integer.parseInt(quantityField.getText());
+      BigDecimal quantity = new BigDecimal(quantityField.getText());
 
-      PurchaseRequest request = new PurchaseRequest(stock.getSymbol(), BigDecimal.valueOf(quantity), playerController.getPlayer());
+      PurchaseRequest request = new PurchaseRequest(stock.getSymbol(), quantity, playerController.getPlayer());
 
       if (onBuy != null) {
         onBuy.accept(request);
@@ -56,7 +56,9 @@ public class BuySharePopup extends Popup {
     VBox popupBox = new VBox();
     popupBox.getChildren().addAll(
       quantityField,
-      buyButton
+      errorLabel,
+      buyButton,
+      cancelButton
     );
 
     return popupBox;
@@ -76,9 +78,9 @@ public class BuySharePopup extends Popup {
 
   private void validateInput() {
     try {
-      int quantity = Integer.parseInt(quantityField.getText());
+      BigDecimal quantity = new BigDecimal(quantityField.getText());
 
-      if (quantity <= 0) {
+      if (quantity.signum() <= 0) {
         showError("Quantity must be greater than 0");
         buyButton.setDisable(true);
         return;
@@ -88,7 +90,7 @@ public class BuySharePopup extends Popup {
       buyButton.setDisable(false);
 
     } catch (NumberFormatException e) {
-      showError("Quantity must be a whole number");
+      showError("Quantity must be a number");
       buyButton.setDisable(true);
     }
   }

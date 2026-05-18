@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsStyler;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsChart.MillionsChart;
 
@@ -45,9 +46,6 @@ public class StockInfo extends MillionsView {
       new VBox(title(), chart),
       createInfoSection()
     );
-
-    chart.addData(0, 500);
-    chart.addData(1, 100);
 
     return stockInfo;
   }
@@ -152,23 +150,6 @@ public class StockInfo extends MillionsView {
     return infoBox;
   }
 
-  private void updateChangeStyle(BigDecimal change) {
-    changeLabel.getStyleClass().removeAll("positive-change", "negative-change", "zero-change");
-
-    if (change.signum() > 0) {
-      changeLabel.setText("+" + change + "%");
-      changeLabel.getStyleClass().add("positive-change");
-    }
-    else if (change.signum() < 0) {
-      changeLabel.setText(change + "%");
-      changeLabel.getStyleClass().add("negative-change");
-    }
-    else {
-      changeLabel.setText(change + "%");
-      changeLabel.getStyleClass().add("zero-change");
-    }
-  }
-
   public void updateStockInfo() {
     companyLabel.setText(stock.getCompany());
     symbolLabel.setText(stock.getSymbol());
@@ -177,7 +158,7 @@ public class StockInfo extends MillionsView {
     highestLabel.setText(stock.getHighestPrice().toString());
     lowestLabel.setText(stock.getLowestPrice().toString());
 
-    updateChangeStyle(stock.getCurrentChange());
+    MillionsStyler.updateChangeStyle(stock.getCurrentChange(), changeLabel);
 
     chart.clearData();
     int week = 0;
