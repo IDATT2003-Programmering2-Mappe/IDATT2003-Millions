@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

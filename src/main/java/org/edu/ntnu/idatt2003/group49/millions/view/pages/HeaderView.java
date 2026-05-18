@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

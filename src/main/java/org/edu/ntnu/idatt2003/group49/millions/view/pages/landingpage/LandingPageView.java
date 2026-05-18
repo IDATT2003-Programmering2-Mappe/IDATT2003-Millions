@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.landingpage;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.landingpage;
 
 import javafx.scene.control.*;
 import javafx.scene.image.Image;

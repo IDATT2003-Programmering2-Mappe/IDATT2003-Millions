@@ -15,6 +15,11 @@ import org.edu.ntnu.idatt2003.group49.millions.view.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.landingpage.LandingPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.PlayerPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.tradingpage.TradingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.pages.HeaderView;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.view.pages.dashboard.DashboardView;
+import org.edu.ntnu.idatt2003.group49.millions.view.pages.landingpage.LandingPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.pages.tradingpage.TradingPageView;
 
 public class ViewFactory {
   private final Navigator navigator;
@@ -34,11 +39,8 @@ public class ViewFactory {
   public DashboardView createDashboardView() {
     GameSession session = gameController.getActiveSession()
             .orElseThrow(() -> new IllegalStateException("No active game session"));
-    Exchange exchange = session.getExchange();
-    Player player = session.getPlayer();
-    TableSelectionModel<Share> selectionModel = new TableSelectionModel<>();
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(exchange), new PlayerController(player), selectionModel);
-    exchange.addObserver(dashboard);
+    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()), new TableSelectionModel<>());
+    session.getExchange().addObserver(dashboard);
     return dashboard;
   }
 
@@ -51,9 +53,7 @@ public class ViewFactory {
   public TradingPageView createTradingPageView() {
     GameSession session = gameController.getActiveSession()
       .orElseThrow(() -> new IllegalStateException("No active game session"));
-    Exchange exchange = session.getExchange();
-    TableSelectionModel<Stock> selectionModel = new TableSelectionModel<>();
-    return new TradingPageView(new ExchangeController(exchange), selectionModel);
+    return new TradingPageView(new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()), new TableSelectionModel<>());
   }
 
   public PlayerPageView createPlayerPageView() {

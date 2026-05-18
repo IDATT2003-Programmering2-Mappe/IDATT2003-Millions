@@ -1,15 +1,26 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.factory;
+package org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.factory;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
+import org.edu.ntnu.idatt2003.group49.millions.controller.ExchangeController;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Stock;
-import org.edu.ntnu.idatt2003.group49.millions.view.components.MillionsTable.TableSelectionModel;
+import org.edu.ntnu.idatt2003.group49.millions.model.player.Portfolio;
+import org.edu.ntnu.idatt2003.group49.millions.view.popups.BuySharePopup;
+
+import java.util.logging.Logger;
 
 public class StocksColumnFactory extends TableColumnFactory {
-  public StocksColumnFactory() {}
+  static Logger logger = Logger.getLogger(StocksColumnFactory.class.getName());
+  private final ExchangeController exchangeController;
+  private BuySharePopup buyStockPopup;
+
+  public StocksColumnFactory(ExchangeController exchangeController, BuySharePopup buyStockPopup) {
+    this.exchangeController = exchangeController;
+    this.buyStockPopup = buyStockPopup;
+  }
 
   public TableColumn<Stock, Number> createIndexColumn(ObservableList<Stock> originalItems) {
     TableColumn<Stock, Number> indexCol = createTableColumn(
@@ -31,7 +42,30 @@ public class StocksColumnFactory extends TableColumnFactory {
       return new SimpleIntegerProperty(index);
     });
 
+    indexCol.setPrefWidth(50);
     return indexCol;
+  }
+
+  public TableColumn<Stock, String> createCompanyColumn() {
+    TableColumn<Stock, String> companyCol = createTableColumn(
+      new TableColumn<>("Company"),
+      (stock, value) -> {
+        System.out.println("Clicked stock: " + stock);
+        System.out.println("Clicked value: " + value);
+      },
+
+      (cell, stock, value) -> {
+
+      }
+
+    );
+
+    companyCol.setCellValueFactory(cellData ->
+      new SimpleStringProperty(cellData.getValue().getCompany())
+    );
+
+    companyCol.setMinWidth(200);
+    return companyCol;
   }
 
   public TableColumn<Stock, String> createSymbolColumn() {
@@ -114,6 +148,19 @@ public class StocksColumnFactory extends TableColumnFactory {
     TableColumn<Stock, String> buyColumn = createTableColumn(
       new TableColumn<>(""),
       (stock, value) -> {
+        buyStockPopup.show(stock, request -> {
+          logger.info("Trying to purchase " + stock.getCompany() + " shares");
+          try {
+            exchangeController.buy(request);
+            logger.info("Player [" + request.player().getName() + "] successfully purchased [" + request.quantity() + "] shares of [" + stock.getCompany() + "] stock");
+            request.player().getTransactionArchive().getPurchases(exchangeController.getWeek()).forEach(System.out::println);
+          } catch (NullPointerException | IllegalArgumentException | IllegalStateException e) {
+            logger.severe("Could not continue with purchase! " + e.getMessage());
+          }
+
+          System.out.println(request.player().getMoney());
+        });
+
         System.out.println("Clicked stock: " + stock);
         System.out.println("Clicked value: " + value);
       },
