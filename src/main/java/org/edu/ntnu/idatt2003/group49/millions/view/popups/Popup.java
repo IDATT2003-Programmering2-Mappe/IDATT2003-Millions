@@ -17,7 +17,7 @@ public abstract class Popup extends MillionsView {
 
   public Popup() {
     title.getStyleClass().add("title-label");
-    exitButton.getStyleClass().add("exit-button");
+    exitButton.getStyleClass().addAll("button-reset", "exit-button");
 
     getStyleClass().add("popup-overlay");
     setVisible(false);
@@ -38,12 +38,17 @@ public abstract class Popup extends MillionsView {
   protected Pane build() {
     popupPane.getStyleClass().add("buy-popup");
 
-    popupPane.setMaxWidth(500);
-    popupPane.setMaxHeight(250);
+    popupPane.setMaxWidth(350);
+    popupPane.setMaxHeight(300);
 
     popupPane.setTop(createPopupControls());
 
     return popupPane;
+  }
+
+  public void setResolution(int width, int height) {
+    popupPane.setMaxWidth(width);
+    popupPane.setMaxHeight(height);
   }
 
   protected void setTitle(String title) {

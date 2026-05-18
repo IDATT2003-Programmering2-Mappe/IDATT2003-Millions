@@ -1,12 +1,12 @@
 .buy-popup {
     -fx-text-fill: white;
     -fx-border-color: #9CA3AF;
-    -fx-background-color: #1e293b;
+    -fx-background-color: #1E293B;
     -fx-alignment: CENTER;
 }
 
 .controls {
-    -fx-background-color: derive(#1e293b, 20%);
+    -fx-background-color: #111827;
     -fx-border-color: #9CA3AF;
 }
 
@@ -21,12 +21,7 @@
     -fx-text-fill: lightgray;
     -fx-background-color: transparent;
     -fx-font-size: 14px;
-
     -fx-padding: 5 15;
-
-    -fx-background-radius: 0;
-    -fx-background-insets: 0;
-    -fx-border-insets: 0;
 }
 
 .exit-button:hover {
@@ -35,6 +30,93 @@
     -fx-cursor: hand;
 }
 
-.label {
+.buy-button {
     -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+.buy-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: derive(#4CAF50, -10%);
+    -fx-border-color: #859BB4;
+    -fx-cursor: hand;
+}
+
+.button-reset {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.purchase-box {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.info-box {
+    -fx-text-fill: white;
+    -fx-background-color: #111827;
+    -fx-border-color: #859BB4;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5;
+}
+
+.total-box {
+    -fx-text-fill: white;
+    -fx-background-color: #111827;
+    -fx-border-color: #859BB4;
+    -fx-font-size: 16px;
+    -fx-padding: 5;
+}
+
+.total-box .label {
+    -fx-text-fill: white;
+}
+
+.info-box .label {
+    -fx-text-fill: white;
+}
+
+.content {
+    -fx-padding: 15;
+}
+
+.error-label {
+    -fx-background-color: derive(#1E293B, -30%);
+    -fx-border-color: #859BB4;
+    -fx-text-fill: derive(#e22a27, 40%);
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 1 5;
+}
+
+.buy-box {
+}
+
+.input-box {
+
+}
+
+.input-box .label {
+
+}
+
+.quantity-field {
+    -fx-text-fill: white;
+    -fx-background-color: #111827;
+    -fx-border-color: #859BB4;
+    -fx-prompt-text-fill: #7D7F8C;
+    -fx-font-size: 16px;
+    -fx-padding: 5;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
 }

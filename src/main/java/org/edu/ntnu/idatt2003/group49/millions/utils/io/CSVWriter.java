@@ -67,7 +67,5 @@ public class CSVWriter {
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
-
-    logger.info("Saved stock data");
   }
 }

@@ -19,6 +19,10 @@ public class PlayerController {
     return player.getName();
   }
 
+  public BigDecimal getMoney() {
+    return player.getMoney();
+  }
+
   public BigDecimal getPortfolioChange() {
     return player.getPortfolio().getCurrentChange();
   }
