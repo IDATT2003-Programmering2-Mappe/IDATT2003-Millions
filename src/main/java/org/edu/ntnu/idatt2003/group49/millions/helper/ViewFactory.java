@@ -10,7 +10,7 @@ import org.edu.ntnu.idatt2003.group49.millions.view.pages.HeaderView;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsTable.TableSelectionModel;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.dashboard.DashboardView;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.landingpage.LandingPageView;
-import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.PlayerPageView;
+import org.edu.ntnu.idatt2003.group49.millions.view.pages.playerpage.PlayerPageView;
 import org.edu.ntnu.idatt2003.group49.millions.view.pages.tradingpage.TradingPageView;
 
 

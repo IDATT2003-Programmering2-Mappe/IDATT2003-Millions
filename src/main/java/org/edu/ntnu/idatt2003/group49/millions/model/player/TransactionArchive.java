@@ -24,6 +24,10 @@ public class TransactionArchive {
     return transactions.isEmpty();
   }
 
+  public List<Transaction> getAllTransactions() {
+    return List.copyOf(transactions);
+  }
+
   public List<Transaction> getTransactions(int week) {
     if (week < 0) {
       throw new IllegalArgumentException("week number cannot be negative");

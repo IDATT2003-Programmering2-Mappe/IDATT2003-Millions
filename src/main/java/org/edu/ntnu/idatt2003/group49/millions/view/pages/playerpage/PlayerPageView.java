@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.playerpage;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.playerpage;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
@@ -8,7 +8,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
 import org.edu.ntnu.idatt2003.group49.millions.controller.PlayerController;
 import org.edu.ntnu.idatt2003.group49.millions.view.MillionsView;
-import org.edu.ntnu.idatt2003.group49.millions.view.playerpage.components.PlayerInfoPanel;
 
 import java.util.Objects;
 

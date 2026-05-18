@@ -41,4 +41,9 @@ public class Sale extends Transaction {
     player.getTransactionArchive().add(this);
     commited = true;
   }
+
+  @Override
+  public String getTransactionType() {
+    return "Sell";
+  }
 }

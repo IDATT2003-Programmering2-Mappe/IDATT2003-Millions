@@ -1,4 +1,4 @@
-package org.edu.ntnu.idatt2003.group49.millions.view.playerpage.components;
+package org.edu.ntnu.idatt2003.group49.millions.view.pages.playerpage;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

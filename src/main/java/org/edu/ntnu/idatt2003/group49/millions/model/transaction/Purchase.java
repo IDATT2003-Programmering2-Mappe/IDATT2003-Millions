@@ -30,4 +30,9 @@ public class Purchase extends Transaction {
     player.getTransactionArchive().add(this);
     commited = true;
   }
+
+  @Override
+  public String getTransactionType() {
+    return "Buy";
+  }
 }

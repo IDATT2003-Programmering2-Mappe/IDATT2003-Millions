@@ -46,4 +46,6 @@ public abstract class Transaction {
   }
 
   public abstract void commit(Player player);
+
+  public abstract String getTransactionType();
 }

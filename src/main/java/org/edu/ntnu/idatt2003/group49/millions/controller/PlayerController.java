@@ -1,8 +1,10 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
+import org.edu.ntnu.idatt2003.group49.millions.model.transaction.Transaction;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class PlayerController {
   private final Player player;
@@ -29,5 +31,9 @@ public class PlayerController {
 
   public BigDecimal getPortfolioValue() {
     return player.getPortfolio().getValue();
+  }
+
+  public List<Transaction> getTransactions() {
+    return player.getTransactionArchive().getAllTransactions();
   }
 }
