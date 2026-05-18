@@ -19,9 +19,9 @@ public class TradingPageView extends MillionsView {
   private final StockInfo stockInfo;
   private final TableSelectionModel<Stock> selectionModel;
 
-  public TradingPageView(ExchangeController exchangeController, PlayerController playerController, TableSelectionModel<Stock> selectionModel) {
+  public TradingPageView(ExchangeController exchangeController, PlayerController playerController) {
     this.exchangeController = exchangeController;
-    this.selectionModel = selectionModel;
+    this.selectionModel = new TableSelectionModel<>();
     BuySharePopup buyStockPopup = new BuySharePopup(playerController);
     this.tradingTable = new TradingTable(new StocksColumnFactory(exchangeController, buyStockPopup),  selectionModel);
     this.stockInfo = new StockInfo();
@@ -44,6 +44,7 @@ public class TradingPageView extends MillionsView {
     tradingTable.setItems(stocks);
 
     stockInfo.updateStockInfo();
+    stockInfo.setMaxHeight(Double.MAX_VALUE);
 
     // Outer TradingTable wrapper
     tradingTable.setMinHeight(0);
@@ -70,7 +71,6 @@ public class TradingPageView extends MillionsView {
 
     // Width behavior for right side
     rightBody.setMinWidth(400);
-    rightBody.setPrefWidth(400);
     rightBody.setMaxWidth(Double.MAX_VALUE);
 
     HBox body = new HBox(leftBody, rightBody);

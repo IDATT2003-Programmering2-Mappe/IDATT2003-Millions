@@ -1,5 +1,6 @@
 .chart {
     -fx-padding: 0;
+    -fx-pref-height: 600px;
 }
 
 .chart-content {
@@ -8,6 +9,8 @@
 
 .chart-plot-background {
     -fx-background-insets: 0;
+    -fx-background-color: #262626;
+    -fx-border-color: #243043;
 }
 
 .chart-container {
@@ -35,11 +38,6 @@
 #filter-btn-clicked {
     -fx-background-color: rgba(49, 67, 97, 0.75);
     -fx-text-fill: #bfdcff;
-}
-
-.chart-plot-background {
-    -fx-background-color: #262626;
-    -fx-border-color: #243043;
 }
 
 .chart-title {

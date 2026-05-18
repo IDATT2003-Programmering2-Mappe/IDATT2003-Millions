@@ -1,7 +1,8 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.ChangeCalculator;
+
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -157,27 +158,19 @@ public class Stock {
 
     if (prices.size() > weekRange) {
       BigDecimal startPrice = prices.get(prices.size() - weekRange);
-      return calculatePriceChange(startPrice, currentPrice);
+      return ChangeCalculator.calculatePercentageChange(startPrice, currentPrice);
     }
 
     BigDecimal startPrice = prices.getFirst();
 
-    return calculatePriceChange(startPrice, currentPrice);
+    return ChangeCalculator.calculatePercentageChange(startPrice, currentPrice);
   }
 
   // TODO: make test for this
   public BigDecimal getCurrentChange() {
-    return calculatePriceChange(
+    return ChangeCalculator.calculatePercentageChange(
       prices.getFirst(),
       prices.getLast()
     );
-  }
-
-  // TODO: make tests for this
-  public BigDecimal calculatePriceChange(BigDecimal startPrice, BigDecimal currentPrice) {
-    return (currentPrice.subtract(startPrice))
-      .divide(startPrice, 4, RoundingMode.HALF_UP)
-      .multiply(new BigDecimal("100"))
-      .setScale(2, RoundingMode.HALF_UP);
   }
 }

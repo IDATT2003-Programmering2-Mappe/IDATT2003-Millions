@@ -1,5 +1,7 @@
 package org.edu.ntnu.idatt2003.group49.millions.model.exchange;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.calculator.ChangeCalculator;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -37,6 +39,14 @@ public class Share {
     }
   }
 
+  @Override
+  public String toString() {
+    return "[stock=" + stock.getSymbol() +
+      ", quantity=" + quantity +
+      ", purchasePrice=" + purchasePrice +
+      ", change=" + getChangeSincePurchase() + "]";
+  }
+
   /**
    * Returns the stock associated with this share.
    *
@@ -62,5 +72,9 @@ public class Share {
    */
   public BigDecimal getPurchasePrice() {
     return purchasePrice;
+  }
+
+  public BigDecimal getChangeSincePurchase() {
+    return ChangeCalculator.calculatePercentageChange(purchasePrice, stock.getSalesPrice());
   }
 }

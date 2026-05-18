@@ -41,18 +41,14 @@ public class MillionsChart extends MillionsView {
   }
 
   private VBox createChartContainer() {
-    VBox chartContainer = new VBox();
+    VBox chartContainer = new VBox(filters(), createChart());
     chartContainer.getStyleClass().add("chart-container");
-    chartContainer.getChildren().addAll(
-      filters(),
-      createChart()
-    );
 
     return chartContainer;
   }
 
   private AreaChart<Number, Number> createChart() {
-    this.xAxis = new NumberAxis(0, 1, 1);
+    this.xAxis = new NumberAxis(1, 2, 1);
 
     this.yAxis = new NumberAxis();
     yAxis.setSide(Side.RIGHT);
@@ -175,7 +171,7 @@ public class MillionsChart extends MillionsView {
         xAxis.setTickUnit(Math.round((double) TimeConstants.ONE_YEAR_IN_WEEKS / 10));
       }
       case MAX -> {
-        xAxis.setLowerBound(0);
+        xAxis.setLowerBound(1);
         if (xAxis.getUpperBound() >= TimeConstants.THREE_MONTHS_IN_WEEKS) {
           xAxis.setTickUnit(Math.round(xAxis.getUpperBound() / 10));
         }

@@ -24,6 +24,8 @@ public class StockInfo extends MillionsView {
   private Label highestLabel;
   private Label lowestLabel;
 
+  private HBox infoSection;
+
   public StockInfo() {
     this.chart = new MillionsChart();
     this.stock = new Stock("Milli", "Millions", new BigDecimal("6767"));
@@ -40,12 +42,12 @@ public class StockInfo extends MillionsView {
 
   @Override
   protected Pane build() {
-    VBox stockInfo = new VBox();
+    infoSection = createInfoSection();
+
+    VBox stockInfo = new VBox(new VBox(title(), chart), infoSection);
     stockInfo.getStyleClass().add("stock-info");
-    stockInfo.getChildren().addAll(
-      new VBox(title(), chart),
-      createInfoSection()
-    );
+
+    VBox.setVgrow(infoSection, Priority.ALWAYS);
 
     return stockInfo;
   }
@@ -82,7 +84,6 @@ public class StockInfo extends MillionsView {
     highestLabel.setMaxWidth(Double.MAX_VALUE);
     lowestLabel.setMaxWidth(Double.MAX_VALUE);
 
-    HBox infoSection = new HBox();
 
     VBox identifierBox = createIdentifierBox();
     VBox infoBox = createInfoBox();
@@ -90,12 +91,10 @@ public class StockInfo extends MillionsView {
     HBox.setHgrow(identifierBox, Priority.ALWAYS);
     HBox.setHgrow(infoBox, Priority.ALWAYS);
 
+    HBox infoSection = new HBox(identifierBox, infoBox);
     infoSection.getStyleClass().add("info-section");
 
-    infoSection.getChildren().addAll(
-      identifierBox,
-      infoBox
-    );
+    infoSection.setMaxHeight(Double.MAX_VALUE);
 
     return infoSection;
   }
@@ -158,7 +157,7 @@ public class StockInfo extends MillionsView {
     highestLabel.setText(stock.getHighestPrice().toString());
     lowestLabel.setText(stock.getLowestPrice().toString());
 
-    MillionsStyler.updateChangeStyle(stock.getCurrentChange(), changeLabel);
+    MillionsStyler.updateChangeStyle(stock.getCurrentChange().doubleValue(), changeLabel);
 
     chart.clearData();
     int week = 0;

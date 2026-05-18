@@ -29,7 +29,7 @@ public class ViewFactory {
   public DashboardView createDashboardView() {
     GameSession session = gameController.getActiveSession()
             .orElseThrow(() -> new IllegalStateException("No active game session"));
-    DashboardView dashboard = new DashboardView(navigator, new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()), new TableSelectionModel<>());
+    DashboardView dashboard = new DashboardView(new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()));
     session.getExchange().addObserver(dashboard);
     return dashboard;
   }
@@ -43,6 +43,6 @@ public class ViewFactory {
   public TradingPageView createTradingPageView() {
     GameSession session = gameController.getActiveSession()
       .orElseThrow(() -> new IllegalStateException("No active game session"));
-    return new TradingPageView(new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()), new TableSelectionModel<>());
+    return new TradingPageView(new ExchangeController(session.getExchange()), new PlayerController(session.getPlayer()));
   }
 }

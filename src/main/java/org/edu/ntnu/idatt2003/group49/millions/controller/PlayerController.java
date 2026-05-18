@@ -1,5 +1,6 @@
 package org.edu.ntnu.idatt2003.group49.millions.controller;
 
+import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
 import org.edu.ntnu.idatt2003.group49.millions.model.player.Player;
 
 import java.math.BigDecimal;
@@ -25,15 +26,23 @@ public class PlayerController {
     return player.getMoney();
   }
 
+  public void addValue(int week) {
+    player.getPortfolio().addValue(week, player.getPortfolio().getValue());
+  }
+
+  public List<Share> getOwnedShares() {
+    return player.getPortfolio().getShares();
+  }
+
   public BigDecimal getPortfolioChange() {
-    return player.getPortfolio().getCurrentChange();
+    return player.getPortfolio().getChangeSinceFirstPurchase();
   }
 
   public BigDecimal getCurrentPortfolioValue() {
     return player.getPortfolio().getValue();
   }
 
-  public Map<Integer, BigDecimal> getPortfolioValues() {
+  public Map<Integer, BigDecimal> getPortfolioValueMap() {
     return player.getPortfolio().getValueMap();
   }
 

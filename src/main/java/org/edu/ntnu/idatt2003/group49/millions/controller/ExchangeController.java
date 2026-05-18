@@ -21,8 +21,8 @@ public class ExchangeController {
   }
 
   public void advance() {
-    logger.info("Advanced to week " + exchange.getWeek());
     exchange.advance();
+    logger.info("Advanced to week " + exchange.getWeek());
 
     CSVWriter.appendStockPricesToFile(Path.of("data/stock_data.csv"), getStockMap());
   }

@@ -4,6 +4,9 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.TableColumn;
 import org.edu.ntnu.idatt2003.group49.millions.model.exchange.Share;
+import org.edu.ntnu.idatt2003.group49.millions.view.MillionsStyler;
+
+import java.math.RoundingMode;
 
 public class SharesColumnFactory extends TableColumnFactory {
   public SharesColumnFactory() {}
@@ -64,7 +67,7 @@ public class SharesColumnFactory extends TableColumnFactory {
     );
 
     priceCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getStock().getSalesPrice().doubleValue())
+      new SimpleDoubleProperty(cellData.getValue().getPurchasePrice().doubleValue())
     );
 
     return priceCol;
@@ -79,22 +82,12 @@ public class SharesColumnFactory extends TableColumnFactory {
       },
 
       (cell, share, value) -> {
-        if (share.getStock().getCurrentChange().signum() > 0) {
-          cell.getStyleClass().removeAll("normal-cell", "negative-change");
-          cell.getStyleClass().add("positive-change");
-
-          cell.setText("↑" + value + "%");
-        } else if (share.getStock().getCurrentChange().signum() < 0) {
-          cell.getStyleClass().removeAll("normal-cell", "positive-change");
-          cell.getStyleClass().add("negative-change");
-
-          cell.setText("↓" + value + "%");
-        }
+        MillionsStyler.updateChangeStyle(value, cell);
       }
     );
 
     changeCol.setCellValueFactory(cellData ->
-      new SimpleDoubleProperty(cellData.getValue().getQuantity().doubleValue())
+      new SimpleDoubleProperty(cellData.getValue().getChangeSincePurchase().setScale(2, RoundingMode.HALF_UP).doubleValue())
     );
 
     return changeCol;
